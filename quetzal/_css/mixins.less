@@ -1,0 +1,312 @@
+// AUTOR: Byron Corrales | https://github.com/byroncorrales/my-less-mixing
+// CONTRIBUTIONS: Helmy Giacoman
+
+// COLORS
+@red1: #d55436;
+@red2: #c52500;
+.noborder {
+  border: none !important;
+}
+.white-text{
+  color: #fff;
+}
+.red-text{
+  .text-error;
+}
+.gray-text{
+  color: #777;
+}
+
+
+.btn-red, .btn-gray, .btn-orange{
+  color: #fff !important;
+  border: none;
+  &:hover, &:focus{
+      background: none;      
+      background-position: 0 0 !important;
+  }
+}
+
+.btn-red{
+  .text-shadow(0px, -1px, 0px, #901600);
+  .linear-gradient(#ca3500, #bb1c00, 10%);
+  &:hover, &:focus{
+      .linear-gradient(#bb1c00, #ca3500, 10%);
+  }
+}
+
+.btn-gray{
+  .text-shadow(0px, -1px, 0px, #40464d);
+  .linear-gradient(#636b75, #444d57, 10%);
+  &:hover, &:focus{
+      .linear-gradient(#444d57, #636b75, 10%);
+  }
+}
+
+.btn-orange{
+  .text-shadow(0px, -1px, 0px, #bb4c00);
+  .linear-gradient(#ff7300, #ff5500, 10%);
+  &:hover, &:focus{
+      .linear-gradient(#ff5500, #ff7300, 10%);
+  }
+}
+
+.bold-weight{font-weight: 700}
+.normal-weight{font-weight: 400}
+.content-font{font-family: Tahoma, Helvetica, Arial, sans-serif}
+.web-font{font-family: 'Asap', sans-serif}
+.web-font-italic{.web-font;font-style: italic}
+
+// GENERAL
+
+.wrapCenter(@width: 960px){
+    width: @width;
+    margin: 0 auto;
+}
+
+// TRANSITIONS
+
+.trans(@propiedad,@seg){
+  transition:         @propiedad @seg;
+  -moz-transition:    @propiedad @seg;
+  -webkit-transition: @propiedad @seg; 
+  -o-transition:      @propiedad @seg; 
+}
+
+.rotate(@deg) {
+  -webkit-transform:  rotate(@deg); 
+  -moz-transform:     rotate(@deg);
+  -ms-transform:      rotate(@deg);
+  -o-transform:       rotate(@deg);
+  transform:          rotate(@deg);
+}
+ 
+.scale(@factor) {
+  -webkit-transform:  scale(@factor);
+  -moz-transform:     scale(@factor);
+  -ms-transform:      scale(@factor);
+  -o-transform:       scale(@factor);
+  transform:          scale(@factor);
+}
+ 
+.translate (@x, @y) {
+  -webkit-transform:  translate(@x, @y);
+  -moz-transform:     translate(@x, @y);
+  -ms-transform:      translate(@x, @y);
+  -o-transform:       translate(@x, @y);
+  transform:          translate(@x, @y);
+}
+
+// GRADIENTS
+
+.linear-gradient(@start:#eee,@end:#fff,@stop:25%){
+    background-color: @start;
+    background-repeat: no-repeat;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@start), color-stop(@stop, @start), to(@end));
+    background-image: -webkit-linear-gradient(@start, @start @stop, @end);
+    background-image: -moz-linear-gradient(top, @start, @start @stop, @end);
+    background-image: -ms-linear-gradient(@start, @start @stop, @end);
+    background-image: -o-linear-gradient(@start, @start @stop, @end);
+    background-image: linear-gradient(@start, @start @stop, @end);
+}
+
+.opacity(@o:0.7){
+    opacity: @o;
+    -moz-opacity: @o;
+    filter:alpha(opacity=@o);
+}
+
+// SHADOWS
+
+.box-shadow (@hor: 0px, @vert: 0px, @blur: 5px, @border:0px, @shadow: #929292){
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+.box-double-shadow (@hor: 0px, @vert: 0px, @blur: 0px, @border:5px, @shadow: #929292, @hor2: 0px, @vert2: 0px, @blur2: 0px, @border2:10px, @shadow2: #929292){
+    -webkit-box-shadow: @hor @vert @blur @border @shadow, @hor2 @vert2 @blur2 @border2 @shadow2;
+    -moz-box-shadow: @hor @vert @blur @border @shadow, @hor2 @vert2 @blur2 @border2 @shadow2;
+    box-shadow: @hor @vert @blur @border @shadow, @hor2 @vert2 @blur2 @border2 @shadow2;
+}
+
+.box-shadow-inset (@hor: 0px, @vert: 0px, @blur: 5px, @shadow: #929292){
+    -webkit-box-shadow: @arguments inset !important;
+    -moz-box-shadow: @arguments inset !important;
+    box-shadow: @arguments inset !important;
+}
+
+.box-shadow-reset{
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.box-sizing(@model: border-box){
+    -webkit-box-sizing: @model;
+    -moz-box-sizing: @model;
+    box-sizing: @model; 
+}
+
+.text-shadow(@hor: 0px, @vert: 0px, @blur: 5px, @shadow: #929292){
+    text-shadow: @arguments;
+    -moz-text-shadow: @arguments;
+    -webkit-text-shadow: @arguments;
+}
+
+.text-shadow-reset{
+    text-shadow: none;
+    -moz-text-shadow: none;
+    -webkit-text-shadow: none; 
+}
+
+// CORNERS
+
+.rounded-corners(@radio: 5px){
+    border-radius: @radio;
+    -ms-border-radius: @radio;
+    -moz-border-radius: @radio;
+    -webkit-border-radius: @radio;
+    -khtml-border-radius: @radio;
+}
+.rounded-corners-reset{
+    -ms-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    -webkit-border-radius: 0px !important;
+    -khtml-border-radius: 0px !important;  
+    border-radius: 0px !important;
+}
+
+.rounded-corners-bottom(@radio:5px){
+    border-bottom-right-radius:@radio;
+    border-bottom-left-radius:@radio;
+    -moz-border-radius-bottomright:@radio;
+    -moz-border-radius-bottomleft:@radio;
+    -webkit-border-bottom-left-radius:@radio;
+    -webkit-border-bottom-right-radius:@radio;
+}
+
+.rounded-corners-top(@radio:5px){
+    border-top-right-radius:@radio;
+    border-top-left-radius:@radio;
+    -moz-border-radius-topright:@radio;
+    -moz-border-radius-topleft:@radio;
+    -webkit-border-top-left-radius:@radio;
+    -webkit-border-top-right-radius:@radio;
+}
+
+.rounded-corners-right(@radio:5px){
+    border-top-right-radius:@radio;
+    border-bottom-right-radius:@radio;
+    -moz-border-radius-topright:@radio;
+    -moz-border-radius-bottomright:@radio;
+    -webkit-border-bottom-right-radius:@radio;
+    -webkit-border-top-right-radius:@radio;
+}
+
+.rounded-corners-left(@radio:5px){
+    border-top-left-radius:@radio;
+    border-bottom-left-radius:@radio;
+    -moz-border-radius-topleft:@radio;
+    -moz-border-radius-bottomleft:@radio;
+    -webkit-border-bottom-left-radius:@radio;
+    -webkit-border-top-left-radius:@radio;
+}
+
+.rounded-corners-combined(@radio:5px){
+    border-top-left-radius:@radio;
+    border-bottom-right-radius:@radio;
+    -moz-border-radius-topleft:@radio;
+    -moz-border-radius-bottomright:@radio;
+    -webkit-border-bottom-right-radius:@radio;
+    -webkit-border-top-left-radius:@radio;
+}
+
+.rounded-corners-right-bottom(@radio:5px){
+    border-bottom-right-radius:@radio;
+    -moz-border-radius-bottomright:@radio;
+    -webkit-border-bottom-right-radius:@radio;
+}
+
+.rounded-corners-left-bottom(@radio:5px){
+    border-bottom-left-radius:@radio;
+    -moz-border-radius-bottomleft:@radio;
+    -webkit-border-bottom-left-radius:@radio;
+}
+
+.rounded-corners-right-top(@radio:5px){
+    border-top-right-radius:@radio;
+    -moz-border-radius-topright:@radio;
+    -webkit-border-top-right-radius:@radio;
+}
+
+.rounded-corners-left-top(@radio:5px){
+    border-top-left-radius:@radio;
+    -moz-border-radius-topleft:@radio;
+    -webkit-border-top-left-radius:@radio;
+}
+
+
+// ARROWS
+.arrow(@border:6px, @color:blue, @orientation:top) when (@orientation = top), (@orientation = bottom){    
+    border-left: @border solid transparent;
+    border-right: @border solid transparent;
+}
+.arrow(@border:6px, @color:blue, @orientation:top) when (@orientation = top){
+    border-bottom: @border solid @color;
+}
+.arrow(@border:6px, @color:blue, @orientation:top) when (@orientation = bottom){
+    border-top: @border solid @color;
+}
+.arrow(@border:6px, @color:blue, @orientation:top) when (@orientation = left), (@orientation = right){    
+    border-top: @border solid transparent;
+    border-bottom: @border solid transparent;
+}    
+.arrow(@border:6px, @color:blue, @orientation:top) when (@orientation = left){
+    border-right: @border solid @color;
+}
+.arrow(@border:6px, @color:blue, @orientation:top) when (@orientation = right){
+    border-left: @border solid @color;
+}
+.arrow(@border:6px, @color:blue, @orientation:top){
+    width: 0; 
+    height: 0;
+}
+
+// REPONSIVE MIXINGS
+
+.responsive-navbar-inner{
+    font-size: 12px !important;
+    width: 100% !important;
+    margin: 0px !important;
+    padding-left: 30px;        
+    .box-shadow-reset;
+    .box-sizing;
+    .rounded-corners-bottom(0px);
+}
+
+.responsive-tablet-slideshow{
+
+    .quetzal-slide {
+        background-position: center center;
+        .rounded-corners-top(0px);
+    }
+    .slide-title{
+        position: relative;
+        top: 20px;
+        padding-left: 30px;
+    }
+    .slide-description{
+        margin-top: 30px;
+        padding-left: 30px;
+    }
+    .quetzal-slideshow-pager{
+        width: 72px;
+        right: 30px;
+        left: auto;
+        top: 25px;
+        a{
+            margin-bottom: 15px;                
+        }
+    }
+}
