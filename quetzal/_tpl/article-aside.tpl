@@ -1,63 +1,139 @@
-<!-- TABS SIDEBAR -->
-<div class="sidebar-widget-tabs visible-desktop">
-    <ul class="nav nav-tabs">
-        <li>
-            <a href="#last-comments" data-toggle="tab">Last comments</a>
-        </li>
-        <li><a href="#more-searches" data-toggle="tab">More searches</a></li>
-        <li class="active"><a href="#sports-poll" data-toggle="tab">Sports Poll</a></li>
-    </ul>
-    <div class="tab-content">
-        <div class="tab-pane" id="last-comments">
-            <div class="comment-box">
-                <div>
-                    <a href="#">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh</a>
-                </div>
-                <div class="comment-info">
-                    <span class="red-text">10 minutes ago,</span> by alexander
+<!-- SIDEBAR -->
+<div class="span4">
+    <aside class="sidebar">
+        
+        <!-- ADVERTISEMENTS -->
+        <div class="advertisements visible-desktop">
+            <a href="#"><img src="http://placehold.it/300x250" alt="Link title"></a>
+        </div>
+
+        <!-- MORE NEWS WIDGET -->
+        <div class="widget-more-news hidden-tablet">
+            <header>
+                <h4>More news like this</h3>
+            </header>
+            <div class="widget-wrap">
+                <div class="news-content">
+                    
+                    <div class="more-like-this-phone visible-phone">
+
+                        <article>
+                            <figure class="article-image">
+                                <a href="#">
+                                    <img src="http://placehold.it/130x98" alt="News Title">
+                                </a>
+                            </figure>
+                            <section class="article-content">
+                                <span class="red-text">Business</span>
+                                <header>
+                                    <h2><a href="#">Sollicitudin Fringilla Amet Lorem</a></h2>
+                                    <span class="article-date">Nov 02 2012, 5:40 am</span>
+                                </header>
+                                <div class="clearfix"></div>
+                            </section>
+
+                        </article>
+
+                        <article>
+                            <figure class="article-image">
+                                <a href="#">
+                                    <img src="http://placehold.it/130x98" alt="News Title">
+                                </a>
+                            </figure>
+                            <section class="article-content">
+                                <span class="red-text">Travel</span>    
+                                <header>
+                                    <h2><a href="#">Justo Dapibus Tellus</a></h2>
+                                    <span class="article-date">Nov 02 2012, 5:40 am</span>
+                                </header>                                                            
+                                <div class="clearfix"></div>
+                            </section>
+                        </article>
+
+                        <article>
+                            <figure class="article-image">
+                                <a href="#">
+                                    <img src="http://placehold.it/130x98" alt="News Title">
+                                </a>
+                            </figure>
+                            <section class="article-content">
+                                <span class="red-text">Sports</span>      
+                                <header>
+                                    <h2><a href="#">Fringilla Amet Lorem</a></h2>
+                                    <span class="article-date">Dec 02 2012, 5:40 am</span>
+                                </header>                                                            
+                                <div class="clearfix"></div>
+                            </section>
+                        </article>
+                            
+                    </div>
+
+                    <div class="visible-desktop">
+                        <div class="news-box">
+                            <img src="http://placehold.it/70x45" alt="News title here" class="pull-left">
+                            <div class="pull-right newtitle">
+                                <a href="#">Vivamus posuere adipiscing erat at ultricies.</a>
+                            </div>
+                            <div class="clearfix divider"></div>
+                            <div class="newdata">
+                                <span>45 comments</span> | 
+                                <a href="#" class="red-text">Read more +</a>
+                                <span class="date pull-right">Jan 28 2012, 4:35 pm</span>
+                            </div>
+                        </div>
+
+                        <div class="news-box">
+                            <img src="http://placehold.it/70x45" alt="News title here" class="pull-left">
+                            <div class="pull-right newtitle">
+                                <a href="#">Vivamus posuere adipiscing erat at ultricies.</a>
+                            </div>
+                            <div class="clearfix divider"></div>
+                            <div class="newdata">
+                                <span>45 comments</span> | 
+                                <a href="#" class="red-text">Read more +</a>
+                                <span class="date pull-right">Jan 28 2012, 4:35 pm</span>
+                            </div>
+                        </div>
+
+                        <div class="news-box">
+                            <img src="http://placehold.it/70x45" alt="News title here" class="pull-left">
+                            <div class="pull-right newtitle">
+                                <a href="#">Vivamus posuere adipiscing erat at ultricies.</a>
+                            </div>
+                            <div class="clearfix divider"></div>
+                            <div class="newdata">
+                                <span>45 comments</span> | 
+                                <a href="#" class="red-text">Read more +</a>
+                                <span class="date pull-right">Jan 28 2012, 4:35 pm</span>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <hr>
-            <div class="comment-box">
-                <div>
-                    <a href="#">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh</a>
-                </div>
-                <div class="comment-info">
-                    <span class="red-text">10 minutes ago,</span> by alexander
-                </div>
-            </div>
-            <hr>
-            <div class="comment-box">
-                <div>
-                    <a href="#">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nullam id dolor id nibh</a>
-                </div>
-                <div class="comment-info">
-                    <span class="red-text">10 minutes ago,</span> by alexander
-                </div>
-            </div>
-            
         </div>
-        <div class="tab-pane" id="more-searches">
-            searches
-        </div>
-        <div class="tab-pane active" id="sports-poll">
-            <div class="polls">
-                Pellentesque habitant morbi tristique senectus et netus et malesuada?
-                <div class="pollWrap">
-                    <form>
-                        <div class="poll-option">
-                            <label><input type="radio" name="group1" value="Option1"> Option 1</label>
-                        </div>
-                        <div class="poll-option">
-                            <label><input type="radio" name="group1" value="Option2"> Option 2</label>
-                        </div>
-                        <div class="poll-option noborder">
-                            <label><input type="radio" name="group1" value="Option3"> Option 3</label>
-                        </div>
-                        <input type="submit" value="Vote this poll!" class="btn btn-block">
-                    </form>
+
+        <!-- MAP WIDGET -->
+        <div class="widget-map hidden-tablet">
+            <header class="widget-wrap">
+                <h4>News near you</h4>
+            </header>
+            <section class="widget-wrap">
+                <img src="img/devel/map.jpg" class="map">
+                <div class="badges">
+                    <a href="#" class="map-badge">New in place <i class="icon-center"></i></a>
+                    <a href="#" class="map-badge">Another new in place <i class="icon-center"></i></a>
+                    <a href="#" class="map-badge">New in place <i class="icon-center"></i></a>
                 </div>
-            </div>                                            
+            </section>
+            <footer>
+                <hr>
+                <div class="widget-wrap">
+                    <i class="icon-center"></i> Center a place
+                </div>
+            </footer>
         </div>
-    </div>
+
+    </aside>
 </div>
+
