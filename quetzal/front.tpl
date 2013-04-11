@@ -7,21 +7,27 @@
           
 {{ include file="_tpl/header.tpl" }}
 
-<section role="main" class="internal-page">
+<section role="main" class="homepage">
     <div class="wrapper">
 
-        {{ include file="_tpl/section-header.tpl" }}
+    {{ include file="_tpl/front-slider.tpl" }}
 
         <div class="container">
             <section id="content">
                 <div class="row">
 
-                {{ include file="_tpl/article-cont.tpl" }}
-
-                {{ include file="_tpl/article-aside.tpl" }}          
+                {{ include file="_tpl/front-stories.tpl" }}
+                                              
+                {{ include file="_tpl/front-sidebar.tpl" }}          
                 </div> <!--end div class="row"-->
 
-                {{ include file="_tpl/tablet-more-tabs.tpl" }}          
+                {{ include file="_tpl/front-multimedia.tpl" }}          
+
+                <div class="row">
+                    {{ include file="_tpl/more-news-block.tpl" }}          
+
+                    {{ include file="_tpl/front-map.tpl" }}          
+                </div>
 
             </section> <!-- end section id=content -->
         </div> <!-- end div class='container' -->
