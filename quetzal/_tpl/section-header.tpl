@@ -3,7 +3,7 @@
         <div class="row">
             <div class="span10">
                 <div class="breadcrumbs">
-                    <h2>Sports</h2><span>&rarr;</span><h3>Football</h3>
+                    <h2>Sports</h2>
                 </div>
             </div>
             <div class="span2 section-rss">
@@ -13,7 +13,7 @@
         <div class="row">
             <div class="span12 more-news-tabs tab-sections">
                 <a class="back-link visible-phone" href="#">&larr; Back</a>
-                <nav class="internal-nav hidden-phone">
+                <nav class="internal-nav visible-desktop visible-tablet">
                     <ul>
                         <li class="active"><a href="#">Football</a></li>
                         <li><a href="#">Tennis</a></li>

@@ -5,7 +5,7 @@
           <div class="carousel-inner quetzal-carousel-content">
             <div class="item active">                                
                   <a href="#" class="pull-left sub-item video">
-                      <img style="background: url(http://lorempixel.com/235/220) no-repeat;" src="img/player.png" alt="uno">
+                      <img style="background: url(http://lorempixel.com/235/220) no-repeat;" src="{{url static_file='_img/player.png'}}" alt="uno">
                   </a>
                   <a href="#" class="pull-left sub-item photo">
                       <img src="http://lorempixel.com/235/220/sports" alt="uno">
@@ -14,7 +14,7 @@
                       </div>
                   </a>
                   <a href="#" class="pull-left sub-item video">
-                      <img style="background: url(http://placehold.it/235x220) no-repeat;" src="img/player.png" alt="uno">
+                      <img style="background: url(http://placehold.it/235x220) no-repeat;" src="{{url static_file='_img/player.png'}}" alt="uno">
                   </a>
                   <a href="#" class="pull-left sub-item">
                       <img src="http://placehold.it/235x220" alt="uno">

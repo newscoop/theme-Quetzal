@@ -7,10 +7,10 @@
           
 {{ include file="_tpl/header.tpl" }}
 
-<section role="main" class="homepage">
+<section role="main" class="internal-page section-page">
     <div class="wrapper">
 
-    {{ include file="_tpl/front-slider.tpl" }}
+    {{ include file="_tpl/section-header.tpl" }}
 
         <div class="container">
             <section id="content">
