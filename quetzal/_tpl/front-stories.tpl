@@ -104,5 +104,4 @@
             </article>
         </div>
     </div>
-</div>
-
+</div><!-- end front-stories.tpl -->

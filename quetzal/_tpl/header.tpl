@@ -27,7 +27,7 @@
                 <div class="row logo-search">
                     <div class="span7">                        
                         <a href="/">
-                            <img class="logo pull-left" src="img/newscoop-quetzal-logo.png" alt="Newscoop Quetzal">
+                            <img class="logo pull-left" src="{{ url static_file='_img/newscoop-quetzal-logo.png'}}" alt="Newscoop Quetzal">
                         </a> 
 
                         <!-- NAVIGATION FOR PHONE -->                       

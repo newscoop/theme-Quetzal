@@ -5,7 +5,7 @@
             <h4>News near you</h4>
         </header>
         <section class="widget-wrap">
-            <img src="img/devel/map.jpg" class="map">
+            <img src="{{ url static_file='_img/devel/map.jpg'}}" class="map">
             <div class="badges">
                 <a href="#" class="map-badge">New in place <i class="icon-center"></i></a>
                 <a href="#" class="map-badge">Another new in place <i class="icon-center"></i></a>

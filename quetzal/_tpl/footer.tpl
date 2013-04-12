@@ -91,7 +91,7 @@
                 <div class="row footer-brand">
                     <div class="span12">
                         <a href="/" class="visible-desktop">
-                            <img class="logo-footer" src="img/newscoop-quetzal-logo-footer.png">
+                            <img class="logo-footer" src="{{ url static_file='_img/newscoop-quetzal-logo-footer.png' }}">
                         </a>
                         Copyright 2013. All rights reserved. Newscoop Magazine Theme
                     </div>
