@@ -18,15 +18,15 @@
 
                 {{ include file="_tpl/front-stories.tpl" }}
                                               
-                {{ include file="_tpl/front-sidebar.tpl" }}          
+                {{ include file="_tpl/sidebar.tpl" }}          
                 </div> <!--end div class="row"-->
 
-                {{ include file="_tpl/front-multimedia.tpl" }}          
+                {{ include file="_tpl/multimedia.tpl" }}          
 
                 <div class="row">
                     {{ include file="_tpl/more-news-block.tpl" }}          
 
-                    {{ include file="_tpl/front-map.tpl" }}          
+                    {{ include file="_tpl/map.tpl" }}          
                 </div>
 
             </section> <!-- end section id=content -->
