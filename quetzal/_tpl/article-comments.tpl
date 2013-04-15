@@ -2,13 +2,14 @@
 <section id="comments">
     <div class="row">
         <div class="span6">
-            <h2>3 Comments</h2>
+            <h2>{{ $gimme->article->comment_count}} Comments</h2>
         </div>
         <div class="span2 write-comment">
             <a href="#" class="red-text">Write a comment</a>
         </div>
     </div>
-    <div class="row comment-box">
+{{list_article_comments order="bydate desc"}}
+    <div class="row comment-box" id="comment-{{$gimme->current_list->index}}">
         <div class="span1">
             <a href="#" class="avatar">
                 <img src="http://placehold.it/60x60" alt="Author's Name">
@@ -16,57 +17,23 @@
         </div>
         <div class="span7 comment-content">                                                
             <h4 class="pull-left comment-author red-text">
-                Helena says:
+            {{ if $gimme->comment->user->identifier }}
+                <a href="http://{{ $gimme->publication->site }}/user/profile/{{ $gimme->comment->user->uname|urlencode }}">{{ $gimme->comment->user->uname }}</a>
+            {{ else }}
+                {{ $gimme->comment->nickname }} (Anonymous)
+            {{ /if }}
             </h4>
             <div class="pull-right comment-date">
-                Today, 4:20 am
+                <time datetime="{{ $gimme->comment->submit_date|camp_date_format:"%Y-%m-%dT%H:%iZ" }}">{{ $gimme->comment->submit_date|camp_date_format:"%e.%m.%Y at %H:%i" }}</time>
             </div>
             <div class="clearfix"></div>
             <div class="comment-body">
-                Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod.
+             {{ $gimme->comment->content}}
             </div>                                                
         </div>
     </div>
-
-    <div class="row comment-box">
-        <div class="span1">
-            <a href="#" class="avatar">
-                <img src="http://placehold.it/60x60" alt="Author's Name">
-            </a>
-        </div>
-        <div class="span7 comment-content">                                                
-            <h4 class="pull-left comment-author red-text">
-                Alexander says:
-            </h4>
-            <div class="pull-right comment-date">
-                Today, 4:20 am
-            </div>
-            <div class="clearfix"></div>
-            <div class="comment-body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod.
-            </div>                                                
-        </div>
-    </div>
-
-    <div class="row comment-box">
-        <div class="span1">
-            <a href="#" class="avatar">
-                <img src="img/noavatar.jpg" alt="Author's Name">
-            </a>
-        </div>
-        <div class="span7 comment-content">                                                
-            <h4 class="pull-left comment-author red-text">
-                Someone without avatar says:
-            </h4>
-            <div class="pull-right comment-date">
-                Today, 4:20 am
-            </div>
-            <div class="clearfix"></div>
-            <div class="comment-body">
-                Morbi leo risus, porta ac consectetur ac, laoreet rutrum faucibus dolor auctor. Curabitur blandit tempus porttitor. Etiam porta sem malesuada magna mollis euismod.
-            </div>                                                
-        </div>
-    </div>
+{{/list_article_comments}}
+    
     <div class="divider"></div>
 
     <!-- COMMENT FORM -->
@@ -79,19 +46,19 @@
                 <a href="#" class="red-text">Login or Sign Up</a>
             </div>                                                
         </div>
-        <form>
+        {{ comment_form html_code="id=\"commentform\"" _button="submit" button_html_code="tabindex=\"6\"" }}
             <div class="row">                                                
                 <div class="span4">
-                    <input type="text" name="name" placeholder="Your name">
-                    <input type="email" name="email" placeholder="Your email" class="error">
-                    <input type="url" name="website" placeholder="Your website">
+                    {{ camp_edit object="comment" attribute="nickname" html_code="id=\"author\" tabindex=\"1\"" }}
+                    {{ camp_edit object="comment" attribute="reader_email" html_code="id=\"email\" tabindex=\"2\"" }}
+                    {{ recaptcha }}
                 </div>
                 <div class="span4">
-                    <textarea name="message" placeholder="Write your message here"></textarea>
-                </div>                                                                                                   
+                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\"" }}
+                </div>
             </div>
             <input type="submit" value="Publish comment" class="btn btn-large pull-right">
             <div class="clearfix"></div>
-        </form>
+        {{ /comment_form }}
 </section>
 <!--  end _tpl/article-comments.tpl-->

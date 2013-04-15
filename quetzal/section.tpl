@@ -16,7 +16,7 @@
             <section id="content">
                 <div class="row">
 
-                {{ include file="_tpl/section-stories.tpl" }}
+                {{ include file="_tpl/section-cont.tpl" }}
                                               
                 {{ include file="_tpl/sidebar.tpl" }}          
                 </div> <!--end div class="row"-->

@@ -16,97 +16,43 @@
                 <div class="news-content">
                     
                     <div class="more-like-this-phone visible-phone">
-
+                        {{ list_related_articles }}
                         <article>
                             <figure class="article-image">
-                                <a href="#">
+                                <a href="{{ uri options="article"}}">
                                     <img src="http://placehold.it/130x98" alt="News Title">
                                 </a>
                             </figure>
                             <section class="article-content">
-                                <span class="red-text">Business</span>
+                                <span class="red-text">{{ $gimme->article->section }}</span>
                                 <header>
-                                    <h2><a href="#">Sollicitudin Fringilla Amet Lorem</a></h2>
+                                    <h2><a href="{{ uri options="article"}}">{{ $gimme->article->name }}</a></h2>
                                     <span class="article-date">Nov 02 2012, 5:40 am</span>
                                 </header>
                                 <div class="clearfix"></div>
                             </section>
-
                         </article>
+                        {{ /list_related_articles  }}
 
-                        <article>
-                            <figure class="article-image">
-                                <a href="#">
-                                    <img src="http://placehold.it/130x98" alt="News Title">
-                                </a>
-                            </figure>
-                            <section class="article-content">
-                                <span class="red-text">Travel</span>    
-                                <header>
-                                    <h2><a href="#">Justo Dapibus Tellus</a></h2>
-                                    <span class="article-date">Nov 02 2012, 5:40 am</span>
-                                </header>                                                            
-                                <div class="clearfix"></div>
-                            </section>
-                        </article>
-
-                        <article>
-                            <figure class="article-image">
-                                <a href="#">
-                                    <img src="http://placehold.it/130x98" alt="News Title">
-                                </a>
-                            </figure>
-                            <section class="article-content">
-                                <span class="red-text">Sports</span>      
-                                <header>
-                                    <h2><a href="#">Fringilla Amet Lorem</a></h2>
-                                    <span class="article-date">Dec 02 2012, 5:40 am</span>
-                                </header>                                                            
-                                <div class="clearfix"></div>
-                            </section>
-                        </article>
-                            
                     </div>
 
                     <div class="visible-desktop">
-                        <div class="news-box">
-                            <img src="http://placehold.it/70x45" alt="News title here" class="pull-left">
-                            <div class="pull-right newtitle">
-                                <a href="#">Vivamus posuere adipiscing erat at ultricies.</a>
-                            </div>
-                            <div class="clearfix divider"></div>
-                            <div class="newdata">
-                                <span>45 comments</span> | 
-                                <a href="#" class="red-text">Read more +</a>
-                                <span class="date pull-right">Jan 28 2012, 4:35 pm</span>
-                            </div>
-                        </div>
 
+                        {{ list_related_articles}}
                         <div class="news-box">
                             <img src="http://placehold.it/70x45" alt="News title here" class="pull-left">
                             <div class="pull-right newtitle">
-                                <a href="#">Vivamus posuere adipiscing erat at ultricies.</a>
+                                <a href="{{ uri options="article"}}">{{ $gimme->article->name }}</a>
                             </div>
                             <div class="clearfix divider"></div>
                             <div class="newdata">
-                                <span>45 comments</span> | 
-                                <a href="#" class="red-text">Read more +</a>
+                                <span>{{ $gimme->article->comment_count }} comments</span> | 
+                                <a href="{{ uri options="article"}}" class="red-text">Read more +</a>
                                 <span class="date pull-right">Jan 28 2012, 4:35 pm</span>
                             </div>
                         </div>
+                        {{ /list_related_articles}}
 
-                        <div class="news-box">
-                            <img src="http://placehold.it/70x45" alt="News title here" class="pull-left">
-                            <div class="pull-right newtitle">
-                                <a href="#">Vivamus posuere adipiscing erat at ultricies.</a>
-                            </div>
-                            <div class="clearfix divider"></div>
-                            <div class="newdata">
-                                <span>45 comments</span> | 
-                                <a href="#" class="red-text">Read more +</a>
-                                <span class="date pull-right">Jan 28 2012, 4:35 pm</span>
-                            </div>
-                        </div>
                     </div>
 
                 </div>

@@ -10,7 +10,7 @@
 <section role="main" class="internal-page">
     <div class="wrapper">
 
-        {{ include file="_tpl/section-header.tpl" }}
+        {{ include file="_tpl/article-header.tpl" }}
 
         <div class="container">
             <section id="content">
