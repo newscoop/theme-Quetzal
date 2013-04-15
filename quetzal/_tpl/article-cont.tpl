@@ -21,7 +21,7 @@
                 <img src="img/devel/article-picture.jpg" alt="Article Title or Photo Title">
                 <figcaption>A cheeky macaque</figcaption>
             </figure>                                        
-            {{ $gimme->article->full_text }}
+            {{ include file="_tpl/_edit-article.tpl" }}{{ $gimme->article->full_text }}
         </section>
 
         <!-- AddThis Button BEGIN -->
