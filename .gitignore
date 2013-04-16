@@ -2,3 +2,5 @@
 *.swo
 templates
 Makefile
+*.sublime-project
+*.sublime-workspace
