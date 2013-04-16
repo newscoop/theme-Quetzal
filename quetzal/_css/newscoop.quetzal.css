@@ -1102,7 +1102,7 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
     -webkit-border-bottom-right-radius: 0px;
   }
   section[role="main"] .wrapper {
-    width: 100%;
+    width: 100% !important;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
     box-shadow: none !important;
@@ -1261,7 +1261,8 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   .section-featured .article-image {
     width: 300px !important;
   }
-  .user-entry {
+  .user-entry,
+  .profile .span6 {
     width: 47%;
   }
 }
@@ -1279,7 +1280,7 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   .article-container h1,
   .article-container .single-1 figure > img,
   .other-featured article {
-    width: 100%;
+    width: 100% !important;
   }
   .container,
   .row {
@@ -1532,7 +1533,7 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
     -webkit-border-bottom-right-radius: 0px;
   }
   section[role="main"] .wrapper {
-    width: 100%;
+    width: 100% !important;
   }
   .homepage {
     margin-top: -15px;
