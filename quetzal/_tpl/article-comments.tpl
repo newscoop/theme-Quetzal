@@ -46,18 +46,17 @@
                 <a href="#" class="red-text">Login or Sign Up</a>
             </div>                                                
         </div>
-        {{ comment_form html_code="id=\"commentform\"" _button="submit" button_html_code="tabindex=\"6\"" }}
+        {{ comment_form html_code="id=\"commentform\"" _button="submit" button_html_code="tabindex=\"6\" class=\"btn btn-large pull-right\" " }}
             <div class="row">                                                
                 <div class="span4">
-                    {{ camp_edit object="comment" attribute="nickname" html_code="id=\"author\" tabindex=\"1\"" }}
-                    {{ camp_edit object="comment" attribute="reader_email" html_code="id=\"email\" tabindex=\"2\"" }}
+                    {{ camp_edit object="comment" attribute="nickname" html_code="id=\"author\" tabindex=\"1\" placeholder=\"Your name\" " }}
+                    {{ camp_edit object="comment" attribute="reader_email" html_code="id=\"email\" tabindex=\"2\" placeholder=\"Your Email\"" }}
                     {{ recaptcha }}
                 </div>
                 <div class="span4">
-                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\"" }}
+                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
                 </div>
             </div>
-            <input type="submit" value="Publish comment" class="btn btn-large pull-right">
             <div class="clearfix"></div>
         {{ /comment_form }}
 </section>

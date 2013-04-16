@@ -6,17 +6,21 @@
             {{ list_sections}}
             {{ if $gimme->current_list->at_beginning }}
             <li class="active">
-                <a href="#tab1" data-toggle="tab">{{ $gimme->section->name}}</a>
+                <a href="#tab{{ $gimme->current_list->index }}" data-toggle="tab">{{ $gimme->section->name}}</a>
             </li>
             {{else}}
-            <li><a href="#tab2" data-toggle="tab">{{ $gimme->section->name}}</a></li>
+            <li><a href="#tab{{ $gimme->current_list->index }}" data-toggle="tab">{{ $gimme->section->name}}</a></li>
             {{/if}}
             {{/list_sections}}
         </ul>
         <div class="tabWrap">
             <div class="tab-content">
                 {{ list_sections }}
+                {{ if $gimme->current_list->at_beginning }}
                 <div class="tab-pane active" id="tab{{ $gimme->current_list->index }}">
+                {{else}}
+                <div class="tab-pane" id="tab{{ $gimme->current_list->index }}">
+                {{/if}}
                     {{ list_articles length="5" order="byPublishDate desc" }}
                     <div class="article-content">
                         <img class="article-image pull-left" src="http://placehold.it/70x45" >
