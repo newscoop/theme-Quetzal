@@ -1207,6 +1207,9 @@ article.main-article .addthis_toolbox {
 article.main-article .addthis_toolbox .addthis_button_facebook_like {
   width: 350px;
 }
+#comments input[type="submit"] {
+  margin-top: -100px;
+}
 .section-page #quetzal-slideshow {
   top: -15px;
 }
@@ -1997,6 +2000,9 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   }
   #comments input[type="submit"] {
     width: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    float: inherit;
   }
   .comment-box .span1 {
     float: left;

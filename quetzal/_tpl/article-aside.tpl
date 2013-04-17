@@ -8,6 +8,8 @@
         </div>
 
         <!-- MORE NEWS WIDGET -->
+        {{ list_related_articles }}
+        {{ if $gimme->current_list->at_beginning }} 
         <div class="widget-more-news hidden-tablet">
             <header>
                 <h4>More news like this</h3>
@@ -16,7 +18,9 @@
                 <div class="news-content">
                     
                     <div class="more-like-this-phone visible-phone">
-                        {{ list_related_articles }}
+                        {{/if}}
+                        {{ /list_related_articles  }}
+                        {{ list_related_articles }} 
                         <article>
                             <figure class="article-image">
                                 <a href="{{ uri options="article"}}">
@@ -32,12 +36,10 @@
                                 <div class="clearfix"></div>
                             </section>
                         </article>
-                        {{ /list_related_articles  }}
-
+                        
                     </div>
-
+                    {{ /list_related_articles  }}
                     <div class="visible-desktop">
-
                         {{ list_related_articles}}
                         <div class="news-box">
                             <img src="http://placehold.it/70x45" alt="News title here" class="pull-left">
@@ -52,11 +54,15 @@
                             </div>
                         </div>
                         {{ /list_related_articles}}
-
+                        {{ list_related_articles}}
+                        {{ if $gimme->current_list->at_end }}
                     </div>
 
                 </div>
             </div>
+            {{/if}}
+            {{ /list_related_articles}}
+
         </div>
 
         <!-- MAP WIDGET -->

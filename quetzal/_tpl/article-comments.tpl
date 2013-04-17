@@ -8,7 +8,7 @@
             <a href="#" class="red-text">Write a comment</a>
         </div>
     </div>
-{{list_article_comments order="bydate desc"}}
+    {{list_article_comments order="bydate desc"}}
     <div class="row comment-box" id="comment-{{$gimme->current_list->index}}">
         <div class="span1">
             <a href="#" class="avatar">
@@ -32,7 +32,7 @@
             </div>                                                
         </div>
     </div>
-{{/list_article_comments}}
+    {{/list_article_comments}}
     
     <div class="divider"></div>
 
@@ -51,13 +51,13 @@
                 <div class="span4">
                     {{ camp_edit object="comment" attribute="nickname" html_code="id=\"author\" tabindex=\"1\" placeholder=\"Your name\" " }}
                     {{ camp_edit object="comment" attribute="reader_email" html_code="id=\"email\" tabindex=\"2\" placeholder=\"Your Email\"" }}
-                    {{ recaptcha }}
-                </div>
-                <div class="span4">
                     {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
                 </div>
+                <div class="span4">
+                    {{ recaptcha }}
+                </div>
             </div>
-            <div class="clearfix"></div>
+
         {{ /comment_form }}
 </section>
 <!--  end _tpl/article-comments.tpl-->
