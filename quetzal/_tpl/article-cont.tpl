@@ -9,8 +9,8 @@
             <div class="clearfix"></div>
 
             <figure class="aside-figure pull-right visible-desktop">
-                <img src="img/devel/article-picture1.jpg" alt="Article Title or Photo Title">
-                <figcaption>A cheeky macaque</figcaption>
+                {{ include file="_tpl/img/img_300x300.tpl"}}
+                <figcaption>{{ $gimme->article->image->caption}}</figcaption>
             </figure>
 
             <h1>{{ $gimme->article->name }}</h1>
@@ -18,8 +18,8 @@
 
         <section class="article-content">
             <figure class="hidden-desktop">
-                <img src="img/devel/article-picture.jpg" alt="Article Title or Photo Title">
-                <figcaption>A cheeky macaque</figcaption>
+                {{ include file="_tpl/img/img_300x300.tpl"}}
+                <figcaption>{{ $gimme->article->image->caption}}</figcaption>
             </figure>                                        
             {{ include file="_tpl/_edit-article.tpl" }}{{ $gimme->article->full_text }}
         </section>
