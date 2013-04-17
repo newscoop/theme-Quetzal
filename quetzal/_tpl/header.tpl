@@ -37,11 +37,9 @@
                                     Sections
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li class="pull-left"><a class="btn" href="#">News</a></li>
-                                    <li class="pull-left"><a class="btn" href="#">Sports</a></li>
-                                    <li class="pull-left"><a class="btn" href="#">Culture</a></li>
-                                    <li class="pull-left"><a class="btn" href="#">Business</a></li>
-                                    <li class="pull-left"><a class="btn" href="#">Money</a></li>
+                                    {{ list_sections }}
+                                    <li class="pull-left"><a class="btn" href="{{ uri option="section"}}">{{ $gimme->section->name}}</a></li>
+                                    {{ /list_sections }}
                                 </ul>
                             </li>
                         </ul>
@@ -65,52 +63,13 @@
             <nav role="navigation" class="container navbar navbar-inverse visible-desktop">    
                 <div class="navbar-inner">
                     <ul class="nav">
-                        <li class="active dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                News <b class="caret"></b>
+                        {{ list_sections }}
+                        <li>
+                            <a href="{{ uri option="section"}}">
+                                {{ $gimme->section->name }}
                             </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                            </ul>
                         </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Sports <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Sports 1</a></li>
-                                <li><a href="#">Sports 2</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Culture <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Business <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                            </ul>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Money <b class="caret"></b>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Link 1</a></li>
-                                <li><a href="#">Link 2</a></li>
-                            </ul>
-                        </li>
-                        
+                        {{ /list_sections }}
                     </ul>
                     
                     <ul class="nav pull-right login-nav">
