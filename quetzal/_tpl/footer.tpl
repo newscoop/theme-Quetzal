@@ -20,12 +20,12 @@
                                     {{ /list_sections }}
                                 </ul>
                             </div>
-                            <div class="span2">
+                            <!--<div class="span2">
                                 <ul>
                                     <li><a href="#">Environment</a></li>
                                     <li><a href="#">Multimedia</a></li>                                    
                                 </ul>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                     <div class="span3 more-links right-separator visible-desktop">
@@ -93,7 +93,7 @@
                         <a href="/" class="visible-desktop">
                             <img class="logo-footer" src="{{ url static_file='_img/newscoop-quetzal-logo-footer.png' }}">
                         </a>
-                        Copyright 2013. All rights reserved. Newscoop Magazine Theme
+                        Copyright 2013. All rights reserved. Newscoop Quetzal Theme
                     </div>
                 </div>
             </div>
