@@ -21,7 +21,7 @@
                 {{else}}
                 <div class="tab-pane" id="tab{{ $gimme->current_list->index }}">
                 {{/if}}
-                    {{ list_articles length="5" order="byPublishDate desc" }}
+                    {{ list_articles length="4" order="byPublishDate desc" }}
                     <div class="article-content">
                         <img class="article-image pull-left" src="http://placehold.it/70x45" >
                         <div class="article-excerpt pull-left">

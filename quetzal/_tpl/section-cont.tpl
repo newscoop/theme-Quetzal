@@ -1,7 +1,7 @@
 <div class="span8 home-featured-news">
     <!-- SECTION ARTICLES -->                                
     <div class="row section-articles">
-    {{ list_articles length="10" ignore_issue="true" }}
+    {{ list_articles length="5" ignore_issue="true" }}
         {{ if $gimme->current_list->at_beginning }}            
 
         <article class="span8 section-article section-featured">                                        
@@ -50,6 +50,34 @@
             <div class="clearfix"></div>
         </article>
         {{ /if}}
+
+        {{ if $gimme->current_list->at_end }}            
+
+        {{* PAGINATION *}}
+        {{ $pages=ceil($gimme->current_list->count/5) }}
+        {{ $curpage=intval($gimme->url->get_parameter($gimme->current_list_id())) }}
+        {{ if $pages gt 1 }}
+        <div class="pagination">
+            <ul class="pagination">
+                {{ if $gimme->current_list->has_previous_elements }}<li class="prev"><a href="{{ uripath options="section" }}?{{ urlparameters options="previous_items" }}">Previous</a></li>{{ /if }}
+                {{ for $i=0 to $pages - 1 }}
+                    {{ $curlistid=$i*5 }}
+                    {{ $gimme->url->set_parameter($gimme->current_list_id(),$curlistid) }}
+                    {{ if $curlistid != $curpage }}
+                <li><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
+                    {{ else }}
+                <li class="active disable"><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
+                    {{ $remi=$i+1 }}
+                    {{ /if }}
+                {{ /for }}
+                {{ if $gimme->current_list->has_next_elements }}<li class="next"><a href="{{ uripath options="section" }}?{{ urlparameters options="next_items" }}">Next</a></li>{{ /if }}
+            </ul>
+        </div>
+        {{ $gimme->url->set_parameter($gimme->current_list_id(),$curpage) }}
+        {{ /if }}
+
+        {{ /if }}
+
         {{ /list_articles }}    
     </div>
 </div>
