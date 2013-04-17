@@ -54,40 +54,18 @@
     <!-- POPULAR NEWS -->
     <div class="quetzal-popular-news visible-desktop">
         <h3>Most popular news</h3>
+        {{ local }} 
+        {{ set_current_issue }} 
+        {{ list_articles length="4" order="bypopularity desc" constraints="type is news" }}
         <div class="mgzn-news-box">
-            <img src="http://placehold.it/72x46" alt="News Title" class="pull-left">
+            <a href="{{ uri options="article" }}"><img src="http://placehold.it/72x46" alt="News Title" class="pull-left"></a>
             <div class="mgzn-news-info pull-right">
-                <span>News</span><br>
-                <a href="#">Adipiscing Dolor Parturient Fermentum Vehicula Fermentum</a>
+                <span><b>{{ $gimme->article->section->name }}</b></span><br>
+                <a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a>
             </div>
             <div class="clearfix"></div>
         </div>
-
-        <div class="mgzn-news-box">
-            <img src="http://placehold.it/72x46" alt="News Title" class="pull-left">
-            <div class="mgzn-news-info pull-right">
-                <span>Culture</span><br>
-                <a href="#">Adipiscing Dolor Parturient Fermentum Vehicula Fermentum</a>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-
-        <div class="mgzn-news-box">
-            <img src="http://placehold.it/72x46" alt="News Title" class="pull-left">
-            <div class="mgzn-news-info pull-right">
-                <span>Sports</span><br>
-                <a href="#">Adipiscing Dolor Parturient Fermentum Vehicula Fermentum</a>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-
-        <div class="mgzn-news-box">
-            <img src="http://placehold.it/72x46" alt="News Title" class="pull-left">
-            <div class="mgzn-news-info pull-right">
-                <span>Business</span><br>
-                <a href="#">Adipiscing Dolor Parturient Fermentum Vehicula Fermentum</a>
-            </div>
-            <div class="clearfix"></div>
-        </div>
+        {{ /list_articles }} 
+        {{ /local }}
     </div>
 </section>
