@@ -15,10 +15,12 @@
         <errorPage src="404.tpl"/>
     </output>
     <renditions>
-        <rendition name="topfront" width="500" height="333" specs="crop"/>
         <rendition name="thumb" width="150" height="100" specs="crop"/>
-        <rendition name="sectionthumb" width="250" height="167" specs="crop"/>
-        <rendition name="articlebig" width="600" height="400" specs="crop"/>
+        <rendition name="morenewsthumb" width="70" height="45" specs="crop"/>
+        <rendition name="sectiontop" width="330" height="215" specs="crop"/>
+        <rendition name="sectionthumb" width="200" height="152" specs="crop"/>
+        <rendition name="articlesquare" width="300" height="300" specs="crop"/>
+        <rendition name="slider" width="960" height="300" specs="crop"/>
         <rendition name="square" width="150" height="150" specs="crop"/>
     </renditions>
 </theme>
