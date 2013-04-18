@@ -17,7 +17,6 @@
             </header>
             <div class="widget-wrap">
                 <div class="news-content">
-                    
                     <div class="visible-desktop">
                         {{/if}}
                         <div class="news-box">
@@ -34,7 +33,6 @@
                         </div>
                         {{ if $gimme->current_list->at_end }}
                     </div>
-
                 </div>
             </div>
         </div>
@@ -49,7 +47,6 @@
             </header>
             <div class="widget-wrap">
                 <div class="news-content">
-                    
                     <div class="more-like-this-phone visible-phone">
                         {{/if}}
                         <article>
@@ -69,7 +66,6 @@
                         </article>
                         {{ if $gimme->current_list->at_end }}
                     </div>
-
                 </div>
             </div>
         </div>
@@ -82,7 +78,12 @@
                 <h4>News near you</h4>
             </header>
             <section class="widget-wrap">
-                <img src="img/devel/map.jpg" class="map">
+                {{ if $gimme->article->has_map }}         
+                <figure class="map">
+                    {{ map show_locations_list="false" show_reset_link="false" width="100%" height="250" }}
+                </figure>  
+                {{ /if }}
+
                 <div class="badges">
                     <a href="#" class="map-badge">New in place <i class="icon-center"></i></a>
                     <a href="#" class="map-badge">Another new in place <i class="icon-center"></i></a>
