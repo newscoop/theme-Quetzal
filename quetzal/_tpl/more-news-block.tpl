@@ -23,7 +23,7 @@
                 {{/if}}
                     {{ list_articles length="4" order="byPublishDate desc" }}
                     <div class="article-content">
-                        <img class="article-image pull-left" src="http://placehold.it/70x45" >
+                        {{ include file='_tpl/img/img_70x45.tpl'}}
                         <div class="article-excerpt pull-left">
                             <a href="{{ uri options="article"}}" class="title">
                                 {{ $gimme->article->name}}

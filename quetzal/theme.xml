@@ -16,6 +16,7 @@
     </output>
     <renditions>
         <rendition name="thumb" width="150" height="100" specs="crop"/>
+        <rendition name="issuethumb" width="130" height="70" specs="crop"/>
         <rendition name="morenewsthumb" width="70" height="45" specs="crop"/>
         <rendition name="sectiontop" width="330" height="215" specs="crop"/>
         <rendition name="sectionthumb" width="202" height="152" specs="crop"/>

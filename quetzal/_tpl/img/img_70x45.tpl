@@ -1,3 +1,3 @@
-{{ image rendition="morenewsthumb" [width="70" height="45"] }}
-<img src="{{ $image->src }}" width="{{ $image->width }}" height="{{ $image->height }}" alt="{{ $image->photographer}}: {{ $image->caption }}" />
+{{ image rendition="morenewsthumb" }}
+<img class="article-image pull-left" src="{{ $image->src }}" width="{{ $image->width }}" height="{{ $image->height }}" alt="{{ $image->photographer}}: {{ $image->caption }}" />
 {{ /image }}

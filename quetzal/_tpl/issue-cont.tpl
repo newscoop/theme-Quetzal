@@ -7,9 +7,7 @@
         <hr>
 {{ /if }}    
         <article class="section-article archive-entry">
-            <figure class="pull-left article-image">
-                <img src="http://placehold.it/130x70" alt="Month Name">
-            </figure>
+            {{ include file='_tpl/img/img_130x70.tpl' }}
             <header>
                 <h1><a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a></h1>
                 <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time></span><br>
