@@ -7,10 +7,43 @@
             <a href="#"><img src="http://placehold.it/300x250" alt="Link title"></a>
         </div>
 
-        <!-- MORE NEWS WIDGET -->
+        <!-- RELATED NEWS WIDGET -->
+
         {{ list_related_articles }}
         {{ if $gimme->current_list->at_beginning }} 
-        <div class="widget-more-news hidden-tablet">
+        <div class="widget-more-news visible-desktop">
+            <header>
+                <h4>More news like this</h3>
+            </header>
+            <div class="widget-wrap">
+                <div class="news-content">
+                    
+                    <div class="visible-desktop">
+                        {{/if}}
+                        <div class="news-box">
+                            <img src="http://placehold.it/70x45" alt="News title here" class="pull-left">
+                            <div class="pull-right newtitle">
+                                <a href="{{ uri options="article"}}">{{ $gimme->article->name }}</a>
+                            </div>
+                            <div class="clearfix divider"></div>
+                            <div class="newdata">
+                                <span>{{ $gimme->article->comment_count }} comments</span> | 
+                                <a href="{{ uri options="article"}}" class="red-text">Read more +</a>
+                                <span class="date pull-right">Jan 28 2012, 4:35 pm</span>
+                            </div>
+                        </div>
+                        {{ if $gimme->current_list->at_end }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{ /list_related_articles}}
+
+        {{ list_related_articles }}
+        {{ if $gimme->current_list->at_beginning }} 
+        <div class="widget-more-news hidden-tablet hidden-desktop">
             <header>
                 <h4>More news like this</h3>
             </header>
@@ -19,8 +52,6 @@
                     
                     <div class="more-like-this-phone visible-phone">
                         {{/if}}
-                        {{ /list_related_articles  }}
-                        {{ list_related_articles }} 
                         <article>
                             <figure class="article-image">
                                 <a href="{{ uri options="article"}}">
@@ -36,34 +67,14 @@
                                 <div class="clearfix"></div>
                             </section>
                         </article>
-                        
-                    </div>
-                    {{ /list_related_articles  }}
-                    <div class="visible-desktop">
-                        {{ list_related_articles}}
-                        <div class="news-box">
-                            <img src="http://placehold.it/70x45" alt="News title here" class="pull-left">
-                            <div class="pull-right newtitle">
-                                <a href="{{ uri options="article"}}">{{ $gimme->article->name }}</a>
-                            </div>
-                            <div class="clearfix divider"></div>
-                            <div class="newdata">
-                                <span>{{ $gimme->article->comment_count }} comments</span> | 
-                                <a href="{{ uri options="article"}}" class="red-text">Read more +</a>
-                                <span class="date pull-right">Jan 28 2012, 4:35 pm</span>
-                            </div>
-                        </div>
-                        {{ /list_related_articles}}
-                        {{ list_related_articles}}
                         {{ if $gimme->current_list->at_end }}
                     </div>
 
                 </div>
             </div>
-            {{/if}}
-            {{ /list_related_articles}}
-
         </div>
+        {{/if}}
+        {{ /list_related_articles}}
 
         <!-- MAP WIDGET -->
         <div class="widget-map hidden-tablet">
