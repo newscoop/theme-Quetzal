@@ -58,7 +58,7 @@
         {{ set_current_issue }} 
         {{ list_articles length="4" order="bypopularity desc" constraints="type is news" }}
         <div class="mgzn-news-box">
-            <a href="{{ uri options="article" }}"><img src="http://placehold.it/72x46" alt="News Title" class="pull-left"></a>
+            <a href="{{ uri options="article" }}">{{ include file='_tpl/img/img_72x46.tpl'}}</a>
             <div class="mgzn-news-info pull-right">
                 <span><b>{{ $gimme->article->section->name }}</b></span><br>
                 <a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a>
