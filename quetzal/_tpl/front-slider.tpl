@@ -6,49 +6,28 @@
         data-cycle-pager="#no-template-pager"
         data-cycle-pause-on-hover="true"
         data-cycle-pager-template="">
+        {{ list_articles length="3" ignore_issue="true" ignore_section="true" order="bydate desc" constraints="highlight is on" }}   
         
         <div class="quetzal-slide" 
-            style="background-image: url(http://lorempixel.com/960/300/sports/)">
+            style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})">
             <div class="slide-title">
-                <span class="red-text">Culture</span>
-                <h3><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h3>
+                <span class="red-text">{{ $gimme->article->section->name }}</span>
+                <h3><a href="{{ uri options='article'}}">{{ $gimme->article->name}}</a></h3>
             </div>
             <div class="slide-description hidden-phone">
-                Vestibulum id ligula porta felis euismod semper. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere
-                <div class="slide-time">Today, 8:47 pm</div>
-                <a class="read-more red-text" href="#">Read more +</a>
+                {{ $gimme->article->full_text|truncate:100:"...":true }}
+                <div class="slide-time"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
+</div>
+                <a class="read-more red-text" href="{{ uri options='article'}}">Read more +</a>
             </div>
         </div>
-        <div class="quetzal-slide" 
-            style="background-image: url(http://lorempixel.com/960/300/cats/)">
-            <div class="slide-title">
-                <span class="red-text">Sports</span>
-                <h3><a href="#">Lorem Dolor Fusce Risus</a></h3>
-            </div>
-            <div class="slide-description hidden-phone">
-                Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Integer posuere Vestibulum id ligula porta felis euismod semper. 
-                <div class="slide-time">Today, 10:30 pm</div>
-                <a class="read-more red-text" href="#">Read more +</a>
-            </div>
-        </div>
-        <div class="quetzal-slide" 
-            style="background-image: url(http://lorempixel.com/960/300/people/)">
-            <div class="slide-title">
-                <span class="red-text">Business</span>
-                <h3><a href="#">Lorem Mollis Vestibulum Fermentum Lorem</a></h3>
-            </div>
-            <div class="slide-description hidden-phone">
-                Pellentesque Aenean eu leo quam.  Vestibulum id ligula porta felis euismod semper. ornare sem lacinia quam venenatis vestibulum. Integer posuere
-                <div class="slide-time">Tomorrow, 12:30 pm</div>
-                <a class="read-more red-text" href="#">Read more +</a>
-            </div>
-        </div>
+        {{ /list_articles}}
     </div>
 
     <div id="no-template-pager" class="cycle-pager external quetzal-slideshow-pager pager-default">
-        <a href=""><img src="http://placehold.it/68x45"></a>
-        <a href=""><img src="http://placehold.it/68x45"></a>
-        <a href=""><img src="http://placehold.it/68x45"></a>
+        {{ list_articles length="3" ignore_issue="true" ignore_section="true" order="bydate desc" constraints="highlight is on" }}   
+        <a href="">{{ include file="_tpl/img/img_68x45.tpl" }}</a>
+        {{ /list_articles}}
     </div>
 
     <!-- POPULAR NEWS -->
