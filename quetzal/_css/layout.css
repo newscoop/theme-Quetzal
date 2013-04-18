@@ -365,6 +365,10 @@ h6 a:hover {
   text-align: right;
   margin: 0px;
   padding: 0px 5px;
+  color: #fff;
+  text-shadow: 0px 1px 3px #000000;
+  -moz-text-shadow: 0px 1px 3px #000000;
+  -webkit-text-shadow: 0px 1px 3px #000000;
 }
 #quetzal-slideshow .quetzal-popular-news .mgzn-news-box {
   margin-bottom: 10px;
