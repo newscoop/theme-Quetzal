@@ -2709,8 +2709,14 @@ i.icon-center {
   margin-bottom: 8px;
 }
 .widget-map .map {
-  margin-bottom: 10px;
+  margin: 0px 0px 10px 0px;
   width: 100%;
+}
+.widget-map .geomap_open_large_map a {
+  color: #d55436;
+  color: #d55436;
+  text-decoration: none;
+  font-size: 12px;
 }
 .widget-map .map-badge {
   display: inline-block;

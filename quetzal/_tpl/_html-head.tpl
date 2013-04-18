@@ -40,4 +40,9 @@
        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
        <script>window.html5 || document.write('<script src="{{ url static_file='_js/vendor/html5shiv.js'}}"><\/script>')</script>
    <![endif]-->
+
+   <!-- jQuery Library -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ url static_file='_js/vendor/jquery-1.9.1.min.js'}}"><\/script>')</script>
+
   </head>
