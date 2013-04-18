@@ -7,12 +7,12 @@
                 15 February 2012 By <a href="#" class="red-text">James Q. Reporter</a>, <a href="#" class="red-text">Sarah Staffwriter</a> <span class="pull-right visible-desktop">Location(s): Prague, Vilnius</span> <span class="visible-phone">Location(s): Prague, Vilnius</span>
             </span>
             <div class="clearfix"></div>
-            {{ include file="_tpl/img/img-desktop_300x300.tpl"}}
+            {{ include file="_tpl/img/img_300x300.tpl"}}
             <h1>{{ $gimme->article->name }}</h1>
         </header>
 
         <section class="article-content">
-            {{ include file="_tpl/img/img-mobile_300x300.tpl"}}
+            {{ include file="_tpl/img/img_300x300.tpl" where="mobile"}}
             {{ include file="_tpl/_edit-article.tpl" }}{{ $gimme->article->full_text }}
         </section>
 
