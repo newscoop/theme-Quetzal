@@ -26,5 +26,6 @@
         <rendition name="slidermostpopular" width="72" height="46" specs="crop"/>
         <rendition name="sliderfeatured" width="68" height="45" specs="crop"/>
         <rendition name="square" width="150" height="150" specs="crop"/>
+        <rendition name="asidethumb" width="130" height="98" specs="crop"/>
     </renditions>
 </theme>

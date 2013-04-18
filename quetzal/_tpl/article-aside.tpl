@@ -21,7 +21,7 @@
                     <div class="visible-desktop">
                         {{/if}}
                         <div class="news-box">
-                            <img src="http://placehold.it/70x45" alt="News title here" class="pull-left">
+                            {{ include file='_tpl/img/img_70x45.tpl' where='aside'}}
                             <div class="pull-right newtitle">
                                 <a href="{{ uri options="article"}}">{{ $gimme->article->name }}</a>
                             </div>
@@ -55,7 +55,7 @@
                         <article>
                             <figure class="article-image">
                                 <a href="{{ uri options="article"}}">
-                                    <img src="http://placehold.it/130x98" alt="News Title">
+                                    {{ include file='_tpl/img/img_130x98.tpl' }}
                                 </a>
                             </figure>
                             <section class="article-content">
