@@ -7,7 +7,7 @@
         <article class="span8 section-article section-featured">                                        
             <figure class="pull-left article-image">
                 <a href="{{ uri options="article" }}">
-                    <img src="http://placehold.it/330x215" alt="News Title">
+                    {{ include file='_tpl/img/img_330x215.tpl'}} 
                 </a>
             </figure>
             <span class="red-text">Business</span>
@@ -30,8 +30,8 @@
         <article class="span8 section-article">
             <figure class="pull-left article-image">
                 <a href="{{ uri options="article" }}">
-                    <img class="hidden-tablet" src="http://placehold.it/202x152" alt="News Title">
-                    <img class="visible-tablet" src="http://placehold.it/225x150" alt="News Title">
+                    {{ include file='_tpl/img/img_202x152.tpl'}} 
+                    {{ include file='_tpl/img/img_225x150.tpl'}} 
                 </a>
             </figure>
             <span class="red-text">Business</span>
