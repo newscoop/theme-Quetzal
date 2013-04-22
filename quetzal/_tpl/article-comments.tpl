@@ -11,9 +11,13 @@
     {{list_article_comments order="bydate desc"}}
     <div class="row comment-box" id="comment-{{$gimme->current_list->index}}">
         <div class="span1">
-            <a href="#" class="avatar">
-                <img src="http://placehold.it/60x60" alt="Author's Name">
+            {{ if $gimme->comment->user->identifier }}
+            <a href="http://{{ $gimme->publication->site }}/user/profile/{{ $gimme->comment->user->uname|urlencode }}" class="avatar">
+                <img src="{{ include file='_tpl/user-image.tpl' user=$user width=60 height=60 }}" alt="{{ $gimme->comment->user->uname }}">
             </a>
+            {{ else }}
+                <img src="{{ include file='_tpl/user-image.tpl' user=$user width=60 height=60 }}" alt="{{ $gimme->comment->user->uname }}">
+            {{ /if }}
         </div>
         <div class="span7 comment-content">                                                
             <h4 class="pull-left comment-author red-text">
