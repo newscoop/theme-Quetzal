@@ -50,7 +50,90 @@
                 <a href="#" class="red-text">Login or Sign Up</a>
             </div>                                                
         </div>
-        {{ comment_form html_code="id=\"commentform\"" _button="submit" button_html_code="tabindex=\"6\" class=\"btn btn-large pull-right\" " }}
+        {{ if !$gimme->publication->public_comments }}
+            <!-- public comments are not allowed-->
+            {{ if $gimme->user->logged_in }}
+                <!-- user is logged in -->
+                {{ if $gimme->article->number && $gimme->article->comments_locked == 0 && $gimme->article->comments_enabled == 1}}
+                    {{ if $gimme->submit_comment_action->defined && $gimme->submit_comment_action->rejected }}
+                    <p><em>Your comment has not been accepted.</em></p>
+                    {{ /if }}
+
+                    {{ if $gimme->submit_comment_action->is_error }}
+                        <p><em>{{ $gimme->submit_comment_action->error_message }}</em></p>
+                    {{ else }}
+                        {{ if $gimme->submit_comment_action->defined }}
+                            {{ if $gimme->publication->moderated_comments }}
+                                <p><em>Your comment has been sent for approval.</em></p>
+                            {{ /if }}
+                        {{ /if }}   
+                    {{ /if }}
+            {{ comment_form html_code="id=\"commentform\"" _button="submit" button_html_code="tabindex=\"6\" class=\"btn btn-large pull-right\" " }}
+            <div class="row">                                                
+                <div class="span4">
+                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
+                </div>
+                <div class="span4">
+                    {{ recaptcha }}
+                </div>
+            </div>
+            {{ /comment_form }}
+            {{ else }}
+                <p>Comments are locked / disabled for this article.</p>
+            {{ /if }}
+        {{ else }}
+            <p>You have to be registered in order to comment on articles and send messages directly to the editorial team. Please login or create a free user account.</p>
+        {{ /if }}
+    {{ else }}
+        <!-- public comments are allowed-->
+        {{ if $gimme->user->logged_in }}
+            {{ if $gimme->article->number && $gimme->article->comments_locked == 0 && $gimme->article->comments_enabled == 1}}
+            {{ if $gimme->submit_comment_action->defined && $gimme->submit_comment_action->rejected }}
+                <p><em>Your comment has not been accepted.</em></p>
+            {{ /if }}
+
+            {{ if $gimme->submit_comment_action->is_error }}
+                <p><em>{{ $gimme->submit_comment_action->error_message }}</em></p>
+            {{ else }}
+                {{ if $gimme->submit_comment_action->defined }}
+                    {{ if $gimme->publication->moderated_comments }}
+                        <p><em>Your comment has been sent for approval.</em></p>
+                    {{ /if }}
+                {{ /if }}   
+            {{ /if }}
+
+            {{ comment_form html_code="id=\"commentform\"" _button="submit" button_html_code="tabindex=\"6\" class=\"btn btn-large pull-right\" " }}
+            <div class="row">                                                
+                <div class="span4">
+                    {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
+                </div>
+                <div class="span4">
+                    {{ recaptcha }}
+                </div>
+            </div>
+            {{ /comment_form }}
+            {{ else }}
+                <p>Comments are locked / disabled for this article.</p>
+            {{ /if }}
+        {{ else }}
+            <!-- user is not logged in -->
+            {{ if $gimme->article->number && $gimme->article->comments_locked == 0 && $gimme->article->comments_enabled == 1}}
+                {{ if $gimme->submit_comment_action->defined && $gimme->submit_comment_action->rejected }}
+                    <p><em>Your comment has not been accepted.</em></p>
+                {{ /if }}
+
+                {{ if $gimme->submit_comment_action->is_error }}
+                    <p><em>{{ $gimme->submit_comment_action->error_message }}</em></p>
+                {{ else }}
+                    {{ if $gimme->submit_comment_action->defined }}
+                        {{ if $gimme->publication->moderated_comments }}
+                            <p><em>Your comment has been sent for approval.</em></p>
+                        {{ /if }}
+                    {{ /if }}   
+                {{ /if }}
+
+
+            {{ comment_form html_code="id=\"commentform\"" _button="submit" button_html_code="tabindex=\"6\" class=\"btn btn-large pull-right\" " }}
             <div class="row">                                                
                 <div class="span4">
                     {{ camp_edit object="comment" attribute="nickname" html_code="id=\"author\" tabindex=\"1\" placeholder=\"Your name\" " }}
@@ -63,5 +146,11 @@
             </div>
 
         {{ /comment_form }}
+            {{ else }}
+            <p>Comments are locked / disabled for this article.</p>
+        {{ /if }}
+    {{ /if }}
+{{ /if }}
+
 </section>
 <!--  end _tpl/article-comments.tpl-->
