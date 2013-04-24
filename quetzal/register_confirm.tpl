@@ -18,6 +18,7 @@
                         <h3>Please fill your data</h3>
                         <fieldset class="background-block">
                         {{ $form }}
+                        </fieldset>
 
                         <script type="text/javascript">
                         $('#first_name, #last_name').keyup(function() {
@@ -43,7 +44,6 @@
                             $(this).change();
                         });
                         </script>
-                        </fieldset>
                     </div> 
                     {{ include file="_tpl/user-sidebar.tpl" }}          
 

@@ -15,7 +15,10 @@
             <section id="content">
                 <div class="row home-featured-news">
                     <div class="span8">
+                        <h3>Register</h3>
+                        <fieldset class="background-block">
                         {{ $form }}
+                        </fieldset>
                         <script type="text/javascript">
                         $('#email').change(function() {
                             $.post('{{ $view->url(['controller' => 'register', 'action' => 'check-email'], 'default') }}?format=json', {
