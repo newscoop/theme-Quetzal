@@ -1,8 +1,11 @@
 <!-- sidebar -->
 <div class="span4">
+    
+    <!-- ADVERTISEMENTS -->
     <div class="advertisements visible-desktop">
-        <a href="#"><img src="http://placehold.it/300x250" alt="Link title"></a>
+        <a href="http://www.sourcefabric.org/" target="_blank"><img src="{{ url static_file='_img/sourcefabric-336x280.png' }}"></a>
     </div>
+
     <!-- TABS SIDEBAR -->
     <div class="sidebar-widget-tabs visible-desktop">
         <ul class="nav nav-tabs">

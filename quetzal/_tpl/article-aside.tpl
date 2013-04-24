@@ -4,7 +4,7 @@
         
         <!-- ADVERTISEMENTS -->
         <div class="advertisements visible-desktop">
-            <a href="#"><img src="http://placehold.it/300x250" alt="Link title"></a>
+            <a href="http://www.sourcefabric.org/" target="_blank"><img src="{{ url static_file='_img/sourcefabric-336x280.png' }}"></a>
         </div>
 
         <!-- RELATED NEWS WIDGET -->
@@ -83,18 +83,10 @@
                     {{ map show_locations_list="false" show_reset_link="false" width="100%" height="250" }}
                 </figure>  
                 {{ /if }}
-
-                <div class="badges">
-                    <a href="#" class="map-badge">New in place <i class="icon-center"></i></a>
-                    <a href="#" class="map-badge">Another new in place <i class="icon-center"></i></a>
-                    <a href="#" class="map-badge">New in place <i class="icon-center"></i></a>
-                </div>
             </section>
             <footer>
                 <hr>
-                <div class="widget-wrap">
-                    <i class="icon-center"></i> Center a place
-                </div>
+
             </footer>
         </div>
 
