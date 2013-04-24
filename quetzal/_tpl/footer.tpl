@@ -3,6 +3,7 @@
             <div class="container">                
                 <!-- FOOTER INFO -->
                 <div class="row footer-info">
+
                     <div class="span3 about-us right-separator visible-desktop">
                         <h4>About us</h4>
                         <div class="pad10right">
