@@ -35,6 +35,12 @@
                 {{ list_map_locations }}
                 {{ assign var="latitude" value=$gimme->location->latitude }}
                 {{ assign var="longitude" value=$gimme->location->longitude }}
+                {{* If for example you want to show articles close to current location,
+                rectangle in list_articles can be specified like 
+                location="$latitude-1/60 $longitude-1/60,$latitude+1/60 $longitude+1/60"
+                that should return all articles geolocated 1 minute or closer to the location.
+                Details about list_articles are here:
+                https://wiki.sourcefabric.org/display/NsLingo/List+of+Articles *}}
                 <a class="map-badge" href="#myModal{{ $gimme->current_list->index }}" role="button" data-toggle="modal">{{ $gimme->location->name }} <i class="icon-center"></i></a>
                 <div id="myModal{{ $gimme->current_list->index }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-header">
@@ -43,27 +49,30 @@
                     </div>
                     <div class="modal-body">
                         {{ list_articles length="3" ignore_issue="true" ignore_section="true" order="bypublishdate desc" location="$latitude $longitude, $latitude $longitude" constraints="type is news" }}
-                        <a href="{{ url options="article" }}">{{ $gimme->article->name }}</a>
+                        <article class="section-article">
+                            <figure class="pull-left article-image">
+                                <a href="{{ uri options="article" }}">
+                                    {{ include file='_tpl/img/img_202x152.tpl'}} 
+                                    {{ include file='_tpl/img/img_225x150.tpl'}} 
+                                </a>
+                            </figure>
+                            <header>
+                                <h1>{{$gimme->article->name}}</h1>
+                            </header>
+                            <div class="article-excerpt">
+                                {{ $gimme->article->full_text|truncate:200:"...":true}}
+                            </div>  
+                            <div class="article-links">
+                                <a href="{{ uri options="article" }}" class="red-text negrita-weight">Read more +</a>
+                            </div>
+                            <div class="clearfix"></div>
+                        </article>
                         {{ /list_articles }} 
                     </div>
-                    <div class="modal-footer">
-                        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-                        <button class="btn btn-primary">Save changes</button>
-                    </div>
                 </div>
-
-                {{* If for example you want to show articles close to current location,
-                rectangle in list_articles can be specified like 
-                location="$latitude-1/60 $longitude-1/60,$latitude+1/60 $longitude+1/60"
-                that should return all articles geolocated 1 minute or closer to the location.
-                Details about list_articles are here:
-                https://wiki.sourcefabric.org/display/NsLingo/List+of+Articles *}}
-                
                 {{ /list_map_locations }}
             </div>
         </section>
-        <footer>
-            <hr>
-        </footer>
+
     </div>
 </div>

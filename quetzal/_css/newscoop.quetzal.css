@@ -1336,6 +1336,13 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 .user-entry .user-picture {
   margin-right: 15px;
 }
+.modal-body .article-image {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.olFramedCloudPopupContent {
+  margin-left: 15px;
+}
 /* End bootstrap override */
 @media (min-width: 768px) and (max-width: 979px) {
   .row,
@@ -2792,6 +2799,38 @@ i.icon-center {
 .widget-map hr {
   border-top: 1px solid #282e36;
   border-bottom: none;
+}
+.modal-body {
+  color: #333;
+}
+.modal-body .article-links a {
+  color: #D55436;
+}
+.modal-header h3 {
+  font-family: 'Asap', sans-serif;
+  font-family: 'Asap', sans-serif;
+  color: #333;
+}
+.popup_title {
+  font-size: 13px !important;
+  color: #333 !important;
+  font-weight: bold;
+  margin: 3px 0px !important;
+  max-width: 190px !important;
+}
+.popup_text {
+  color: #707070;
+  font-size: 12px !important;
+}
+.article_backlinks ul li {
+  line-height: 15px;
+}
+.article_backlinks a {
+  color: #c52500 !important;
+  font-size: 11px;
+}
+.olFramedCloudPopupContent {
+  margin-left: 15px;
 }
 .social-buttons a {
   padding-left: 23px !important;

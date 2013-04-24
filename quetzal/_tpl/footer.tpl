@@ -86,22 +86,58 @@
                                     open_map_on_click=false
                                     popup_width="1000"
                                     popup_height="750"
-                                    max_zoom=15
+                                    max_zoom=16
                                     map_margin=20
                                     area_show="focus"
                                 }}
                                 </figure>
                                 <div class="badges">
-                                    <a href="#" class="map-badge">New in place <i class="icon-center"></i></a>
-                                    <a href="#" class="map-badge">Another new in place <i class="icon-center"></i></a>
-                                    <a href="#" class="map-badge">New in place <i class="icon-center"></i></a>
+                                    {{ list_map_locations }}
+                                    {{ assign var="latitude" value=$gimme->location->latitude }}
+                                    {{ assign var="longitude" value=$gimme->location->longitude }}
+                                    {{* If for example you want to show articles close to current location,
+                                    rectangle in list_articles can be specified like 
+                                    location="$latitude-1/60 $longitude-1/60,$latitude+1/60 $longitude+1/60"
+                                    that should return all articles geolocated 1 minute or closer to the location.
+                                    Details about list_articles are here:
+                                    https://wiki.sourcefabric.org/display/NsLingo/List+of+Articles *}}
+                                    <a class="map-badge" href="#myModal-footer{{ $gimme->current_list->index }}" role="button" data-toggle="modal">{{ $gimme->location->name }} <i class="icon-center"></i></a>
+                                    <div id="myModal-footer{{ $gimme->current_list->index }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                            <h3 id="myModalLabel">Latest news from {{ $gimme->location->name }}</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            {{ list_articles length="3" ignore_issue="true" ignore_section="true" order="bypublishdate desc" location="$latitude $longitude, $latitude $longitude" constraints="type is news" }}
+                                            <article class="section-article">
+                                                <figure class="pull-left article-image">
+                                                    <a href="{{ uri options="article" }}">
+                                                        {{ include file='_tpl/img/img_202x152.tpl'}} 
+                                                        {{ include file='_tpl/img/img_225x150.tpl'}} 
+                                                    </a>
+                                                </figure>
+                                                <header>
+                                                    <h1>{{$gimme->article->name}}</h1>
+                                                </header>
+                                                <div class="article-excerpt">
+                                                    {{ $gimme->article->full_text|truncate:200:"...":true}}
+                                                </div>  
+                                                <div class="article-links">
+                                                    <a href="{{ uri options="article" }}" class="red-text negrita-weight">Read more +</a>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                            </article>
+                                            {{ /list_articles }} 
+                                        </div>
+                                    </div>
+                                    {{ /list_map_locations }}
                                 </div>
                             </section>
                             <div class="widget-footer">
                                 <hr>
                                 <div class="widget-wrap">
-                                    <i class="icon-center"></i> Center a place
                                     <a href="#" class="btn btn-red pull-right">Back to Top</a>
+                                    <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>
