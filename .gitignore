@@ -1,6 +1,7 @@
 *.swp
 *.swo
 templates
+theme
 Makefile
 *.sublime-project
 *.sublime-workspace
