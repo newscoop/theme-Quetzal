@@ -59,6 +59,7 @@
                         </div>
                     </div>
 
+                    {{ if $gimme->section->name }}
                     <!-- FOOTER TABLET VISIBLE HOME ONLY -->
                     <div class="span12 visible-tablet tablet-map">
                         <div class="widget-map">                            
@@ -104,6 +105,7 @@
                                 </div>
                             </div>
                         </div>
+                        {{ /if }}
                     </div>
 
                     <!-- FOOTER MOBILE VISIBLE -->
