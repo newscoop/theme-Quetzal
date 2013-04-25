@@ -10,8 +10,10 @@
                     {{ include file='_tpl/img/img_330x215.tpl'}} 
                 </a>
             </figure>
-            <span class="red-text">Business</span>
+            <span class="red-text">{{ $gimme->article->section->name }}</span>
+            {{ if !$gimme->article->content_accessible }}
             <span class="label label-important normal-weight">premium</span>
+            {{ /if }}
             <header>
                 <h1>{{ $gimme->article->name }}</h1>
                 <span class="article-date">Jan 28 2012, 4:35 am</span>
@@ -34,8 +36,10 @@
                     {{ include file='_tpl/img/img_225x150.tpl'}} 
                 </a>
             </figure>
-            <span class="red-text">Business</span>
+            <span class="red-text">{{ $gimme->article->section->name }}</span>
+            {{ if !$gimme->article->content_accessible }}
             <span class="label label-important normal-weight">premium</span>
+            {{ /if }}
             <header>
                 <h1>{{$gimme->article->name}}</h1>
                 <span class="article-date">Jan 28 2012, 4:35 am</span>

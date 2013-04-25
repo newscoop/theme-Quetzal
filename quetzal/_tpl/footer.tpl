@@ -141,8 +141,8 @@
                                 </div>
                             </div>
                         </div>
-                        {{ /if }}
                     </div>
+                    {{ /if }}
 
                     <!-- FOOTER MOBILE VISIBLE -->
                     <div class="span12 visible-phone action-buttons">
