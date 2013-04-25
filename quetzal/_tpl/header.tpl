@@ -10,7 +10,8 @@
                         </div>
                         <a href="#" class="pull-left white-text visible-phone login-link">
                             <i class="icon-user icon-white"></i> Login
-                        </a>                        
+                        </a>
+                        <a href="/user" class="pull-left white-text visible-phone">&nbsp;|&nbsp;Community</a>                         
                         <ul class="nav pull-right social-buttons">
                           <li class="hidden-phone"><a href="#" class="fb">Be our fan</a></li>
                           <li class="hidden-phone"><a href="#" class="tw">Follow Us</a></li>
@@ -74,6 +75,7 @@
                     
                     <ul class="nav pull-right login-nav">
                         <li class="dropdown">
+                            <a href="/user" class="white-text">Community</a>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 Login <b class="caret"></b>
                             </a>
@@ -111,8 +113,11 @@
 
             <ul class="nav visible-tablet pull-right login-nav login-nav-tablet">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle btn btn-gray" data-toggle="dropdown">
+                    <a href="#" class="dropdown-toggle btn btn-gray pull-left" data-toggle="dropdown">
                         <i class="icon-user icon-white"></i> Login
+                    </a>
+                    <a href="/user" class="btn btn-gray pull-left">
+                         Community
                     </a>
                     <ul class="dropdown-menu">                        
                         <form style="margin: 0px" accept-charset="UTF-8" action="." method="post">
