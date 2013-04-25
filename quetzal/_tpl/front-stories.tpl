@@ -43,6 +43,9 @@
                     <header>
                         <span class="red-text">{{ $gimme->article->section->name}}</span>
                         <h1><a href="{{url option='article'}}">{{ $gimme->article->name}}</a></h1>
+                        {{ if !$gimme->article->content_accesible }}
+                        <span class="label label-important normal-weight">premium</span>
+                        {{ /if }} 
                         <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
 </span>
                     </header>
