@@ -49,10 +49,11 @@
 
                     </div>
                     <div class="span5">
-                        <form id="seachform" action="" method="GET">
+                        <form id="seachform" action="/{{ $gimme->language->code }}/{{ $gimme->issue->url_name }}/" method="POST">
                             <div class="input-append pull-right">
-                                <input type="search" placeholder="Search" name="search">
-                                <button class="btn" type="button"><i class="icon-search"></i></button>
+                                <input type="hidden" name="tpl" value="7">
+                                <input type="search" placeholder="Search" name="f_search_keywords">
+                                <button class="btn" type="button" name="f_search_articles"><i class="icon-search"></i></button>
                             </div>
                             <div class="clearfix"></div>
                         </form>

@@ -49,7 +49,7 @@
             </div>  
             <div class="article-links hidden-phone">
                 <hr>
-                <a href="#" class="comments-link">{{ $gimme->article->comment_count }} Comments</a> | <a href="{{ uri options="article" }}" class="red-text negrita-weight">Read more +</a>
+                <a href="{{ uri options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} Comments</a> | <a href="{{ uri options="article" }}" class="red-text negrita-weight">Read more +</a>
             </div>
             <div class="clearfix"></div>
         </article>
