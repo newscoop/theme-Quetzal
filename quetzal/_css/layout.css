@@ -202,9 +202,6 @@ a.red-text:hover {
 .label {
   padding: 0px 4px 2px 4px;
 }
-input {
-  -webkit-appearance: none !important;
-}
 h1 a,
 h2 a,
 h3 a,
@@ -878,6 +875,29 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 }
 .olFramedCloudPopupContent {
   margin-left: 15px;
+}
+.quetzal-form {
+  padding-right: 30px;
+}
+.quetzal-form:after {
+  content: " ";
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+.zend_form dt {
+  float: left;
+  margin-right: 3.8%;
+  width: 39.45%;
+}
+.zend_form input[type="text"] {
+  width: 100%;
+}
+.zend_form dd {
+  margin-left: 0;
+  width: 56.75%;
+  float: left;
 }
 /* End bootstrap override */
 @media (min-width: 768px) and (max-width: 979px) {

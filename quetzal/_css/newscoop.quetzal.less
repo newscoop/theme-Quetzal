@@ -15,7 +15,61 @@ h1, h2, h3, h4, h5, h6{
     padding-right: 10px;
 }
 
+// COLORS
+
+@red1: #d55436;
+@red2: #c52500;
+
+.noborder {
+  border: none !important;
+}
+.white-text{
+  color: #fff;
+}
+.red-text{
+  .text-error;
+}
+.gray-text{
+  color: #777;
+}
+
+// CUSTOM BUTTONS
+
+.btn-red, .btn-gray, .btn-orange{
+  color: #fff !important;
+  border: none;
+  &:hover, &:focus{
+      background: none;      
+      background-position: 0 0 !important;
+  }
+}
+
+.btn-red{
+  .text-shadow(0px, -1px, 0px, #901600);
+  .linear-gradient(#ca3500, #bb1c00, 10%);
+  &:hover, &:focus{
+      .linear-gradient(#ca3500, #bb1c00, 70%);
+  }
+}
+
+.btn-gray{
+  .text-shadow(0px, -1px, 0px, #40464d);
+  .linear-gradient(#636b75, #444d57, 10%);
+  &:hover, &:focus{
+      .linear-gradient(#636b75, #444d57, 70%);
+  }
+}
+
+.btn-orange{
+  .text-shadow(0px, -1px, 0px, #bb4c00);
+  .linear-gradient(#ff7300, #ff5500, 10%);
+  &:hover, &:focus{
+      .linear-gradient(#ff7300, #ff5500, 70%);
+  }
+}
+
 // HEADER STYLES
+
 header[role='banner']{
     background: #171b20 url(../_img/header-back.png) top repeat-x;
     .navbar{margin-bottom: 8px}
@@ -874,3 +928,12 @@ i.icon-center{
     }
 }
 
+// REGISTRATION AND LOGIN FORM
+
+.zend_form{
+    input[type="submit"]{
+.btn-red;
+padding:8px 10px;
+.rounded-corners(4px);      
+    }
+}

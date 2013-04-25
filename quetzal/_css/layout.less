@@ -39,10 +39,6 @@ a.red-text{
 
 .label{padding: 0px 4px 2px 4px}
 
-input {
-    -webkit-appearance: none !important;        
-}
-
 h1, h2, h3, h4, h5, h6{
     a, a:hover{
         color: #000;        
@@ -724,6 +720,34 @@ article.main-article{
 
 .olFramedCloudPopupContent{
     margin-left: 15px;
+}
+
+
+// REGISTRATION AND LOGIN FORM
+.quetzal-form{
+    padding-right: 30px;
+    &:after{
+        content: " ";
+        display: block;
+        height: 0;
+        overflow: hidden;
+        clear:both;
+    }
+}
+.zend_form{
+    dt {
+        float: left;
+        margin-right: 3.8%;
+        width: 39.45%;
+    }
+    input[type="text"]{
+        width: 100%;
+    }
+    dd {
+        margin-left: 0;
+        width: 56.75%;
+        float: left;
+    }
 }
 
 /* End bootstrap override */
