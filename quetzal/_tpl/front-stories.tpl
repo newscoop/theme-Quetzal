@@ -4,7 +4,7 @@
     <div class="row">
         <article class="span8 most-prominent">
             <figure class="pull-left article-image">
-                <a href="{{uri optio='article'}}">
+                <a href="{{uri option='article'}}">
                     {{ include file='_tpl/img/img_202x152.tpl'}}
                     {{ include file='_tpl/img/img_225x150.tpl'}}
                 </a>

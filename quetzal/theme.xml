@@ -19,8 +19,8 @@
         <rendition name="issuethumb" width="130" height="70" specs="crop"/>
         <rendition name="morenewsthumb" width="70" height="45" specs="crop"/>
         <rendition name="sectiontop" width="330" height="215" specs="crop"/>
-        <rendition name="sectionthumb" width="202" height="152" specs="crop"/>
-        <rendition name="sectionthumbtablet" width="225" height="150" specs="crop"/>
+        <rendition name="section" width="202" height="152" specs="crop"/>
+        <rendition name="sectiontablet" width="225" height="150" specs="crop"/>
         <rendition name="articlesquare" width="300" height="300" specs="crop"/>
         <rendition name="slider" width="960" height="300" specs="crop"/>
         <rendition name="slidermostpopular" width="72" height="46" specs="crop"/>
