@@ -30,18 +30,28 @@
         <div class="container">
             <section id="content">
                 <div class="row home-featured-news">
-                    <div class="span8">
+                    <div class="span4 visible-desktop">
                         <center>
                         <span class="label">Current avatar</span><br>
                             <figure class="user-image">
                                 <img src="{{ include file="_tpl/user-image.tpl" user=$user width=175 height=210 }}" style="max-width: 100%" rel="resizable" />
                             </figure>
                         </center>
+                    </div>
+                    <div class="span8 hidden-desktop">
+                        <center>
+                        <span class="label">Current avatar</span><br>
+                            <figure class="user-image">
+                                <img src="{{ include file="_tpl/user-image.tpl" user=$user width=175 height=210 }}" style="max-width: 100%" rel="resizable" />
+                            </figure>
+                        </center>
+                    </div>
+                    <div class="span8">
                         <div class="quetzal-form well">
                             {{ $form }}
                         </div>
                     </div>
-                    {{ include file="_tpl/user-sidebar.tpl" }}          
+
                 </div> <!--end div class="row"-->
             </section> <!-- end section id=content -->
         </div> <!-- end div class='container' -->
