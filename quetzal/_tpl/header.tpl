@@ -8,7 +8,7 @@
                         <div class="pull-left welcome hidden-phone">
                             <span class="red-text">Welcome,</span> 01/29/2012
                         </div>
-                        <a href="#" class="pull-left white-text visible-phone login-link">
+                        <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="pull-left white-text visible-phone login-link">
                             <i class="icon-user icon-white"></i> Login
                         </a>
                         <a href="/user" class="pull-left white-text visible-phone">&nbsp;|&nbsp;Community</a>                         
@@ -81,12 +81,12 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- LOGIN FORM TWITTER STYLE XD -->
-                                <form style="margin: 0px" accept-charset="UTF-8" action="." method="post">
+                                <form style="margin: 0px" accept-charset="UTF-8" action="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" method="post">
                                     <fieldset class='textbox' style="padding:10px">
-                                        <input style="margin-top: 8px" type="text" placeholder="Username" />
-                                        <input style="margin-top: 8px" type="password" placeholder="Passsword" />
+                                        <input name="email" id="email" style="margin-top: 8px" type="text" placeholder="Email" />
+                                        <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
                                         <button class="btn btn-danger" name="submit" type="submit">Log In</button>
-                                        or <a href="#" class="red-text negrita-weight">Sign Up</a>
+                                        or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">Sign Up</a>
                                     </fieldset>
                                 </form>
                             </ul>
@@ -102,11 +102,9 @@
                         Sections
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="pull-left"><a class="btn" href="#">News</a></li>
-                        <li class="pull-left"><a class="btn" href="#">Sports</a></li>
-                        <li class="pull-left"><a class="btn" href="#">Culture</a></li>
-                        <li class="pull-left"><a class="btn" href="#">Business</a></li>
-                        <li class="pull-left"><a class="btn" href="#">Money</a></li>
+                        {{ list_sections }}
+                        <li class="pull-left"><a class="btn" href="{{ uri option="section"}}">{{ $gimme->section->name}}</a></li>
+                        {{ /list_sections }}
                     </ul>
                 </li>
             </ul>
@@ -120,12 +118,12 @@
                          Community
                     </a>
                     <ul class="dropdown-menu">                        
-                        <form style="margin: 0px" accept-charset="UTF-8" action="." method="post">
+                        <form style="margin: 0px" accept-charset="UTF-8" action="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" method="post">
                             <fieldset class='textbox' style="padding:10px">
-                                <input style="margin-top: 8px" type="text" placeholder="Username" />
-                                <input style="margin-top: 8px" type="password" placeholder="Passsword" />
+                                <input name="email" id="email" style="margin-top: 8px" type="text" placeholder="Email" />
+                                <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
                                 <button class="btn btn-danger" name="submit" type="submit">Log In</button>
-                                or <a href="#" class="red-text negrita-weight">Sign Up</a>
+                                or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">Sign Up</a>
                             </fieldset>
                         </form>
                     </ul>
