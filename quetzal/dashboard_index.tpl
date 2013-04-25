@@ -8,26 +8,40 @@
 {{ include file="_tpl/header.tpl" }}
 <section role="main" class="internal-page section-page">
     <div class="wrapper">
-
-        {{ include file="_tpl/dashboard-header.tpl" }}
+        <header class="section-header">
+            <div class="container">
+                <div class="row">
+                    <div class="span10">
+                        <div class="breadcrumbs">
+                            <h2>Welcome {{ $user->name }}</h2>
+                        </div>
+                    </div>
+                    <div class="span2 section-rss">
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="span12 more-news-tabs tab-sections">
+                        <a class="back-link visible-phone" href="#">&larr; Back</a>
+                    </div>
+                </div>                       
+            </div>
+        </header>
 
         <div class="container">
             <section id="content">
                 <div class="row home-featured-news">
-                    <div class="span4">
-                        <header>
-                            <h3>Welcome {{ $user->name }}</h3>
-                        </header>
-
-                        {{ $form }}
+                    <div class="span8">
+                        <center>
+                        <span class="label">Current avatar</span><br>
+                            <figure class="user-image">
+                                <img src="{{ include file="_tpl/user-image.tpl" user=$user width=175 height=210 }}" style="max-width: 100%" rel="resizable" />
+                            </figure>
+                        </center>
+                        <div class="quetzal-form well">
+                            {{ $form }}
+                        </div>
                     </div>
-                    <div class="span4">
-                        <figure class="user-image threecol">
-                            <img src="{{ include file="_tpl/user-image.tpl" user=$user width=175 height=210 }}" style="max-width: 100%" rel="resizable" />
-                        </figure>
-                    </div>
-                {{ include file="_tpl/user-sidebar.tpl" }}          
-
+                    {{ include file="_tpl/user-sidebar.tpl" }}          
                 </div> <!--end div class="row"-->
             </section> <!-- end section id=content -->
         </div> <!-- end div class='container' -->

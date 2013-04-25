@@ -33,6 +33,15 @@ h1, h2, h3, h4, h5, h6{
   color: #777;
 }
 
+.text-error{color: @red1}
+
+a.red-text{
+    color: @red1; font-weight: 600;
+    &:hover{
+        color: @red2;
+    }
+}
+
 // CUSTOM BUTTONS
 
 .btn-red, .btn-gray, .btn-orange{
@@ -340,6 +349,12 @@ hr{
     }
 }
 
+.home-featured-news{
+    .article-date{
+        .gray-text;
+    }
+}
+
 .tab-content{
     background: #29313a url(../_img/tabcontent.png) repeat-x bottom;
 
@@ -580,7 +595,11 @@ i.icon-center{
         }
         h2{
             font-size: 28px;
-            color: #f0532e;            
+            color: #f0532e;
+            a{
+                color:#fff;
+                text-decoration: none;
+            }           
         }
         h3{
             padding-left: 5px;

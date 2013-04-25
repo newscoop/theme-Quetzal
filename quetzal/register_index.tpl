@@ -8,27 +8,25 @@
 {{ include file="_tpl/header.tpl" }}
 <section role="main" class="internal-page section-page">
     <div class="wrapper">
-
-    <header class="section-header">
-        <div class="container">
-            <div class="row">
-                <div class="span10">
-                    <div class="breadcrumbs">
-                        <h2>Register</h2>
+        <header class="section-header">
+            <div class="container">
+                <div class="row">
+                    <div class="span10">
+                        <div class="breadcrumbs">
+                            <h2>Register</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="span2 section-rss">
+                    <div class="span2 section-rss">
 
-                </div>
-            </div> 
-            <div class="row">
-                <div class="span12 more-news-tabs tab-sections">
-                    <a class="back-link visible-phone" href="#">&larr; Back</a>
-                </div>
-            </div>                       
-        </div>
-    </header>
-
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="span12 more-news-tabs tab-sections">
+                        <a class="back-link visible-phone" href="#">&larr; Back</a>
+                    </div>
+                </div>                       
+            </div>
+        </header>
         <div class="container">
             <section id="content">
                 <div class="row home-featured-news">
