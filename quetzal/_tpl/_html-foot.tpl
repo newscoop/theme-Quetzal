@@ -1,5 +1,5 @@
         <!-- Vendor plugins -->
-        <script src="{{ url static_file='_js/vendor/bootstrap.min.js'}}"></script>
+        
         <script src="{{ url static_file='_js/plugins.js'}}"></script>
         <script src="{{ url static_file='_js/newscoop.quetzal.js'}}"></script>
         <script src="{{ url static_file='_js/vendor/jquery.cycle2.min.js'}}"></script>
