@@ -8,7 +8,7 @@
         <p><b>Date of birth</b> {{ $profile['birth_date'] }}</p>
         <p><b>Twitter</b> {{ $profile['twitter'] }}</p>
 
-        <p class="member-since">Member since <time class="timeago" datetime="{{ $user->created }}">{{ $user->created }}</time></p>
+        <p class="member-since">Member <time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00</time></p>
         <p class="member-post">{{ $user->posts_count }} posts</p>
     </div>
     <div class="clearfix"></div>
