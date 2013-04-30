@@ -1,8 +1,10 @@
-// boostrap initialize components
+$(document).ready(function() {
 
-$(function(){
-    $("a[rel=tooltip]").tooltip();
-});
-$(function(){
-  $("a[rel]").popover();
+	// initialize timeago plugin for dates
+ 	$(".timeago").timeago();
+
+ 	// boostrap initialize components
+  	$("a[rel]").popover();
+  	$("a[rel=tooltip]").tooltip();
+
 });

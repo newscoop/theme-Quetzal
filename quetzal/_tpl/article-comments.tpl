@@ -28,7 +28,7 @@
             {{ /if }}
             </h4>
             <div class="pull-right comment-date">
-                <time datetime="{{ $gimme->comment->submit_date|camp_date_format:"%Y-%m-%dT%H:%iZ" }}">{{ $gimme->comment->submit_date|camp_date_format:"%e.%m.%Y at %H:%i" }}</time>
+                <time class="timeago" datetime="{{ $gimme->comment->submit_date }}">{{ $gimme->comment->submit_date }}</time>
             </div>
             <div class="clearfix"></div>
             <div class="comment-body">

@@ -10,7 +10,7 @@
             <div class="comm-entry">
                 <p>New comment on:</p>
                 <a href="{{ uri options="article" }}" class="red-text">{{ $gimme->article->name }}</a><br>
-                <span>{{ $gimme->comment->submit_date|camp_date_format:"%H:%i" }}</span>
+                <time class="timeago" datetime="{{ $gimme->comment->submit_date }}">{{ $gimme->comment->submit_date}}</time>
             </div>
             {{ /list_article_comments }}
             {{ /list_articles }}

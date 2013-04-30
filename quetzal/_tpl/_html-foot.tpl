@@ -2,6 +2,7 @@
         <script src="{{ url static_file='_js/plugins.js'}}"></script>
         <script src="{{ url static_file='_js/newscoop.quetzal.js'}}"></script>
         <script src="{{ url static_file='_js/vendor/jquery.cycle2.min.js'}}"></script>
+        <script src="{{ url static_file='_js/vendor/jquery.timeago.js'}}"></script>
 
         <script>
             var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

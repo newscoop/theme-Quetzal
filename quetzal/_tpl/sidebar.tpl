@@ -24,7 +24,7 @@
                         <a href="{{uri}}#comments">{{$gimme->comment->content|truncate:120}}</a>
                     </div>
                     <div class="comment-info">
-                        <span class="red-text">{{$gimme->comment->submit_date|date_format:'%m-%d-%y'}},</span> by 
+                        <time class="timeago red-text" datetime="{{$gimme->comment->submit_date}}">{{$gimme->comment->submit_date}},</time> by 
                                     {{ if $gimme->comment->user->identifier }}
                                         <a href="http://{{ $gimme->publication->site }}/user/profile/{{ $gimme->comment->user->uname|urlencode }}">{{ $gimme->comment->user->uname }}</a>
                                     {{ else }}

@@ -14,7 +14,7 @@
             <article class="span4 user-entry">
                 <a href="{{ $view->url(['username' => $user->uname], 'user') }}" class="pull-left user-picture"><img src="{{ include file="_tpl/user-image.tpl" user=$user width=50 height=50 }}" alt="User Name"></a>
                 <h1><a class="red-text" href="{{ $view->url(['username' => $user->uname], 'user') }}">{{ $user->uname }}</a></h1>
-                <span class="gray-text">Member since {{ $user->created }}</span><br>
+                <span class="gray-text">Member since <time class="timeago" datetime="{{ $user->created }}">{{ $user->created }}</time></span><br>
                 <span>{{ $user->posts_count }}&nbsp;posts</span>
                 <div class="clearfix"></div>
             </article>
