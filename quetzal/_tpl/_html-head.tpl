@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="{{ url static_file="_css/bootstrap.min.css"}}">
     <link rel="stylesheet" href="{{ url static_file="_css/newscoop.quetzal.css"}}">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Asap:400,700">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Asap:400,700">
 
     <!-- RSS & Pingback -->
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://{{ $gimme->publication->site }}/en/static/rss/">
@@ -48,5 +48,8 @@
     <!-- Vendor plugins -->
     <script src="{{ url static_file='_js/vendor/bootstrap.min.js'}}"></script>
     <script src="{{ url static_file='_js/vendor/jquery.timeago.js'}}"></script>
+    {{ if $gimme->template->name == 'article.tpl'}}
+    <script src="{{ url static_file='_js/vendor/galleria/galleria-1.2.9.min.js'}}"></script>
+    {{/if}}
 
   </head>
