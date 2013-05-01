@@ -11,7 +11,7 @@
             {{/if}}
             </span>
             <div class="clearfix"></div>
-            {{ if $gimme->article->slideshows->count }}
+            {{ if $gimme->article->slideshows }}
             {{ include file="_tpl/article-slideshows.tpl"}}
             {{ else }}
             {{ include file="_tpl/img/img_300x300.tpl"}}

@@ -619,6 +619,13 @@ footer[id="main-footer"] .footer-brand .logo-footer {
   -webkit-border-top-right-radius: 3px;
   background: #fff;
 }
+#gallery {
+  min-width: 300px;
+  max-width: 600px;
+  min-height: 300px;
+  max-height: 400px;
+  background: #000000;
+}
 .single-1 h1 {
   width: 300px;
 }
