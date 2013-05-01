@@ -23,7 +23,7 @@
         {{* add to array with multimedia articles *}}
         {{append var=multimedia value="yes" index="`$gimme->article->number`"}}
         {{* increase counter to check for max number *}}
-        {{$multimediacounter++}}
+        {{ assign "multimediacounter" $multimediacounter+1 }}
       {{/if}}
   {{/if}}
 {{ /list_articles }}  
