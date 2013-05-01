@@ -8,9 +8,15 @@
                         <div class="pull-left welcome hidden-phone">
                             <span class="red-text">Welcome,</span> {{$smarty.now|date_format:"%d/%m/%Y"}} 
                         </div>
+                        {{ if !$gimme->user->logged_in}}
                         <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="pull-left white-text visible-phone login-link">
                             <i class="icon-user icon-white"></i> Login
                         </a>
+                        {{ else }}
+                        <a href="{{ $view->url(['controller' => 'auth', 'action' =>'logout'], 'default') }}" class="pull-left white-text visible-phone login-link">
+                            <i class="icon-user icon-white"></i> Logout
+                        </a>
+                        {{ /if }}
                         <a href="/user" class="pull-left white-text visible-phone">&nbsp;|&nbsp;Community</a>                         
                         <ul class="nav pull-right social-buttons">
                           <li class="hidden-phone"><a href="#" class="fb">Be our fan</a></li>
@@ -77,6 +83,7 @@
                     <ul class="nav pull-right login-nav">
                         <li class="dropdown">
                             <a href="/user" class="white-text">Community</a>
+                            {{ if !$gimme->user->logged_in }}
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 Login <b class="caret"></b>
                             </a>
@@ -91,6 +98,15 @@
                                     </fieldset>
                                 </form>
                             </ul>
+                            {{ else }}
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                Hi {{$gimme->user->uname}}<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>Profile</a></li>
+                                <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>Logout</a></li>
+                            </ul>
+                            {{ /if }}
                         </li>
                     </ul>
                 </div>
@@ -112,11 +128,9 @@
 
             <ul class="nav visible-tablet pull-right login-nav login-nav-tablet">
                 <li class="dropdown">
+                    {{ if !$gimme->user->logged_in }}
                     <a href="#" class="dropdown-toggle btn btn-gray pull-left" data-toggle="dropdown">
                         <i class="icon-user icon-white"></i> Login
-                    </a>
-                    <a href="/user" class="btn btn-gray pull-left">
-                         Community
                     </a>
                     <ul class="dropdown-menu">                        
                         <form style="margin: 0px" accept-charset="UTF-8" action="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" method="post">
@@ -128,6 +142,19 @@
                             </fieldset>
                         </form>
                     </ul>
+
+                    {{ else }}
+                    <a href="#" class="dropdown-toggle btn btn-gray pull-left" data-toggle="dropdown">
+                        <i class="icon-user icon-white"></i> Hi {{ $gimme->user->uname }} 
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>Profile</a></li>
+                        <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>Logout</a></li>
+                    </ul>
+                    {{ /if }} 
+                    <a href="/user" class="btn btn-gray pull-left">
+                         Community
+                    </a>
                 </li>
             </ul>            
             <div class="clearfix visible-tablet"></div>
