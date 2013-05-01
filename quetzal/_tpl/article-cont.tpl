@@ -39,12 +39,12 @@
         </div>
         <!-- AddThis Button END -->
         {{ include file="_tpl/article-comments.tpl" }}
+        </section>
         {{ else }}
         <header>
             <h1>Article not available</h1>
         </header>
         {{ /if }} {{* end content_accesible *}}
-        </section>
 
     </article>
 </div>
