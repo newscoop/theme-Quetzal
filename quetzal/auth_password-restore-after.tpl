@@ -9,15 +9,30 @@
 <section role="main" class="internal-page section-page">
     <div class="wrapper">
 
-        {{ include file="_tpl/user-header.tpl" }}
+        <header class="section-header">
+            <div class="container">
+                <div class="row">
+                    <div class="span10">
+                        <div class="breadcrumbs">
+                            <h2>User Account</h2>
+                        </div>
+                    </div>
+                    <div class="span2 section-rss">
+
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="span12 more-news-tabs tab-sections">
+                        <a class="back-link visible-phone" href="#">&larr; Back</a>
+                    </div>
+                </div>                       
+            </div>
+        </header>
 
         <div class="container">
             <section id="content">
                 <div class="row home-featured-news">
                     <div class="span8">
-                        <header>
-                            <h3>User account</h3>
-                        </header>
                         <div class="alert alert-info">
                             <h5 class="checkHeading">We've sent you an e-mail.</h5>
                             <p>Please check your inbox and click on the link in the email to reset your password.</p>

@@ -785,11 +785,15 @@ article.main-article{
         #attributes-last_name_public-element,
         #attributes-email_public-element{
             float: left;
-            width: 100%;
             margin-top:-10px;
+            input[type="radio"], input[type="checkbox"] {
+                height: 40px;
+            }
         }
+    }
 
-
+    #submit-element{
+        margin-bottom:10px;
     }
 }
 
@@ -1357,6 +1361,19 @@ article.main-article{
         }
     }
 
+    .zend_form{
+        dt {
+            float: left;
+            margin-right: 3.8%;
+            width: 100%;
+        }
+        dd {
+            margin-left: 0;
+            width:100%;
+            float: left;
+        }
+    }
+    
 }
 
 // REPONSIVE 380

@@ -9,44 +9,56 @@
 <section role="main" class="internal-page section-page">
     <div class="wrapper">
 
-        {{ include file="_tpl/user-header.tpl" }}
+        <header class="section-header">
+            <div class="container">
+                <div class="row">
+                    <div class="span10">
+                        <div class="breadcrumbs">
+                            <h2>Login</h2>
+                        </div>
+                    </div>
+                    <div class="span2 section-rss">
+
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="span12 more-news-tabs tab-sections">
+                        <a class="back-link visible-phone" href="#">&larr; Back</a>
+                    </div>
+                </div>                       
+            </div>
+        </header>
 
         <div class="container">
             <section id="content">
                 <div class="row home-featured-news">
                     <div class="span8">
-                        <header>
-                            <h3>Login</h3>
-                        </header>
-                        <form action="{{ $form->getAction() }}" method="{{ $form->getMethod() }}">
-                            <fieldset>
-                            {{ if $form->isErrors() }}
-                            <div class="alert alert-error">
-                                <h5>Login failed</h5>
-                                <p>Either your email or password is wrong.</p>
-                                <p>Try again please!</p>
-                                <p><a class="register-link" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot your password?</a></p>
-                            </div>
-                            {{ /if }}
-                            </fieldset>
-                            <fieldset class="background-block login">
-                            <dl>
-                                {{ $form->email->setLabel("E-mail")->removeDecorator('Errors') }}
-                                {{ $form->password->setLabel("Password")->removeDecorator('Errors') }}
-                                <dt class="empty">&nbsp;</dt>
-                                <dd>
-                                    <span class="input-info">
-                                        <a class="register-link" href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}">Register</a>
-                                        <a class="register-link" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
-                                    </span>
-                                </dd>
-                            </dl>
-                            <div class="form-buttons right">
-                                <input type="submit" id="submit" class="button big" value="Login" />
-                            </div>
-                            </fieldset>
-                        </form>
-
+                        <div class="quetzal-form">
+                            <form action="{{ $form->getAction() }}" class="zend_form" method="{{ $form->getMethod() }}">
+                                {{ if $form->isErrors() }}
+                                <div class="alert alert-error">
+                                    <h5>Login failed</h5>
+                                    <p>Either your email or password is wrong.</p>
+                                    <p>Try again please!</p>
+                                    <p><a class="register-link" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot your password?</a></p>
+                                </div>
+                                {{ /if }}
+                                <dl>
+                                    {{ $form->email->setLabel("E-mail")->removeDecorator('Errors') }}
+                                    {{ $form->password->setLabel("Password")->removeDecorator('Errors') }}
+                                    <dt class="empty">&nbsp;</dt>
+                                    <dd>
+                                        <span class="input-info">
+                                            <a class="register-link red-text" href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}">Register | </a>
+                                            <a class="register-link red-text" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
+                                        </span>
+                                    </dd>
+                                </dl>
+                                <div class="form-buttons right">
+                                    <input type="submit" id="submit" class="button big" value="Login" />
+                                </div>
+                            </form>
+                        </div>
                     </div> 
                     {{ include file="_tpl/user-sidebar.tpl" }}          
 
