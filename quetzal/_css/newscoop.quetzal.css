@@ -1089,8 +1089,18 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 }
 .zend_form #attributes-element #attributes-first_name_public-element, .zend_form #attributes-element #attributes-last_name_public-element, .zend_form #attributes-element #attributes-email_public-element {
   float: left;
-  width: 100%;
   margin-top: -10px;
+}
+.zend_form #attributes-element #attributes-first_name_public-element input[type="radio"],
+.zend_form #attributes-element #attributes-last_name_public-element input[type="radio"],
+.zend_form #attributes-element #attributes-email_public-element input[type="radio"],
+.zend_form #attributes-element #attributes-first_name_public-element input[type="checkbox"],
+.zend_form #attributes-element #attributes-last_name_public-element input[type="checkbox"],
+.zend_form #attributes-element #attributes-email_public-element input[type="checkbox"] {
+  height: 40px;
+}
+.zend_form #submit-element {
+  margin-bottom: 10px;
 }
 /* End bootstrap override */
 @media (min-width: 768px) and (max-width: 979px) {
@@ -1898,6 +1908,16 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   }
   .more-like-this-phone article .article-date {
     font-size: 11px;
+  }
+  .zend_form dt {
+    float: left;
+    margin-right: 3.8%;
+    width: 100%;
+  }
+  .zend_form dd {
+    margin-left: 0;
+    width: 100%;
+    float: left;
   }
 }
 @media (max-width: 380px) {

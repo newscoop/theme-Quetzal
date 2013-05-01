@@ -9,31 +9,48 @@
 <section role="main" class="internal-page section-page">
     <div class="wrapper">
 
-        {{ include file="_tpl/user-header.tpl" }}
+        <header class="section-header">
+            <div class="container">
+                <div class="row">
+                    <div class="span10">
+                        <div class="breadcrumbs">
+                            <h2>Reset Password</h2>
+                        </div>
+                    </div>
+                    <div class="span2 section-rss">
+
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="span12 more-news-tabs tab-sections">
+                        <a class="back-link visible-phone" href="#">&larr; Back</a>
+                    </div>
+                </div>                       
+            </div>
+        </header>
 
         <div class="container">
             <section id="content">
                 <div class="row home-featured-news">
                     <div class="span8">
-                     <header>
-                        <h3>Reset Password</h3>
-                     </header>
-                     <form action="{{ $form->getAction() }}" method="{{ $form->getMethod() }}">
-                         <fieldset>
-                             {{ if $form->email->hasErrors() }}
-                             <div class="alert alert-error">
-                                 <h5>E-mail is not correct</h5>
-                                 <p>Maybe you registered on <em>{{ $gimme->publication->name }}</em> with another e-mail account?</p>
-                             </div>
-                             {{ /if }}
-                         </fieldset>
-                         <fieldset class="background-block login">
-                             <dl> {{ $form->email->setLabel("E-Mail")->removeDecorator('Errors') }}</dl>
-                             <div class="form-buttons right">
-                                 <input type="submit" id="submit" class="button" value="Request new password" />
-                             </div>
-                         </fieldset>
-                     </form>
+                     <div class="quetzal-form">
+                         <form action="{{ $form->getAction() }}"  class="zend_form" method="{{ $form->getMethod() }}">
+                             <fieldset>
+                                 {{ if $form->email->hasErrors() }}
+                                 <div class="alert alert-error">
+                                     <h5>E-mail is not correct</h5>
+                                     <p>Maybe you registered on <em>{{ $gimme->publication->name }}</em> with another e-mail account?</p>
+                                 </div>
+                                 {{ /if }}
+                             </fieldset>
+                             <fieldset class="background-block login">
+                                 <dl> {{ $form->email->setLabel("E-Mail")->removeDecorator('Errors') }}</dl>
+                                 <div class="form-buttons right">
+                                     <input type="submit" id="submit" class="button" value="Request new password" />
+                                 </div>
+                             </fieldset>
+                         </form>
+                     </div>
                      </div> 
                     {{ include file="_tpl/user-sidebar.tpl" }}          
 
