@@ -1,7 +1,6 @@
 <div class="span8 section-articles">
 
 {{ list_search_results length="5" order="bypublishdate desc" }}
-
     <article class="span8 section-article">
             <figure class="pull-left article-image">
                 <a href="{{ uri options="article" }}">
