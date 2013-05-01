@@ -6,7 +6,7 @@
                 <nav id="topnav" class="navbar">
                     <div class="navbar-inner">
                         <div class="pull-left welcome hidden-phone">
-                            <span class="red-text">Welcome,</span> 01/29/2012
+                            <span class="red-text">Welcome,</span> {{$smarty.now|date_format:"%d/%m/%Y"}} 
                         </div>
                         <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="pull-left white-text visible-phone login-link">
                             <i class="icon-user icon-white"></i> Login
@@ -15,7 +15,7 @@
                         <ul class="nav pull-right social-buttons">
                           <li class="hidden-phone"><a href="#" class="fb">Be our fan</a></li>
                           <li class="hidden-phone"><a href="#" class="tw">Follow Us</a></li>
-                          <li class="hidden-phone"><a href="#" class="rss">Feed RSS</a></li>
+                          <li class="hidden-phone"><a href="/en/static/rss/" class="rss">Feed RSS</a></li>
                           <li class="visible-phone"><a href="#" class="fb">Facebook</a></li>
                           <li class="visible-phone"><a href="#" class="tw">Twitter</a></li>
                           <li class="visible-phone"><a href="#" class="rss">RSS</a></li>
@@ -28,7 +28,7 @@
                 <div class="row logo-search">
                     <div class="span7">                        
                         <a href="/">
-                            <img class="logo pull-left" src="{{ url static_file='_img/newscoop-quetzal-logo.png'}}" alt="Newscoop Quetzal">
+                            <img class="logo pull-left" src="{{ url static_file='_img/logo.png'}}" alt="{{$gimme->publication->name}}">
                         </a> 
 
                         <!-- NAVIGATION FOR PHONE -->                       
