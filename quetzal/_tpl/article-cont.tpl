@@ -26,6 +26,8 @@
             {{ /if }}
 
             {{ include file="_tpl/_edit-article.tpl" }}{{ $gimme->article->full_text }}
+
+            {{ include file="_tpl/article-attachments.tpl"}}
         </section>
 
         <!-- AddThis Button BEGIN -->
