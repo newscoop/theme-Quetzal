@@ -28,13 +28,18 @@
         </section>
                 <!-- AddThis Button BEGIN -->
         <div class="addthis_toolbox addthis_default_style">
-            <a class="addthis_button_facebook_send visible-desktop"></a>
-            <a class="addthis_button_facebook_like visible-desktop" fb:like:layout="standard"></a>
-            <a class="addthis_button_facebook_like visible-phone" fb:like:layout="button_count"></a>
+            
+           
+            <a class="addthis_button_facebook_like" fb:like:width="112" fb:like:layout="button_count"></a>
             <a class="addthis_button_tweet"></a>
             <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
         </div>
+        <script src="//s7.addthis.com/js/200/addthis_widget.js#pubid=undefined"></script>
+        <script>
+            var addthis_config = {ui_language: "en"}
+        </script>
         <!-- AddThis Button END -->
+
         {{ include file="_tpl/article-comments.tpl" }}
         </section>
 
