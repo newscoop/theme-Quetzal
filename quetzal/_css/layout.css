@@ -753,6 +753,8 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 }
 .widget-community-feed .comm-entry {
   margin-top: 10px;
+  border-bottom: #454545 1px dotted;
+  padding-bottom: 10px;
 }
 .widget-community-feed .comm-entry p {
   color: #BCC2CB;

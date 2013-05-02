@@ -1006,6 +1006,8 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 }
 .widget-community-feed .comm-entry {
   margin-top: 10px;
+  border-bottom: #454545 1px dotted;
+  padding-bottom: 10px;
 }
 .widget-community-feed .comm-entry p {
   color: #BCC2CB;
@@ -2647,17 +2649,17 @@ i.icon-center {
 }
 .widget-map {
   background: #191d23;
-  padding: 10px 0px;
-  border-radius: 3px;
-  -ms-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -khtml-border-radius: 3px;
-  border-radius: 3px;
-  -ms-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  -khtml-border-radius: 3px;
+  padding: 10px 0px 20px 0px;
+  border-radius: 5px;
+  -ms-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  -ms-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
 }
 .widget-map h4 {
   font-weight: 400;
@@ -2746,6 +2748,9 @@ i.icon-center {
 .widget-map hr {
   border-top: 1px solid #282e36;
   border-bottom: none;
+}
+.widget-map .timeago {
+  color: #888a85;
 }
 .modal-body {
   color: #333;
