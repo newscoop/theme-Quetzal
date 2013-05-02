@@ -1,7 +1,7 @@
 <!-- MAIN ARTICLE -->
 <div class="span8 article-container">
     <article class="main-article single-1">                                    
-        
+        {{ if $gimme->article->content_accesible }} 
         <header>
             <span class="article-info">
                 <time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time> 
@@ -11,7 +11,7 @@
             {{/if}}
             </span>
             <div class="clearfix"></div>
-            {{ if $gimme->article->slideshows }}
+            {{ if $gimme->article->slideshows|@count }}
             {{ include file="_tpl/article-slideshows.tpl"}}
             {{ else }}
             {{ include file="_tpl/img/img_300x300.tpl"}}
@@ -29,8 +29,7 @@
 
             {{ include file="_tpl/article-attachments.tpl"}}
         </section>
-
-        <!-- AddThis Button BEGIN -->
+                <!-- AddThis Button BEGIN -->
         <div class="addthis_toolbox addthis_default_style">
             <a class="addthis_button_facebook_send visible-desktop"></a>
             <a class="addthis_button_facebook_like visible-desktop" fb:like:layout="standard"></a>
@@ -41,6 +40,11 @@
         <!-- AddThis Button END -->
         {{ include file="_tpl/article-comments.tpl" }}
         </section>
+        {{ else }}
+        <header>
+            <h1>Article not available</h1>
+        </header>
+        {{ /if }} {{* end content_accesible *}}
 
     </article>
 </div>
