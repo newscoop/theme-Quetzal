@@ -1,7 +1,6 @@
 <!-- MAIN ARTICLE -->
 <div class="span8 article-container">
     <article class="main-article single-1">                                    
-        {{ if $gimme->article->content_accesible }} 
         <header>
             <span class="article-info">
                 <time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time> 
@@ -40,11 +39,6 @@
         <!-- AddThis Button END -->
         {{ include file="_tpl/article-comments.tpl" }}
         </section>
-        {{ else }}
-        <header>
-            <h1>Article not available</h1>
-        </header>
-        {{ /if }} {{* end content_accesible *}}
 
     </article>
 </div>
