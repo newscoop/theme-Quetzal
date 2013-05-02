@@ -855,8 +855,8 @@ footer[id="main-footer"] .footer-brand .logo-footer {
   background: #fff;
 }
 #gallery {
-  min-width: 300px;
-  max-width: 600px;
+  min-width: 250px;
+  max-width: 100%;
   min-height: 300px;
   max-height: 400px;
   background: #000;
