@@ -88,7 +88,7 @@
                                 Login <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
-                                <!-- LOGIN FORM TWITTER STYLE XD -->
+                                <!-- LOGIN FORM TWITTER STYLE -->
                                 <form style="margin: 0px" accept-charset="UTF-8" action="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" method="post">
                                     <fieldset class='textbox' style="padding:10px">
                                         <input name="email" id="email" style="margin-top: 8px" type="text" placeholder="Email" />
@@ -100,9 +100,9 @@
                             </ul>
                             {{ else }}
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Hi {{$gimme->user->uname}}<b class="caret"></b>
+                                Hi {{$gimme->user->uname}} <b class="caret"></b>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu profile-dropdown">
                                 <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>Profile</a></li>
                                 <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>Logout</a></li>
                             </ul>
@@ -147,7 +147,7 @@
                     <a href="#" class="dropdown-toggle btn btn-gray pull-left" data-toggle="dropdown">
                         <i class="icon-user icon-white"></i> Hi {{ $gimme->user->uname }} 
                     </a>
-                    <ul class="dropdown-menu">
+                    <ul class="dropdown-menu profile-dropdown">
                         <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>Profile</a></li>
                         <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>Logout</a></li>
                     </ul>
