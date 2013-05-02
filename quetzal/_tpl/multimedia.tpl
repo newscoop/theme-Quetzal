@@ -8,20 +8,23 @@
       {{assign var=multimediacurrent value=0}}
       {{ foreach $gimme->article->slideshows as $slideshow }}
         {{assign var=multimediacurrent value=1}}
+        {{assign var=multimediatype value='slideshow'}}
       {{ /foreach }}
       {{ if $gimme->article->has_attachments }} 
           {{ list_article_attachments }}
               {{ if $gimme->attachment->extension == oga }}    
                 {{assign var=multimediacurrent value=1}}              
+                {{assign var=multimediatype value='video'}}
               {{ elseif $gimme->attachment->extension == ogv || $gimme->attachment->extension == ogg || $gimme->attachment->extension == mp4 || $gimme->attachment->extension == webm }}             
                 {{assign var=multimediacurrent value=1}}
+                {{assign var=multimediatype value='video'}}
               {{ /if }}  
           {{ /list_article_attachments }}   
       {{ /if }}  
       {{* check now if multimedia found *}}
       {{if $multimediacurrent == 1}}
         {{* add to array with multimedia articles *}}
-        {{append var=multimedia value="yes" index="`$gimme->article->number`"}}
+        {{append var=multimedia value="`$multimediatype`" index="`$gimme->article->number`"}}
         {{* increase counter to check for max number *}}
         {{ assign "multimediacounter" $multimediacounter+1 }}
       {{/if}}
@@ -32,35 +35,26 @@
       <h4>Latest Multimedia</h4>
       <div id="myCarousel" class="carousel slide">                            
           <div class="carousel-inner quetzal-carousel-content">
-            {{foreach from=$multimedia key=articleID item=articleName name=multimediaLoop}}
+            {{foreach from=$multimedia key=articleID item=multimediaType name=multimediaLoop}}
                 {{ if $smarty.foreach.multimediaLoop.first }}
                     <div class="item active">                                
-                {{/if}}
-
-                {{ if $smarty.foreach.multimediaLoop.iteration is div by 4}}
+                {{elseif $smarty.foreach.multimediaLoop.index is div by 4}}
                       <div class="clearfix"></div>
                     </div>                                
-                {{/if}}
-
-                {{ if $smarty.foreach.multimediaLoop.iteration is div by 4}}
                     <div class="item">                                
                 {{/if}}
-                
+
                 {{ list_articles ignore_issue="true" ignore_section="true" length="1" constraints="number is `$articleID`"}}
-                  {{ if $gimme->article->has_attachments }} 
-                      {{ list_article_attachments }}
-                      {{ if $gimme->attachment->extension == oga || $gimme->attachment->extension == ogv || $gimme->attachment->extension == ogg || $gimme->attachment->extension == mp4 || $gimme->attachment->extension == webm }}             
-                      <a href="{{ uri options="article" }}" class="pull-left sub-item video">
-                          <img style="background: #000;" src="{{url static_file='_img/player.png'}}" alt="uno">
+                  {{ if $multimediaType=="video" }} 
+                      {{ list_article_attachments length="1" }}
+                          {{ include file="_tpl/img/img_235x220.tpl" where='video'}}
                       </a> 
-                      {{ /if }}
                       {{ /list_article_attachments }}
                   {{ else }}
-                  <a href="{{ uri options="article" }}" class="pull-left sub-item photo">
-                      {{ include file="_tpl/img/img_235x220.tpl"}}
-                  </a>
+                      {{ include file="_tpl/img/img_235x220.tpl" where='slideshow'}}
                   {{ /if }}
                   {{ /list_articles }}
+
 
                 {{ if $smarty.foreach.multimediaLoop.last}}
                       <div class="clearfix"></div>
