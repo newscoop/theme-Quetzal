@@ -2335,6 +2335,9 @@ nav[role="navigation"] .login-nav .dropdown-menu input[type="text"], nav[role="n
   width: 168px;
   font-size: 12px;
 }
+nav[role="navigation"] .login-nav .profile-dropdown {
+  background: #fff;
+}
 section[role="main"] .wrapper {
   background: #fff;
   width: 960px;
@@ -3320,6 +3323,9 @@ i.icon-center {
   -moz-border-radius-topleft: 0px;
   -webkit-border-top-left-radius: 0px;
 }
+.tablet-nav .profile-dropdown {
+  background: #fff;
+}
 .login-nav-tablet {
   margin-bottom: 5px;
   margin-right: 3px;
@@ -3361,6 +3367,22 @@ i.icon-center {
 .login-nav-tablet .dropdown-menu input[type="text"], .login-nav-tablet .dropdown-menu input[type="password"] {
   width: 168px;
   font-size: 12px;
+}
+.login-nav-tablet .dropdown-menu  > li > a {
+  padding: 3px 10px;
+  border-bottom: 1px dotted #999999;
+}
+.login-nav-tablet .dropdown-menu  > li > a:hover {
+  background: none;
+  color: #d55436;
+  color: #d55436;
+  color: #d55436;
+  color: #d55436;
+}
+.login-nav-tablet .profile-dropdown {
+  background: #fff;
+  margin-top: 45px;
+  right: 163px;
 }
 .back-link {
   color: #fff;

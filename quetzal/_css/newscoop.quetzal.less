@@ -220,6 +220,10 @@ nav[role="navigation"]{
                 font-size: 12px;                
             }
         }
+
+        .profile-dropdown{
+            background: #fff;
+        }
     }
 }
 
@@ -886,7 +890,7 @@ i.icon-center{
     }
 }
 
-// BAGIN TABLET NAV (extends from phone nav)
+// BEGIN TABLET NAV (extends from phone nav)
 .tablet-nav{
     margin-bottom: 5px;
     .btn-red{
@@ -899,7 +903,9 @@ i.icon-center{
         .rounded-corners-top(6px);
         .rounded-corners-left-top(0px);
     }
-    
+    .profile-dropdown{
+        background: #fff;
+    }
 }
 
 // LOGIN NAV TABLET
@@ -932,6 +938,19 @@ i.icon-center{
             width: 168px;
             font-size: 12px;                
         }
+        & > li > a{
+            padding: 3px 10px;
+            border-bottom: 1px dotted #999999;
+            &:hover{
+                background: none;
+                .red-text;
+            }
+        }  
+    }
+    .profile-dropdown{
+        background: #fff;
+        margin-top: 45px;
+        right:163px;
     }
 }
 
