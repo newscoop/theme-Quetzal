@@ -859,7 +859,8 @@ footer[id="main-footer"] .footer-brand .logo-footer {
   max-width: 600px;
   min-height: 300px;
   max-height: 400px;
-  background: #000000;
+  background: #000;
+  margin-bottom: 15px;
 }
 .single-1 h1 {
   width: 300px;
