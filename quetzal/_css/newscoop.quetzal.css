@@ -923,6 +923,9 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 #comments input[type="submit"] {
   margin-top: -100px;
 }
+.login-textarea textarea {
+  margin-bottom: 100px;
+}
 .section-page #quetzal-slideshow {
   top: -15px;
 }
@@ -1788,13 +1791,15 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
     margin-bottom: 5px;
     float: inherit;
   }
+  .login-textarea textarea {
+    margin-bottom: 15px;
+  }
   .comment-box .span1 {
     float: left;
     width: 60px;
     margin-right: 5px;
   }
   .comment-box .comment-content {
-    width: 340px;
     float: left;
   }
   .logo {
@@ -1950,16 +1955,10 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   .phone-nav .dropdown-menu {
     width: 342px;
   }
-  .comment-box .comment-content {
-    width: 280px;
-  }
 }
 @media (max-width: 360px) {
   .phone-nav .dropdown-menu {
     width: 322px;
-  }
-  .comment-box .comment-content {
-    width: 260px;
   }
 }
 @media (max-width: 320px) {
@@ -1972,9 +1971,6 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   }
   .phone-nav .dropdown-menu {
     width: 284px;
-  }
-  .comment-box .comment-content {
-    width: 220px;
   }
 }
 body {
@@ -2976,7 +2972,6 @@ i.icon-center {
 }
 #comments .write-comment a {
   position: relative;
-  top: 10px;
   font-size: 16px;
   font-weight: 400;
   font-weight: 400;

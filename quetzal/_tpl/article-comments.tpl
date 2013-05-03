@@ -5,7 +5,7 @@
             <h2>{{ $gimme->article->comment_count}} Comments</h2>
         </div>
         <div class="span2 write-comment">
-            <a href="#" class="red-text">Write a comment</a>
+            <a href="#comment-form" class="red-text">Write a comment</a>
         </div>
     </div>
     {{list_article_comments order="bydate desc"}}
@@ -47,7 +47,9 @@
                 <h2>Write a comment</h2>
             </div>
             <div class="span2 write-comment">
-                <a href="#" class="red-text">Login or Sign Up</a>
+                {{ if !$gimme->user->logged_in}}
+                <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="red-text">Login or Sign Up</a>
+                {{/if}}
             </div>                                                
         </div>
         {{ if !$gimme->publication->public_comments }}
@@ -104,7 +106,7 @@
 
             {{ comment_form html_code="id=\"commentform\"" _button="submit" button_html_code="tabindex=\"6\" class=\"btn btn-large pull-right\" " }}
             <div class="row">                                                
-                <div class="span4">
+                <div class="span4 login-textarea">
                     {{ camp_edit object="comment" attribute="content" html_code="id=\"comment\" tabindex=\"4\" placeholder=\"Write your message here\" " }}
                 </div>
                 <div class="span4">

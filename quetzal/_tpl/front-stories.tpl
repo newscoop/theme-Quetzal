@@ -54,7 +54,7 @@
                     </div>
                     <div class="article-links hidden-phone">
                         <hr>
-                        <a href="{{url option='article'}}" class="comments-link">5 Comments</a> | 
+                        <a href="{{url option='article'}}" class="comments-link">{{ $gimme->article->comment_count }} Comments</a> | 
                         <a href="{{url option='article'}}" class="red-text negrita-weight">Read more +</a>
                     </div>
                     <div class="clearfix"></div>
