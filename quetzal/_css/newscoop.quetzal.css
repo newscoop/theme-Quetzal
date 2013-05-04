@@ -1739,6 +1739,9 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   .login-link:hover {
     color: #fff;
   }
+  .phone-nav .dropdown-menu {
+    width: 262px !important;
+  }
   .internal-page .wrapper {
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
@@ -3239,6 +3242,7 @@ i.icon-center {
   -webkit-border-top-right-radius: 0px;
   padding: 10px;
   padding-bottom: 0px;
+  z-index: 10000;
 }
 .phone-nav .dropdown-menu li > a {
   color: #fff !important;
