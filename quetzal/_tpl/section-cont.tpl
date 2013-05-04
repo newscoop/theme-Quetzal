@@ -15,7 +15,7 @@
             <span class="label label-important normal-weight">premium</span>
             {{ /if }}
             <header>
-                <h1>{{ $gimme->article->name }}</h1>
+                <h1><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h1>
                 <span class="article-date">Jan 28 2012, 4:35 am</span>
             </header>
             <div class="article-excerpt hidden-phone">
@@ -41,7 +41,7 @@
             <span class="label label-important normal-weight">premium</span>
             {{ /if }}
             <header>
-                <h1>{{$gimme->article->name}}</h1>
+                <h1><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h1>
                 <span class="article-date">Jan 28 2012, 4:35 am</span>
             </header>
             <div class="article-excerpt hidden-phone">
