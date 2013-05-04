@@ -12,7 +12,7 @@
         </div>
         <div class="row">
             <div class="span12 more-news-tabs tab-sections">
-                <a class="back-link visible-phone" href="#">&larr; Back</a>
+                <a class="back-link visible-phone" href="javascript:history.back()">&larr; Back</a>
                 <!--
                 <nav class="internal-nav visible-desktop visible-tablet">
                     <ul>

@@ -4,7 +4,7 @@
             <div class="container">
                 <!-- TOPBAR NAV -->
                 <nav id="topnav" class="navbar">
-                    <div class="navbar-inner">
+                    <div class="navbar-inner user-top-lef-links">
                         <div class="pull-left welcome hidden-phone">
                             <span class="red-text">Welcome,</span> {{$smarty.now|date_format:"%d/%m/%Y"}} 
                         </div>

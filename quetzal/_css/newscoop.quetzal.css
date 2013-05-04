@@ -2231,6 +2231,9 @@ header[role='banner'] #topnav .navbar-inner .nav > li > a {
   -moz-text-shadow: 0px 0px 2px #000000 0px 5px #929292;
   -webkit-text-shadow: 0px 0px 2px #000000 0px 5px #929292;
 }
+header[role='banner'] #topnav .user-top-lef-links a:hover {
+  color: #ff8f59;
+}
 nav[role="navigation"] .navbar-inner {
   padding: 0px;
   min-height: 30px !important;
@@ -2786,7 +2789,7 @@ i.icon-center {
   padding-left: 23px !important;
 }
 .social-buttons a:hover {
-  color: #c52500 !important;
+  color: #ff8f59 !important;
 }
 .social-buttons .fb {
   background: url(../_img/fb.png) no-repeat left center;
