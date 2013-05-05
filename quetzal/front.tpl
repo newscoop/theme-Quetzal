@@ -1,3 +1,4 @@
+{{ config_load file="_lang/{{ $gimme->language->english_name }}.conf" section="Front" }}
 {{ include file="_tpl/_html-head.tpl" }}
 
 <body>

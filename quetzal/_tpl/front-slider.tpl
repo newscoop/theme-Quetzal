@@ -32,7 +32,7 @@
 
     <!-- POPULAR NEWS -->
     <div class="quetzal-popular-news visible-desktop">
-        <h3>Most popular news</h3>
+        <h3>{{ #mostPopularNews# }}</h3>
         {{ local }} 
         {{ set_current_issue }} 
         {{ list_articles length="4" order="bypopularity desc" constraints="type is news" }}
