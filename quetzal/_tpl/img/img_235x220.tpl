@@ -4,7 +4,7 @@
     <img src="{{ $image->src }}" alt="uno">
 {{else}}
 <a href="{{ uri options="article" }}" class="pull-left sub-item video">
-  <img style="background: #000;" src="{{url static_file='_img/player.png'}}" alt="uno">
+  <img style="background: #000 url({{ $image->src }});" src="{{url static_file='_img/player.png'}}" alt="uno">
 {{/if}}
     <div class="photo-caption">
         {{ $image->caption }}
