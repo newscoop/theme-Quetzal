@@ -95,6 +95,9 @@
                                         <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
                                         <button class="btn btn-danger" name="submit" type="submit">Log In</button>
                                         or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">Sign Up</a>
+                                        <br>
+                                        <a class="red-text negrita-weight pull-right"href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
+                                        </span>
                                     </fieldset>
                                 </form>
                             </ul>
@@ -140,6 +143,8 @@
                                 <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
                                 <button class="btn btn-danger" name="submit" type="submit">Log In</button>
                                 or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">Sign Up</a>
+                                <br>
+                                <a class="red-text negrita-weight pull-right" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
                             </fieldset>
                         </form>
                     </ul>
