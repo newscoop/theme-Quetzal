@@ -19,12 +19,15 @@
                         {{ /if }}
                         <a href="/user" class="pull-left white-text visible-phone">&nbsp;|&nbsp;Community</a>                         
                         <ul class="nav pull-right social-buttons">
-                          <li class="hidden-phone"><a href="#" class="fb">Be our fan</a></li>
-                          <li class="hidden-phone"><a href="#" class="tw">Follow Us</a></li>
-                          <li class="hidden-phone"><a href="/en/static/rss/" class="rss">Feed RSS</a></li>
-                          <li class="visible-phone"><a href="#" class="fb">Facebook</a></li>
-                          <li class="visible-phone"><a href="#" class="tw">Twitter</a></li>
-                          <li class="visible-phone"><a href="#" class="rss">RSS</a></li>
+                          <li class="visible-desktop"><a href="#" class="fb">Be our fan</a></li>
+                          <li class="visible-desktop"><a href="#" class="tw">Follow Us</a></li>
+                          <li class="visible-desktop"><a href="/en/static/rss/" class="rss">Feed RSS</a></li>
+                          <li class="visible-tablet"><a href="#" class="fb">Facebook</a></li>
+                          <li class="visible-tablet"><a href="#" class="tw">Twitter</a></li>
+                          <li class="visible-tablet"><a href="#" class="rss">RSS</a></li>
+                          <li class="visible-phone"><a href="#" class="fb">&nbsp;</a></li>
+                          <li class="visible-phone"><a href="#" class="tw">&nbsp;</a></li>
+                          <li class="visible-phone"><a href="#" class="rss">&nbsp;</a></li>
                         </ul>
                     </div>                    
                 </nav>
