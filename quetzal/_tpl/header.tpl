@@ -6,25 +6,25 @@
                 <nav id="topnav" class="navbar">
                     <div class="navbar-inner user-top-lef-links">
                         <div class="pull-left welcome hidden-phone">
-                            <span class="red-text">Welcome,</span> {{$smarty.now|date_format:"%d/%m/%Y"}} 
+                            <span class="red-text">{{ #welcome# }}</span> {{$smarty.now|date_format:"%d/%m/%Y"}} 
                         </div>
                         {{ if !$gimme->user->logged_in}}
                         <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="pull-left white-text visible-phone login-link">
-                            <i class="icon-user icon-white"></i> Login
+                            <i class="icon-user icon-white"></i> {{ #login# }} 
                         </a>
                         {{ else }}
                         <a href="{{ $view->url(['controller' => 'auth', 'action' =>'logout'], 'default') }}" class="pull-left white-text visible-phone login-link">
-                            <i class="icon-user icon-white"></i> Logout
+                            <i class="icon-user icon-white"></i> {{ #logout# }}
                         </a>
                         {{ /if }}
-                        <a href="/user" class="pull-left white-text visible-phone">&nbsp;|&nbsp;Community</a>                         
+                        <a href="/user" class="pull-left white-text visible-phone">&nbsp;|&nbsp;{{ #community# }}</a>                         
                         <ul class="nav pull-right social-buttons">
-                          <li class="visible-desktop"><a href="#" class="fb">Be our fan</a></li>
-                          <li class="visible-desktop"><a href="#" class="tw">Follow Us</a></li>
-                          <li class="visible-desktop"><a href="/en/static/rss/" class="rss">Feed RSS</a></li>
+                          <li class="visible-desktop"><a href="#" class="fb">{{ #beOurFan# }}</a></li>
+                          <li class="visible-desktop"><a href="#" class="tw">{{ #followUs# }}</a></li>
+                          <li class="visible-desktop"><a href="/en/static/rss/" class="rss">{{ #rssFeed# }}</a></li>
                           <li class="visible-tablet"><a href="#" class="fb">Facebook</a></li>
                           <li class="visible-tablet"><a href="#" class="tw">Twitter</a></li>
-                          <li class="visible-tablet"><a href="#" class="rss">RSS</a></li>
+                          <li class="visible-tablet"><a href="#" class="rss">{{ #rssFeed# }}</a></li>
                           <li class="visible-phone"><a href="#" class="fb">&nbsp;</a></li>
                           <li class="visible-phone"><a href="#" class="tw">&nbsp;</a></li>
                           <li class="visible-phone"><a href="#" class="rss">&nbsp;</a></li>
@@ -44,7 +44,7 @@
                         <ul class="nav visible-phone pull-right phone-nav">
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle btn btn-red" data-toggle="dropdown">
-                                    Sections
+                                    {{ #sections# }}
                                 </a>
                                 <ul class="dropdown-menu">
                                     {{ list_sections }}
@@ -85,10 +85,10 @@
                     
                     <ul class="nav pull-right login-nav">
                         <li class="dropdown">
-                            <a href="/user" class="white-text">Community</a>
+                            <a href="/user" class="white-text">{{ #community# }}</a>
                             {{ if !$gimme->user->logged_in }}
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                Login <b class="caret"></b>
+                                {{ #login# }} <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- LOGIN FORM TWITTER STYLE -->
@@ -96,8 +96,8 @@
                                     <fieldset class='textbox' style="padding:10px">
                                         <input name="email" id="email" style="margin-top: 8px" type="text" placeholder="Email" />
                                         <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
-                                        <button class="btn btn-danger" name="submit" type="submit">Log In</button>
-                                        or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">Sign Up</a>
+                                        <button class="btn btn-danger" name="submit" type="submit">{{ #login# }}</button>
+                                        or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">{{ #signUp# }}</a>
                                         <br>
                                         <a class="red-text negrita-weight pull-right"href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
                                         </span>
@@ -109,9 +109,9 @@
                                 Hi {{$gimme->user->uname}} <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu profile-dropdown">
-                                <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>Profile</a></li>
+                                <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>{{ #profile# }}</a></li>
                                 <li><a href='/dashboard'>Edit Profile</a></li>
-                                <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>Logout</a></li>
+                                <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>{{ #logout# }}</a></li>
                             </ul>
                             {{ /if }}
                         </li>
@@ -123,7 +123,7 @@
             <ul class="nav visible-tablet pull-left phone-nav tablet-nav">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle btn btn-red" data-toggle="dropdown">
-                        Sections
+                        {{ #sections# }}
                     </a>
                     <ul class="dropdown-menu">
                         {{ list_sections }}
@@ -137,15 +137,15 @@
                 <li class="dropdown">
                     {{ if !$gimme->user->logged_in }}
                     <a href="#" class="dropdown-toggle btn btn-gray pull-left" data-toggle="dropdown">
-                        <i class="icon-user icon-white"></i> Login
+                        <i class="icon-user icon-white"></i> {{ #login# }}
                     </a>
                     <ul class="dropdown-menu">                        
                         <form style="margin: 0px" accept-charset="UTF-8" action="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" method="post">
                             <fieldset class='textbox' style="padding:10px">
                                 <input name="email" id="email" style="margin-top: 8px" type="text" placeholder="Email" />
                                 <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
-                                <button class="btn btn-danger" name="submit" type="submit">Log In</button>
-                                or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">Sign Up</a>
+                                <button class="btn btn-danger" name="submit" type="submit">{{ #login# }}</button>
+                                or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">{{ #signUp# }}</a>
                                 <br>
                                 <a class="red-text negrita-weight pull-right" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
                             </fieldset>
@@ -154,16 +154,16 @@
 
                     {{ else }}
                     <a href="#" class="dropdown-toggle btn btn-gray pull-left" data-toggle="dropdown">
-                        <i class="icon-user icon-white"></i> Hi {{ $gimme->user->uname }} 
+                        <i class="icon-user icon-white"></i> {{ #hi# }} {{ $gimme->user->uname }} 
                     </a>
                     <ul class="dropdown-menu profile-dropdown">
                         <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>Profile</a></li>
                         <li><a href='/dashboard'>Edit Profile</a></li>
-                        <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>Logout</a></li>
+                        <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>{{ #logout# }}</a></li>
                     </ul>
                     {{ /if }} 
                     <a href="/user" class="btn btn-gray pull-left">
-                         Community
+                         {{ #community# }}
                     </a>
                 </li>
             </ul>            

@@ -12,7 +12,7 @@
             <header>
                 <span class="red-text">{{ $gimme->article->section->name}}</span>
                 {{ if !$gimme->article->content_accesible }}
-                <span class="label label-important normal-weight">premium</span>
+                <span class="label label-important normal-weight">{{ #premium# }}</span>
                 {{ /if }} 
                 <h1><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h1>
                 <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
@@ -23,7 +23,7 @@
             </div>  
             <div class="article-links hidden-phone">
                 <hr>
-                <a href="{{ uri option='article'}}" class="comments-link">{{ $gimme->article->comment_count }} Comments</a> | <a href="{{uri option='article'}}" class="red-text negrita-weight">Read more +</a>
+                <a href="{{ uri option='article'}}" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{uri option='article'}}" class="red-text negrita-weight">{{ #readMore# }}</a>
             </div>                                        
             <div class="clearfix"></div>
         </article>
@@ -44,7 +44,7 @@
                         <span class="red-text">{{ $gimme->article->section->name}}</span>
                         <h1><a href="{{url option='article'}}">{{ $gimme->article->name}}</a></h1>
                         {{ if !$gimme->article->content_accesible }}
-                        <span class="label label-important normal-weight">premium</span>
+                        <span class="label label-important normal-weight">{{ #premium# }}</span>
                         {{ /if }} 
                         <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
 </span>
@@ -54,8 +54,8 @@
                     </div>
                     <div class="article-links hidden-phone">
                         <hr>
-                        <a href="{{url option='article'}}" class="comments-link">{{ $gimme->article->comment_count }} Comments</a> | 
-                        <a href="{{url option='article'}}" class="red-text negrita-weight">Read more +</a>
+                        <a href="{{url option='article'}}" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | 
+                        <a href="{{url option='article'}}" class="red-text negrita-weight">{{ #readMore# }}</a>
                     </div>
                     <div class="clearfix"></div>
                 </div>
