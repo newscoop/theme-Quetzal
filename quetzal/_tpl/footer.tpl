@@ -38,7 +38,8 @@
                             <li><a href="#">Follow us on twitter</a></li>
                             <li><a href="#">Become a facebook fan</a></li>
                             <li><a href="#">Sign up to our newsletter</a></li>
-                            <li><a href="#">Subscribe to our feed</a></li>                            
+                            <li><a href="#">Subscribe to our feed</a></li> 
+                            <li><a href="/?tpl=6">Archive</a></li>                           
                         </ul>
                     </div>
                     <div class="span2 contact-us visible-desktop">

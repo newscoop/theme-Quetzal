@@ -104,6 +104,7 @@
                             </a>
                             <ul class="dropdown-menu profile-dropdown">
                                 <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>Profile</a></li>
+                                <li><a href='/dashboard'>Edit Profile</a></li>
                                 <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>Logout</a></li>
                             </ul>
                             {{ /if }}
@@ -149,6 +150,7 @@
                     </a>
                     <ul class="dropdown-menu profile-dropdown">
                         <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>Profile</a></li>
+                        <li><a href='/dashboard'>Edit Profile</a></li>
                         <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>Logout</a></li>
                     </ul>
                     {{ /if }} 

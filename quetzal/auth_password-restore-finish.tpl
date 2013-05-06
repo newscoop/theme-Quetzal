@@ -67,6 +67,7 @@
                                 </fieldset>
                                 </form>
                             </div>
+                    </div>
                     {{ include file="_tpl/user-sidebar.tpl" }}          
 
                 </div> <!--end div class="row"-->
