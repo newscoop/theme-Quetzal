@@ -155,7 +155,7 @@
                 <div class="row footer-brand">
                     <div class="span12">
                         <a href="/" class="visible-desktop">
-                            <img class="logo-footer" src="{{ url static_file='_img/newscoop-quetzal-logo-footer.png' }}">
+                            <img class="logo-footer" src="{{ url static_file='_img/newscoop-quetzal-logo-footer.png' }}" alt="{{$gimme->publication->name}}">
                         </a>
                         Copyright 2013. All rights reserved. Newscoop Quetzal Theme
                     </div>
