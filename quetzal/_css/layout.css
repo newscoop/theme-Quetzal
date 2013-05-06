@@ -511,10 +511,10 @@ h1.block-title {
   -webkit-transition: opacity 1s;
   -o-transition: opacity 1s;
 }
-.quetzal-carousel .photo {
+.quetzal-carousel .photo, .quetzal-carousel .video {
   position: relative;
 }
-.quetzal-carousel .photo .photo-caption {
+.quetzal-carousel .photo .photo-caption, .quetzal-carousel .video .photo-caption {
   color: #fff;
   position: absolute;
   bottom: 0px;

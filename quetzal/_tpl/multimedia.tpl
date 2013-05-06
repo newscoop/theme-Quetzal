@@ -48,7 +48,6 @@
                   {{ if $multimediaType=="video" }} 
                       {{ list_article_attachments length="1" }}
                           {{ include file="_tpl/img/img_235x220.tpl" where='video'}}
-                      </a> 
                       {{ /list_article_attachments }}
                   {{ else }}
                       {{ include file="_tpl/img/img_235x220.tpl" where='slideshow'}}

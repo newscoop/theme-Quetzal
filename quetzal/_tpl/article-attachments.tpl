@@ -10,7 +10,7 @@
 {{ elseif $gimme->attachment->extension == ogv || $gimme->attachment->extension == ogg || $gimme->attachment->extension == mp4 || $gimme->attachment->extension == webm }}             
 
   <div class="video-attachment"><!-- read http://diveintohtml5.org/video.html -->
-  <h5><i class="icon-film"></i> Watch</h5><hr>
+  <h5 id="video-cont-label"><i class="icon-film"></i> Watch</h5><hr>
   <video id="video_{{ $gimme->current_list->index }}" class="video-js vjs-default-skin" controls
           preload="auto" width="100%" height="270"
           data-setup="{}">
