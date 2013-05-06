@@ -1826,8 +1826,8 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
     width: 85%;
     margin-left: 1.5%;
   }
-  .breadcrumbs h2, .breadcrumbs h3 {
-    font-size: 20px;
+  .internal-page .breadcrumbs h2, .internal-page .breadcrumbs h3 {
+    font-size: 20px !important;
   }
   #quetzal-slideshow {
     height: 260px;
