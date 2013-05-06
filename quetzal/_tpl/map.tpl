@@ -2,14 +2,14 @@
     <!-- MAP WIDGET -->
     <div class="widget-map">
         <header class="widget-wrap">
-            <h4>News near you</h4>
+            <h4>{{ #newsNearYou# }}</h4>
         </header>
         <section class="widget-wrap">
             <figure class="map">
             {{* All possible constraints for setting the map you can see here:
             https://wiki.sourcefabric.org/display/CS/Dynamic+maps+-+Constraints *}}
             {{ set_map
-                label="Latest locations"
+                label="{{ #latestLocations# }}"
                 issues="_current"
                 max_points=5
             }}
@@ -45,7 +45,7 @@
                 <div id="myModal{{ $gimme->current_list->index }}" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h3 id="myModalLabel">Latest news from {{ $gimme->location->name }}</h3>
+                        <h3 id="myModalLabel">{{ #latestNewsFrom# }} {{ $gimme->location->name }}</h3>
                     </div>
                     <div class="modal-body">
                         {{ list_articles length="3" ignore_issue="true" ignore_section="true" order="bypublishdate desc" location="$latitude $longitude, $latitude $longitude" constraints="type is news" }}

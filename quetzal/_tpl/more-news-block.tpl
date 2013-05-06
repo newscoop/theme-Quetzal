@@ -2,7 +2,7 @@
     <!-- MORE NEWS TABS -->
     <div class="hidden-phone">
         <ul class="nav nav-tabs">
-            <h4>More news</h4>
+            <h4>{{ #moreNews# }}</h4>
             {{ list_sections}}
             {{ if $gimme->current_list->at_beginning }}
             <li class="active">
@@ -33,8 +33,8 @@
                         <div class="clearfix"></div>
                         <div class="article-links">
                             <hr>
-                            <a href="{{ url options="comments"}}" class="comments-link">{{ $gimme->article->comment_count }} Comments</a> | 
-                            <a href="{{ uri options="article"}}" class="red-text negrita-weight">Read more +</a>
+                            <a href="{{ url options="comments"}}" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | 
+                            <a href="{{ uri options="article"}}" class="red-text negrita-weight">{{ #readMore# }}</a>
                             <span class="article-date pull-right">
                                 <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
                             </span>

@@ -10,9 +10,9 @@
     <div class="sidebar-widget-tabs visible-desktop">
         <ul class="nav nav-tabs">
             <li class="active">
-                <a href="#last-comments" data-toggle="tab">Last comments</a>
+                <a href="#last-comments" data-toggle="tab">{{ #latestComments# }}</a>
             </li>
-            <li><a href="#more-searches" data-toggle="tab">More searches</a></li>
+            <li><a href="#more-searches" data-toggle="tab">{{ #moreSearches# }}</a></li>
             <li><a href="#sports-poll" data-toggle="tab">Sports Poll</a></li>
         </ul>
         <div class="tab-content">
@@ -28,7 +28,7 @@
                                     {{ if $gimme->comment->user->identifier }}
                                         <a href="http://{{ $gimme->publication->site }}/user/profile/{{ $gimme->comment->user->uname|urlencode }}">{{ $gimme->comment->user->uname }}</a>
                                     {{ else }}
-                                        {{ $gimme->comment->nickname }} (Anonymous)
+                                        {{ $gimme->comment->nickname }} ({{ #anonymous# }})
                                     {{ /if }}
                     </div>
                 </div>

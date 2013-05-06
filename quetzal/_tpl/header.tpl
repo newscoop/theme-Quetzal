@@ -17,11 +17,11 @@
                             <i class="icon-user icon-white"></i> {{ #logout# }}
                         </a>
                         {{ /if }}
-                        <a href="/user" class="pull-left white-text visible-phone">&nbsp;|&nbsp;Community</a>                         
+                        <a href="/user" class="pull-left white-text visible-phone">&nbsp;|&nbsp;{{ #community# }}</a>                         
                         <ul class="nav pull-right social-buttons">
                           <li class="hidden-phone"><a href="#" class="fb">{{ #beOurFan# }}</a></li>
                           <li class="hidden-phone"><a href="#" class="tw">{{ #followUs# }}</a></li>
-                          <li class="hidden-phone"><a href="/en/static/rss/" class="rss"> {{ #rssFeed# }} </a></li>
+                          <li class="hidden-phone"><a href="/en/static/rss/" class="rss">{{ #rssFeed# }}</a></li>
                           <li class="visible-phone"><a href="#" class="fb">Facebook</a></li>
                           <li class="visible-phone"><a href="#" class="tw">Twitter</a></li>
                           <li class="visible-phone"><a href="/en/static/rss/" class="rss">{{ #rssFeed# }}</a></li>
@@ -104,7 +104,7 @@
                             </a>
                             <ul class="dropdown-menu profile-dropdown">
                                 <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>{{ #profile# }}</a></li>
-                                <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>{{ #logout #}}</a></li>
+                                <li><a href='{{ $view->url(['controller' => 'auth', 'action' => 'logout'], 'default') }}?t={{ time() }}'>{{ #logout# }}</a></li>
                             </ul>
                             {{ /if }}
                         </li>
@@ -145,7 +145,7 @@
 
                     {{ else }}
                     <a href="#" class="dropdown-toggle btn btn-gray pull-left" data-toggle="dropdown">
-                        <i class="icon-user icon-white"></i> {{ #hi# }}{{ $gimme->user->uname }} 
+                        <i class="icon-user icon-white"></i> {{ #hi# }} {{ $gimme->user->uname }} 
                     </a>
                     <ul class="dropdown-menu profile-dropdown">
                         <li><a href='{{ $view->url(['username' => $gimme->user->uname], 'user') }}'>{{ #profile# }}</a></li>
