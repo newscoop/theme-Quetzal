@@ -21,12 +21,6 @@
                                     {{ /list_sections }}
                                 </ul>
                             </div>
-                            <!--<div class="span2">
-                                <ul>
-                                    <li><a href="#">Environment</a></li>
-                                    <li><a href="#">Multimedia</a></li>                                    
-                                </ul>
-                            </div>-->
                         </div>
                     </div>
                     <div class="span3 more-links right-separator visible-desktop">
@@ -147,8 +141,7 @@
 
                     <!-- FOOTER MOBILE VISIBLE -->
                     <div class="span12 visible-phone action-buttons">
-                        <a href="#" class="btn btn-large btn-red">Back to Top</a>
-                        <a href="#" class="btn btn-large btn-gray">Web Version</a>
+                        <a href="#topnav" class="btn btn-large btn-red">Back to Top</a>
                     </div>
                 </div>
 
