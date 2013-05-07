@@ -8,7 +8,7 @@
         </figure>
         <header>
             <h1><a href="{{ uri options="template issue.tpl" }}">{{ $gimme->issue->name}}</a></h1>
-            <span class="article-date">Published on <time datetime="{{ $gimme->issue->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->issue->publish_date|camp_date_format:"%d %M %Y" }}</time></span>
+            <span class="article-date">{{ #publishedOn# }} <time datetime="{{ $gimme->issue->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->issue->publish_date|camp_date_format:"%d %M %Y" }}</time></span>
         </header>
         <div class="clearfix"></div>
     </article>

@@ -3,7 +3,7 @@
         <div class="row">
             <div class="span10">
                 <div class="breadcrumbs">
-                    <h2>Issues Archive</h2>
+                    <h2>{{ #issuesArchive# }}</h2>
                 </div>
             </div>
             <div class="span2 section-rss">
