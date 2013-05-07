@@ -2,10 +2,10 @@
 <section id="comments">
     <div class="row">
         <div class="span6">
-            <h2>{{ $gimme->article->comment_count}} Comments</h2>
+            <h2>{{ $gimme->article->comment_count}} {{ #comments# }}</h2>
         </div>
         <div class="span2 write-comment">
-            <a href="#comment-form" class="red-text">Write a comment</a>
+            <a href="#comment-form" class="red-text">{{ #writeComment# }}</a>
         </div>
     </div>
     {{list_article_comments order="bydate desc"}}
@@ -24,7 +24,7 @@
             {{ if $gimme->comment->user->identifier }}
                 <a href="http://{{ $gimme->publication->site }}/user/profile/{{ $gimme->comment->user->uname|urlencode }}">{{ $gimme->comment->user->uname }}</a>
             {{ else }}
-                {{ $gimme->comment->nickname }} (Anonymous)
+                {{ $gimme->comment->nickname }} ({{ #anonymous# }})
             {{ /if }}
             </h4>
             <div class="pull-right comment-date">
@@ -44,11 +44,11 @@
     <section id="comment-form">
         <div class="row">
             <div class="span6">
-                <h2>Write a comment</h2>
+                <h2>{{ #writeComment# }}</h2>
             </div>
             <div class="span2 write-comment">
                 {{ if !$gimme->user->logged_in}}
-                <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="red-text">Login or Sign Up</a>
+                <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="red-text">{{ #loginOrSignUp# }}</a>
                 {{/if}}
             </div>                                                
         </div>
@@ -58,7 +58,7 @@
                 <!-- user is logged in -->
                 {{ if $gimme->article->number && $gimme->article->comments_locked == 0 && $gimme->article->comments_enabled == 1}}
                     {{ if $gimme->submit_comment_action->defined && $gimme->submit_comment_action->rejected }}
-                    <p><em>Your comment has not been accepted.</em></p>
+                    <p><em>{{ #yourCommentHasNotBeenAccepted# }}</em></p>
                     {{ /if }}
 
                     {{ if $gimme->submit_comment_action->is_error }}
@@ -66,7 +66,7 @@
                     {{ else }}
                         {{ if $gimme->submit_comment_action->defined }}
                             {{ if $gimme->publication->moderated_comments }}
-                                <p><em>Your comment has been sent for approval.</em></p>
+                                <p><em>{{ #yourCommentHasBeenSentForApproval# }}</em></p>
                             {{ /if }}
                         {{ /if }}   
                     {{ /if }}
@@ -81,17 +81,17 @@
             </div>
             {{ /comment_form }}
             {{ else }}
-                <p>Comments are locked / disabled for this article.</p>
+                <p>{{ #commentsLocked# }}</p>
             {{ /if }}
         {{ else }}
-            <p>You have to be registered in order to comment on articles and send messages directly to the editorial team. Please login or create a free user account.</p>
+            <p>{{ #registrationNeeded# }}</p>
         {{ /if }}
     {{ else }}
         <!-- public comments are allowed-->
         {{ if $gimme->user->logged_in }}
             {{ if $gimme->article->number && $gimme->article->comments_locked == 0 && $gimme->article->comments_enabled == 1}}
             {{ if $gimme->submit_comment_action->defined && $gimme->submit_comment_action->rejected }}
-                <p><em>Your comment has not been accepted.</em></p>
+                <p><em>{{ #yourCommentHasNotBeenAccepted# }}</em></p>
             {{ /if }}
 
             {{ if $gimme->submit_comment_action->is_error }}
@@ -99,7 +99,7 @@
             {{ else }}
                 {{ if $gimme->submit_comment_action->defined }}
                     {{ if $gimme->publication->moderated_comments }}
-                        <p><em>Your comment has been sent for approval.</em></p>
+                        <p><em>{{ #yourCommentHasBeenSentForApproval# }}</em></p>
                     {{ /if }}
                 {{ /if }}   
             {{ /if }}
@@ -115,13 +115,13 @@
             </div>
             {{ /comment_form }}
             {{ else }}
-                <p>Comments are locked / disabled for this article.</p>
+                <p>{{ #commentsLocked# }}</p>
             {{ /if }}
         {{ else }}
             <!-- user is not logged in -->
             {{ if $gimme->article->number && $gimme->article->comments_locked == 0 && $gimme->article->comments_enabled == 1}}
                 {{ if $gimme->submit_comment_action->defined && $gimme->submit_comment_action->rejected }}
-                    <p><em>Your comment has not been accepted.</em></p>
+                    <p><em>{{ #yourCommentHasNotBeenAccepted# }}</em></p>
                 {{ /if }}
 
                 {{ if $gimme->submit_comment_action->is_error }}
@@ -129,7 +129,7 @@
                 {{ else }}
                     {{ if $gimme->submit_comment_action->defined }}
                         {{ if $gimme->publication->moderated_comments }}
-                            <p><em>Your comment has been sent for approval.</em></p>
+                            <p><em>{{ #yourCommentHasBeenSentForApproval# }}</em></p>
                         {{ /if }}
                     {{ /if }}   
                 {{ /if }}
@@ -149,7 +149,7 @@
 
         {{ /comment_form }}
             {{ else }}
-            <p>Comments are locked / disabled for this article.</p>
+            <p>{{ #commentsLocked# }}</p>
         {{ /if }}
     {{ /if }}
 {{ /if }}

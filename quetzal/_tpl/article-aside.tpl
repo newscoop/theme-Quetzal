@@ -13,7 +13,7 @@
         {{ if $gimme->current_list->at_beginning }} 
         <div class="widget-more-news visible-desktop">
             <header>
-                <h4>More news like this</h3>
+                <h4>{{ #moreNewsLikeThis# }}</h4>
             </header>
             <div class="widget-wrap">
                 <div class="news-content">
@@ -26,9 +26,9 @@
                             </div>
                             <div class="clearfix divider"></div>
                             <div class="newdata">
-                                <span>{{ $gimme->article->comment_count }} comments</span> | 
-                                <a href="{{ uri options="article"}}" class="red-text">Read more +</a>
-                                <span class="date pull-right">Jan 28 2012, 4:35 pm</span>
+                                <span>{{ $gimme->article->comment_count }} {{ #comments# }}</span> | 
+                                <a href="{{ uri options="article"}}" class="red-text">{{ #readMore# }}</a>
+                                <span class="date pull-right"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time></span>
                             </div>
                         </div>
                         {{ if $gimme->current_list->at_end }}
@@ -43,7 +43,7 @@
         {{ if $gimme->current_list->at_beginning }} 
         <div class="widget-more-news hidden-tablet hidden-desktop">
             <header>
-                <h4>More news like this</h3>
+                <h4>{{ #moreNewsLikeThis# }}</h4>
             </header>
             <div class="widget-wrap">
                 <div class="news-content">
@@ -59,7 +59,7 @@
                                 <span class="red-text">{{ $gimme->article->section }}</span>
                                 <header>
                                     <h2><a href="{{ uri options="article"}}">{{ $gimme->article->name }}</a></h2>
-                                    <span class="article-date">Nov 02 2012, 5:40 am</span>
+                                    <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time></span>
                                 </header>
                                 <div class="clearfix"></div>
                             </section>
@@ -75,7 +75,7 @@
         <!-- MAP WIDGET -->
         <div class="widget-map hidden-tablet">
             <header class="widget-wrap">
-                <h4>News near you</h4>
+                <h4>{{ #newsNearYou# }}</h4>
             </header>
             <section class="widget-wrap">
                 {{ if $gimme->article->has_map }}         
