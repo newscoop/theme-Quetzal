@@ -1583,7 +1583,8 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
     margin-right: 7px;
   }
   .home-featured-news .other-featured article {
-    min-height: auto;
+    min-height: 1px !important;
+    height: auto !important;
     padding-bottom: 3px;
   }
   .home-featured-news .other-featured .article-content {
