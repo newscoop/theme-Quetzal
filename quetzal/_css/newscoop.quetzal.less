@@ -304,7 +304,7 @@ hr{
         top: 46px;        
         .rounded-corners(0px);
         .trans(all, 0.5s);
-        .opacity(0.8);
+        .opacity(0.7);
         span{
             display: block;
             top: 76px;
@@ -724,6 +724,26 @@ i.icon-center{
     }
 }
 
+// PAGINATION
+
+.pagination{
+    ul li{
+        a{
+            color:@red2;
+            &:hover{
+                background: @red2;
+                color:#fff;
+            }
+        }
+    }
+    ul > .active > a{
+            background: #fff5ec;
+            &:hover{
+                background: #fff5ec;
+                color:#999;
+            }
+    }
+}
 // COMMENTS
 .avatar{
     .rounded-corners(4px);

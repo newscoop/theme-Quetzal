@@ -2448,11 +2448,11 @@ hr {
   -moz-transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
-  opacity: 0.8;
-  -moz-opacity: 0.8;
+  opacity: 0.7;
+  -moz-opacity: 0.7;
   filter: alpha(opacity=0.8);
-  opacity: 0.8;
-  -moz-opacity: 0.8;
+  opacity: 0.7;
+  -moz-opacity: 0.7;
   filter: alpha(opacity=0.8);
 }
 .quetzal-carousel .carousel-control span {
@@ -2949,6 +2949,20 @@ i.icon-center {
   height: 5px;
   display: block;
   border-bottom: 1px dotted #B2B2B2;
+}
+.pagination ul li a {
+  color: #c52500;
+}
+.pagination ul li a:hover {
+  background: #c52500;
+  color: #fff;
+}
+.pagination ul > .active > a {
+  background: #fff5ec;
+}
+.pagination ul > .active > a:hover {
+  background: #fff5ec;
+  color: #999;
 }
 .avatar {
   border-radius: 4px;
