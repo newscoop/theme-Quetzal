@@ -47,6 +47,7 @@
 
     <!-- Vendor plugins -->
     <script src="{{ url static_file='_js/vendor/jquery.cycle2.min.js'}}"></script>
+    <script src="{{ url static_file='_js/vendor/jquery.cycle2.loader.min.js'}}"></script>
     <script src="{{ url static_file='_js/vendor/bootstrap.min.js'}}"></script>
     <script src="{{ url static_file='_js/vendor/jquery.timeago.js'}}"></script>
 

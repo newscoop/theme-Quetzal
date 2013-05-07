@@ -20,7 +20,7 @@
             <div class="slide-description hidden-phone">
                 {{ $gimme->article->full_text|truncate:100:"...":true }}
                 <div class="slide-time"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
-</div>
+                </div>
                 <a class="read-more red-text" href="{{ uri options='article'}}">Read more +</a>
             </div>
         </div>
