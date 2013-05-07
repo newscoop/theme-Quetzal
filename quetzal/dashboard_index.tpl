@@ -13,7 +13,7 @@
                 <div class="row">
                     <div class="span10">
                         <div class="breadcrumbs">
-                            <h2>Welcome {{ $user->name }}</h2>
+                            <h2>{{ #welcome# }} {{ $user->name }}</h2>
                         </div>
                     </div>
                     <div class="span2 section-rss">
@@ -21,7 +21,7 @@
                 </div> 
                 <div class="row">
                     <div class="span12 more-news-tabs tab-sections">
-                        <a class="back-link visible-phone" href="#">&larr; Back</a>
+                        <a class="back-link visible-phone" href="#">&larr; {{ #back# }}</a>
                     </div>
                 </div>                       
             </div>
@@ -32,7 +32,7 @@
                 <div class="row home-featured-news">
                     <div class="span4 visible-desktop">
                         <center>
-                        <span class="label">Current avatar</span><br>
+                        <span class="label">{{ #currentAvatar# }}</span><br>
                             <figure class="user-image">
                                 <img src="{{ include file="_tpl/user-image.tpl" user=$user width=175 height=210 }}" style="max-width: 100%" rel="resizable" />
                             </figure>
@@ -40,7 +40,7 @@
                     </div>
                     <div class="span8 hidden-desktop">
                         <center>
-                        <span class="label">Current avatar</span><br>
+                        <span class="label">{{ #currentAvatar# }}</span><br>
                             <figure class="user-image">
                                 <img src="{{ include file="_tpl/user-image.tpl" user=$user width=175 height=210 }}" style="max-width: 100%" rel="resizable" />
                             </figure>
