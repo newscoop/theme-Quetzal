@@ -5,11 +5,14 @@
         data-cycle-slides="> div.quetzal-slide"
         data-cycle-pager="#no-template-pager"
         data-cycle-pause-on-hover="true"
-        data-cycle-pager-template="">
+        data-cycle-pager-template=""
+        data-cycle-log="false">
         {{ list_articles length="3" ignore_issue="true" ignore_section="true" order="bydate desc" constraints="highlight is on" }}   
-        
-        <div class="quetzal-slide" 
-            style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})">
+        {{ if $gimme->current_list->at_beginning }}
+        <div class="quetzal-slide first" style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})">
+        {{ else }}
+        <div class="quetzal-slide" style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})">
+        {{ /if }}
             <div class="slide-title">
                 <span class="red-text">{{ $gimme->article->section->name }}</span>
                 <h3><a href="{{ uri options='article'}}">{{ $gimme->article->name}}</a></h3>

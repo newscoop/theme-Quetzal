@@ -46,6 +46,7 @@
     <script>window.jQuery || document.write('<script src="{{ url static_file='_js/vendor/jquery-1.9.1.min.js'}}"><\/script>')</script>
 
     <!-- Vendor plugins -->
+    <script src="{{ url static_file='_js/vendor/jquery.cycle2.min.js'}}"></script>
     <script src="{{ url static_file='_js/vendor/bootstrap.min.js'}}"></script>
     <script src="{{ url static_file='_js/vendor/jquery.timeago.js'}}"></script>
 

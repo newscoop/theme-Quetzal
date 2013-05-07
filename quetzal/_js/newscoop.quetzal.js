@@ -6,5 +6,7 @@ $(document).ready(function() {
  	// boostrap initialize components
   	$("a[rel]").popover();
   	$("a[rel=tooltip]").tooltip();
-
+  	
 });
+
+

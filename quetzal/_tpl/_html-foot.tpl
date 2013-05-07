@@ -2,7 +2,6 @@
         
         <script src="{{ url static_file='_js/plugins.js'}}"></script>
         <script src="{{ url static_file='_js/newscoop.quetzal.js'}}"></script>
-        <script src="{{ url static_file='_js/vendor/jquery.cycle2.min.js'}}"></script>
 
         <!-- Google analytics block -->
         <script>
