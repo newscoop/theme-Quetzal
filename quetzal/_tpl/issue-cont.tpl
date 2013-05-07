@@ -11,7 +11,7 @@
             <header>
                 <h1><a href="{{ uri options="article" }}">{{ $gimme->article->name }}</a></h1>
                 <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time></span><br>
-                <span>{{ $gimme->article->comment_count }} comment(s)</span>
+                <span>{{ $gimme->article->comment_count }} {{ #comments# }}</span>
             </header>                                        
             <div class="clearfix"></div>
         </article>
