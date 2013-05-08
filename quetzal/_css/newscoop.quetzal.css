@@ -943,7 +943,7 @@ h6 {
 .white-text {
   color: #fff;
 }
-.red-text {
+.link-color {
   color: #d55436;
 }
 .gray-text {
@@ -952,11 +952,11 @@ h6 {
 .text-error {
   color: #d55436;
 }
-a.red-text {
+a.link-color {
   color: #d55436;
   font-weight: 600;
 }
-a.red-text:hover {
+a.link-color:hover {
   color: #c52500;
 }
 .bold-weight {

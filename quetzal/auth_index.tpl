@@ -50,8 +50,8 @@
                                     <dt class="empty">&nbsp;</dt>
                                     <dd>
                                         <span class="input-info">
-                                            <a class="register-link red-text" href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}">Register | </a>
-                                            <a class="register-link red-text" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">{{ #forgotYourPassword# }}</a>
+                                            <a class="register-link link-color" href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}">Register | </a>
+                                            <a class="register-link link-color" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">{{ #forgotYourPassword# }}</a>
                                         </span>
                                     </dd>
                                 </dl>

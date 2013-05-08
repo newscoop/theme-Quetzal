@@ -8,7 +8,7 @@
                         <h4>{{ #aboutUs# }}</h4>
                         <div class="pad10right">
                             Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur<br>
-                            <a href="#" class="red-text">{{ #moreAboutUs# }}</a>
+                            <a href="#" class="link-color">{{ #moreAboutUs# }}</a>
                         </div>
                     </div>
                     <div class="span4 categories right-separator visible-desktop">
@@ -39,17 +39,17 @@
                     <div class="span2 contact-us visible-desktop">
                         <h4>{{ #contactUs# }}</h4>
                         <div class="info">
-                            <span class="red-text">{{ #email# }}</span>
+                            <span class="link-color">{{ #email# }}</span>
                             support@domain.com
                         </div>
 
                         <div class="info">
-                            <span class="red-text">{{ #address# }}</span>
+                            <span class="link-color">{{ #address# }}</span>
                             New York, NY 10021-3528
                         </div>
 
                         <div class="info">
-                            <span class="red-text">{{ #phone# }}</span>
+                            <span class="link-color">{{ #phone# }}</span>
                             +1 (502) 2468-4984
                         </div>
                     </div>
@@ -118,7 +118,7 @@
                                                     {{ $gimme->article->full_text|truncate:200:"...":true}}
                                                 </div>  
                                                 <div class="article-links">
-                                                    <a href="{{ uri options="article" }}" class="red-text">Read more +</a>
+                                                    <a href="{{ uri options="article" }}" class="link-color">Read more +</a>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </article>

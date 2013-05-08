@@ -14,14 +14,14 @@
         <div class="quetzal-slide" style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})"><br class="visible-desktop">
         {{ /if }}
             <div class="slide-title">
-                <span class="red-text">{{ $gimme->article->section->name }}</span>
+                <span class="link-color">{{ $gimme->article->section->name }}</span>
                 <h3><a href="{{ uri options='article'}}">{{ $gimme->article->name}}</a></h3>
             </div>
             <div class="slide-description hidden-phone">
                 {{ $gimme->article->full_text|truncate:100:"...":true }}
                 <div class="slide-time"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
                 </div>
-                <a class="read-more red-text" href="{{ uri options='article'}}">Read more +</a>
+                <a class="read-more link-color" href="{{ uri options='article'}}">Read more +</a>
             </div>
         </div>
         {{ /list_articles}}

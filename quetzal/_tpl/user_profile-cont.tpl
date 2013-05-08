@@ -4,7 +4,7 @@
         <h1>{{ $user->first_name }} {{ $user->last_name }} ({{$user->uname}})</h1>
         <p><b>{{ #gender# }}</b> {{ $profile['gender'] }}</p>
         <p><b>{{ #organisation# }}</b> {{ $profile['organisation']}}</p>
-        <p><b>{{ #website# }}</b> <a class="red-text" href="{{ $profile['website']|escape:url}}">{{ $profile['website']|escape}}</a></p>
+        <p><b>{{ #website# }}</b> <a class="link-color" href="{{ $profile['website']|escape:url}}">{{ $profile['website']|escape}}</a></p>
         <p><b>{{ #birthday# }}</b> {{ $profile['birth_date'] }}</p>
         <p><b>Twitter</b> {{ $profile['twitter'] }}</p>
 

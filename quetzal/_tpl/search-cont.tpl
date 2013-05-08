@@ -8,7 +8,7 @@
                     {{ include file='_tpl/img/img_225x150.tpl'}} 
                 </a>
             </figure>
-            <span class="red-text">{{ $gimme->article->section->name }}</span>
+            <span class="link-color">{{ $gimme->article->section->name }}</span>
             {{ if !$gimme->article->content_accessible }}
             <span class="label label-important normal-weight">{{ #premium# }}</span>
             {{ /if }}
@@ -21,7 +21,7 @@
             </div>  
             <div class="article-links hidden-phone">
                 <hr>
-                <a href="{{ uri options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="red-text">{{ #readMore# }}</a>
+                <a href="{{ uri options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="link-color">{{ #readMore# }}</a>
             </div>
             <div class="clearfix"></div>
         </article>

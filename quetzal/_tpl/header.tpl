@@ -6,7 +6,7 @@
                 <nav id="topnav" class="navbar">
                     <div class="navbar-inner user-top-lef-links">
                         <div class="pull-left welcome hidden-phone">
-                            <span class="red-text">{{ #welcome# }}</span> {{$smarty.now|date_format:"%d/%m/%Y"}} 
+                            <span class="link-color">{{ #welcome# }}</span> {{$smarty.now|date_format:"%d/%m/%Y"}} 
                         </div>
                         {{ if !$gimme->user->logged_in}}
                         <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="pull-left white-text visible-phone login-link">
@@ -97,9 +97,9 @@
                                         <input name="email" id="email" style="margin-top: 8px" type="text" placeholder="Email" />
                                         <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
                                         <button class="btn btn-danger" name="submit" type="submit">{{ #login# }}</button>
-                                        or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text">{{ #signUp# }}</a>
+                                        or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="link-color">{{ #signUp# }}</a>
                                         <br>
-                                        <a class="red-text pull-right"href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
+                                        <a class="link-color pull-right"href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
                                         </span>
                                     </fieldset>
                                 </form>
@@ -145,9 +145,9 @@
                                 <input name="email" id="email" style="margin-top: 8px" type="text" placeholder="Email" />
                                 <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
                                 <button class="btn btn-danger" name="submit" type="submit">{{ #login# }}</button>
-                                or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text">{{ #signUp# }}</a>
+                                or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="link-color">{{ #signUp# }}</a>
                                 <br>
-                                <a class="red-text pull-right" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
+                                <a class="link-color pull-right" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
                             </fieldset>
                         </form>
                     </ul>

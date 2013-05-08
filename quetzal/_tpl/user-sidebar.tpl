@@ -9,7 +9,7 @@
             {{ list_article_comments length="1" order="bydate desc"}}
             <div class="comm-entry">
                 <p>{{ #newCommentOn# }}</p>
-                <a href="{{ uri options="article" }}" class="red-text">{{ $gimme->article->name }}</a><br>
+                <a href="{{ uri options="article" }}" class="link-color">{{ $gimme->article->name }}</a><br>
                 <time class="timeago" datetime="{{ $gimme->comment->submit_date }}">{{ $gimme->comment->submit_date}}</time>
             </div>
             {{ /list_article_comments }}

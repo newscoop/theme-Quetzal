@@ -3,7 +3,7 @@
 {{/if}}
 <div class="span8 section-articles profile-articles">
     <section class="archive-block">
-        <h1 class="block-title">{{ #articlesBy# }} <span class="red-text">{{ $user->first_name}} {{ $user->last_name}}</span></h1>
+        <h1 class="block-title">{{ #articlesBy# }} <span class="link-color">{{ $user->first_name}} {{ $user->last_name}}</span></h1>
         <hr>
         {{ list_articles length="5" ignore_publication="true" ignore_issue="true" ignore_section="true" constraints="author is $escapedName type is news" order="bypublishdate desc" }}
         <article class="section-article archive-entry">
