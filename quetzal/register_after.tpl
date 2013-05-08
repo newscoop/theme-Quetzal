@@ -1,4 +1,4 @@
-
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include file="_tpl/_html-head.tpl" }}
 
 <body>
@@ -14,7 +14,7 @@
 	            <div class="row">
 	                <div class="span10">
 	                    <div class="breadcrumbs">
-	                        <h2>Confirmation has been sent</h2>
+	                        <h2>{{ #confirmationHasBeenSent# }}</h2>
 	                    </div>
 	                </div>
 	                <div class="span2 section-rss">
@@ -22,7 +22,7 @@
 	            </div> 
 	            <div class="row">
 	                <div class="span12 more-news-tabs tab-sections">
-	                    <a class="back-link visible-phone" href="#">&larr; Back</a>
+	                    <a class="back-link visible-phone" href="#">&larr; {{ #back# }}</a>
 	                </div>
 	            </div>                       
 	        </div>
@@ -32,8 +32,8 @@
                 <div class="row home-featured-news">
                     <div class="span8">
                         <div class="alert">
-                            <p>Follow the steps you will find in your email</p>
-                            <p><b>Thanks for registering</b></p>
+                            <p>{{ #followTheSteps# }}</p>
+                            <p><b>{{ #thanksForRegistering# }}</b></p>
                         </div>
                     </div> 
                     {{ include file="_tpl/user-sidebar.tpl" }}          
