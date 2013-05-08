@@ -299,7 +299,7 @@ figure.article-image {
 article {
   font-size: 12px;
 }
-article h1 {
+article h2 {
   font-size: 20px;
   font-weight: normal;
   margin: 0px;
@@ -848,10 +848,10 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   margin-bottom: 10px;
   margin-top: 10px;
 }
-.user-entry h1 {
+.user-entry h2 {
   font-size: 18px;
 }
-.user-entry h1 a {
+.user-entry h2 a {
   font-weight: 400;
   font-weight: 400;
 }

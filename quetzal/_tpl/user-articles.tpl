@@ -9,7 +9,7 @@
         <article class="section-article archive-entry">
             {{ include file='_tpl/img/img_130x70.tpl'}}
             <header>
-                <h1><a href="{{ $gimme->article->url }}">{{ $gimme->article->name }}</a></h1>
+                <h2><a href="{{ $gimme->article->url }}">{{ $gimme->article->name }}</a></h2>
                 <span class="article-date">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</span>
                 <span class="label label-important normal-weight">{{ #premium# }}</span>
                 <br>

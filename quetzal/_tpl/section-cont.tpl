@@ -15,7 +15,7 @@
             <span class="label label-important normal-weight">{{ #premium# }}</span>
             {{ /if }}
             <header>
-                <h1><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h1>
+                <h2><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h2>
                 <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
             </header>
             <div class="article-excerpt hidden-phone">
@@ -41,7 +41,7 @@
             <span class="label label-important normal-weight">{{ #premium# }}</span>
             {{ /if }}
             <header>
-                <h1><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h1>
+                <h2><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h2>
                 <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
             </header>
             <div class="article-excerpt hidden-phone">
