@@ -18,7 +18,11 @@
                 {{ include file="_tpl/user_profile-cont.tpl" }}
                 </div> <!--end div class="row"-->
                 <div class="row home-featured-news">
+                {{ if $user->isAuthor() }}
                 {{ include file="_tpl/user-articles.tpl" }}          
+                {{ else }}
+                {{ include file="_tpl/user-comments.tpl" }}          
+                {{ /if }}
                 {{ include file="_tpl/user-sidebar.tpl" }}          
                 </div> 
             </section> <!-- end section id=content -->
