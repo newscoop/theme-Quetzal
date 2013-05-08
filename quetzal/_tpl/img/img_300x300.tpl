@@ -1,6 +1,6 @@
 {{ image rendition="articlesquare" }}
 {{ if $where=='mobile'}}
-<figure class="hidden-desktop">
+<figure class="aside-figure pull-right hidden-desktop">
 {{ else }}
 <figure class="aside-figure pull-right visible-desktop">
 {{ /if }}

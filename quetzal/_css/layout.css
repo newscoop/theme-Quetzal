@@ -558,14 +558,14 @@ footer[id="main-footer"] .footer-brand .logo-footer {
   background: #000;
   margin-bottom: 15px;
 }
-.single-1 h1 {
+.single h1 {
   width: 300px;
 }
-.single-1 figure.aside-figure {
+.single figure.aside-figure {
   width: 300px;
   margin: 0px;
   padding: 0px;
-  margin: 10px 0 0 10px;
+  margin: 10px 0 0 15px;
 }
 article.main-article figure {
   margin: 0px;

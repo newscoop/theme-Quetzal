@@ -1,6 +1,6 @@
 <!-- MAIN ARTICLE -->
 <div class="span8 article-container">
-    <article class="main-article single-1">                                    
+    <article class="main-article single">                                    
         <header>
             <span class="article-info">
                 <time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time> 

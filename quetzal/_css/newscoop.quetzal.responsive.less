@@ -230,7 +230,7 @@
     .logo-search .span7,
     .article-container,
     .article-container h1,
-    .article-container .single-1 figure > img,
+    .article-container .single figure > img,
     .other-featured article{
         width: 100% !important;
     }
@@ -303,6 +303,12 @@
         .rounded-corners-top(0px);
         .container{
             padding: 0px 30px;
+        }
+    }
+
+    .single{
+        figure.aside-figure{
+            width: 50%;  
         }
     }
 
@@ -470,6 +476,16 @@
         }
     }
 
+    .single{
+        figure.aside-figure{
+            width: 100%;
+            margin-bottom: 10px;
+            img{
+                width: 100%;
+            }  
+        }
+    }
+
     #comments{
         .write-comment{        
             text-align: left;
@@ -593,7 +609,7 @@
         margin-right: -30px !important;
     }
 
-    .single-1 h1{
+    .single h1{
         width: 100%;        
     }
 
