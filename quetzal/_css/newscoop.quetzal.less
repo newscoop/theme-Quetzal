@@ -11,29 +11,22 @@ h1, h2, h3, h4, h5, h6{
     .web-font;
 }
 
-.pad10right{
-    padding-right: 10px;
-}
-
 // COLORS
 
 @red1: #d55436;
 @red2: #c52500;
 
-.white-text{
-  color: #fff;
-}
-.link-color{
-  .text-error;
-}
-.gray-text{
-  color: #777;
-}
+.white-text{color: #fff;}
+
+.link-color{.text-error;}
+
+.gray-text{color: #777;}
 
 .text-error{color: @red1}
 
 a.link-color{
-    color: @red1; font-weight: 600;
+    color: @red1; 
+    font-weight: 600;
     &:hover{
         color: @red2;
     }
