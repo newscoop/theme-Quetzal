@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="span10">
                         <div class="breadcrumbs">
-                            <h2>Login</h2>
+                            <h2>{{ #login# }}</h2>
                         </div>
                     </div>
                     <div class="span2 section-rss">
@@ -23,7 +23,7 @@
                 </div> 
                 <div class="row">
                     <div class="span12 more-news-tabs tab-sections">
-                        <a class="back-link visible-phone" href="#">&larr; Back</a>
+                        <a class="back-link visible-phone" href="#">&larr; {{ #back# }}</a>
                     </div>
                 </div>                       
             </div>
@@ -37,10 +37,10 @@
                             <form action="{{ $form->getAction() }}" class="zend_form" method="{{ $form->getMethod() }}">
                                 {{ if $form->isErrors() }}
                                 <div class="alert alert-error">
-                                    <h5>Login failed</h5>
-                                    <p>Either your email or password is wrong.</p>
-                                    <p>Try again please!</p>
-                                    <p><a class="register-link" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot your password?</a></p>
+                                    <h5>{{ #loginFailed# }}</h5>
+                                    <p>{{ #loginFailedMessage# }}</p>
+                                    <p>{{ #tryAgainPlease# }}</p>
+                                    <p><a class="register-link" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">{{ #forgotYourPassword# }}</a></p>
                                 </div>
                                 {{ /if }}
                                 <dl>
@@ -50,12 +50,12 @@
                                     <dd>
                                         <span class="input-info">
                                             <a class="register-link red-text" href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}">Register | </a>
-                                            <a class="register-link red-text" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
+                                            <a class="register-link red-text" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">{{ #forgotYourPassword# }}</a>
                                         </span>
                                     </dd>
                                 </dl>
                                 <div class="form-buttons right">
-                                    <input type="submit" id="submit" class="button big" value="Login" />
+                                    <input type="submit" id="submit" class="button big" value="{{ #login# }}" />
                                 </div>
                             </form>
                         </div>
