@@ -1,3 +1,4 @@
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include file="_tpl/_html-head.tpl" }}
 
 <body>
@@ -19,9 +20,9 @@
                 <div class="span12 article-container">
                     <br>
                     <center>
-                        <h4 style="text-align:center;">Sorry, the requested page was not found.</h4>
+                        <h4 style="text-align:center;">{{ #notFoundMessage# }}</h4>
                         <br>
-                        <a href="javascript:history.back()" class="btn btn-red">← Back</a>
+                        <a href="javascript:history.back()" class="btn btn-red">← {{ #back# }}</a>
                     </center>
                     <br>
                 </div>
