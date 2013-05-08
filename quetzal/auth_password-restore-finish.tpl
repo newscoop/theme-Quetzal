@@ -1,3 +1,4 @@
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include file="_tpl/_html-head.tpl" }}
 
 <body>
@@ -14,7 +15,7 @@
                 <div class="row">
                     <div class="span10">
                         <div class="breadcrumbs">
-                            <h2>Set New Password</h2>
+                            <h2>{{ #setNewPassword# }}</h2>
                         </div>
                     </div>
                     <div class="span2 section-rss">
@@ -23,7 +24,7 @@
                 </div> 
                 <div class="row">
                     <div class="span12 more-news-tabs tab-sections">
-                        <a class="back-link visible-phone" href="#">&larr; Back</a>
+                        <a class="back-link visible-phone" href="#">&larr; {{ #back# }}</a>
                     </div>
                 </div>                       
             </div>
@@ -38,7 +39,7 @@
                                 <fieldset>
                                     {{ if $form->isErrors() }}
                                     <div class="alert alert-error">
-                                        <p>Your password could not be changed. Please follow the instructions and try again.</p>
+                                        <p>{{ #yourPasswordCouldNotBeChanged# }}</p>
                                     </div>
                                     {{ /if }}
                                 </fieldset>
@@ -48,7 +49,7 @@
                                             {{ if $form->password->hasErrors() }}
                                             <dt class="info-block">&nbsp;</dt>
                                             <dd class="info-block">
-                                                <span class="error-info">Please enter your new password (minimum 6 characters)</span>
+                                                <span class="error-info">{{ #pleaseEnterYourNewPassword# }}</span>
                                             </dd>
                                             {{ /if }}
                                     </dl>
@@ -57,12 +58,12 @@
                                             {{ if $form->password_confirm->hasErrors() && !$form->password->hasErrors() }}
                                             <dt class="info-block">&nbsp;</dt>
                                             <dd class="info-block">
-                                                <span class="error-info">The confirmation of your password does not match your password.</span>
+                                                <span class="error-info">{{ #theConfirmationPasswordDoesNotMatch# }}</span>
                                             </dd>
                                             {{ /if }}
                                      </dl>
                                     <div class="form-buttons right">
-                                        <input type="submit" id="submit" class="button" value="Save password" />
+                                        <input type="submit" id="submit" class="button" value="{{ #savePassword# }}" />
                                     </div>
                                 </fieldset>
                                 </form>
