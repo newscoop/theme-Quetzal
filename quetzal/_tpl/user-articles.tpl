@@ -32,9 +32,9 @@
                         {{ $curlistid=$i*5 }}
                         {{ $gimme->url->set_parameter($gimme->current_list_id(),$curlistid) }}
                         {{ if $curlistid != $curpage }}
-                    <li><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
+                    <li><a href="{{ $view->url(['username' => $user->uname], 'user') }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
                         {{ else }}
-                    <li class="active disable"><a href="{{ uripath options="section" }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
+                    <li class="active disable"><a href="{{ $view->url(['username' => $user->uname], 'user') }}?{{ urlparameters }}">{{ $i+1 }}</a></li>
                         {{ $remi=$i+1 }}
                         {{ /if }}
                     {{ /for }}
