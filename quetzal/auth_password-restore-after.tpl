@@ -1,3 +1,4 @@
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include file="_tpl/_html-head.tpl" }}
 
 <body>
@@ -14,7 +15,7 @@
                 <div class="row">
                     <div class="span10">
                         <div class="breadcrumbs">
-                            <h2>User Account</h2>
+                            <h2>{{ #userAccount# }}</h2>
                         </div>
                     </div>
                     <div class="span2 section-rss">
@@ -23,7 +24,7 @@
                 </div> 
                 <div class="row">
                     <div class="span12 more-news-tabs tab-sections">
-                        <a class="back-link visible-phone" href="#">&larr; Back</a>
+                        <a class="back-link visible-phone" href="#">&larr; {{ #back# }}</a>
                     </div>
                 </div>                       
             </div>
@@ -34,8 +35,8 @@
                 <div class="row home-featured-news">
                     <div class="span8">
                         <div class="alert alert-info">
-                            <h5 class="checkHeading">We've sent you an e-mail.</h5>
-                            <p>Please check your inbox and click on the link in the email to reset your password.</p>
+                            <h5 class="checkHeading">{{ #weSentYouAnEmail# }}</h5>
+                            <p>{{ #pleaseCheckYourInbox# }}</p>
                         </div>
                      </div> 
                     {{ include file="_tpl/user-sidebar.tpl" }}          
