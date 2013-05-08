@@ -32,7 +32,7 @@
                             <li><a href="#">{{ #followUs# }}</a></li>
                             <li><a href="#">{{ #beOurFan# }}</a></li>
                             <li><a href="#">{{ #signUpToOurNewsletter# }}</a></li>
-                            <li><a href="#">{{ #subscribeToOurFeed# }}</a></li> 
+                            <li><a href="/en/static/rss">{{ #subscribeToOurFeed# }}</a></li> 
                             <li><a href="/?tpl=6">{{ #archive# }}</a></li>                           
                         </ul>
                     </div>

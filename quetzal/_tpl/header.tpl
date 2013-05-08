@@ -21,7 +21,7 @@
                         <ul class="nav pull-right social-buttons">
                           <li class="visible-desktop"><a href="#" class="fb">{{ #beOurFan# }}</a></li>
                           <li class="visible-desktop"><a href="#" class="tw">{{ #followUs# }}</a></li>
-                          <li class="visible-desktop"><a href="/en/static/rss/" class="rss">{{ #rssFeed# }}</a></li>
+                          <li class="visible-desktop"><a href="/en/static/rss" class="rss">{{ #rssFeed# }}</a></li>
                           <li class="visible-tablet"><a href="#" class="fb">Facebook</a></li>
                           <li class="visible-tablet"><a href="#" class="tw">Twitter</a></li>
                           <li class="visible-tablet"><a href="#" class="rss">{{ #rssFeed# }}</a></li>
