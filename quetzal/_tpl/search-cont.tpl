@@ -10,18 +10,18 @@
             </figure>
             <span class="red-text">{{ $gimme->article->section->name }}</span>
             {{ if !$gimme->article->content_accessible }}
-            <span class="label label-important normal-weight">premium</span>
+            <span class="label label-important normal-weight">{{ #premium# }}</span>
             {{ /if }}
             <header>
                 <h1>{{$gimme->article->name}}</h1>
-                <span class="article-date">Jan 28 2012, 4:35 am</span>
+                <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time></span>
             </header>
             <div class="article-excerpt hidden-phone">
                 {{ $gimme->article->full_text|truncate:200:"...":true}}
             </div>  
             <div class="article-links hidden-phone">
                 <hr>
-                <a href="{{ uri options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} Comments</a> | <a href="{{ uri options="article" }}" class="red-text negrita-weight">Read more +</a>
+                <a href="{{ uri options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="red-text negrita-weight">{{ #readMore# }}</a>
             </div>
             <div class="clearfix"></div>
         </article>
@@ -33,7 +33,7 @@
 {{ $curpage=intval($gimme->url->get_parameter($gimme->current_list_id())) }}
 {{ if $pages gt 1 }}
 <ul class="pagination">
-    {{ if $gimme->current_list->has_previous_elements }}<li class="prev"><a href="{{ uripath options="section" }}?{{ urlparameters options="previous_items" }}">Previous</a></li>{{ /if }}
+    {{ if $gimme->current_list->has_previous_elements }}<li class="prev"><a href="{{ uripath options="section" }}?{{ urlparameters options="previous_items" }}">{{ #previous# }}</a></li>{{ /if }}
     {{ for $i=0 to $pages - 1 }}
         {{ $curlistid=$i*5 }}
         {{ $gimme->url->set_parameter($gimme->current_list_id(),$curlistid) }}
@@ -44,7 +44,7 @@
         {{ $remi=$i+1 }}
         {{ /if }}
     {{ /for }}
-    {{ if $gimme->current_list->has_next_elements }}<li class="next"><a href="{{ uripath options="section" }}?{{ urlparameters options="next_items" }}">Next</a></li>{{ /if }}
+    {{ if $gimme->current_list->has_next_elements }}<li class="next"><a href="{{ uripath options="section" }}?{{ urlparameters options="next_items" }}">{{ #next# }}</a></li>{{ /if }}
 </ul>
 {{ $gimme->url->set_parameter($gimme->current_list_id(),$curpage) }}
 {{ /if }}
