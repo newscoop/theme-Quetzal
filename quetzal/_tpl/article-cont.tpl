@@ -10,14 +10,12 @@
             {{/if}}
             </span>
             <div class="clearfix"></div>
-            {{ include file="_tpl/article-slideshows.tpl"}}
-            
-
+            {{ include file="_tpl/article-slideshows.tpl" }}
         </header>
 
         <section class="article-content">
             <!-- mejorar esto -->
-            {{ if $gimme->article->slideshows }}
+            {{ if $hasSlideshow > 0}}
             {{ else }}
             {{ include file="_tpl/img/img_300x300.tpl" where="mobile"}}
             {{ /if }}
