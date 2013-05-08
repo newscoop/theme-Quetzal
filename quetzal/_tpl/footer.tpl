@@ -5,10 +5,10 @@
                 <div class="row footer-info">
 
                     <div class="span3 about-us right-separator visible-desktop">
-                        <h4>{{ #aboutUs #}}</h4>
+                        <h4>{{ #aboutUs# }}</h4>
                         <div class="pad10right">
                             Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur<br>
-                            <a href="#" class="red-text">{{ #moreAboutUs #}}</a>
+                            <a href="#" class="red-text">{{ #moreAboutUs# }}</a>
                         </div>
                     </div>
                     <div class="span4 categories right-separator visible-desktop">
@@ -30,14 +30,14 @@
                             <li><a href="#">{{ #termsAndConditions# }}</a></li>
                             <li><a href="#">{{ #contact# }}</a></li>
                             <li><a href="#">{{ #followUs# }}</a></li>
-                            <li><a href="#">{{ #beOurFan #}}</a></li>
+                            <li><a href="#">{{ #beOurFan# }}</a></li>
                             <li><a href="#">{{ #signUpToOurNewsletter# }}</a></li>
                             <li><a href="#">{{ #subscribeToOurFeed# }}</a></li> 
                             <li><a href="/?tpl=6">{{ #archive# }}</a></li>                           
                         </ul>
                     </div>
                     <div class="span2 contact-us visible-desktop">
-                        <h4>Contact us</h4>
+                        <h4>{{ #contactUs# }}</h4>
                         <div class="info">
                             <span class="red-text">{{ #email# }}</span>
                             support@domain.com
