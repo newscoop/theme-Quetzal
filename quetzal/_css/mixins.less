@@ -7,6 +7,24 @@
 .web-font{font-family: 'Asap', sans-serif}
 .web-font-italic{.web-font;font-style: italic}
 
+// COLORS
+
+@red1: #d55436;
+@red2: #c52500;
+
+.noborder {
+  border: none !important;
+}
+.white-text{
+  color: #fff;
+}
+.red-text{
+  .text-error;
+}
+.gray-text{
+  color: #777;
+}
+
 // GENERAL
 
 .wrapCenter(@width: 960px){
@@ -240,6 +258,13 @@
     .quetzal-slide {
         background-position: center center;
         .rounded-corners-top(0px);
+        display: none;
+    }
+    .quetzal-slide.first{
+        display: block;
+        .slide-title{
+            margin-top:15px;
+        }
     }
     .slide-title{
         position: relative;

@@ -15,6 +15,19 @@
   font-family: 'Asap', sans-serif;
   font-style: italic;
 }
+.noborder {
+  border: none !important;
+}
+.white-text {
+  color: #fff;
+}
+.red-text {
+  color: #d55436;
+  color: #d55436;
+}
+.gray-text {
+  color: #777;
+}
 .box-shadow-reset {
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
@@ -76,6 +89,13 @@
   -moz-border-radius-topleft: 0px;
   -webkit-border-top-left-radius: 0px;
   -webkit-border-top-right-radius: 0px;
+  display: none;
+}
+.responsive-tablet-slideshow .quetzal-slide.first {
+  display: block;
+}
+.responsive-tablet-slideshow .quetzal-slide.first .slide-title {
+  margin-top: 15px;
 }
 .responsive-tablet-slideshow .slide-title {
   position: relative;
@@ -112,6 +132,19 @@
   font-family: 'Asap', sans-serif;
   font-style: italic;
 }
+.noborder {
+  border: none !important;
+}
+.white-text {
+  color: #fff;
+}
+.red-text {
+  color: #d55436;
+  color: #d55436;
+}
+.gray-text {
+  color: #777;
+}
 .box-shadow-reset {
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
@@ -173,6 +206,13 @@
   -moz-border-radius-topleft: 0px;
   -webkit-border-top-left-radius: 0px;
   -webkit-border-top-right-radius: 0px;
+  display: none;
+}
+.responsive-tablet-slideshow .quetzal-slide.first {
+  display: block;
+}
+.responsive-tablet-slideshow .quetzal-slide.first .slide-title {
+  margin-top: 15px;
 }
 .responsive-tablet-slideshow .slide-title {
   position: relative;
@@ -302,6 +342,21 @@ h6 a:hover {
   -moz-border-radius-topleft: 6px;
   -webkit-border-top-left-radius: 6px;
   -webkit-border-top-right-radius: 6px;
+  display: none;
+  transition: display 0.3s;
+  -moz-transition: display 0.3s;
+  -webkit-transition: display 0.3s;
+  -o-transition: display 0.3s;
+  transition: display 0.3s;
+  -moz-transition: display 0.3s;
+  -webkit-transition: display 0.3s;
+  -o-transition: display 0.3s;
+}
+#quetzal-slideshow .quetzal-slide.first {
+  display: block;
+}
+#quetzal-slideshow .quetzal-slide.first .slide-title {
+  margin-top: 15px;
 }
 #quetzal-slideshow .slide-title {
   padding: 10px 10px 15px 10px;
@@ -990,6 +1045,8 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 .profile .member-since {
   color: #777;
   color: #777;
+  color: #777;
+  color: #777;
   padding-left: 30px;
   background: url(../_img/calendar-icon.png) left center no-repeat;
   display: inline-block;
@@ -1027,6 +1084,8 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   font-weight: 400;
 }
 .widget-community-feed .comm-entry span {
+  color: #777;
+  color: #777;
   color: #777;
   color: #777;
 }
@@ -1247,6 +1306,13 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
     -moz-border-radius-topleft: 0px;
     -webkit-border-top-left-radius: 0px;
     -webkit-border-top-right-radius: 0px;
+    display: none;
+  }
+  #quetzal-slideshow .quetzal-slide.first {
+    display: block;
+  }
+  #quetzal-slideshow .quetzal-slide.first .slide-title {
+    margin-top: 15px;
   }
   #quetzal-slideshow .slide-title {
     position: relative;
@@ -1280,6 +1346,13 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
     -moz-border-radius-topleft: 0px;
     -webkit-border-top-left-radius: 0px;
     -webkit-border-top-right-radius: 0px;
+    display: none;
+  }
+  #quetzal-slideshow .quetzal-slide.first {
+    display: block;
+  }
+  #quetzal-slideshow .quetzal-slide.first .slide-title {
+    margin-top: 15px;
   }
   #quetzal-slideshow .slide-title {
     position: relative;
@@ -1508,6 +1581,13 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
     -moz-border-radius-topleft: 0px;
     -webkit-border-top-left-radius: 0px;
     -webkit-border-top-right-radius: 0px;
+    display: none;
+  }
+  #quetzal-slideshow .quetzal-slide.first {
+    display: block;
+  }
+  #quetzal-slideshow .quetzal-slide.first .slide-title {
+    margin-top: 15px;
   }
   #quetzal-slideshow .slide-title {
     position: relative;
@@ -1541,6 +1621,13 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
     -moz-border-radius-topleft: 0px;
     -webkit-border-top-left-radius: 0px;
     -webkit-border-top-right-radius: 0px;
+    display: none;
+  }
+  #quetzal-slideshow .quetzal-slide.first {
+    display: block;
+  }
+  #quetzal-slideshow .quetzal-slide.first .slide-title {
+    margin-top: 15px;
   }
   #quetzal-slideshow .slide-title {
     position: relative;
@@ -1855,13 +1942,6 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
     -webkit-border-top-right-radius: 0px;
     height: 260px;
     background-position: center center;
-    display: none !important;
-  }
-  #quetzal-slideshow .cycle-slideshow .first {
-    display: block;
-  }
-  #quetzal-slideshow .cycle-slide {
-    display: none !important;
   }
   #quetzal-slideshow .slide-title {
     position: relative;
@@ -2552,6 +2632,8 @@ hr {
 .home-featured-news .article-date {
   color: #777;
   color: #777;
+  color: #777;
+  color: #777;
 }
 .tab-content {
   background: #29313a url(../_img/tabcontent.png) repeat-x bottom;
@@ -2692,6 +2774,10 @@ i.icon-center {
   width: 100%;
 }
 .widget-map .geomap_open_large_map a {
+  color: #d55436;
+  color: #d55436;
+  color: #d55436;
+  color: #d55436;
   color: #d55436;
   color: #d55436;
   color: #d55436;
@@ -3411,6 +3497,10 @@ i.icon-center {
 }
 .login-nav-tablet .dropdown-menu  > li > a:hover {
   background: none;
+  color: #d55436;
+  color: #d55436;
+  color: #d55436;
+  color: #d55436;
   color: #d55436;
   color: #d55436;
   color: #d55436;

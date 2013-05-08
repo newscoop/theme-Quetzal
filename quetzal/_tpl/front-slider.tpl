@@ -9,9 +9,9 @@
         data-cycle-log="false">
         {{ list_articles length="3" ignore_issue="true" ignore_section="true" order="bydate desc" constraints="highlight is on" }}   
         {{ if $gimme->current_list->at_beginning }}
-        <div class="quetzal-slide first" style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})">
+        <div class="quetzal-slide first" style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})"><br class="visible-desktop">
         {{ else }}
-        <div class="quetzal-slide" style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})">
+        <div class="quetzal-slide" style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})"><br class="visible-desktop">
         {{ /if }}
             <div class="slide-title">
                 <span class="red-text">{{ $gimme->article->section->name }}</span>

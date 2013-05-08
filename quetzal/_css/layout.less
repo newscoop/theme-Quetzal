@@ -83,6 +83,15 @@ h1, h2, h3, h4, h5, h6{
         width: 100%;
         height: 300px;
         .rounded-corners-top(6px); 
+        display: none;
+        .trans(display,0.3s);
+    }
+
+    .quetzal-slide.first{
+        display: block;
+        .slide-title{
+            margin-top:15px;
+        }
     }
 
     .slide-title{
@@ -1312,13 +1321,6 @@ article.main-article{
             .rounded-corners-top(0px);
             height: 260px;
             background-position: center center;
-            display: none !important;
-        }
-        .cycle-slideshow .first{
-            display: block;
-        }
-        .cycle-slide{
-            display: none !important;
         }
         .slide-title{
             position: relative;

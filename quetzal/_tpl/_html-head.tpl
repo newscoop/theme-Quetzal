@@ -46,10 +46,12 @@
     <script>window.jQuery || document.write('<script src="{{ url static_file='_js/vendor/jquery-1.9.1.min.js'}}"><\/script>')</script>
 
     <!-- Vendor plugins -->
-    <script src="{{ url static_file='_js/vendor/jquery.cycle2.min.js'}}"></script>
-    <script src="{{ url static_file='_js/vendor/jquery.cycle2.loader.min.js'}}"></script>
     <script src="{{ url static_file='_js/vendor/bootstrap.min.js'}}"></script>
     <script src="{{ url static_file='_js/vendor/jquery.timeago.js'}}"></script>
+
+    {{ if $gimme->template->name == 'front.tpl'}}
+    <script src="{{ url static_file='_js/vendor/jquery.cycle2.min.js'}}"></script>
+    {{/if}}
 
     {{ if $gimme->template->name == 'article.tpl'}}
     <script src="{{ url static_file='_js/vendor/galleria/galleria-1.2.9.min.js'}}"></script>
