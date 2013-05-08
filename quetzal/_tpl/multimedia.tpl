@@ -14,7 +14,7 @@
           {{ list_article_attachments }}
               {{ if $gimme->attachment->extension == oga }}    
                 {{assign var=multimediacurrent value=1}}              
-                {{assign var=multimediatype value='video'}}
+                {{assign var=multimediatype value='audio'}}
               {{ elseif $gimme->attachment->extension == ogv || $gimme->attachment->extension == ogg || $gimme->attachment->extension == mp4 || $gimme->attachment->extension == webm }}             
                 {{assign var=multimediacurrent value=1}}
                 {{assign var=multimediatype value='video'}}
@@ -45,9 +45,9 @@
                 {{/if}}
 
                 {{ list_articles ignore_issue="true" ignore_section="true" length="1" constraints="number is `$articleID`"}}
-                  {{ if $multimediaType=="video" }} 
+                  {{ if $multimediaType=="video" || $multimediaType=='audio'}} 
                       {{ list_article_attachments length="1" }}
-                          {{ include file="_tpl/img/img_235x220.tpl" where='video'}}
+                          {{ include file="_tpl/img/img_235x220.tpl" where=$multimediaType}}
                       {{ /list_article_attachments }}
                   {{ else }}
                       {{ include file="_tpl/img/img_235x220.tpl" where='slideshow'}}
