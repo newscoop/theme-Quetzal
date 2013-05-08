@@ -6,10 +6,10 @@
 
                     <div class="span3 about-us right-separator visible-desktop">
                         <h4>{{ #aboutUs# }}</h4>
-                        <div class="pad10right">
-                            Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur<br>
+                        <p>
+                            Developed and used by news organisations like Switzerland’s TagesWoche, ElPeriódico de Guatemala and Yemen Times, Newscoop 4 aims to help independent news organisations manage online publications, enrich content and find new audiences.<br>
                             <a href="#" class="link-color">{{ #moreAboutUs# }}</a>
-                        </div>
+                        </p>
                     </div>
                     <div class="span4 categories right-separator visible-desktop">
                         <h4>{{ #sections# }}</h4>

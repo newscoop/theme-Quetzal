@@ -469,6 +469,9 @@ footer[id="main-footer"] .categories ul, footer[id="main-footer"] .more-links ul
   margin: 0px;
   margin-left: 5px;
 }
+footer[id="main-footer"] .about-us p {
+  padding-right: 18px;
+}
 footer[id="main-footer"] .contact-us {
   font-size: 11px;
 }
