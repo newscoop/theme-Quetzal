@@ -1,3 +1,4 @@
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include file="_tpl/_html-head.tpl" }}
 
 <body>
@@ -14,7 +15,7 @@
                 <div class="row">
                     <div class="span10">
                         <div class="breadcrumbs">
-                            <h2>Reset Password</h2>
+                            <h2>{{ #resetPassword# }}</h2>
                         </div>
                     </div>
                     <div class="span2 section-rss">
@@ -23,7 +24,7 @@
                 </div> 
                 <div class="row">
                     <div class="span12 more-news-tabs tab-sections">
-                        <a class="back-link visible-phone" href="#">&larr; Back</a>
+                        <a class="back-link visible-phone" href="#">&larr; {{ #back# }}</a>
                     </div>
                 </div>                       
             </div>
@@ -38,15 +39,15 @@
                              <fieldset>
                                  {{ if $form->email->hasErrors() }}
                                  <div class="alert alert-error">
-                                     <h5>E-mail is not correct</h5>
-                                     <p>Maybe you registered on <em>{{ $gimme->publication->name }}</em> with another e-mail account?</p>
+                                     <h5>{{ #emailIsNotCorrect #}}</h5>
+                                     <p>{{ #maybeYouRegisteredOn# }} <em>{{ $gimme->publication->name }}</em> with another e-mail account?</p>
                                  </div>
                                  {{ /if }}
                              </fieldset>
                              <fieldset class="background-block login">
                                  <dl> {{ $form->email->setLabel("E-Mail")->removeDecorator('Errors') }}</dl>
                                  <div class="form-buttons right">
-                                     <input type="submit" id="submit" class="button" value="Request new password" />
+                                     <input type="submit" id="submit" class="button" value="{{ #requestNewPassword# }}" />
                                  </div>
                              </fieldset>
                          </form>
