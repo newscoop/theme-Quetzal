@@ -62,10 +62,10 @@
             {{/foreach}}
           </div>
           <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-              <span class="arrow-left"></span>
+              ‹<span class="arrow-left"></span>
           </a>
           <a class="right carousel-control" href="#myCarousel" data-slide="next">
-              <span class="arrow-right"></span>
+              ›<span class="arrow-right"></span>
           </a>
       </div>
   </div>

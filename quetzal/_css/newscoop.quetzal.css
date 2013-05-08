@@ -79,6 +79,12 @@ h6 a:hover {
 #seachform {
   margin-top: 20px;
 }
+.welcome {
+  line-height: 35px;
+}
+.navbar .login-nav > li > a {
+  float: left;
+}
 /* Begin Index Slider */
 #quetzal-slideshow {
   position: relative;
@@ -279,12 +285,6 @@ section[role="main"] .wrapper {
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
   -khtml-border-radius: 6px;
-  -webkit-box-shadow: 0px 2px 7px 0px #f0e5da;
-  -moz-box-shadow: 0px 2px 7px 0px #f0e5da;
-  box-shadow: 0px 2px 7px 0px #f0e5da;
-  -webkit-box-shadow: 0px 2px 7px 0px #f0e5da;
-  -moz-box-shadow: 0px 2px 7px 0px #f0e5da;
-  box-shadow: 0px 2px 7px 0px #f0e5da;
 }
 section#content {
   padding: 10px 0px 20px 0px;
@@ -1302,21 +1302,12 @@ nav[role="navigation"] .login-nav .profile-dropdown {
   background: #fff;
 }
 section[role="main"] .wrapper {
-  background: #fff;
-  width: 960px;
-  margin: 0 auto;
-  width: 960px;
-  margin: 0 auto;
-  border-radius: 6px;
-  -ms-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -khtml-border-radius: 6px;
-  border-radius: 6px;
-  -ms-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -khtml-border-radius: 6px;
+  -webkit-box-shadow: 0px 2px 7px 0px #f0e5da;
+  -moz-box-shadow: 0px 2px 7px 0px #f0e5da;
+  box-shadow: 0px 2px 7px 0px #f0e5da;
+  -webkit-box-shadow: 0px 2px 7px 0px #f0e5da;
+  -moz-box-shadow: 0px 2px 7px 0px #f0e5da;
+  box-shadow: 0px 2px 7px 0px #f0e5da;
 }
 section[role="main"] .container:before {
   display: block !important;
@@ -1412,7 +1403,7 @@ hr {
 }
 .quetzal-carousel .carousel-control span {
   display: block;
-  top: 76px;
+  top: 46px;
 }
 .quetzal-carousel .carousel-control.left {
   left: 0px;

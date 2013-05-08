@@ -28,7 +28,7 @@
                             <div class="article-links">
                                 <hr>
                                 <a href="#" class="comments-link">0 Comments</a> | 
-                                <a href="#" class="red-text negrita-weight">Read more +</a>
+                                <a href="#" class="red-text">Read more +</a>
                                 <span class="article-date pull-right">
                                     Jan 28 2012, 4:35 am
                                 </span>
@@ -47,7 +47,7 @@
                             <div class="article-links">
                                 <hr>
                                 <a href="#" class="comments-link">0 Comments</a> | 
-                                <a href="#" class="red-text negrita-weight">Read more +</a>
+                                <a href="#" class="red-text">Read more +</a>
                                 <span class="article-date pull-right">
                                     Jan 28 2012, 4:35 am
                                 </span>
@@ -66,7 +66,7 @@
                             <div class="article-links">
                                 <hr>
                                 <a href="#" class="comments-link">0 Comments</a> | 
-                                <a href="#" class="red-text negrita-weight">Read more +</a>
+                                <a href="#" class="red-text">Read more +</a>
                                 <span class="article-date pull-right">
                                     Jan 28 2012, 4:35 am
                                 </span>

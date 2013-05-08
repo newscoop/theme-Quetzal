@@ -63,7 +63,7 @@
                                 {{ $gimme->article->full_text|truncate:200:"...":true}}
                             </div>  
                             <div class="article-links">
-                                <a href="{{ uri options="article" }}" class="red-text negrita-weight">Read more +</a>
+                                <a href="{{ uri options="article" }}" class="red-text">Read more +</a>
                             </div>
                             <div class="clearfix"></div>
                         </article>

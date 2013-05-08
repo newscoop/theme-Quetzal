@@ -97,9 +97,9 @@
                                         <input name="email" id="email" style="margin-top: 8px" type="text" placeholder="Email" />
                                         <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
                                         <button class="btn btn-danger" name="submit" type="submit">{{ #login# }}</button>
-                                        or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">{{ #signUp# }}</a>
+                                        or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text">{{ #signUp# }}</a>
                                         <br>
-                                        <a class="red-text negrita-weight pull-right"href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
+                                        <a class="red-text pull-right"href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
                                         </span>
                                     </fieldset>
                                 </form>
@@ -145,9 +145,9 @@
                                 <input name="email" id="email" style="margin-top: 8px" type="text" placeholder="Email" />
                                 <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
                                 <button class="btn btn-danger" name="submit" type="submit">{{ #login# }}</button>
-                                or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">{{ #signUp# }}</a>
+                                or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text">{{ #signUp# }}</a>
                                 <br>
-                                <a class="red-text negrita-weight pull-right" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
+                                <a class="red-text pull-right" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
                             </fieldset>
                         </form>
                     </ul>
