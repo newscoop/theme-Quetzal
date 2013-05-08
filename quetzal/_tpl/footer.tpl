@@ -5,14 +5,14 @@
                 <div class="row footer-info">
 
                     <div class="span3 about-us right-separator visible-desktop">
-                        <h4>About us</h4>
+                        <h4>{{ #aboutUs #}}</h4>
                         <div class="pad10right">
                             Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur<br>
-                            <a href="#" class="red-text">More about us +</a>
+                            <a href="#" class="red-text">{{ #moreAboutUs #}}</a>
                         </div>
                     </div>
                     <div class="span4 categories right-separator visible-desktop">
-                        <h4>Sections</h4>
+                        <h4>{{ #sections# }}</h4>
                         <div class="row">
                             <div class="span2">
                                 <ul>
@@ -24,32 +24,32 @@
                         </div>
                     </div>
                     <div class="span3 more-links right-separator visible-desktop">
-                        <h4>More links</h4>
+                        <h4>{{ #moreLinks# }}</h4>
                         <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Terms and conditions</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Follow us on twitter</a></li>
-                            <li><a href="#">Become a facebook fan</a></li>
-                            <li><a href="#">Sign up to our newsletter</a></li>
-                            <li><a href="#">Subscribe to our feed</a></li> 
-                            <li><a href="/?tpl=6">Archive</a></li>                           
+                            <li><a href="#">{{ #aboutUs# }}</a></li>
+                            <li><a href="#">{{ #termsAndConditions# }}</a></li>
+                            <li><a href="#">{{ #contact# }}</a></li>
+                            <li><a href="#">{{ #followUs# }}</a></li>
+                            <li><a href="#">{{ #beOurFan #}}</a></li>
+                            <li><a href="#">{{ #signUpToOurNewsletter# }}</a></li>
+                            <li><a href="#">{{ #subscribeToOurFeed# }}</a></li> 
+                            <li><a href="/?tpl=6">{{ #archive# }}</a></li>                           
                         </ul>
                     </div>
                     <div class="span2 contact-us visible-desktop">
                         <h4>Contact us</h4>
                         <div class="info">
-                            <span class="red-text">Email</span>
+                            <span class="red-text">{{ #email# }}</span>
                             support@domain.com
                         </div>
 
                         <div class="info">
-                            <span class="red-text">Address</span>
+                            <span class="red-text">{{ #address# }}</span>
                             New York, NY 10021-3528
                         </div>
 
                         <div class="info">
-                            <span class="red-text">Phone</span>
+                            <span class="red-text">{{ #phone# }}</span>
                             +1 (502) 2468-4984
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                     <!-- FOOTER TABLET VISIBLE HOME ONLY -->
                     <div class="span12 visible-tablet tablet-map">
                         <div class="widget-map">                            
-                            <h4 class="widget-wrap">News near you</h4>                            
+                            <h4 class="widget-wrap">{{ #newsNearYou# }}</h4>                            
                             <section class="widget-wrap">
                                 <figure class="map">
                                 {{* All possible constraints for setting the map you can see here:
@@ -131,7 +131,7 @@
                             <div class="widget-footer">
                                 <hr>
                                 <div class="widget-wrap">
-                                    <a href="#" class="btn btn-red pull-right">Back to Top</a>
+                                    <a href="#topnav" class="btn btn-red pull-right">{{ #backToTop# }}</a>
                                     <div class="clearfix"></div>
                                 </div>
                             </div>
@@ -141,7 +141,7 @@
 
                     <!-- FOOTER MOBILE VISIBLE -->
                     <div class="span12 visible-phone action-buttons">
-                        <a href="#topnav" class="btn btn-large btn-red">Back to Top</a>
+                        <a href="#topnav" class="btn btn-large btn-red">{{ #backToTop# }}</a>
                     </div>
                 </div>
 
@@ -151,7 +151,7 @@
                         <a href="/" class="visible-desktop">
                             <img class="logo-footer" src="{{ url static_file='_img/newscoop-quetzal-logo-footer.png' }}" alt="{{$gimme->publication->name}}">
                         </a>
-                        Copyright 2013. All rights reserved. Newscoop Quetzal Theme
+                        {{ #copyrightMessage# }}
                     </div>
                 </div>
             </div>
