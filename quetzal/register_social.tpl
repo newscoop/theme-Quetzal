@@ -1,3 +1,4 @@
+{{ config_load file="{{ $gimme->language->english_name }}.conf" }}
 {{ include file="_tpl/_html-head.tpl" }}
 
 <body>
@@ -15,9 +16,9 @@
             <section id="content">
                 <div class="row home-featured-news">
                     <div class="span8">
-                        <h1>Hello, {{ $name }}</h1>
+                        <h1>{{ #hi# }}, {{ $name }}</h1>
 
-                        <p>You're here for the first time. Please fill in your data to finish registration.</p>
+                        <p>{{ #youAreHereForTheFirstTime# }}</p>
                         {{ if !empty($error) }}
                         <p style="color: #c00;"><strong>{{ $error }}</strong></p>
                         {{ /if }}
