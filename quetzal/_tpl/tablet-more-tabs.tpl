@@ -4,84 +4,48 @@
         <!-- MORE NEWS TABS -->
         <div class="hidden-phone">
             <ul class="nav nav-tabs">
-                <h4>More news</h4>
+                <h4>{{ #moreNews# }}</h4>
+                {{ list_sections}}
+                {{ if $gimme->current_list->at_beginning }}
                 <li class="active">
-                    <a href="#tab1" data-toggle="tab">Business</a>
+                    <a href="#tab{{ $gimme->current_list->index }}" data-toggle="tab">{{ $gimme->section->name}}</a>
                 </li>
-                <li><a href="#tab2" data-toggle="tab">Money</a></li>
-                <li><a href="#tab3" data-toggle="tab">Life & Style</a></li>
-                <li><a href="#tab4" data-toggle="tab">Culture</a></li>
-                <li><a href="#tab5" data-toggle="tab">Travel</a></li>
+                {{else}}
+                <li><a href="#tab{{ $gimme->current_list->index }}" data-toggle="tab">{{ $gimme->section->name}}</a></li>
+                {{/if}}
+                {{/list_sections}}
             </ul>
             <div class="tabWrap">
                 <div class="tab-content">
-                    <div class="tab-pane active" id="tab1">
+                    {{ list_sections }}
+                    {{ if $gimme->current_list->at_beginning }}
+                    <div class="tab-pane active" id="tab{{ $gimme->current_list->index }}">
+                        {{ list_articles length="4" order="byPublishDate desc" }}
                         <div class="article-content">
-                            <img class="article-image pull-left" src="http://placehold.it/70x45" >
+                               {{ include file='_tpl/img/img_70x45.tpl'}}
                             <div class="article-excerpt pull-left">
-                                <a href="#" class="title">
-                                    Vivamus posuere adipiscing erat at ultricies.
+                                <a href="{{ uri options="article"}}" class="title">
+                                    {{ $gimme->article->name}}
                                 </a>               
-                                Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.
+                                    {{ $gimme->article->full_text|truncate:100:"...":true }}
                             </div>
                             <div class="clearfix"></div>
                             <div class="article-links">
                                 <hr>
-                                <a href="#" class="comments-link">0 Comments</a> | 
-                                <a href="#" class="link-color">Read more +</a>
+                                <a href="{{ url options="comments"}}" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | 
+                                <a href="{{ uri options="article"}}" class="link-color">{{ #readMore# }}</a>
                                 <span class="article-date pull-right">
-                                    Jan 28 2012, 4:35 am
+                                    <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
                                 </span>
                                 <div class="clearfix"></div>
                             </div>
                         </div>
-                        <div class="article-content">
-                            <img class="article-image pull-left" src="http://placehold.it/70x45" >
-                            <div class="article-excerpt pull-left">
-                                <a href="#" class="title">
-                                    Vivamus posuere adipiscing erat at ultricies.
-                                </a>               
-                                Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="article-links">
-                                <hr>
-                                <a href="#" class="comments-link">0 Comments</a> | 
-                                <a href="#" class="link-color">Read more +</a>
-                                <span class="article-date pull-right">
-                                    Jan 28 2012, 4:35 am
-                                </span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                        <div class="article-content">
-                            <img class="article-image pull-left" src="http://placehold.it/70x45" >
-                            <div class="article-excerpt pull-left">
-                                <a href="#" class="title">
-                                    Vivamus posuere adipiscing erat at ultricies.
-                                </a>               
-                                Nullam quis risus eget urna mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec sed odio dui.
-                            </div>
-                            <div class="clearfix"></div>
-                            <div class="article-links">
-                                <hr>
-                                <a href="#" class="comments-link">0 Comments</a> | 
-                                <a href="#" class="link-color">Read more +</a>
-                                <span class="article-date pull-right">
-                                    Jan 28 2012, 4:35 am
-                                </span>
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
+                        {{ /list_articles }}
                     </div>
-                    <div class="tab-pane" id="tab2">tab 2</div>
-                    <div class="tab-pane" id="tab3">tab 3</div>
-                    <div class="tab-pane" id="tab4">tab 4</div>
-                    <div class="tab-pane" id="tab5">tab 5</div>
+                    {{/list_sections}}
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- END TABLET MORE NEWS -->
-
