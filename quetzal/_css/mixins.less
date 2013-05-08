@@ -1,30 +1,6 @@
 // AUTOR: Byron Corrales | https://github.com/byroncorrales/my-less-mixing
 // CONTRIBUTIONS: Helmy Giacoman
 
-.bold-weight{font-weight: 700}
-.normal-weight{font-weight: 400}
-.content-font{font-family: Tahoma, Helvetica, Arial, sans-serif}
-.web-font{font-family: 'Asap', sans-serif}
-.web-font-italic{.web-font;font-style: italic}
-
-// COLORS
-
-@red1: #d55436;
-@red2: #c52500;
-
-.noborder {
-  border: none !important;
-}
-.white-text{
-  color: #fff;
-}
-.red-text{
-  .text-error;
-}
-.gray-text{
-  color: #777;
-}
-
 // GENERAL
 
 .wrapCenter(@width: 960px){
@@ -104,10 +80,10 @@
     box-shadow: @arguments inset !important;
 }
 
-.box-shadow-reset{
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important;
+.box-shadow-reset(@val:none){
+    -webkit-box-shadow: @val !important;
+    -moz-box-shadow: @val !important;
+    box-shadow: @val !important;
 }
 
 .box-sizing(@model: border-box){
@@ -122,10 +98,10 @@
     -webkit-text-shadow: @arguments;
 }
 
-.text-shadow-reset{
-    text-shadow: none;
-    -moz-text-shadow: none;
-    -webkit-text-shadow: none; 
+.text-shadow-reset(@val:none){
+    text-shadow: @val;
+    -moz-text-shadow: @val;
+    -webkit-text-shadow: @val; 
 }
 
 // CORNERS
@@ -136,13 +112,6 @@
     -moz-border-radius: @radio;
     -webkit-border-radius: @radio;
     -khtml-border-radius: @radio;
-}
-.rounded-corners-reset{
-    -ms-border-radius: 0px !important;
-    -moz-border-radius: 0px !important;
-    -webkit-border-radius: 0px !important;
-    -khtml-border-radius: 0px !important;  
-    border-radius: 0px !important;
 }
 
 .rounded-corners-bottom(@radio:5px){
@@ -214,6 +183,13 @@
     -webkit-border-top-left-radius:@radio;
 }
 
+.rounded-corners-reset(@val:0px){
+    -ms-border-radius: @val !important;
+    -moz-border-radius: @val !important;
+    -webkit-border-radius: @val !important;
+    -khtml-border-radius: @val !important;  
+    border-radius: @val !important;
+}
 
 // ARROWS
 .arrow(@border:6px, @color:blue, @orientation:top) when (@orientation = top), (@orientation = bottom){    
@@ -239,49 +215,4 @@
 .arrow(@border:6px, @color:blue, @orientation:top){
     width: 0; 
     height: 0;
-}
-
-// REPONSIVE MIXINGS
-
-.responsive-navbar-inner{
-    font-size: 12px !important;
-    width: 100% !important;
-    margin: 0px !important;
-    padding-left: 30px;        
-    .box-shadow-reset;
-    .box-sizing;
-    .rounded-corners-bottom(0px);
-}
-
-.responsive-tablet-slideshow{
-
-    .quetzal-slide {
-        background-position: center center;
-        .rounded-corners-top(0px);
-        display: none;
-    }
-    .quetzal-slide.first{
-        display: block;
-        .slide-title{
-            margin-top:15px;
-        }
-    }
-    .slide-title{
-        position: relative;
-        top: 20px;
-        padding-left: 30px;
-    }
-    .slide-description{
-        margin-top: 30px;
-        padding-left: 30px;
-    }
-    .quetzal-slideshow-pager{
-        width: 72px;
-        right: 30px;
-        left: auto;
-        top: 25px;
-        a{
-            margin-bottom: 15px;                
-        }
-    }
 }
