@@ -20,6 +20,9 @@
                     {{ list_sections }}
                     {{ if $gimme->current_list->at_beginning }}
                     <div class="tab-pane active" id="tab{{ $gimme->current_list->index }}">
+                    {{else}}
+                    <div class="tab-pane" id="tab{{ $gimme->current_list->index }}">
+                    {{/if}}
                         {{ list_articles length="4" order="byPublishDate desc" }}
                         <div class="article-content">
                                {{ include file='_tpl/img/img_70x45.tpl'}}
