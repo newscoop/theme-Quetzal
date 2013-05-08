@@ -6,9 +6,6 @@
                     <h2>{{ #issuesArchive# }}</h2>
                 </div>
             </div>
-            <div class="span2 section-rss">
-
-            </div>
         </div>                        
     </div>
 </header>  
