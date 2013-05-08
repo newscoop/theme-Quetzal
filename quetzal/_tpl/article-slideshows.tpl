@@ -1,6 +1,4 @@
-{{ assign var="hasSlideshow" value=0 }}
 {{ foreach $gimme->article->slideshows as $slideshow }}
-{{ assign var="hasSlideshow" value=$hasSlideshow+1 }}
 <h1 style="width:100%">{{ $gimme->article->name }}</h1>
           <h6>{{ $slideshow->headline }}</h6>
           <div id="gallery">
