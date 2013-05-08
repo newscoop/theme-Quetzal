@@ -5,11 +5,14 @@
         data-cycle-slides="> div.quetzal-slide"
         data-cycle-pager="#no-template-pager"
         data-cycle-pause-on-hover="true"
-        data-cycle-pager-template="">
+        data-cycle-pager-template=""
+        data-cycle-log="false">
         {{ list_articles length="3" ignore_issue="true" ignore_section="true" order="bydate desc" constraints="highlight is on" }}   
-        
-        <div class="quetzal-slide" 
-            style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})">
+        {{ if $gimme->current_list->at_beginning }}
+        <div class="quetzal-slide first" style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})"><br class="visible-desktop">
+        {{ else }}
+        <div class="quetzal-slide" style="background-image: url({{ include file="_tpl/img/img_960x300.tpl" }})"><br class="visible-desktop">
+        {{ /if }}
             <div class="slide-title">
                 <span class="red-text">{{ $gimme->article->section->name }}</span>
                 <h3><a href="{{ uri options='article'}}">{{ $gimme->article->name}}</a></h3>
@@ -17,7 +20,7 @@
             <div class="slide-description hidden-phone">
                 {{ $gimme->article->full_text|truncate:100:"...":true }}
                 <div class="slide-time"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
-</div>
+                </div>
                 <a class="read-more red-text" href="{{ uri options='article'}}">Read more +</a>
             </div>
         </div>
