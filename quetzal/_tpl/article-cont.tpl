@@ -19,9 +19,7 @@
             {{ assign var="has_slideshow" value=$has_slideshow+1 }}
             {{ /foreach }}
 
-            {{ $has_slideshow}}
             {{ if $has_slideshow > 0}}
-            <!-- mejorar esto -->
             {{ else }}
             {{ include file="_tpl/img/img_300x300.tpl" where="mobile"}}
             {{ /if }}
