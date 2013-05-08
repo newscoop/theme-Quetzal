@@ -16,8 +16,8 @@
     <meta name="keywords" content="{{ if $gimme->article->defined }}{{ $gimme->article->keywords }}{{ else }}{{$siteinfo.keywords}}{{ /if }}" />
 
     <link rel="stylesheet" href="{{ url static_file="_css/bootstrap.min.css"}}">
-    <link rel="stylesheet" href="{{ url static_file="_css/newscoop.quetzal.css"}}">
-    <link rel="stylesheet" href="{{ url static_file="_css/newscoop.quetzal.responsive.css"}}">
+    <link rel="stylesheet" href="{{ url static_file="_css/quetzal.layout.css"}}">
+    <link rel="stylesheet" href="{{ url static_file="_css/=quetzal.responsive.css"}}">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Asap:400,700">
 
     <!-- RSS & Pingback -->
