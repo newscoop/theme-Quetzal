@@ -1754,12 +1754,12 @@ i.icon-center {
   background: none;
   background-color: #bb1c00;
   background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bb1c00), color-stop(10%, #bb1c00), to(#ca3500));
-  background-image: -webkit-linear-gradient(#bb1c00, #bb1c00 10%, #ca3500);
-  background-image: -moz-linear-gradient(top, #bb1c00, #bb1c00 10%, #ca3500);
-  background-image: -ms-linear-gradient(#bb1c00, #bb1c00 10%, #ca3500);
-  background-image: -o-linear-gradient(#bb1c00, #bb1c00 10%, #ca3500);
-  background-image: linear-gradient(#bb1c00, #bb1c00 10%, #ca3500);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bb1c00), color-stop(70%, #bb1c00), to(#ca3500));
+  background-image: -webkit-linear-gradient(#bb1c00, #bb1c00 70%, #ca3500);
+  background-image: -moz-linear-gradient(top, #bb1c00, #bb1c00 70%, #ca3500);
+  background-image: -ms-linear-gradient(#bb1c00, #bb1c00 70%, #ca3500);
+  background-image: -o-linear-gradient(#bb1c00, #bb1c00 70%, #ca3500);
+  background-image: linear-gradient(#bb1c00, #bb1c00 70%, #ca3500);
 }
 .sidebar-widget-tabs .polls .poll-option {
   padding-left: 10px;

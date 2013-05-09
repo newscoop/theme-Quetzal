@@ -12,8 +12,7 @@
             <li class="active">
                 <a href="#last-comments" data-toggle="tab">{{ #latestComments# }}</a>
             </li>
-            <li><a href="#more-searches" data-toggle="tab">{{ #moreSearches# }}</a></li>
-            <li><a href="#sports-poll" data-toggle="tab">Sports Poll</a></li>
+            <li><a href="#poll" data-toggle="tab">Poll</a></li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="last-comments">
@@ -36,10 +35,7 @@
                 {{/if}}
                 {{ /list_article_comments }}                
             </div>
-            <div class="tab-pane" id="more-searches">
-                searches
-            </div>
-            <div class="tab-pane" id="sports-poll">
+            <div class="tab-pane" id="poll">
                 <div class="polls">
                     Pellentesque habitant morbi tristique senectus et netus et malesuada?
                     <div class="pollWrap">
