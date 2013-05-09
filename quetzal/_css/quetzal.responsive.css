@@ -419,7 +419,7 @@
     margin-right: 1%;
   }
   #comments #comment-form form > .row .span4 {
-    width: 49%;
+    width: 100%;
     float: left;
   }
   .footer-info .widget-map {

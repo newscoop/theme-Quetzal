@@ -820,7 +820,7 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 /* End bootstrap override */body {
   font-family: Tahoma, Helvetica, Arial, sans-serif;
   font-weight: normal;
-  background: url(../_img/body-back.jpg) repeat;
+  background: url("../_img/body-back.jpg") repeat;
 }
 h1,
 h2,
