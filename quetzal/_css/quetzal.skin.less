@@ -340,6 +340,7 @@ hr{
 
 .nav-tabs{
     background: #161a20 url("../_img/nav-tabs.png") repeat-x top;
+    border-bottom: 1px solid #3A434C;
     & > li{
         & > a{
             color: #fff;
@@ -395,6 +396,15 @@ hr{
     hr{
         border-bottom: none;
         border-top: 1px dotted #454f58;
+    }
+}
+
+.sidebar-widget-tabs, .more-news-tabs{
+    li.active > a:focus{
+        color: #fff;
+        border: 1px solid #29313A;
+        outline: none;
+        background: url("../_img/tab-active.png") repeat-x center top #29313A;
     }
 }
 
@@ -608,6 +618,11 @@ i.icon-center{
 /* Internal page style */
 .internal-page{    
 
+    header.section-header{
+        background: #171b21 url("../_img/internal-header.png") repeat-x top;
+        .rounded-corners-top(6px);
+    }
+
     .breadcrumbs{
         color: #fff;
         h2, h3{
@@ -817,10 +832,7 @@ i.icon-center{
     input[type="email"],
     input[type="url"],
     textarea{
-        width: 100%;
-        font-size: 14px;
         color: #525456;
-        height: 42px;
         font-style: italic;
 
         .linear-gradient(#fff, #f6f8fb, 35%);
@@ -832,9 +844,6 @@ i.icon-center{
             .linear-gradient(#fff, #ffe6e0, 35%);
         }
     }
-    textarea{
-        height: 146px;
-    }
     input[type="submit"]{
         .btn-red;
     }
@@ -842,12 +851,48 @@ i.icon-center{
 
 // POLL STYLES
 .sidebar-widget-tabs{
+    color: #fff;
     .polls{
-        .pollWrap{ 
-            background: #171b21;            
+        form{
+            margin-bottom: 0px;
         }
+
+        .pollWrap{
+            background: #171b21; 
+            padding: 10px 0px 0px 0px;
+            margin: 10px 0px;
+            .box-sizing;
+            .rounded-corners(4px);
+        }
+
+        input[type="submit"]{
+            color: #fff;
+            border: none;
+            padding-bottom: 6px;
+            .rounded-corners-top(0px);
+            .text-shadow(0px, -1px, 0px, #901600);
+            .linear-gradient(#ca3500, #bb1c00, 10%);
+            &:hover{
+                background: none;
+                .linear-gradient(#bb1c00, #ca3500, 10%);
+            }
+        }
+
         .poll-option{
-            
+            padding-left: 10px;
+            padding-right: 10px;
+            margin: 0px 10px 10px 10px;
+            border-bottom: 1px dotted #5f6d7d;
+            .box-sizing;
+
+            label{
+                font-size: 12px;
+            }
+            input[type="radio"]{
+                margin-right: 5px;
+                position: relative;
+                top: -2px;
+            }
         }
     }
 }

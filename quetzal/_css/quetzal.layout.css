@@ -54,7 +54,6 @@ h6 a:hover {
   padding-top: 10px;
   padding-left: 5px;
   margin-bottom: 0px;
-  border-bottom: 1px solid #3a434c;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
   -moz-border-radius-topright: 3px;
@@ -347,82 +346,12 @@ h1.block-title {
 .more-news-tabs {
   font-size: 11px;
 }
-.sidebar-widget-tabs li.active > a:focus,
-.more-news-tabs li.active > a:focus {
-  color: #fff;
-  border: 1px solid #29313A;
-  outline: none;
-  background: url("../_img/tab-active.png") repeat-x center top #29313a;
+.more-news-tabs .article-content img {
+  margin-right: 10px;
 }
 .sidebar-widget-tabs {
-  color: #fff;
   font-size: 12px;
   line-height: 14px;
-}
-.sidebar-widget-tabs .polls form {
-  margin-bottom: 0px;
-}
-.sidebar-widget-tabs .polls .pollWrap {
-  padding: 10px 0px 0px 0px;
-  margin: 10px 0px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border-radius: 4px;
-  -ms-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -khtml-border-radius: 4px;
-}
-.sidebar-widget-tabs .polls input[type="submit"] {
-  color: #fff;
-  border: none;
-  padding-bottom: 6px;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-  -moz-border-radius-topright: 0px;
-  -moz-border-radius-topleft: 0px;
-  -webkit-border-top-left-radius: 0px;
-  -webkit-border-top-right-radius: 0px;
-  text-shadow: 0px -1px 0px #901600;
-  -moz-text-shadow: 0px -1px 0px #901600;
-  -webkit-text-shadow: 0px -1px 0px #901600;
-  background-color: #ca3500;
-  background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ca3500), color-stop(10%, #ca3500), to(#bb1c00));
-  background-image: -webkit-linear-gradient(#ca3500, #ca3500 10%, #bb1c00);
-  background-image: -moz-linear-gradient(top, #ca3500, #ca3500 10%, #bb1c00);
-  background-image: -ms-linear-gradient(#ca3500, #ca3500 10%, #bb1c00);
-  background-image: -o-linear-gradient(#ca3500, #ca3500 10%, #bb1c00);
-  background-image: linear-gradient(#ca3500, #ca3500 10%, #bb1c00);
-}
-.sidebar-widget-tabs .polls input[type="submit"]:hover {
-  background: none;
-  background-color: #bb1c00;
-  background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bb1c00), color-stop(10%, #bb1c00), to(#ca3500));
-  background-image: -webkit-linear-gradient(#bb1c00, #bb1c00 10%, #ca3500);
-  background-image: -moz-linear-gradient(top, #bb1c00, #bb1c00 10%, #ca3500);
-  background-image: -ms-linear-gradient(#bb1c00, #bb1c00 10%, #ca3500);
-  background-image: -o-linear-gradient(#bb1c00, #bb1c00 10%, #ca3500);
-  background-image: linear-gradient(#bb1c00, #bb1c00 10%, #ca3500);
-}
-.sidebar-widget-tabs .polls .poll-option {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 0px 10px 10px 10px;
-  border-bottom: 1px dotted #5f6d7d;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.sidebar-widget-tabs .polls .poll-option label {
-  font-size: 12px;
-}
-.sidebar-widget-tabs .polls .poll-option input[type="radio"] {
-  margin-right: 5px;
-  position: relative;
-  top: -2px;
 }
 .tab-content hr {
   margin: 5px 0px;
@@ -515,13 +444,7 @@ footer[id="main-footer"] .footer-brand .logo-footer {
   font-size: 13px;
 }
 .internal-page header.section-header {
-  background: #171b21 url("../_img/internal-header.png") repeat-x top;
-  border-top-right-radius: 6px;
-  border-top-left-radius: 6px;
-  -moz-border-radius-topright: 6px;
-  -moz-border-radius-topleft: 6px;
-  -webkit-border-top-left-radius: 6px;
-  -webkit-border-top-right-radius: 6px;
+  background: #171b21;
   min-height: 50px;
 }
 .breadcrumbs {
@@ -529,6 +452,7 @@ footer[id="main-footer"] .footer-brand .logo-footer {
 }
 .breadcrumbs h2,
 .breadcrumbs h3 {
+  color: #6b6b6b;
   margin: 0px;
   margin-top: 4px;
   margin-bottom: 4px;
@@ -631,6 +555,18 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 }
 #comments input[type="submit"] {
   margin-top: -100px;
+}
+#comment-form input[type="text"],
+#comment-form input[type="email"],
+#comment-form input[type="url"],
+#comment-form textarea {
+  width: 100%;
+  font-size: 14px;
+  height: 42px;
+  font-style: italic;
+}
+#comment-form textarea {
+  height: 146px;
 }
 .login-textarea textarea {
   margin-bottom: 100px;

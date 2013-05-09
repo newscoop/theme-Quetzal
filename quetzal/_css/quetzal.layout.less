@@ -54,7 +54,6 @@ h1, h2, h3, h4, h5, h6{
     padding-top: 10px;
     padding-left: 5px;
     margin-bottom: 0px;
-    border-bottom: 1px solid #3a434c;
     .rounded-corners-top(3px);
     & > li{
         & > a{
@@ -345,61 +344,17 @@ h1.block-title{
     font-size: 11px;
 }
 
-.sidebar-widget-tabs, .more-news-tabs{
-    li.active > a:focus{
-        color: #fff;
-        border: 1px solid #29313A;
-        outline: none;
-        background: url("../_img/tab-active.png") repeat-x center top #29313A;
+.more-news-tabs{
+    .article-content{
+        img{
+            margin-right: 10px;
+        }
     }
 }
 
 .sidebar-widget-tabs{
-    color: #fff;
     font-size: 12px;
     line-height: 14px;
-    .polls{
-        form{
-            margin-bottom: 0px;
-        }
-
-        .pollWrap{
-            padding: 10px 0px 0px 0px;
-            margin: 10px 0px;
-            .box-sizing;
-            .rounded-corners(4px);
-        }
-
-        input[type="submit"]{
-            color: #fff;
-            border: none;
-            padding-bottom: 6px;
-            .rounded-corners-top(0px);
-            .text-shadow(0px, -1px, 0px, #901600);
-            .linear-gradient(#ca3500, #bb1c00, 10%);
-            &:hover{
-                background: none;
-                .linear-gradient(#bb1c00, #ca3500, 10%);
-            }
-        }
-
-        .poll-option{
-            padding-left: 10px;
-            padding-right: 10px;
-            margin: 0px 10px 10px 10px;
-            border-bottom: 1px dotted #5f6d7d;
-            .box-sizing;
-
-            label{
-                font-size: 12px;
-            }
-            input[type="radio"]{
-                margin-right: 5px;
-                position: relative;
-                top: -2px;
-            }
-        }
-    }
 }
 
 .tab-content{
@@ -496,8 +451,7 @@ footer[id="main-footer"]{
     font-size: 13px;
 
     header.section-header{
-        background: #171b21 url("../_img/internal-header.png") repeat-x top;
-        .rounded-corners-top(6px);
+        background: #171b21;
         min-height: 50px;
     }
 }
@@ -505,6 +459,7 @@ footer[id="main-footer"]{
 .breadcrumbs{
     min-height: 50px;
     h2, h3{
+        color:#6b6b6b;
         margin: 0px;
         margin-top: 4px;
         margin-bottom: 4px;
@@ -615,6 +570,22 @@ article.main-article{
 #comments{
     input[type="submit"]{
         margin-top:-100px;            
+    }
+}
+
+
+#comment-form{
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    textarea{
+        width: 100%;
+        font-size: 14px;
+        height: 42px;
+        font-style: italic;
+    }
+    textarea{
+        height: 146px;
     }
 }
 
