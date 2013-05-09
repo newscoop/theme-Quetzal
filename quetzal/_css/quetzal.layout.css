@@ -62,7 +62,7 @@ h6 a:hover {
   -webkit-border-top-left-radius: 3px;
   -webkit-border-top-right-radius: 3px;
 }
-.nav-tabs  > li  > a {
+.nav-tabs > li > a {
   padding: 4px 6px;
 }
 .tab-content {
@@ -112,7 +112,7 @@ h6 a:hover {
 #quetzal-slideshow .slide-title {
   padding: 10px 10px 15px 10px;
   max-width: 320px;
-  background: url(../_img/black-dot.png) repeat;
+  background: url('../_img/black-dot.png') repeat;
   margin-top: 15px;
 }
 #quetzal-slideshow .slide-title h3 {
@@ -130,7 +130,8 @@ h6 a:hover {
   display: block;
   font-size: 11px;
 }
-#quetzal-slideshow .slide-time, #quetzal-slideshow .read-more {
+#quetzal-slideshow .slide-time,
+#quetzal-slideshow .read-more {
   display: block;
   padding: 0px 5px;
   font-size: 12px;
@@ -151,7 +152,8 @@ h6 a:hover {
   font-size: 12px;
   position: relative;
 }
-#quetzal-slideshow .slide-description .slide-time, #quetzal-slideshow .slide-description .read-more {
+#quetzal-slideshow .slide-description .slide-time,
+#quetzal-slideshow .slide-description .read-more {
   position: absolute;
   bottom: -20px;
 }
@@ -271,13 +273,16 @@ article .article-date {
 .home-featured-news .most-prominent {
   max-height: 152px;
 }
-.home-featured-news .section-article, .home-featured-news .most-prominent {
+.home-featured-news .section-article,
+.home-featured-news .most-prominent {
   margin-bottom: 10px;
 }
-.home-featured-news .section-article .article-image, .home-featured-news .most-prominent .article-image {
+.home-featured-news .section-article .article-image,
+.home-featured-news .most-prominent .article-image {
   margin-right: 7px;
 }
-.home-featured-news .section-article figure.article-image, .home-featured-news .most-prominent figure.article-image {
+.home-featured-news .section-article figure.article-image,
+.home-featured-news .most-prominent figure.article-image {
   margin: 0px;
   padding: 0px;
   margin-right: 7px;
@@ -296,7 +301,8 @@ article .article-date {
 .home-featured-news .other-featured article:last-child {
   margin-right: 0px !important;
 }
-.home-featured-news .other-featured .article-image, .home-featured-news .other-featured figure.article-image {
+.home-featured-news .other-featured .article-image,
+.home-featured-news .other-featured figure.article-image {
   margin-bottom: 7px;
 }
 .home-featured-news .other-featured .article-content {
@@ -337,10 +343,12 @@ h1.block-title {
 .advertisements {
   margin-bottom: 10px;
 }
-.sidebar-widget-tabs, .more-news-tabs {
+.sidebar-widget-tabs,
+.more-news-tabs {
   font-size: 11px;
 }
-.sidebar-widget-tabs li.active > a:focus, .more-news-tabs li.active > a:focus {
+.sidebar-widget-tabs li.active > a:focus,
+.more-news-tabs li.active > a:focus {
   color: #fff;
   border: 1px solid #29313A;
   outline: none;
@@ -449,16 +457,18 @@ h1.block-title {
   -webkit-transition: opacity 1s;
   -o-transition: opacity 1s;
 }
-.quetzal-carousel .photo, .quetzal-carousel .video {
+.quetzal-carousel .photo,
+.quetzal-carousel .video {
   position: relative;
 }
-.quetzal-carousel .photo .photo-caption, .quetzal-carousel .video .photo-caption {
+.quetzal-carousel .photo .photo-caption,
+.quetzal-carousel .video .photo-caption {
   color: #fff;
   position: absolute;
   bottom: 0px;
   padding: 6px;
   text-align: center;
-  background: url(../_img/black-dot.png) repeat;
+  background: url("../_img/black-dot.png") repeat;
 }
 footer[id="main-footer"] {
   margin-top: 25px;
@@ -474,7 +484,8 @@ footer[id="main-footer"] h4 {
 footer[id="main-footer"] .categories ul {
   text-transform: uppercase;
 }
-footer[id="main-footer"] .categories ul, footer[id="main-footer"] .more-links ul {
+footer[id="main-footer"] .categories ul,
+footer[id="main-footer"] .more-links ul {
   list-style-type: none;
   margin: 0px;
   margin-left: 5px;
@@ -504,7 +515,7 @@ footer[id="main-footer"] .footer-brand .logo-footer {
   font-size: 13px;
 }
 .internal-page header.section-header {
-  background: #171b21 url(../_img/internal-header.png) repeat-x top;
+  background: #171b21 url("../_img/internal-header.png") repeat-x top;
   border-top-right-radius: 6px;
   border-top-left-radius: 6px;
   -moz-border-radius-topright: 6px;
@@ -516,7 +527,8 @@ footer[id="main-footer"] .footer-brand .logo-footer {
 .breadcrumbs {
   min-height: 50px;
 }
-.breadcrumbs h2, .breadcrumbs h3 {
+.breadcrumbs h2,
+.breadcrumbs h3 {
   margin: 0px;
   margin-top: 4px;
   margin-bottom: 4px;
@@ -550,7 +562,8 @@ footer[id="main-footer"] .footer-brand .logo-footer {
 .internal-nav ul li a:hover {
   text-decoration: none;
 }
-.internal-nav ul li.active a, .internal-nav ul li:hover a {
+.internal-nav ul li.active a,
+.internal-nav ul li:hover a {
   color: #000;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
@@ -592,7 +605,7 @@ article.main-article figure figcaption {
   line-height: 30px;
   color: #fff;
   font-style: italic;
-  background: url(../_img/black-dot.png) repeat;
+  background: url("../_img/black-dot.png") repeat;
   padding: 0px 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -678,13 +691,13 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 .profile .member-since {
   color: #777;
   padding-left: 30px;
-  background: url(../_img/calendar-icon.png) left center no-repeat;
+  background: url("../_img/calendar-icon.png") left center no-repeat;
   display: inline-block;
 }
 .profile .member-post {
   padding-left: 30px;
   display: inline-block;
-  background: url(../_img/post-icon.png) left center no-repeat;
+  background: url("../_img/post-icon.png") left center no-repeat;
 }
 .profile-articles .block-title {
   font-size: 18px;
@@ -703,7 +716,7 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 }
 .widget-community-feed .comm-entry p {
   color: #BCC2CB;
-  background: url(../_img/comment-icon.png) left bottom no-repeat;
+  background: url("../_img/comment-icon.png") left bottom no-repeat;
   display: block;
   margin: 0px;
   font-size: 11.5px;
@@ -753,7 +766,9 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   margin-right: 3.8%;
   width: 39.45%;
 }
-.zend_form input[type="text"], .zend_form input[type="password"], .zend_form textarea {
+.zend_form input[type="text"],
+.zend_form input[type="password"],
+.zend_form textarea {
   width: 100%;
 }
 .zend_form dd {
@@ -785,7 +800,9 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   margin-top: -15px;
   margin-bottom: 10px;
 }
-.zend_form #attributes-element #attributes-first_name_public-element, .zend_form #attributes-element #attributes-last_name_public-element, .zend_form #attributes-element #attributes-email_public-element {
+.zend_form #attributes-element #attributes-first_name_public-element,
+.zend_form #attributes-element #attributes-last_name_public-element,
+.zend_form #attributes-element #attributes-email_public-element {
   float: left;
   margin-top: -10px;
 }
