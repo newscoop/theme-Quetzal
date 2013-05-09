@@ -17,7 +17,7 @@
                             <div class="span2">
                                 <ul>
                                     {{ list_sections }}
-                                    <li><a href="{{ url options="section" }} title="{{ $gimme->section->name }}"> {{ $gimme->section->name }}</a></li>
+                                    <li><a href="{{ url options='section' }}" title="{{ $gimme->section->name }}"> {{ $gimme->section->name }}</a></li>
                                     {{ /list_sections }}
                                 </ul>
                             </div>
