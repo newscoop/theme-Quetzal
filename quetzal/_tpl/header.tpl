@@ -6,7 +6,7 @@
                 <nav id="topnav" class="navbar">
                     <div class="navbar-inner user-top-lef-links">
                         <div class="pull-left welcome hidden-phone">
-                            <span class="red-text">{{ #welcome# }}</span> {{$smarty.now|date_format:"%d/%m/%Y"}} 
+                            <span class="link-color">{{ #welcome# }}</span> {{$smarty.now|date_format:"%d/%m/%Y"}} 
                         </div>
                         {{ if !$gimme->user->logged_in}}
                         <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="pull-left white-text visible-phone login-link">
@@ -34,11 +34,15 @@
                 <!-- TOPBAR NAV END -->
 
                 <!-- BANNER & SEACH -->
-                <div class="row logo-search">
-                    <div class="span7">                        
-                        <a href="/">
-                            <img class="logo pull-left" src="{{ url static_file='_img/logo.png'}}" alt="{{$gimme->publication->name}}">
-                        </a> 
+                <div class="row main-header">
+                    <div class="span7">
+                        <hgroup>
+                            <h1>                        
+                                <a href="/">
+                                    <img class="logo pull-left" src="{{ url static_file='_img/logo.png'}}" alt="{{$gimme->publication->name}}">
+                                </a>
+                            </h1>
+                        </hgroup> 
 
                         <!-- NAVIGATION FOR PHONE -->                       
                         <ul class="nav visible-phone pull-right phone-nav">
@@ -68,6 +72,8 @@
                         </form>
                     </div>
                 </div>
+                <!-- END BANNER & SEACH -->
+
             </div>
 
             <!-- MAIN NAV -->
@@ -97,9 +103,9 @@
                                         <input name="email" id="email" style="margin-top: 8px" type="text" placeholder="Email" />
                                         <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
                                         <button class="btn btn-danger" name="submit" type="submit">{{ #login# }}</button>
-                                        or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">{{ #signUp# }}</a>
+                                        or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="link-color">{{ #signUp# }}</a>
                                         <br>
-                                        <a class="red-text negrita-weight pull-right"href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
+                                        <a class="link-color pull-right"href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
                                         </span>
                                     </fieldset>
                                 </form>
@@ -145,9 +151,9 @@
                                 <input name="email" id="email" style="margin-top: 8px" type="text" placeholder="Email" />
                                 <input name="password" id="password" style="margin-top: 8px" type="password" placeholder="Passsword" />
                                 <button class="btn btn-danger" name="submit" type="submit">{{ #login# }}</button>
-                                or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="red-text negrita-weight">{{ #signUp# }}</a>
+                                or <a href="{{ $view->url(['controller' => 'register', 'action' => 'index']) }}" class="link-color">{{ #signUp# }}</a>
                                 <br>
-                                <a class="red-text negrita-weight pull-right" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
+                                <a class="link-color pull-right" href="{{ $view->url(['controller' => 'auth', 'action' => 'password-restore']) }}">Forgot password?</a>
                             </fieldset>
                         </form>
                     </ul>
@@ -169,4 +175,6 @@
             </ul>            
             <div class="clearfix visible-tablet"></div>
             <!--  END MAIN NAV TABLET -->
+
         </header>       
+        <!--END  HEADER -->

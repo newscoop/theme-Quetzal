@@ -1,5 +1,5 @@
 {{ foreach $gimme->article->slideshows as $slideshow }}
-<h1 style="width:100%">{{ $gimme->article->name }}</h1>
+<h1 class="full-width">{{ $gimme->article->name }}</h1>
           <h6>{{ $slideshow->headline }}</h6>
           <div id="gallery">
           	{{ assign var="style" value='true' }}

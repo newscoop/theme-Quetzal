@@ -27,7 +27,7 @@
                             <div class="clearfix divider"></div>
                             <div class="newdata">
                                 <span>{{ $gimme->article->comment_count }} {{ #comments# }}</span> | 
-                                <a href="{{ uri options="article"}}" class="red-text">{{ #readMore# }}</a>
+                                <a href="{{ uri options="article"}}" class="link-color">{{ #readMore# }}</a>
                                 <span class="date pull-right"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time></span>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                 </a>
                             </figure>
                             <section class="article-content">
-                                <span class="red-text">{{ $gimme->article->section }}</span>
+                                <span class="link-color">{{ $gimme->article->section }}</span>
                                 <header>
                                     <h2><a href="{{ uri options="article"}}">{{ $gimme->article->name }}</a></h2>
                                     <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time></span>

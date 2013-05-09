@@ -5,7 +5,7 @@
             <h2>{{ $gimme->article->comment_count}} {{ #comments# }}</h2>
         </div>
         <div class="span2 write-comment">
-            <a href="#comment-form" class="red-text">{{ #writeComment# }}</a>
+            <a href="#comment-form" class="link-color">{{ #writeComment# }}</a>
         </div>
     </div>
     {{list_article_comments order="bydate desc"}}
@@ -20,7 +20,7 @@
             {{ /if }}
         </div>
         <div class="span7 comment-content">                                                
-            <h4 class="pull-left comment-author red-text">
+            <h4 class="pull-left comment-author link-color">
             {{ if $gimme->comment->user->identifier }}
                 <a href="http://{{ $gimme->publication->site }}/user/profile/{{ $gimme->comment->user->uname|urlencode }}">{{ $gimme->comment->user->uname }}</a>
             {{ else }}
@@ -48,7 +48,7 @@
             </div>
             <div class="span2 write-comment">
                 {{ if !$gimme->user->logged_in}}
-                <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="red-text">{{ #loginOrSignUp# }}</a>
+                <a href="{{ $view->url(['controller' => 'auth', 'action' =>'index'], 'default') }}" class="link-color">{{ #loginOrSignUp# }}</a>
                 {{/if}}
             </div>                                                
         </div>

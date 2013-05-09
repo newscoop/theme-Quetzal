@@ -17,8 +17,6 @@
 	                        <h2>{{ #confirmationHasBeenSent# }}</h2>
 	                    </div>
 	                </div>
-	                <div class="span2 section-rss">
-	                </div>
 	            </div> 
 	            <div class="row">
 	                <div class="span12 more-news-tabs tab-sections">

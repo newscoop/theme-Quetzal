@@ -10,12 +10,12 @@
                     {{ include file='_tpl/img/img_330x215.tpl'}} 
                 </a>
             </figure>
-            <span class="red-text">{{ $gimme->article->section->name }}</span>
+            <span class="link-color">{{ $gimme->article->section->name }}</span>
             {{ if !$gimme->article->content_accessible }}
             <span class="label label-important normal-weight">{{ #premium# }}</span>
             {{ /if }}
             <header>
-                <h1><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h1>
+                <h2><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h2>
                 <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
             </header>
             <div class="article-excerpt hidden-phone">
@@ -23,7 +23,7 @@
             </div>  
             <div class="article-links hidden-phone">
                 <hr>
-                <a href="{{ uri options="article" }}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="red-text negrita-weight">{{ #readMore# }}</a>
+                <a href="{{ uri options="article" }}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="link-color">{{ #readMore# }}</a>
             </div>                                        
             <div class="clearfix"></div>
         </article>
@@ -36,12 +36,12 @@
                     {{ include file='_tpl/img/img_225x150.tpl'}} 
                 </a>
             </figure>
-            <span class="red-text">{{ $gimme->article->section->name }}</span>
+            <span class="link-color">{{ $gimme->article->section->name }}</span>
             {{ if !$gimme->article->content_accessible }}
             <span class="label label-important normal-weight">{{ #premium# }}</span>
             {{ /if }}
             <header>
-                <h1><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h1>
+                <h2><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h2>
                 <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
             </header>
             <div class="article-excerpt hidden-phone">
@@ -49,7 +49,7 @@
             </div>  
             <div class="article-links hidden-phone">
                 <hr>
-                <a href="{{ uri options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="red-text negrita-weight">{{ #readMore# }}</a>
+                <a href="{{ uri options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="link-color">{{ #readMore# }}</a>
             </div>
             <div class="clearfix"></div>
         </article>

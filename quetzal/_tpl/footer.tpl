@@ -6,10 +6,10 @@
 
                     <div class="span3 about-us right-separator visible-desktop">
                         <h4>{{ #aboutUs# }}</h4>
-                        <div class="pad10right">
-                            Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur<br>
-                            <a href="#" class="red-text">{{ #moreAboutUs# }}</a>
-                        </div>
+                        <p>
+                            Developed and used by news organisations like Switzerland’s TagesWoche, ElPeriódico de Guatemala and Yemen Times, Newscoop 4 aims to help independent news organisations manage online publications, enrich content and find new audiences.<br>
+                            <a href="#" class="link-color">{{ #moreAboutUs# }}</a>
+                        </p>
                     </div>
                     <div class="span4 categories right-separator visible-desktop">
                         <h4>{{ #sections# }}</h4>
@@ -17,7 +17,7 @@
                             <div class="span2">
                                 <ul>
                                     {{ list_sections }}
-                                    <li><a href="{{ url options="section" }} title="{{ $gimme->section->name }}"> {{ $gimme->section->name }}</a></li>
+                                    <li><a href="{{ url options='section' }}" title="{{ $gimme->section->name }}"> {{ $gimme->section->name }}</a></li>
                                     {{ /list_sections }}
                                 </ul>
                             </div>
@@ -39,17 +39,17 @@
                     <div class="span2 contact-us visible-desktop">
                         <h4>{{ #contactUs# }}</h4>
                         <div class="info">
-                            <span class="red-text">{{ #email# }}</span>
+                            <span class="link-color">{{ #email# }}</span>
                             support@domain.com
                         </div>
 
                         <div class="info">
-                            <span class="red-text">{{ #address# }}</span>
+                            <span class="link-color">{{ #address# }}</span>
                             New York, NY 10021-3528
                         </div>
 
                         <div class="info">
-                            <span class="red-text">{{ #phone# }}</span>
+                            <span class="link-color">{{ #phone# }}</span>
                             +1 (502) 2468-4984
                         </div>
                     </div>
@@ -112,13 +112,13 @@
                                                     </a>
                                                 </figure>
                                                 <header>
-                                                    <h1>{{$gimme->article->name}}</h1>
+                                                    <h2><a href="{{ uri options="article" }}">{{$gimme->article->name}}</a></h2>
                                                 </header>
                                                 <div class="article-excerpt">
                                                     {{ $gimme->article->full_text|truncate:200:"...":true}}
                                                 </div>  
                                                 <div class="article-links">
-                                                    <a href="{{ uri options="article" }}" class="red-text negrita-weight">Read more +</a>
+                                                    <a href="{{ uri options="article" }}" class="link-color">Read more +</a>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </article>

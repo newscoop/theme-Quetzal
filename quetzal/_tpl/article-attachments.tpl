@@ -23,7 +23,7 @@
 {{ else }}
 <div class="attachment">
     <h5><i class="icon-download-alt"></i> {{ #attachment# }}</h5><hr>
-    <a href="{{ uri options="articleattachment" }}" class="btn btn-mini btn-red">{{ #download# }}| {{ $gimme->attachment->file_name }} ({{ $gimme->attachment->size_kb }}kb)</a>
+    <a href="{{ uri options="articleattachment" }}" class="btn btn-mini btn-red">{{ #download# }} | {{ $gimme->attachment->file_name }} ({{ $gimme->attachment->size_kb }}kb)</a>
     <p><em>{{ $gimme->attachment->description }}</em></p>
 </div><!-- /.attachment -->
 {{ /if }}      
