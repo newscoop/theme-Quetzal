@@ -1,6 +1,6 @@
 <div class="span8 section-articles profile-articles">
     <section class="archive-block">
-        <h1 class="block-title">{{ #commentsBy# }} <span class="link-color">{{ $user->first_name}} {{ $user->last_name}}</span></h1>
+        <div class="block-title">{{ #commentsBy# }} <span class="link-color">{{ $user->first_name}} {{ $user->last_name}}</span></div>
         <hr>
         {{ list_user_comments user=$user->identifier order="bydate desc" length="20" }}
         {{if $gimme->comment->content }}

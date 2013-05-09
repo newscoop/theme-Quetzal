@@ -15,9 +15,9 @@
             <span class="label label-important normal-weight">{{ #premium# }}</span>
             {{ /if }}
             <header>
-                <h1><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h1>
-                <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
+                <h2><a href="{{ uri options="article" }}">{{$gimme->article->name}}</a></h2>
             </header>
+            <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
             <div class="article-excerpt hidden-phone">
                 {{ $gimme->article->full_text|truncate:255:"...":true }}
             </div>  
@@ -27,6 +27,7 @@
             </div>                                        
             <div class="clearfix"></div>
         </article>
+
         {{ else }}
 
         <article class="span8 section-article">
@@ -41,9 +42,9 @@
             <span class="label label-important normal-weight">{{ #premium# }}</span>
             {{ /if }}
             <header>
-                <h1><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h1>
-                <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
+                <h2><a href="{{ uri options="article" }}">{{$gimme->article->name}}</a></h2>
             </header>
+            <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
             <div class="article-excerpt hidden-phone">
                 {{ $gimme->article->full_text|truncate:200:"...":true}}
             </div>  

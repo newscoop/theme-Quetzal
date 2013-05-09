@@ -57,7 +57,7 @@
                                 </a>
                             </figure>
                             <header>
-                                <h1>{{$gimme->article->name}}</h1>
+                                <h2><a href="{{ uri options="article" }}">{{$gimme->article->name}}</a></h2>
                             </header>
                             <div class="article-excerpt">
                                 {{ $gimme->article->full_text|truncate:200:"...":true}}

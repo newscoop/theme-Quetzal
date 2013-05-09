@@ -3,18 +3,18 @@
 {{/if}}
 <div class="span8 section-articles profile-articles">
     <section class="archive-block">
-        <h1 class="block-title">{{ #articlesBy# }} <span class="link-color">{{ $user->first_name}} {{ $user->last_name}}</span></h1>
+        <div class="block-title">{{ #articlesBy# }} <span class="link-color">{{ $user->first_name}} {{ $user->last_name}}</span></div>
         <hr>
         {{ list_articles length="5" ignore_publication="true" ignore_issue="true" ignore_section="true" constraints="author is $escapedName type is news" order="bypublishdate desc" }}
         <article class="section-article archive-entry">
             {{ include file='_tpl/img/img_130x70.tpl'}}
             <header>
                 <h2><a href="{{ $gimme->article->url }}">{{ $gimme->article->name }}</a></h2>
-                <span class="article-date">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</span>
-                <span class="label label-important normal-weight">{{ #premium# }}</span>
-                <br>
-                <span>{{ $gimme->article->comment_count }} {{ #comments# }}</span>
-            </header>                                        
+            </header>
+            <span class="article-date">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</span>
+            <span class="label label-important normal-weight">{{ #premium# }}</span>
+            <br>
+            <span>{{ $gimme->article->comment_count }} {{ #comments# }}</span>
             <div class="clearfix"></div>
         </article>
 
