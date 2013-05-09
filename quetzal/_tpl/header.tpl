@@ -34,11 +34,15 @@
                 <!-- TOPBAR NAV END -->
 
                 <!-- BANNER & SEACH -->
-                <div class="row logo-search">
-                    <div class="span7">                        
-                        <a href="/">
-                            <img class="logo pull-left" src="{{ url static_file='_img/logo.png'}}" alt="{{$gimme->publication->name}}">
-                        </a> 
+                <div class="row main-header">
+                    <div class="span7">
+                        <hgroup>
+                            <h1>                        
+                                <a href="/">
+                                    <img class="logo pull-left" src="{{ url static_file='_img/logo.png'}}" alt="{{$gimme->publication->name}}">
+                                </a>
+                            </h1>
+                        </hgroup> 
 
                         <!-- NAVIGATION FOR PHONE -->                       
                         <ul class="nav visible-phone pull-right phone-nav">
@@ -68,6 +72,8 @@
                         </form>
                     </div>
                 </div>
+                <!-- END BANNER & SEACH -->
+
             </div>
 
             <!-- MAIN NAV -->
@@ -169,4 +175,6 @@
             </ul>            
             <div class="clearfix visible-tablet"></div>
             <!--  END MAIN NAV TABLET -->
+
         </header>       
+        <!--END  HEADER -->

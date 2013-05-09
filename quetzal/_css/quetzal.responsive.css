@@ -103,7 +103,7 @@
   .homepage {
     margin-top: -15px;
   }
-  .logo-search {
+  .main-header {
     padding-left: 10px;
     padding-right: 30px;
     margin-left: 0px;
@@ -111,10 +111,10 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  .logo-search .span7 {
+  .main-header .span7 {
     width: 53%;
   }
-  .logo-search .span5 {
+  .main-header .span5 {
     width: 41%;
   }
   #quetzal-slideshow .quetzal-slide {
@@ -242,7 +242,7 @@
   .row,
   .container,
   section[role="main"] .wrapper,
-  .logo-search .span7,
+  .main-header .span7,
   .article-container,
   .article-container h1,
   .article-container .single figure > img,
@@ -283,7 +283,7 @@
     -moz-box-shadow: none !important;
     box-shadow: none !important;
   }
-  .logo-search {
+  .main-header {
     padding-left: 10px;
     padding-right: 30px;
     margin-left: 0px;
@@ -560,21 +560,21 @@
   .logo {
     margin-left: 10px;
   }
-  .logo-search .span7 {
+  .main-header .span7 {
     margin-bottom: 5px;
   }
-  .logo-search .span5 {
+  .main-header .span5 {
     background-color: #1A1E24;
   }
-  .logo-search .span5 #seachform, .logo-search .span5 .input-append {
+  .main-header .span5 #seachform, .main-header .span5 .input-append {
     margin: 0px;
     width: 100%;
   }
-  .logo-search .span5 .input-append {
+  .main-header .span5 .input-append {
     margin-top: 3px;
     padding-bottom: 2px;
   }
-  .logo-search .span5 input[name="search"] {
+  .main-header .span5 input[name="search"] {
     width: 85%;
     margin-left: 1.5%;
   }

@@ -5,6 +5,13 @@ body {
 header[role="banner"] {
   background: #c0c0c0;
 }
+header[role="banner"] .main-header {
+  margin-bottom: 2px;
+}
+header[role="banner"] .main-header h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 header[role="banner"] #topnav .navbar-inner {
   width: 920px;
   margin-left: -10px;
@@ -1123,8 +1130,11 @@ header[role='banner'] {
 header[role='banner'] .navbar {
   margin-bottom: 8px;
 }
-header[role='banner'] .logo-search {
-  margin-bottom: 2px;
+header[role='banner'] .main-header h1 {
+  color: #c52500;
+}
+header[role='banner'] .main-header h1 a {
+  color: #c52500;
 }
 header[role='banner'] #seachform input[type="search"] {
   border-right: none;
