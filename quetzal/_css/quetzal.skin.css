@@ -1786,6 +1786,8 @@ i.icon-center {
   color: #cdcdcd;
   border: 0;
   padding-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 .sidebar-widget-tabs .polls .label-important {
   margin-left: 5px;
