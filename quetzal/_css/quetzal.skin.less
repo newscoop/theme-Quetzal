@@ -1,6 +1,12 @@
 @import "mixins.less";
 @import "quetzal.layout.less";
 
+/***************************** */
+/**** Begin Quetzal Skin ***** */
+/***************************** */
+
+/* --- Begin General Elements */
+
 body{
     .content-font;
     font-weight: normal;
@@ -11,24 +17,24 @@ h1, h2, h3, h4, h5, h6{
     .web-font;
 }
 
-// COLORS
+/* End General Elements --- */
 
-@red1: #d55436;
-@red2: #c52500;
+/* --- Begin Skin Variables and Custom Style Classes */
+
+@light_color: #d55436; // light orange
+@strong_color: #c52500; // strong orange
 
 .white-text{color: #fff;}
 
-.link-color{.text-error;}
+.link-color{color:@light_color;}
 
 .gray-text{color: #777;}
 
-.text-error{color: @red1}
-
 a.link-color{
-    color: @red1; 
+    color: @light_color; 
     font-weight: 600;
     &:hover{
-        color: @red2;
+        color: @strong_color;
     }
 }
 
@@ -75,6 +81,8 @@ a.link-color{
   }
 }
 
+/* End Skin Variables and custom style classes --- */
+
 // HEADER STYLES
 
 header[role='banner']{
@@ -82,9 +90,9 @@ header[role='banner']{
     .navbar{margin-bottom: 8px}
     .main-header{
         h1{
-            color:@red2;
+            color:@strong_color;
             a{
-                color:@red2;
+                color:@strong_color;
             }
         }
     }
@@ -250,7 +258,6 @@ footer[id="main-footer"]{
     background: #1e232a url("../_img/footer-back.jpg") bottom repeat-x;
     color: #bcc2cb;
     a{color: #bcc2cb}
-    a.text-error{color: @red2}
     h4{color: #fff}
     .footer-brand{
         color: #7d8288;
@@ -258,7 +265,7 @@ footer[id="main-footer"]{
     .categories{
         a:hover{
             text-decoration: none;
-            color: @red2;
+            color: @strong_color;
         }
     }
     .right-separator{
@@ -328,12 +335,12 @@ hr{
     }    
 }
 .arrow-left{
-    .arrow(8px, @red2, left);
+    .arrow(8px, @strong_color, left);
     position: relative;
     left: 5px;
 }
 .arrow-right{
-    .arrow(8px, @red2, right);
+    .arrow(8px, @strong_color, right);
     position: relative;    
     left: 6px;
 }
@@ -588,7 +595,7 @@ i.icon-center{
         line-height: 15px;
     }
     a{
-        color:@red2 !important;
+        color:@strong_color !important;
         font-size: 11px;
     }
 }
@@ -675,7 +682,7 @@ i.icon-center{
 
         .article-content blockquote{
             color: #fff;
-            background: @red2;
+            background: @strong_color;
             .web-font-italic;
         }
         .addthis_toolbox{
@@ -754,9 +761,9 @@ i.icon-center{
 .pagination{
     ul li{
         a{
-            color:@red2;
+            color:@strong_color;
             &:hover{
-                background: @red2;
+                background: @strong_color;
                 color:#fff;
             }
         }

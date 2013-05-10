@@ -758,7 +758,11 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 /* End Registration and Login Form --- */
 /***************************** */
 /******** End Layout ********* */
-/***************************** */body {
+/***************************** *//***************************** */
+/**** Begin Quetzal Skin ***** */
+/***************************** */
+/* --- Begin General Elements */
+body {
   font-family: Tahoma, Helvetica, Arial, sans-serif;
   font-weight: normal;
   background: url("../_img/body-back.jpg") repeat;
@@ -771,6 +775,8 @@ h5,
 h6 {
   font-family: 'Asap', sans-serif;
 }
+/* End General Elements --- */
+/* --- Begin Skin Variables and Custom Style Classes */
 .white-text {
   color: #fff;
 }
@@ -779,9 +785,6 @@ h6 {
 }
 .gray-text {
   color: #777;
-}
-.text-error {
-  color: #d55436;
 }
 a.link-color {
   color: #d55436;
@@ -893,6 +896,7 @@ a.link-color:hover {
   background-image: -o-linear-gradient(#ff7300, #ff7300 70%, #ff5500);
   background-image: linear-gradient(#ff7300, #ff7300 70%, #ff5500);
 }
+/* End Skin Variables and custom style classes --- */
 header[role='banner'] {
   background: #171b20 url("../_img/header-back.png") top repeat-x;
 }
@@ -1070,9 +1074,6 @@ footer[id="main-footer"] {
 }
 footer[id="main-footer"] a {
   color: #bcc2cb;
-}
-footer[id="main-footer"] a.text-error {
-  color: #c52500;
 }
 footer[id="main-footer"] h4 {
   color: #ffffff;
