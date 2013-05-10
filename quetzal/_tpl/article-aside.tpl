@@ -72,6 +72,9 @@
         {{/if}}
         {{ /list_related_articles}}
 
+        {{ if $gimme->article->type_name == "debate" }}
+        {{ include file="_tpl/debate-voting.tpl" }}
+        {{ else }}
         <!-- MAP WIDGET -->
         <div class="widget-map hidden-tablet">
             <header class="widget-wrap">
@@ -89,6 +92,7 @@
 
             </footer>
         </div>
+        {{ /if }}
 
     </aside>
 </div>
