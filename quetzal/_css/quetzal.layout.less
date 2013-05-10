@@ -1,41 +1,14 @@
 @import "mixins.less";
 
+/***************************** */
+/******** Begin Layout ******* */
+/***************************** */
+
+/* --- Begin General Elements */
+
 body{
     background: #eee;
 }
-
-/* Begin bootstrap override */
-
-header[role="banner"]{
-    background: #c0c0c0;
-    .main-header{
-        margin-bottom: 2px;
-        h1{
-            margin-top:0px;
-            margin-bottom: 0px;
-        }
-    }
-
-    // -- Layout ajustment --
-    #topnav{
-        .navbar-inner{
-            width: 920px;
-            margin-left: -10px;
-        }
-    }
-    nav[role="navigation"]{
-        .navbar-inner{
-            width: 960px;
-            margin-left: -10px;
-            padding: 0px 0px;
-        }
-    }
-    // -- end layout ajustment --
-}
-
-.label-important{background: #ca2600}
-
-.label{padding: 0px 4px 2px 4px}
 
 h1, h2, h3, h4, h5, h6{
     a, a:hover{
@@ -43,7 +16,11 @@ h1, h2, h3, h4, h5, h6{
     }
 }
 
-// FONT
+hr{ margin: 5px 0px;}
+
+.label-important{background: #ca2600}
+
+.label{padding: 0px 4px 2px 4px}
 
 .bold-weight{font-weight: 700}
 .normal-weight{font-weight: 400}
@@ -67,17 +44,53 @@ h1, h2, h3, h4, h5, h6{
     .rounded-corners-bottom(7px);
 }
 
-#seachform{margin-top: 20px}
-
-.welcome{
-    line-height: 35px;
-}
-
 .navbar .login-nav > li > a{
     float: left;
 }
 
-/* Begin Index Slider */
+/* End General Elements --- */
+
+/* --- Begin Header */
+
+header[role="banner"]{
+    background: #c0c0c0;
+
+    .main-header{
+        margin-bottom: 2px;
+        h1{
+            margin-top:0px;
+            margin-bottom: 0px;
+        }
+    }
+
+    // -- Layout ajustment
+    #topnav{
+        .navbar-inner{
+            width: 920px;
+            margin-left: -10px;
+        }
+    }
+
+    nav[role="navigation"]{
+        .navbar-inner{
+            width: 960px;
+            margin-left: -10px;
+            padding: 0px 0px;
+        }
+    }
+
+    // end layout ajustment --
+
+    #seachform{margin-top: 20px}
+
+    .welcome{
+        line-height: 35px;
+    }
+}
+
+/* End Header --- */
+
+/* --- Begin Index Slider  */
 
 #quetzal-slideshow{
     position: relative;
@@ -93,6 +106,7 @@ h1, h2, h3, h4, h5, h6{
 
     .quetzal-slide.first{
         display: block;
+
         .slide-title{
             margin-top:15px;
         }
@@ -103,6 +117,7 @@ h1, h2, h3, h4, h5, h6{
         max-width: 320px;
         background: url('../_img/black-dot.png') repeat;
         margin-top: 15px;
+
         h3{
             font-size: 24px;
             line-height: 25px;
@@ -114,6 +129,7 @@ h1, h2, h3, h4, h5, h6{
                 .normal-weight;
             }
         }
+
         span{
             display: block;
             font-size: 11px;
@@ -125,10 +141,12 @@ h1, h2, h3, h4, h5, h6{
         padding: 0px 5px;
         font-size: 12px;
     }
+
     .slide-time{
         background: #f2f7fa;
         padding: 0px 5px;        
     }
+
     .read-more{        
         background: #000;
         color: red;
@@ -181,6 +199,7 @@ h1, h2, h3, h4, h5, h6{
                 .rounded-corners(2px);     
             }
         }
+
         .cycle-pager-active{
             .box-shadow(0px, 0px, 1px, 2px, #fff);
         }
@@ -191,6 +210,7 @@ h1, h2, h3, h4, h5, h6{
         z-index: 999;
         right: 0px;
         top: 10px;
+
         h3{
             font-size: 24px;
             font-weight: normal;
@@ -200,6 +220,7 @@ h1, h2, h3, h4, h5, h6{
             color:#fff;
             .text-shadow(0px,1px,3px,#000);
         }
+
         .mgzn-news-box{
             margin-bottom: 10px;
             background: #fff;
@@ -220,6 +241,10 @@ h1, h2, h3, h4, h5, h6{
     }
 }
 
+/* End Index Slider --- */
+
+/* --- Begin Content Elements */
+
 section[role="main"]{
     .wrapper{
         background: #fff;
@@ -232,26 +257,59 @@ section#content{
     padding: 10px 0px 20px 0px 
 }
 
-hr{
-    margin: 5px 0px;
-}
-
 figure.article-image{
     margin: 0px;
     padding: 0px;
 }
 article{
     font-size: 12px;
+
     h2{
         font-size: 20px;
         font-weight: normal;
         margin: 0px;
         line-height: 20px;        
     }
+
     .article-date{
         font-size: 11px;
     }
 }
+
+h1.block-title{
+    font-size: 26px;
+    .normal-weight;
+    margin-bottom: 0px;
+}
+
+.archive-block{
+    margin-bottom: 20px;
+
+    hr{
+        margin-top: 2px;
+        margin-bottom: 15px;
+    }
+
+    article{
+        h1{
+            font-size: 18px;
+        }
+    }
+}
+
+.archive-entry{
+    header{        
+        .box-sizing;
+    }
+
+    .article-image{
+        width: 130px !important;
+    }
+}
+
+/* End General Content Elements --- */
+
+/* --- Begin Index */
 
 .home-featured-news{
 
@@ -285,6 +343,7 @@ article{
                 width: 100%;
             }
         }
+
         article:last-child{
             margin-right: 0px !important;
         }
@@ -292,6 +351,7 @@ article{
         .article-image, figure.article-image{
             margin-bottom: 7px;
         }
+
         .article-content{
             width: 202px;
         }
@@ -302,39 +362,58 @@ article{
             padding-top: 15px;
             .box-sizing;
         }
+
         .article-image{
             width: 80px !important;
         }        
     }
 }
 
-h1.block-title{
-    font-size: 26px;
-    .normal-weight;
-    margin-bottom: 0px;
-}
-
-.archive-block{
-    margin-bottom: 20px;
+.tab-content{
     hr{
-        margin-top: 2px;
-        margin-bottom: 15px;
-    }
-    article{
-        h1{
-            font-size: 18px;
-        }
+        margin: 5px 0px;
     }
 }
 
-.archive-entry{
-    header{        
-        .box-sizing;
+.quetzal-carousel{
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 12px;
+    margin-top: 10px;
+
+    .quetzal-carousel-content{
+        height: 220px;
     }
-    .article-image{
-        width: 130px !important;
+
+    .sub-item{
+        width: 235px;
+        display: block;        
     }
+
+    .video{
+        .opacity(0.8);
+        .trans(opacity, 0.5s);
+        &:hover{
+            .opacity(1);
+            .trans(opacity, 1s);
+        }
+    } 
+
+    .photo, .video{
+        position: relative;
+        .photo-caption{
+            color: #fff;
+            position: absolute;
+            bottom: 0px;
+            padding: 6px;
+            text-align: center;
+            background: url("../_img/black-dot.png") repeat;            
+        }
+    }   
 }
+
+/* End Index --- */
+
+/* --- Begin Sidebar */
 
 .advertisements{
     margin-bottom: 10px;
@@ -357,43 +436,9 @@ h1.block-title{
     line-height: 14px;
 }
 
-.tab-content{
-    hr{
-        margin: 5px 0px;
-    }
-}
+/* End Sidebar --- */
 
-.quetzal-carousel{
-    font-family: Tahoma, Arial, sans-serif;
-    font-size: 12px;
-    margin-top: 10px;
-    .quetzal-carousel-content{
-        height: 220px;
-    }
-    .sub-item{
-        width: 235px;
-        display: block;        
-    }
-    .video{
-        .opacity(0.8);
-        .trans(opacity, 0.5s);
-        &:hover{
-            .opacity(1);
-            .trans(opacity, 1s);
-        }
-    } 
-    .photo, .video{
-        position: relative;
-        .photo-caption{
-            color: #fff;
-            position: absolute;
-            bottom: 0px;
-            padding: 6px;
-            text-align: center;
-            background: url("../_img/black-dot.png") repeat;            
-        }
-    }   
-}
+/* --- Begin Footer */
 
 footer[id="main-footer"]{
     margin-top: 25px;
@@ -407,11 +452,13 @@ footer[id="main-footer"]{
     h4{
         font-weight: normal;
     }
+
     .categories{
         ul{
             text-transform: uppercase;
         }
     }
+
     .categories, .more-links{
         ul{            
             list-style-type: none;
@@ -419,11 +466,13 @@ footer[id="main-footer"]{
             margin-left: 5px;
         }
     }
+
     .about-us{
         p{
             padding-right: 18px;
         }
     }
+
     .contact-us{
         font-size: 11px;
         .info{
@@ -445,7 +494,9 @@ footer[id="main-footer"]{
     }
 }
 
-// INTERNAL PAGE STYLE
+/* End Footer --- */
+
+/* --- Begin Internal Page */
 
 .internal-page{
     font-size: 13px;
@@ -458,6 +509,7 @@ footer[id="main-footer"]{
 
 .breadcrumbs{
     min-height: 50px;
+
     h2, h3{
         color:#6b6b6b;
         margin: 0px;
@@ -465,6 +517,7 @@ footer[id="main-footer"]{
         margin-bottom: 4px;
         display: inline-block;
     }
+
     span{
         display: inline-block;
         position: relative;
@@ -479,6 +532,7 @@ footer[id="main-footer"]{
         list-style-type: none;
         min-height: 31px;
         line-height: 31px;
+
         li{
             display: inline-block;
             font-size: 12px;
@@ -507,6 +561,23 @@ footer[id="main-footer"]{
     }
 }
 
+/* End Internal Page --- */
+
+/* --- Begin Single Page */
+
+.single{
+    h1{
+        width: 300px;
+    }
+
+    figure.aside-figure{
+        width: 300px;
+        margin: 0px;
+        padding: 0px;
+        margin: 10px 0 0 15px;       
+    }
+}
+
 #gallery{ 
     min-width: 250px; 
     max-width: 100%; 
@@ -516,20 +587,7 @@ footer[id="main-footer"]{
     margin-bottom: 15px;
 }
 
-.single{
-    h1{
-        width: 300px;
-    }
-    figure.aside-figure{
-        width: 300px;
-        margin: 0px;
-        padding: 0px;
-        margin: 10px 0 0 15px;       
-    }
-}
-
 article.main-article{
-
     figure{
         margin: 0px;
         padding: 0px;
@@ -550,6 +608,7 @@ article.main-article{
             .box-sizing;
         }
     }
+
     .article-content blockquote{
         border: 0;
         padding: 12px;
@@ -560,6 +619,7 @@ article.main-article{
     .addthis_toolbox{
         padding: 10px 0px 0px 0px;
         margin: 10px 0px;
+
         .addthis_button_facebook_like{
             width: 120px;
             margin-right: 0px;
@@ -584,6 +644,7 @@ article.main-article{
         height: 42px;
         font-style: italic;
     }
+
     textarea{
         height: 146px;
     }
@@ -595,38 +656,18 @@ article.main-article{
     }
 }
 
-// CATEGORY PAGE STYLE
+/* End Single Page --- */
 
-.section-page{
-    #quetzal-slideshow{
-        top: -15px;        
-    }
 
-    .quetzal-slide-section{
-        .rounded-corners-reset;
+/* --- Begin Profile */
 
-        .slide-title{
-            position: relative;
-            top: 150px;
-        }
-
-        .slide-bottom-links{
-            position: absolute;
-            bottom: -20px;
-            right: 35px;
-            .slide-time{
-                margin-right: 10px;
-            }
-        }
-    }
-}
-
-// PROFILE PAGE STYLE
 .profile{
     .span6{
         padding-top: 15px;
     }  
-    margin-bottom: 20px;  
+
+    margin-bottom: 20px; 
+
     h1{
         font-size: 24px;
         .normal-weight;
@@ -634,6 +675,7 @@ article.main-article{
         line-height: 24px;
         margin-bottom: 10px;
     }
+
     h3{
         margin: 0px;      
         margin-bottom: 8px;  
@@ -641,6 +683,7 @@ article.main-article{
         line-height: 18px;
         .normal-weight;
     }
+
     .profile-picture{
         margin-right: 10px;
     }
@@ -719,7 +762,9 @@ article.main-article{
     }
 }
 
-// MAP MODAL
+/* End Profile --- */
+
+/* --- Begin Map Related Elements */
 
 .modal-body{
     .article-image{
@@ -728,16 +773,17 @@ article.main-article{
     }
 }
 
-// MAP POPUP LOCATION
-
-.olFramedCloudPopupContent{
+.olFramedCloudPopupContent{ // popup position
     margin-left: 15px;
 }
 
+/* End Map Related Elements --- */
 
-// REGISTRATION AND LOGIN FORM
+/* --- Begin Registration and Login Form */
+
 .quetzal-form{
     padding-right: 30px;
+
     &:after{
         content: " ";
         display: block;
@@ -752,14 +798,17 @@ article.main-article{
         margin-right: 3.8%;
         width: 39.45%;
     }
+
     input[type="text"],input[type="password"],textarea{
         width: 100%;
     }
+
     dd {
         margin-left: 0;
         width: 56.75%;
         float: left;
     }
+
     #fieldset-newsletter{
         dd {
             margin-left: 0;
@@ -773,6 +822,7 @@ article.main-article{
             margin-bottom: 10px;
         }
     }
+    
     #attributes-element{
         width: 100%;
         #attributes-gender-male{
@@ -801,4 +851,8 @@ article.main-article{
     }
 }
 
-/* End bootstrap override */
+/* End Registration and Login Form --- */
+
+/***************************** */
+/******** End Layout ********* */
+/***************************** */

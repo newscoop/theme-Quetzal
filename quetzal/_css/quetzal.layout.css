@@ -1,31 +1,9 @@
+/***************************** */
+/******** Begin Layout ******* */
+/***************************** */
+/* --- Begin General Elements */
 body {
   background: #eee;
-}
-/* Begin bootstrap override */
-header[role="banner"] {
-  background: #c0c0c0;
-}
-header[role="banner"] .main-header {
-  margin-bottom: 2px;
-}
-header[role="banner"] .main-header h1 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-header[role="banner"] #topnav .navbar-inner {
-  width: 920px;
-  margin-left: -10px;
-}
-header[role="banner"] nav[role="navigation"] .navbar-inner {
-  width: 960px;
-  margin-left: -10px;
-  padding: 0px 0px;
-}
-.label-important {
-  background: #ca2600;
-}
-.label {
-  padding: 0px 4px 2px 4px;
 }
 h1 a,
 h2 a,
@@ -40,6 +18,15 @@ h4 a:hover,
 h5 a:hover,
 h6 a:hover {
   color: #000;
+}
+hr {
+  margin: 5px 0px;
+}
+.label-important {
+  background: #ca2600;
+}
+.label {
+  padding: 0px 4px 2px 4px;
 }
 .bold-weight {
   font-weight: 700;
@@ -73,16 +60,38 @@ h6 a:hover {
   -webkit-border-bottom-left-radius: 7px;
   -webkit-border-bottom-right-radius: 7px;
 }
-#seachform {
-  margin-top: 20px;
-}
-.welcome {
-  line-height: 35px;
-}
 .navbar .login-nav > li > a {
   float: left;
 }
-/* Begin Index Slider */
+/* End General Elements --- */
+/* --- Begin Header */
+header[role="banner"] {
+  background: #c0c0c0;
+}
+header[role="banner"] .main-header {
+  margin-bottom: 2px;
+}
+header[role="banner"] .main-header h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+header[role="banner"] #topnav .navbar-inner {
+  width: 920px;
+  margin-left: -10px;
+}
+header[role="banner"] nav[role="navigation"] .navbar-inner {
+  width: 960px;
+  margin-left: -10px;
+  padding: 0px 0px;
+}
+header[role="banner"] #seachform {
+  margin-top: 20px;
+}
+header[role="banner"] .welcome {
+  line-height: 35px;
+}
+/* End Header --- */
+/* --- Begin Index Slider  */
 #quetzal-slideshow {
   position: relative;
   height: 300px;
@@ -237,6 +246,8 @@ h6 a:hover {
 #quetzal-slideshow .quetzal-popular-news .mgzn-news-box .mgzn-news-info a {
   color: #333333;
 }
+/* End Index Slider --- */
+/* --- Begin Content Elements */
 section[role="main"] .wrapper {
   background: #fff;
   width: 960px;
@@ -249,9 +260,6 @@ section[role="main"] .wrapper {
 }
 section#content {
   padding: 10px 0px 20px 0px;
-}
-hr {
-  margin: 5px 0px;
 }
 figure.article-image {
   margin: 0px;
@@ -269,6 +277,31 @@ article h2 {
 article .article-date {
   font-size: 11px;
 }
+h1.block-title {
+  font-size: 26px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.archive-block {
+  margin-bottom: 20px;
+}
+.archive-block hr {
+  margin-top: 2px;
+  margin-bottom: 15px;
+}
+.archive-block article h1 {
+  font-size: 18px;
+}
+.archive-entry header {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.archive-entry .article-image {
+  width: 130px !important;
+}
+/* End General Content Elements --- */
+/* --- Begin Index */
 .home-featured-news .most-prominent {
   max-height: 152px;
 }
@@ -316,43 +349,6 @@ article .article-date {
 .home-featured-news .issue-entry .article-image {
   width: 80px !important;
 }
-h1.block-title {
-  font-size: 26px;
-  font-weight: 400;
-  margin-bottom: 0px;
-}
-.archive-block {
-  margin-bottom: 20px;
-}
-.archive-block hr {
-  margin-top: 2px;
-  margin-bottom: 15px;
-}
-.archive-block article h1 {
-  font-size: 18px;
-}
-.archive-entry header {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-.archive-entry .article-image {
-  width: 130px !important;
-}
-.advertisements {
-  margin-bottom: 10px;
-}
-.sidebar-widget-tabs,
-.more-news-tabs {
-  font-size: 11px;
-}
-.more-news-tabs .article-content img {
-  margin-right: 10px;
-}
-.sidebar-widget-tabs {
-  font-size: 12px;
-  line-height: 14px;
-}
 .tab-content hr {
   margin: 5px 0px;
 }
@@ -399,6 +395,24 @@ h1.block-title {
   text-align: center;
   background: url("../_img/black-dot.png") repeat;
 }
+/* End Index --- */
+/* --- Begin Sidebar */
+.advertisements {
+  margin-bottom: 10px;
+}
+.sidebar-widget-tabs,
+.more-news-tabs {
+  font-size: 11px;
+}
+.more-news-tabs .article-content img {
+  margin-right: 10px;
+}
+.sidebar-widget-tabs {
+  font-size: 12px;
+  line-height: 14px;
+}
+/* End Sidebar --- */
+/* --- Begin Footer */
 footer[id="main-footer"] {
   margin-top: 25px;
   font-size: 12px;
@@ -440,6 +454,8 @@ footer[id="main-footer"] .footer-brand .logo-footer {
   display: inline-block;
   margin-right: 10px;
 }
+/* End Footer --- */
+/* --- Begin Internal Page */
 .internal-page {
   font-size: 13px;
 }
@@ -497,14 +513,8 @@ footer[id="main-footer"] .footer-brand .logo-footer {
   -webkit-border-top-right-radius: 3px;
   background: #fff;
 }
-#gallery {
-  min-width: 250px;
-  max-width: 100%;
-  min-height: 300px;
-  max-height: 400px;
-  background: #000;
-  margin-bottom: 15px;
-}
+/* End Internal Page --- */
+/* --- Begin Single Page */
 .single h1 {
   width: 300px;
 }
@@ -513,6 +523,14 @@ footer[id="main-footer"] .footer-brand .logo-footer {
   margin: 0px;
   padding: 0px;
   margin: 10px 0 0 15px;
+}
+#gallery {
+  min-width: 250px;
+  max-width: 100%;
+  min-height: 300px;
+  max-height: 400px;
+  background: #000;
+  margin-bottom: 15px;
 }
 article.main-article figure {
   margin: 0px;
@@ -571,28 +589,8 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 .login-textarea textarea {
   margin-bottom: 100px;
 }
-.section-page #quetzal-slideshow {
-  top: -15px;
-}
-.section-page .quetzal-slide-section {
-  -ms-border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-  -webkit-border-radius: 0px !important;
-  -khtml-border-radius: 0px !important;
-  border-radius: 0px !important;
-}
-.section-page .quetzal-slide-section .slide-title {
-  position: relative;
-  top: 150px;
-}
-.section-page .quetzal-slide-section .slide-bottom-links {
-  position: absolute;
-  bottom: -20px;
-  right: 35px;
-}
-.section-page .quetzal-slide-section .slide-bottom-links .slide-time {
-  margin-right: 10px;
-}
+/* End Single Page --- */
+/* --- Begin Profile */
 .profile {
   margin-bottom: 20px;
 }
@@ -680,6 +678,8 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 .user-entry .user-picture {
   margin-right: 15px;
 }
+/* End Profile --- */
+/* --- Begin Map Related Elements */
 .modal-body .article-image {
   margin-right: 10px;
   margin-bottom: 10px;
@@ -687,6 +687,8 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 .olFramedCloudPopupContent {
   margin-left: 15px;
 }
+/* End Map Related Elements --- */
+/* --- Begin Registration and Login Form */
 .quetzal-form {
   padding-right: 30px;
 }
@@ -753,4 +755,7 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 .zend_form #submit-element {
   margin-bottom: 10px;
 }
-/* End bootstrap override */
+/* End Registration and Login Form --- */
+/***************************** */
+/******** End Layout ********* */
+/***************************** */
