@@ -17,7 +17,11 @@
             <section id="content">
                 <div class="row">
 
+                {{ if $gimme->article->type_name == "debate" }}
+                {{ include file="_tpl/article-debate.tpl" }}
+                {{ else }}
                 {{ include file="_tpl/article-cont.tpl" }}
+                {{ /if }}
 
                 {{ include file="_tpl/article-aside.tpl" }}          
                 </div> <!--end div class="row"-->
