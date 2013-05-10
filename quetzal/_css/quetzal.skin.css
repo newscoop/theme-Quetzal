@@ -1772,7 +1772,7 @@ i.icon-center {
 .sidebar-widget-tabs .polls .pollWrap {
   background: #171b21;
   padding: 10px 0px 0px 0px;
-  margin: 10px 0px;
+  margin: 0px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1782,16 +1782,21 @@ i.icon-center {
   -webkit-border-radius: 4px;
   -khtml-border-radius: 4px;
 }
+.sidebar-widget-tabs .polls .pollWrap blockquote {
+  color: #cdcdcd;
+  border: 0;
+  padding-left: 20px;
+}
+.sidebar-widget-tabs .polls .label-important {
+  margin-left: 5px;
+  margin-bottom: 3px;
+  font-size: 10px;
+}
 .sidebar-widget-tabs .polls input[type="submit"] {
   color: #fff;
+  padding: 6px;
+  color: #fff !important;
   border: none;
-  padding-bottom: 6px;
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-  -moz-border-radius-topright: 0px;
-  -moz-border-radius-topleft: 0px;
-  -webkit-border-top-left-radius: 0px;
-  -webkit-border-top-right-radius: 0px;
   text-shadow: 0px -1px 0px #901600;
   -moz-text-shadow: 0px -1px 0px #901600;
   -webkit-text-shadow: 0px -1px 0px #901600;
@@ -1803,21 +1808,34 @@ i.icon-center {
   background-image: -ms-linear-gradient(#ca3500, #ca3500 10%, #bb1c00);
   background-image: -o-linear-gradient(#ca3500, #ca3500 10%, #bb1c00);
   background-image: linear-gradient(#ca3500, #ca3500 10%, #bb1c00);
+  border-radius: 3 x;
+  -ms-border-radius: 3 x;
+  -moz-border-radius: 3 x;
+  -webkit-border-radius: 3 x;
+  -khtml-border-radius: 3 x;
+  width: 100%;
+  margin-top: -15px;
 }
-.sidebar-widget-tabs .polls input[type="submit"]:hover {
+.sidebar-widget-tabs .polls input[type="submit"]:hover,
+.sidebar-widget-tabs .polls input[type="submit"]:focus {
   background: none;
-  background-color: #bb1c00;
+  background-position: 0 0 !important;
+}
+.sidebar-widget-tabs .polls input[type="submit"]:hover,
+.sidebar-widget-tabs .polls input[type="submit"]:focus {
+  background-color: #ca3500;
   background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#bb1c00), color-stop(70%, #bb1c00), to(#ca3500));
-  background-image: -webkit-linear-gradient(#bb1c00, #bb1c00 70%, #ca3500);
-  background-image: -moz-linear-gradient(top, #bb1c00, #bb1c00 70%, #ca3500);
-  background-image: -ms-linear-gradient(#bb1c00, #bb1c00 70%, #ca3500);
-  background-image: -o-linear-gradient(#bb1c00, #bb1c00 70%, #ca3500);
-  background-image: linear-gradient(#bb1c00, #bb1c00 70%, #ca3500);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ca3500), color-stop(70%, #ca3500), to(#bb1c00));
+  background-image: -webkit-linear-gradient(#ca3500, #ca3500 70%, #bb1c00);
+  background-image: -moz-linear-gradient(top, #ca3500, #ca3500 70%, #bb1c00);
+  background-image: -ms-linear-gradient(#ca3500, #ca3500 70%, #bb1c00);
+  background-image: -o-linear-gradient(#ca3500, #ca3500 70%, #bb1c00);
+  background-image: linear-gradient(#ca3500, #ca3500 70%, #bb1c00);
 }
 .sidebar-widget-tabs .polls .poll-option {
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 10px;
   margin: 0px 10px 10px 10px;
   border-bottom: 1px dotted #5f6d7d;
   -webkit-box-sizing: border-box;
@@ -1830,7 +1848,8 @@ i.icon-center {
 .sidebar-widget-tabs .polls .poll-option input[type="radio"] {
   margin-right: 5px;
   position: relative;
-  top: -2px;
+  margin-right: 10px;
+  float: left;
 }
 .more-news-tabs-section .section-label {
   font-size: 11px;

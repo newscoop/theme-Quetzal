@@ -867,27 +867,36 @@ i.icon-center{
         .pollWrap{
             background: #171b21; 
             padding: 10px 0px 0px 0px;
-            margin: 10px 0px;
+            margin: 0px;
             .box-sizing;
             .rounded-corners(4px);
+            blockquote{
+                color:#cdcdcd;
+                border:0;
+                padding-left:20px;
+            }
+        }
+
+        .label-important{
+            margin-left: 5px;
+            margin-bottom: 3px;
+            font-size: 10px
         }
 
         input[type="submit"]{
             color: #fff;
             border: none;
-            padding-bottom: 6px;
-            .rounded-corners-top(0px);
-            .text-shadow(0px, -1px, 0px, #901600);
-            .linear-gradient(#ca3500, #bb1c00, 10%);
-            &:hover{
-                background: none;
-                .linear-gradient(#bb1c00, #ca3500, 70%);
-            }
+            padding: 6px;
+            .btn-red;
+            .rounded-corners(3x);
+            width: 100%;
+            margin-top:-15px;
         }
 
         .poll-option{
             padding-left: 10px;
             padding-right: 10px;
+            padding-bottom: 10px;
             margin: 0px 10px 10px 10px;
             border-bottom: 1px dotted #5f6d7d;
             .box-sizing;
@@ -898,7 +907,8 @@ i.icon-center{
             input[type="radio"]{
                 margin-right: 5px;
                 position: relative;
-                top: -2px;
+                margin-right: 10px;
+                float: left;
             }
         }
     }
