@@ -16,7 +16,7 @@
                 <h4>{{ #moreNewsLikeThis# }}</h4>
             </header>
             <div class="widget-wrap">
-                <div class="news-content">
+                <div class="widget-content">
                     <div class="visible-desktop">
                         {{/if}}
                         <div class="news-box">

@@ -682,6 +682,11 @@
   .more-like-this-phone article .article-date {
     font-size: 11px;
   }
+  .debate .well {
+    width: 90%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
   .zend_form dt {
     float: left;
     margin-right: 3.8%;
@@ -717,6 +722,9 @@
   .phone-nav .dropdown-menu {
     width: 322px;
   }
+  .debate .well {
+    width: 85%;
+  }
 }
 @media (max-width: 320px) {
   #seachform input[name="search"] {
@@ -728,5 +736,8 @@
   }
   .phone-nav .dropdown-menu {
     width: 284px;
+  }
+  .debate .well {
+    width: 80%;
   }
 }

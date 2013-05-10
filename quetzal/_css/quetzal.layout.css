@@ -590,6 +590,34 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   margin-bottom: 100px;
 }
 /* End Single Page --- */
+/* --- Begin Debate */
+.debate .debate-right h1 {
+  float: left;
+}
+.debate .debate-right .well {
+  margin-left: 10px;
+  margin-right: 0px;
+}
+.debate .debate-left {
+  margin-top: 10px;
+}
+.debate .debate-left h1 {
+  float: right;
+}
+.debate .debate-left .well {
+  margin-right: 15px;
+  margin-left: 0px;
+}
+.debate h1 {
+  width: 65%;
+}
+.debate .well {
+  width: 25%;
+  margin-left: 10px;
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+/* End Debate --- */
 /* --- Begin Profile */
 .profile {
   margin-bottom: 20px;

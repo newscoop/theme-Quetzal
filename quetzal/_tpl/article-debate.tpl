@@ -1,6 +1,6 @@
 <!-- MAIN ARTICLE -->
 <div class="span8 article-container">
-    <article class="main-article single">                                    
+    <article class="main-article single debate">                                    
         <header>
             <span class="article-info">
                 <time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time> 
@@ -13,34 +13,48 @@
         </header>
 
         <section class="article-content">
-        {{ list_article_authors }}
-            {{ if $gimme->current_list->index == "1"}}
-            <figure>
-              <img rel="resizable" alt="{{ $gimme->author->name }}" src="{{ $gimme->author->picture->imageurl }}" width=97 height=97 />
-            </figure>
-            <h5>{{ #proArgumentsBy# }}</h5>
-            <p>{{ if $gimme->author->user->defined }}<a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}">{{ /if }}{{ $gimme->author->name }}{{ if $gimme->author->user->defined }}</a>{{ /if }}</p>
-            <p>{{ $gimme->author->biography->text|strip_tags:false|truncate:200 }}</p>
-            {{ /if }}
-        {{ /list_article_authors }}
 
-        <h3>PRO: {{ $gimme->article->pro_title }}</h3>
-        <div class="clearfix">{{ $gimme->article->pro_text }}</div>
+            {{ include file="_tpl/_edit-article.tpl" }}
 
-        {{ list_article_authors }}
-            {{ if $gimme->current_list->index == "2"}}
-            <figure>
-              <img rel="resizable" alt="{{ $gimme->author->name }}" src="{{ $gimme->author->picture->imageurl }}" width=97 height=97 />
-            </figure>
-            <h5>{{ #contraArgumentsBy# }}</h5>
-            <p>{{ if $gimme->author->user->defined }}<a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}">{{ /if }}{{ $gimme->author->name }}{{ if $gimme->author->user->defined }}</a>{{ /if }}</p>
-            <p>{{ $gimme->author->biography->text|strip_tags:false|truncate:200 }}</p>
-            {{ /if }}
-        {{ /list_article_authors }}
+            <em class="teaser">{{ $gimme->article->teaser }}</em>
 
-        <h3>CONTRA: {{ $gimme->article->contra_title }}</h3>
-        <div class="clearfix">{{ $gimme->article->contra_text }}</div>
+            <div class="debate-right">
+                                <h1>PRO: {{ $gimme->article->pro_title }}</h1>
+                {{ list_article_authors }}
+                    {{ if $gimme->current_list->index == "1"}}
+                    <div class="well pull-right ">
+                        <figure>
+                          <img rel="resizable" alt="{{ $gimme->author->name }}" src="{{ $gimme->author->picture->imageurl }}" width=97 height=97 />
+                        </figure>
+                        <h5>{{ #proArgumentsBy# }}</h5>
+                        <p>{{ if $gimme->author->user->defined }}<a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}" class="link-color">{{ /if }}{{ $gimme->author->name }}{{ if $gimme->author->user->defined }}</a>{{ /if }}</p>
+                        <p>{{ $gimme->author->biography->text|strip_tags:false|truncate:200 }}</p>
+                    </div>
+                    {{ /if }}
 
+                {{ /list_article_authors }}
+
+                <div class="clearfix">{{ $gimme->article->pro_text }}</div>
+            </div>
+
+            <div class="debate-left">
+                <h1>CONTRA: {{ $gimme->article->contra_title }}</h1>
+                {{ list_article_authors }}
+                    {{ if $gimme->current_list->index == "2"}}
+                    <div class="well pull-left">
+                        <figure>
+                          <img rel="resizable" alt="{{ $gimme->author->name }}" src="{{ $gimme->author->picture->imageurl }}" width=97 height=97 />
+                        </figure>
+                        <h5>{{ #contraArgumentsBy# }}</h5>
+                        <p>{{ if $gimme->author->user->defined }}<a class="link-color" href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}">{{ /if }}{{ $gimme->author->name }}{{ if $gimme->author->user->defined }}</a>{{ /if }}</p>
+                        <p>{{ $gimme->author->biography->text|strip_tags:false|truncate:200 }}</p>
+                    </div>
+                    {{ /if }}
+                {{ /list_article_authors }}
+
+                
+                <div class="clearfix">{{ $gimme->article->contra_text }}</div>
+            </div>
         </section>
                 <!-- AddThis Button BEGIN -->
         <div class="addthis_toolbox addthis_default_style">
