@@ -92,7 +92,6 @@
                             </ul>    
                        {{ /if }}
                     {{ /if }}
-                    </div>
                     {{ if $gimme->current_list->at_end }}
                     </div>
                     {{ /if }}
