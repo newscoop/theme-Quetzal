@@ -1,6 +1,7 @@
 <!-- MAIN ARTICLE -->
 <div class="span8 article-container">
     <article class="main-article single debate">                                    
+        {{ if $gimme->article->content_accesible }} 
         <header>
             <span class="article-info">
                 <time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time> 
@@ -72,6 +73,12 @@
 
         {{ include file="_tpl/article-comments.tpl" }}
         </section>
+        {{ else }}
+        <header>
+            <p>{{ #infoOnLockedArticles# }}</p>
+        </header>
+        {{ /if }} {{* end content_accesible *}}
+{ else }}
 
     </article>
 </div>
