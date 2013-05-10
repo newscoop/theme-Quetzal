@@ -9,10 +9,8 @@
     <!-- TABS SIDEBAR -->
     <div class="sidebar-widget-tabs visible-desktop">
         <ul class="nav nav-tabs">
-            <li class="active">
-                <a href="#last-comments" data-toggle="tab">{{ #latestComments# }}</a>
-            </li>
-            <li><a href="#sports-poll" data-toggle="tab">{{ #pollTitle# }}</a></li>
+            <li class="active"> <a href="#last-comments" data-toggle="tab">{{ #latestComments# }}</a> </li>
+            <li><a href="#poll" data-toggle="tab">{{ #pollTitle# }}</a></li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="last-comments">
