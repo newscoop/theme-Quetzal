@@ -1,13 +1,18 @@
 {{ include file="_tpl/debate-answers.tpl" scope="parent" }}
 
 {{ capture name="votes" }}
-    <ul class="debatte-score">
+    <div class="debate-score">
         {{ strip }}
         {{ foreach $answers as $answer }}
-        <li style="width:{{ $answer.percent }}%;" class="{{ if $answer@first }}yes{{ else }}no{{ /if }}"><span><b>{{ $answer.answer|escape }}</b> {{ $answer.percent }}%</span></li>
+        <div class="debate-value">
+	    	<div class="progress progress-danger progress-striped debate-bar">
+				<div class="bar" style="width: {{ $answer.percent }}%"></div>
+			</div>
+	        <span><b>{{ $answer.answer|escape }}</b> {{ $answer.percent }}%</span>
+    	</div>
         {{ /foreach }}
         {{ /strip }}
-    </ul>
+    </div>
 {{ /capture }}
 
 {{ if !$gimme->debate->is_votable }}

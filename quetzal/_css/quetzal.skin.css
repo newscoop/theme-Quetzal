@@ -617,6 +617,13 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   font-size: 11px;
   margin-bottom: 10px;
 }
+.debate-bar {
+  height: 5px;
+  margin-bottom: 0px;
+}
+.debate-value {
+  margin: 10px 0px 15px 0px;
+}
 /* End Debate --- */
 /* --- Begin Profile */
 .profile {
@@ -1130,9 +1137,6 @@ article.main-article figcaption {
 }
 .article-content .article-date {
   color: #777;
-}
-.teaser {
-  font-size: 13px;
 }
 .article-links {
   font-size: 11px;
@@ -1864,6 +1868,12 @@ i.icon-center {
   width: 238px;
 }
 /* --- Begin Debate */
+.debate .teaser {
+  font-size: 13px;
+  margin-top: 8px;
+  display: block;
+  color: #707070;
+}
 .debate .well {
   background: #191D23;
   border: #000 1px solid;

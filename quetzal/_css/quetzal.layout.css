@@ -617,6 +617,13 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   font-size: 11px;
   margin-bottom: 10px;
 }
+.debate-bar {
+  height: 5px;
+  margin-bottom: 0px;
+}
+.debate-value {
+  margin: 10px 0px 15px 0px;
+}
 /* End Debate --- */
 /* --- Begin Profile */
 .profile {

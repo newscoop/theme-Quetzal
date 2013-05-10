@@ -1,5 +1,5 @@
 <!-- SIDEBAR -->
-<div class="span4">
+<div class="span4 internal-sidebar">
     <aside class="sidebar">
         
         <!-- ADVERTISEMENTS -->
