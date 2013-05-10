@@ -78,7 +78,5 @@
             <p>{{ #infoOnLockedArticles# }}</p>
         </header>
         {{ /if }} {{* end content_accesible *}}
-{ else }}
-
     </article>
 </div>
