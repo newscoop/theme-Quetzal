@@ -11,7 +11,7 @@
             </figure>                                        
             <header>
                 <span class="link-color">{{ $gimme->article->section->name}}</span>
-                {{ if !$gimme->article->content_accesible }}
+                {{ if !$gimme->article->content_accessible }}
                 <span class="label label-important normal-weight">{{ #premium# }}</span>
                 {{ /if }} 
                 <h2><a href="{{ uri option='article'}}">{{ $gimme->article->name }}</a></h2>
@@ -42,7 +42,7 @@
                     <header>
                         <span class="link-color">{{ $gimme->article->section->name}}</span>
                         <h2><a href="{{url option='article'}}">{{ $gimme->article->name}}</a></h2>
-                        {{ if !$gimme->article->content_accesible }}
+                        {{ if !$gimme->article->content_accessible }}
                         <span class="label label-important normal-weight">{{ #premium# }}</span>
                         {{ /if }} 
                         <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>

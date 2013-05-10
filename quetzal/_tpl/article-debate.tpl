@@ -1,7 +1,7 @@
 <!-- MAIN ARTICLE -->
 <div class="span8 article-container">
     <article class="main-article single debate">                                    
-        {{ if $gimme->article->content_accesible }} 
+        {{ if $gimme->article->content_accessible }} 
         <header>
             <span class="article-info">
                 <time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time> 
