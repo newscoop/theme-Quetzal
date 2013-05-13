@@ -41,9 +41,10 @@
                     {{ if $gimme->debate_action->defined }}
                         <blockquote>{{ $gimme->debate->question }}</blockquote>
                         {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user || $gimme->debate_action->ok }}
-                            <p class="poll-info">{{ #thankYouPoll# }}</p>
+                            <blockquote class="white-text poll-info">{{ #thankYouPoll# }}</blockquote>
                         {{ elseif $gimme->debate_action->is_error }}
-                            <p>{{ #alreadyVoted# }}</p>
+                            <blockquote class="white-text poll-info">{{ #alreadyVoted# }}</blockquote>
+                            <div class="clearfix"></div>
                         {{ /if }}                        
 
                         {{ assign var="votes" value=0 }}
@@ -87,7 +88,10 @@
                             
                        {{ else }}                       
                             <blockquote>{{ $gimme->debate->question }}</blockquote> 
-                            {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user }}<p class="poll-info">{{ #thankYouPoll# }}</p>{{ /if }}  
+                            {{ if $gimme->debate->user_vote_count >= $gimme->debate->votes_per_user }}
+                            <blockquote class="white-text poll-info">{{ #thankYouPoll# }}</blockquote>
+                            <div class="clearfix"></div>
+                            {{ /if }}  
                             {{ list_debate_answers }}
                               <div class="poll-option">
                                   <label for="radio{{ $gimme->current_list->index }}">{{ $gimme->debateanswer->answer }}

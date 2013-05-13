@@ -1792,6 +1792,10 @@ i.icon-center {
   margin-top: 5px;
   margin-bottom: 15px;
 }
+.sidebar-widget-tabs .polls .pollWrap .poll-info {
+  color: #fff;
+  font-weight: bold;
+}
 .sidebar-widget-tabs .polls .label-important {
   margin-left: 5px;
   margin-bottom: 3px;
@@ -1836,6 +1840,9 @@ i.icon-center {
   background-image: -ms-linear-gradient(#ca3500, #ca3500 70%, #bb1c00);
   background-image: -o-linear-gradient(#ca3500, #ca3500 70%, #bb1c00);
   background-image: linear-gradient(#ca3500, #ca3500 70%, #bb1c00);
+}
+.sidebar-widget-tabs .polls .total-votes {
+  margin-left: 10px;
 }
 .sidebar-widget-tabs .polls .poll-option {
   padding-left: 10px;
