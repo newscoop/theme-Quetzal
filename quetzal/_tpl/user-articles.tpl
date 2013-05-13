@@ -12,7 +12,9 @@
                 <h2><a href="{{ $gimme->article->url }}">{{ $gimme->article->name }}</a></h2>
             </header>
             <span class="article-date">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</span>
+            {{ if !$gimme->article->content_accessible }}
             <span class="label label-important normal-weight">{{ #premium# }}</span>
+            {{ /if }}
             <br>
             <span>{{ $gimme->article->comment_count }} {{ #comments# }}</span>
             <div class="clearfix"></div>
