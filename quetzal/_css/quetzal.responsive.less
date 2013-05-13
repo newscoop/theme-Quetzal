@@ -17,7 +17,6 @@
 }
 
 .responsive-tablet-slideshow{
-
     .quetzal-slide {
         background-position: center center;
         .rounded-corners-top(0px);
@@ -49,7 +48,11 @@
     }
 }
 
-// RESPONSIVE 768 - 979
+/* End responsive mixings --- */
+
+
+/* --- Begin 768px to 979px screen resolution */
+
 @media (min-width: 768px) and (max-width: 979px) {
     .row,
     .container,
@@ -96,10 +99,12 @@
         padding-left: 10px;
         padding-right: 30px;
         margin-left: 0px;
-        .box-sizing;        
+        .box-sizing; 
+
         .span7{
             width: 53%;
         }
+
         .span5{
             width: 41%;
         }
@@ -113,7 +118,8 @@
 
         .article-image{
             width: 225px !important;
-        }        
+        }  
+
         .other-featured article{
             margin-right: 9px;
             width: 32.3%;
@@ -130,9 +136,11 @@
         .sub-item{
             width: 33.3%;            
         }
+
         .photo img{
             height: 220px;
         }
+
         .video{
             img{
                 background-size: cover !important;
@@ -170,6 +178,7 @@
         .row:first-child, .comment-box{
             width: 100%;
         }
+
         .row:first-child{
             margin-left: 0px;
             
@@ -187,10 +196,12 @@
         }
         .comment-box{
             margin-left: 0px;
+
             .span1{
                 width: 9%;
                 margin-left: 0px;
             }
+
             .span7{
                 width: 88.1%;
             }
@@ -200,6 +211,7 @@
                 .span4:first-child{
                     margin-left: 0px;
                 }
+
                 .span4{
                     width: 48.5%;
                 }
@@ -220,13 +232,19 @@
     
 }
 
-// RESPONSIVE 481 - 767
-/* Landscape phone to portrait tablet */
+/* --- End 768px to 979px screen resolution*/
+
+
+/* --- Begin 481px to 767px screen resolution */
+/* --- Landscape phone to portrait tablet */
+
 @media (min-width: 481px) and (max-width: 767px) {
+
     body{
         padding-left: 0px;
         padding-right: 0px;
-    }    
+    }
+
     .row,
     .container,
     section[role="main"] .wrapper,
@@ -237,9 +255,11 @@
     .other-featured article{
         width: 100% !important;
     }
+
     .container, .row{        
         .box-sizing;
     }
+
     .navbar-inner{
         .responsive-navbar-inner;
     }
@@ -247,6 +267,7 @@
     section#content{
         padding: 10px 30px;
     }
+
     .homepage{
         margin-top: -15px;
     }
@@ -269,9 +290,11 @@
     .footer-brand{
         text-align: center;
     }
+
     #seachform{
         margin-bottom: 3px;
         margin-top: 13px;
+
         .input-append{
             margin-bottom: 0px;
             input{
@@ -284,18 +307,22 @@
         .article-excerpt.hidden-phone{
             display: block !important;            
         }
+
         article{
             max-height: none !important;
         }
+
         .other-featured{
             figure.article-image{
                 margin-right: 7px;
             }
+
             article{
                 min-height: 1px !important;
                 height: auto !important;
                 padding-bottom: 3px;                
             }
+
             .article-content{
                 width: 100%;
             }
@@ -319,48 +346,58 @@
         .row:first-child, .comment-box{
             width: 100%;
         }
+
         .row:first-child{
             margin-left: 0px;
+
             .span6{
                 width: 60%;
                 margin-left: 0px;
                 float: left;                
             }
+
             .span2{
                 width: 40%;
                 text-align: right;
                 float: left;
             }
+
             .write-comment a{
                 right: 0px;
                 left: auto;
             }
         }
+
         .row:first-child:after{
             content: '';
             display: block;
             clear: both;
             margin-bottom: 10px;
         }
+
         .comment-box{
             margin-left: 0px;
+
             .span1{
                 width: 10%;
                 margin-left: 0px;
                 margin-right: 1%;
                 float: left;
             }
+
             .span7{
                 width: 89%;
                 float: left;
             }
         }
+
         #comment-form{
             form > .row{
                 .span4:first-child{
                     margin-left: 0px;
                     margin-right: 1%;
                 }
+
                 .span4{
                     width: 100%;
                     float: left;
@@ -368,6 +405,7 @@
             }
         }
     }
+
     .footer-info{
         .widget-map{
             margin-left: 30px;
@@ -379,11 +417,13 @@
             margin-bottom: 10px;
             padding-bottom: 10px;
             border-bottom: 1px dotted #b2b2b2;
+
             figure{
                 float: left;
                 width: 130px;
                 margin-right: 5px;
             }
+
             h2{
                 font-size: 16px;
                 margin: 0px;
@@ -394,13 +434,16 @@
                     &:hover{color: #000}
                 }                
             }
+
             .article-date{
                 font-size: 11px;
             }
         }
     }  
+
     .action-buttons{
         text-align: center;
+
         .btn{
             margin-right: 20px;
         }
@@ -412,18 +455,24 @@
     }
 }
 
-// RESPONSIVE 480
-/* Landscape phones and down */
+/* --- End 481px to 767px screen resolution */
+
+/* --- Begin screen resolution less than 480px */
+/* --- Landscape phones and down */
+
 @media (max-width: 480px) {
     body{
         padding:0px;
     }
+
     .container, .row{
         width: 100%;
     }
+
     section#content{
         padding-bottom: 0px;
     }
+
     .navbar-inner{
         font-size: 12px !important;
         width: 100% !important;
@@ -432,14 +481,17 @@
         .box-sizing;
         .rounded-corners-bottom(0px);
     }
+
     section[role="main"]{        
         .wrapper{            
             width: 100% !important;
         }
     }
+
     .homepage{
         margin-top: -15px;
     }
+
     .login-link:hover{
         color: #fff;
     }
@@ -458,19 +510,23 @@
         .wrapper{
             .box-shadow-reset;            
         }
+
         header.section-header{            
             .rounded-corners(0px);
         }
+
         .container{
             padding-left: 10px;
             padding-right: 10px;
             .box-sizing;
         }
+
         .main-article{
             .article-info{
                 display: inline-block;
                 line-height: 15px;
             }
+
             h1{
                 font-size: 24px;
                 margin-bottom: 5px;
@@ -483,20 +539,98 @@
         figure.aside-figure{
             width: 100%;
             margin-bottom: 10px;
+
             img{
                 width: 100%;
             }  
         }
     }
 
+    .main-header{
+        .span7{
+            margin-bottom: 5px;
+        }
+
+        .span5{
+            background-color: #1A1E24;
+
+            #seachform, .input-append{
+                margin: 0px;                
+                width: 100%;
+            }
+
+            .input-append{
+                margin-top: 3px;
+                padding-bottom: 2px;
+            }
+
+            input[name="search"]{
+                width: 85%; 
+                margin-left: 1.5%;
+            }
+        }        
+    }
+    
+    .internal-page .breadcrumbs{
+        h2, h3{
+            font-size: 20px !important;
+        }
+    }
+
+    #quetzal-slideshow {
+        height: 260px;
+        margin-bottom: 30px;
+
+        .quetzal-slide {
+            .rounded-corners-top(0px);
+            height: 260px;
+            background-position: center center;
+        }
+
+        .slide-title{
+            position: relative;
+            top: 100px;
+        }
+
+        .quetzal-slideshow-pager{
+            bottom: -22px;
+        }
+    }
+
+    .home-featured-news, .section-articles{
+        article{
+            width: 100%;
+            min-height: 100px !important;
+            margin-bottom: 10px;
+            padding-bottom: 0px !important;
+            padding-left: 10px;
+            padding-right: 10px;
+            .box-sizing;
+        }
+
+        .article-image{
+            width: 130px !important;
+            float: left;
+            margin-bottom: 0px !important;
+            margin-right: 7px;
+        }
+
+        .article-content{
+            width: 268px !important;
+            float: left;
+        }        
+    } 
+
     #comments{
         .write-comment{        
             text-align: left;
             margin-bottom: 5px;
+
             a{
                 top: 0px;                
             }
         }
+
         input[type="submit"]{
             width: 100%;
             margin-top:15px;
@@ -526,83 +660,20 @@
         margin-left: 10px;
     }
 
-    .main-header{
-        .span7{
-            margin-bottom: 5px;
-        }
-        .span5{
-            background-color: #1A1E24;
-            #seachform, .input-append{
-                margin: 0px;                
-                width: 100%;
-            }
-            .input-append{
-                margin-top: 3px;
-                padding-bottom: 2px;
-            }
-            input[name="search"]{
-                width: 85%; 
-                margin-left: 1.5%;
-            }
-        }        
-    }
-    .internal-page .breadcrumbs{
-        h2, h3{
-            font-size: 20px !important;
-        }
-    }
-
-    #quetzal-slideshow {
-        height: 260px;
-        margin-bottom: 30px;
-        .quetzal-slide {
-            .rounded-corners-top(0px);
-            height: 260px;
-            background-position: center center;
-        }
-        .slide-title{
-            position: relative;
-            top: 100px;
-        }
-        .quetzal-slideshow-pager{
-            bottom: -22px;
-        }
-    }
-
-    .home-featured-news, .section-articles{
-        article{
-            width: 100%;
-            min-height: 100px !important;
-            margin-bottom: 10px;
-
-            padding-bottom: 0px !important;
-            padding-left: 10px;
-            padding-right: 10px;
-            .box-sizing;
-        }
-        .article-image{
-            width: 130px !important;
-            float: left;
-            margin-bottom: 0px !important;
-            margin-right: 7px;
-        }
-        .article-content{
-            width: 268px !important;
-            float: left;
-        }        
-    } 
     .section-articles{
         article{
             padding-left: 0px;
             padding-right: 0px;
         }        
     }
+
     .footer-brand{
         text-align: center;
     }
     
     .action-buttons{
         text-align: center;
+
         .btn{
             margin-right: 20px;
         }
@@ -625,21 +696,25 @@
             margin-bottom: 10px;
             padding-bottom: 10px;
             border-bottom: 1px dotted #b2b2b2;
+
             figure{
                 float: left;
                 width: 130px;
                 margin-right: 5px;
             }
+
             h2{
                 font-size: 16px;
                 margin: 0px;
                 line-height: 18px;
                 font-weight: 400;
+
                 a{
                     color: #000;
                     &:hover{color: #000}
                 }                
             }
+
             .article-date{
                 font-size: 11px;
             }
@@ -669,23 +744,30 @@
 
 }
 
-// REPONSIVE 380
+/* --- End screen resolution less than 480px */
+
+/* --- Begin screen resolution less than 380px */
+
 @media (max-width: 380px) {
     body{padding: 0px}
     .logo{width: 135px}
+
     .social-buttons{
         margin-right: -20px !important;
     }    
+
     #seachform{
         input[name="search"]{
             width: 82%;
         }
     }
+
     .action-buttons{        
         .btn{
             margin-right: 0px;
         }
     }
+
     .phone-nav{
         .dropdown-menu{
             width: 342px;
@@ -693,13 +775,17 @@
     }
 }
 
-// RESPONSIVE 360
+/* End screen resolution less than 380px --- */
+
+/* --- Begin screen resolution less than 360px */
+
 @media (max-width: 360px) {    
     .phone-nav{
         .dropdown-menu{
             width: 322px;
         }
     }
+
     .debate{
         .well{
             width: 85%;
@@ -707,25 +793,37 @@
     }
 }
 
-// RESPONSIVE 320
+/* End screen resolution less than 360px --- */
+
+/* --- Begin screen resolution less than 320px */
+
 @media (max-width: 320px) {
     #seachform input[name="search"] {
         width: 80%;
     }
+
     .footer-brand{
         .span12{
             line-height: 20px;
             padding: 6px 10px;        
         }
     }
+
     .phone-nav{
         .dropdown-menu{
             width: 284px;
         }
     }
+
     .debate{
         .well{
             width: 80%;
         }
     }
 }
+
+/* End screen resolution less than 320px --- */
+
+/**************************************** */
+/****** End Responsive Media Queries **** */
+/**************************************** */

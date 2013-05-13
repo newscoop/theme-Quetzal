@@ -54,6 +54,8 @@
 .responsive-tablet-slideshow .quetzal-slideshow-pager a {
   margin-bottom: 15px;
 }
+/* End responsive mixings --- */
+/* --- Begin 768px to 979px screen resolution */
 @media (min-width: 768px) and (max-width: 979px) {
   .row,
   .container,
@@ -242,7 +244,9 @@
     width: 47%;
   }
 }
-/* Landscape phone to portrait tablet */
+/* --- End 768px to 979px screen resolution*/
+/* --- Begin 481px to 767px screen resolution */
+/* --- Landscape phone to portrait tablet */
 @media (min-width: 481px) and (max-width: 767px) {
   body {
     padding-left: 0px;
@@ -466,7 +470,9 @@
     float: left;
   }
 }
-/* Landscape phones and down */
+/* --- End 481px to 767px screen resolution */
+/* --- Begin screen resolution less than 480px */
+/* --- Landscape phones and down */
 @media (max-width: 480px) {
   body {
     padding: 0px;
@@ -545,33 +551,6 @@
   .single figure.aside-figure img {
     width: 100%;
   }
-  #comments .write-comment {
-    text-align: left;
-    margin-bottom: 5px;
-  }
-  #comments .write-comment a {
-    top: 0px;
-  }
-  #comments input[type="submit"] {
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    float: inherit;
-  }
-  .login-textarea textarea {
-    margin-bottom: 15px;
-  }
-  .comment-box .span1 {
-    float: left;
-    width: 60px;
-    margin-right: 5px;
-  }
-  .comment-box .comment-content {
-    float: left;
-  }
-  .logo {
-    margin-left: 10px;
-  }
   .main-header .span7 {
     margin-bottom: 5px;
   }
@@ -640,6 +619,33 @@
     width: 268px !important;
     float: left;
   }
+  #comments .write-comment {
+    text-align: left;
+    margin-bottom: 5px;
+  }
+  #comments .write-comment a {
+    top: 0px;
+  }
+  #comments input[type="submit"] {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    float: inherit;
+  }
+  .login-textarea textarea {
+    margin-bottom: 15px;
+  }
+  .comment-box .span1 {
+    float: left;
+    width: 60px;
+    margin-right: 5px;
+  }
+  .comment-box .comment-content {
+    float: left;
+  }
+  .logo {
+    margin-left: 10px;
+  }
   .section-articles article {
     padding-left: 0px;
     padding-right: 0px;
@@ -703,6 +709,8 @@
     float: left;
   }
 }
+/* --- End screen resolution less than 480px */
+/* --- Begin screen resolution less than 380px */
 @media (max-width: 380px) {
   body {
     padding: 0px;
@@ -723,6 +731,8 @@
     width: 342px;
   }
 }
+/* End screen resolution less than 380px --- */
+/* --- Begin screen resolution less than 360px */
 @media (max-width: 360px) {
   .phone-nav .dropdown-menu {
     width: 322px;
@@ -731,6 +741,8 @@
     width: 85%;
   }
 }
+/* End screen resolution less than 360px --- */
+/* --- Begin screen resolution less than 320px */
 @media (max-width: 320px) {
   #seachform input[name="search"] {
     width: 80%;
@@ -746,3 +758,7 @@
     width: 80%;
   }
 }
+/* End screen resolution less than 320px --- */
+/**************************************** */
+/****** End Responsive Media Queries **** */
+/**************************************** */
