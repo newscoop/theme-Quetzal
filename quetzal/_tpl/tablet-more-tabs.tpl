@@ -1,5 +1,5 @@
 <!-- TABLET MORE NEWS TABS -->
-<div class="row visible-tablet">
+<section class="row visible-tablet">
     <div class="span12 more-news-tabs">
         <!-- MORE NEWS TABS -->
         <div class="hidden-phone">
@@ -50,5 +50,5 @@
             </div>
         </div>
     </div>
-</div>
+</section>
 <!-- END TABLET MORE NEWS -->

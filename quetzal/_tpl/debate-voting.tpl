@@ -1,5 +1,5 @@
 {{ list_debates length="1" item="article" }}
-<div id="debate" class="widget-debate">
+<section id="debate" class="widget-debate">
     <header><h4>{{ #debateVoting# }}</h4></header>
     <div class="widget-wrap">
         <div class="widget-content">
@@ -36,5 +36,5 @@
         {{ /if }}
         </div>
     </div>
-</div>
+</section>
 {{ /list_debates }} 

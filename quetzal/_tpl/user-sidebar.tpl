@@ -1,6 +1,6 @@
 <!-- sidebar -->
-<div class="span4 community-feed">                                
-    <div class="widget-map widget-community-feed">
+<aside class="span4 community-feed">                                
+    <section class="widget-map widget-community-feed">
         <h4 class="widget-wrap">{{ #communityFeed# }}</h4>
         <div class="widget-wrap">
             {{ local }}
@@ -16,5 +16,5 @@
             {{ /list_articles }}
             {{ /local }}
         </div>
-    </div>
-</div>
+    </section>
+</aside>

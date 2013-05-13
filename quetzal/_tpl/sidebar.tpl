@@ -1,13 +1,13 @@
 <!-- sidebar -->
-<div class="span4">
+<aside class="span4">
     
     <!-- ADVERTISEMENTS -->
-    <div class="advertisements visible-desktop">
+    <section class="advertisements visible-desktop">
         <a href="http://www.sourcefabric.org/" target="_blank"><img src="{{ url static_file='_img/sourcefabric-336x280.png' }}"></a>
-    </div>
+    </section>
 
     <!-- TABS SIDEBAR -->
-    <div class="sidebar-widget-tabs visible-desktop">
+    <section class="sidebar-widget-tabs visible-desktop">
         <ul class="nav nav-tabs">
             <li class="active"> <a href="#last-comments" data-toggle="tab">{{ #latestComments# }}</a> </li>
             <li><a href="#poll" data-toggle="tab">{{ #pollTitle# }}</a></li>
@@ -113,5 +113,5 @@
                 </div>                                            
             </div>
         </div>
-    </div>
-</div>  
+    </section>
+</aside>  

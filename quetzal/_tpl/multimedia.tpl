@@ -30,7 +30,7 @@
       {{/if}}
   {{/if}}
 {{ /list_articles }}  
-<div class="row hidden-phone">
+<section class="row hidden-phone">
   <div class="span12 quetzal-carousel">
       <h4>Latest Multimedia</h4>
       <div id="myCarousel" class="carousel slide">                            
@@ -69,4 +69,4 @@
           </a>
       </div>
   </div>
-</div>
+</section>

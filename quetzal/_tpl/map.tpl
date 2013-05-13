@@ -1,10 +1,10 @@
-<div class="span4 hidden-tablet">
+<section class="span4 hidden-tablet">
     <!-- MAP WIDGET -->
     <div class="widget-map">
         <header class="widget-wrap">
             <h4>{{ #newsNearYou# }}</h4>
         </header>
-        <section class="widget-wrap">
+        <div class="widget-wrap">
             <figure class="map">
             {{* All possible constraints for setting the map you can see here:
             https://wiki.sourcefabric.org/display/CS/Dynamic+maps+-+Constraints *}}
@@ -72,7 +72,7 @@
                 </div>
                 {{ /list_map_locations }}
             </div>
-        </section>
+        </div>
 
     </div>
-</div>
+</section>
