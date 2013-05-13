@@ -414,6 +414,39 @@ h1.block-title {
   font-size: 12px;
   line-height: 14px;
 }
+.modal-body .article-image {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.olFramedCloudPopupContent {
+  margin-left: 15px;
+}
+.widget-community-feed h4 {
+  margin-top: 10px !important;
+  margin-bottom: 20px !important;
+}
+.widget-community-feed .comm-entry {
+  margin-top: 10px;
+  border-bottom: #454545 1px dotted;
+  padding-bottom: 10px;
+}
+.widget-community-feed .comm-entry p {
+  color: #BCC2CB;
+  background: url("../_img/comment-icon.png") left bottom no-repeat;
+  display: block;
+  margin: 0px;
+  font-size: 11.5px;
+  padding-left: 20px;
+}
+.widget-community-feed .comm-entry a {
+  font-weight: 400;
+}
+.widget-community-feed .comm-entry span {
+  color: #777;
+}
+.widget-community-feed .widget-wrap {
+  padding: 0 20px !important;
+}
 /* End Sidebar --- */
 /* --- Begin Footer */
 footer[id="main-footer"] {
@@ -677,32 +710,6 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   margin: 0px;
   margin-bottom: 10px;
 }
-.widget-community-feed h4 {
-  margin-top: 10px !important;
-  margin-bottom: 20px !important;
-}
-.widget-community-feed .comm-entry {
-  margin-top: 10px;
-  border-bottom: #454545 1px dotted;
-  padding-bottom: 10px;
-}
-.widget-community-feed .comm-entry p {
-  color: #BCC2CB;
-  background: url("../_img/comment-icon.png") left bottom no-repeat;
-  display: block;
-  margin: 0px;
-  font-size: 11.5px;
-  padding-left: 20px;
-}
-.widget-community-feed .comm-entry a {
-  font-weight: 400;
-}
-.widget-community-feed .comm-entry span {
-  color: #777;
-}
-.widget-community-feed .widget-wrap {
-  padding: 0 20px !important;
-}
 .user-entry {
   margin-bottom: 10px;
   margin-top: 10px;
@@ -717,15 +724,6 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
   margin-right: 15px;
 }
 /* End Profile --- */
-/* --- Begin Map Related Elements */
-.modal-body .article-image {
-  margin-right: 10px;
-  margin-bottom: 10px;
-}
-.olFramedCloudPopupContent {
-  margin-left: 15px;
-}
-/* End Map Related Elements --- */
 /* --- Begin Registration and Login Form */
 .quetzal-form {
   padding-right: 30px;
