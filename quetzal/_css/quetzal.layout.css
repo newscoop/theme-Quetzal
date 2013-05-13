@@ -213,21 +213,24 @@ header[role="banner"] .welcome {
   box-shadow: 0px 0px 1px 2px #ffffff;
 }
 #quetzal-slideshow .quetzal-popular-news {
+  background: url('../_img/popular_news_background.png') repeat-y right top;
   position: absolute;
+  border-top-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
   z-index: 999;
   right: 0px;
-  top: 10px;
+  top: 0px;
+  height: 290px;
+  padding-top: 10px;
 }
 #quetzal-slideshow .quetzal-popular-news h3 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: normal;
   text-align: right;
   margin: 0px;
-  padding: 0px 5px;
-  color: #fff;
-  text-shadow: 0px 1px 3px #000000;
-  -moz-text-shadow: 0px 1px 3px #000000;
-  -webkit-text-shadow: 0px 1px 3px #000000;
+  padding: 0px 10px;
+  color: #000;
 }
 #quetzal-slideshow .quetzal-popular-news .mgzn-news-box {
   margin-bottom: 10px;

@@ -206,19 +206,22 @@ header[role="banner"]{
     }
 
     .quetzal-popular-news{
+        background: url('../_img/popular_news_background.png') repeat-y right top;
         position: absolute;
+        .rounded-corners-right-top(5px);
         z-index: 999;
         right: 0px;
-        top: 10px;
+        top: 0px;
+        height: 290px;
+        padding-top:10px;
 
         h3{
-            font-size: 24px;
+            font-size: 18px;
             font-weight: normal;
             text-align: right;
             margin: 0px;
-            padding: 0px 5px;
-            color:#fff;
-            .text-shadow(0px,1px,3px,#000);
+            padding: 0px 10px;
+            color:#000;
         }
 
         .mgzn-news-box{
