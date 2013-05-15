@@ -6,7 +6,7 @@
 {{ assign var="counter" value=0 }}              
 {{ foreach $slideshow->items as $item }}      
 {{ assign var="counter" value=$counter+1 }}
-              <img src="{{ $item->image->src }}" />                
+              <img src="{{ $item->image->src }}" data-title="{{ $item->caption }}" />                
 {{ /foreach }}
 
           </div>
