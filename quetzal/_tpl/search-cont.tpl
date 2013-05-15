@@ -1,5 +1,7 @@
 <div class="span8 section-articles">
 
+<p>{{ #resultsFor# }} <strong>"{{ $gimme->search_articles_action->search_phrase }}"</strong>.</p>
+
 {{ list_search_results length="5" order="bypublishdate desc" }}
     <article class="span8 section-article">
             <figure class="pull-left article-image">
@@ -54,7 +56,7 @@
 {{ /list_search_results }} 
 
 {{ if $gimme->prev_list_empty }}
-  <p>No search results found for your query.</p>
+  <p>{{ #noResultsFound# }} <strong>"{{ $gimme->search_articles_action->search_phrase }}"</strong>.</p>
 {{ /if }}    
 
 </div>
