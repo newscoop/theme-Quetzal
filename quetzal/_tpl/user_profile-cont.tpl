@@ -6,9 +6,9 @@
         <p><b>{{ #organisation# }}</b> {{ $profile['organisation']}}</p>
         <p><b>{{ #website# }}</b> <a class="link-color" href="{{ $profile['website']}}" target="_blank" rel="nofollow">{{ $profile['website']|escape}}</a></p>
         <p><b>{{ #birthday# }}</b> {{ $profile['birth_date'] }}</p>
-        <p><b>Twitter</b> {{ $profile['twitter'] }}</p>
+        <p><b>Twitter</b> <a class="link-color" href="http://twitter.com/{{ $profile['twitter'] }}" rel="nofollow" target="_blank">{{ $profile['twitter'] }}</a></p>
 
-        <p class="member-since">{{ #memberSince# }}<time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00</time></p>
+        <p class="member-since">{{ #memberSince# }} <time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00</time></p>
         <p class="member-post">{{ $user->posts_count }} {{ #posts# }}</p>
     </div>
     <div class="clearfix"></div>
