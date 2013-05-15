@@ -1,8 +1,9 @@
-<div class="span8 section-articles">
-
-<p>{{ #resultsFor# }} <strong>"{{ $gimme->search_articles_action->search_phrase }}"</strong>.</p>
-
+<div class="span8 home-featured-news section-articles">
 {{ list_search_results length="5" order="bypublishdate desc" }}
+    {{if $gimme->current_list->at_beginning}}
+    <p>{{ #resultsFor# }} <strong>"{{ $gimme->search_articles_action->search_phrase }}"</strong>.</p>
+    {{/if}}
+    <div class="row section-articles">
     <article class="span8 section-article">
             <figure class="pull-left article-image">
                 <a href="{{ uri options="article" }}">
@@ -27,7 +28,7 @@
             </div>
             <div class="clearfix"></div>
         </article>
-
+     </div>
 {{ if $gimme->current_list->at_end }}            
 
 {{* PAGINATION *}}

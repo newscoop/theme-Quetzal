@@ -15,7 +15,7 @@
 
         <div class="container">
             <section id="content">
-                <div class="row home-featured-news">
+                <div class="row">
 
                 {{ include file="_tpl/search-cont.tpl" }}
 

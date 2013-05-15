@@ -3,7 +3,7 @@
         <div class="row">
             <div class="span10">
                 <div class="breadcrumbs">
-                    <h2>Search Results</h2>
+                    <h2>{{ #searchResults# }}</h2>
                 </div>
             </div>
         </div>                        
