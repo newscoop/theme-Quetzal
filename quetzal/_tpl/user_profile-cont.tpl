@@ -1,7 +1,7 @@
 <div class="span6">
     <img class="pull-left profile-picture" src="{{ include file='_tpl/user-image.tpl' user=$user width=175 height=210 }}" alt="{{ #profilePicture# }}"> 
     <div class="profile-info">
-        <h1>{{ if $profile['first_name_public'] }}{{ $user->first_name }}{{ /if }} {{ if $profile['last_name_public'] }} {{ $user->last_name }}{{ /if }} ({{$user->uname}})</h1>
+        <h1>{{ if $profile['first_name_public'] }}{{ $user->first_name }}{{ /if }} {{ if $profile['last_name_public'] }} {{ $user->last_name }}{{ /if }} {{ if !$profile['first_name_public'] && !$profile['last_name_public'] }}{{$user->uname}}{{ /if }}</h1>
         <p><b>{{ #gender# }}</b> {{ $profile['gender'] }}</p>
         <p><b>{{ #organisation# }}</b> {{ $profile['organisation']}}</p>
         <p><b>{{ #website# }}</b> <a class="link-color" href="{{ $profile['website']}}" target="_blank" rel="nofollow">{{ $profile['website']|escape}}</a></p>
