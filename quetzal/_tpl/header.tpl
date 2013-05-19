@@ -54,7 +54,7 @@
                                     {{ local }}
                                     {{ set_current_issue }}
                                     {{ list_sections }}
-                                    <li class="pull-left"><a class="btn" href="{{ uri option="section"}}">{{ $gimme->section->name}}</a></li>
+                                    <li class="pull-left"><a class="btn" href="{{ uri options="section" }}">{{ $gimme->section->name}}</a></li>
                                     {{ /list_sections }}
                                     {{ /local }}
                                 </ul>
