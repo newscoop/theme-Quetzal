@@ -1,5 +1,5 @@
 <div class="span6">
-    <img class="pull-left profile-picture" src="{{ include file='_tpl/user-image.tpl' user=$user width=150 height=210 }}" alt="{{ #profilePicture# }}"> 
+    <img class="pull-left profile-picture" src="{{ include file='_tpl/user-image.tpl' user=$user width=140 height=210 }}" alt="{{ #profilePicture# }}"> 
     <div class="profile-info">
         <h1>{{ if $profile['first_name_public'] }}{{ $user->first_name }}{{ /if }} {{ if $profile['last_name_public'] }} {{ $user->last_name }}{{ /if }} {{ if !$profile['first_name_public'] && !$profile['last_name_public'] }}{{$user->uname}}{{ /if }}</h1>
         <p><b>{{ #gender# }}</b> {{ $profile['gender'] }}</p>
