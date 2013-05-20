@@ -7,3 +7,11 @@
 .home-featured-news .other-featured article{
 	margin-right: 4px;
 }
+
+.quetzal-carousel .video {
+    filter: alpha(opacity = 80);
+}
+
+.quetzal-carousel .video:hover {
+    filter: alpha(opacity = 100);
+}
