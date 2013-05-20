@@ -1,0 +1,9 @@
+/* lte IE 9*/
+
+#topnav .navbar-inner{
+	filter:none;
+}
+
+.home-featured-news .other-featured article{
+	margin-right: 4px;
+}

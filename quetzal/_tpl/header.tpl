@@ -1,10 +1,10 @@
         <!-- HEADER -->
-        <header role="banner">
+        <header id="header" role="banner">
             
             <div class="container">
                 <!-- TOPBAR NAV -->
                 <nav id="topnav" class="navbar">
-                    <div class="navbar-inner user-top-lef-links">
+                    <div class="navbar-inner user-top-lef-links topnavbar">
                         <div class="pull-left welcome hidden-phone">
                             <span class="link-color">{{ #welcome# }}</span> {{$smarty.now|date_format:"%d/%m/%Y"}} 
                         </div>

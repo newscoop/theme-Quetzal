@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="{{ url static_file="_css/quetzal.skin.css"}}">
     <link rel="stylesheet" href="{{ url static_file="_css/quetzal.responsive.css"}}">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Asap:400,700">
+    <!--[if lte IE 9]>
+       <link rel="stylesheet" href="{{ url static_file="_css/quetzal.ie.css"}}">
+    <![endif]-->
 
     <!-- RSS & Pingback -->
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://{{ $gimme->publication->site }}/en/static/rss/">
