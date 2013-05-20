@@ -649,6 +649,9 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 .login-textarea textarea {
   margin-bottom: 100px;
 }
+#recaptcha_response_field {
+  height: 32px !important;
+}
 /* End Single Page --- */
 /* --- Begin Debate */
 .debate .debate-right h1 {

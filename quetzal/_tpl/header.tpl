@@ -68,7 +68,7 @@
                         <form id="seachform" name="search_articles" action="/{{ $gimme->language->code }}/{{ $gimme->issue->url_name }}/" method="POST">
                             <div class="input-append pull-right">
                                 <input type="hidden" name="tpl" value="7">
-                                <input type="search" placeholder="Search" name="f_search_keywords">
+                                <input type="search" id="searchinput" placeholder="Search" name="f_search_keywords">
                                 <button class="btn" type="submit" name="f_search_articles"><i class="icon-search"></i></button>
                             </div>
                             <div class="clearfix"></div>
