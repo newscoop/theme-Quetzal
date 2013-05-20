@@ -711,6 +711,11 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 }
 .profile .profile-picture {
   margin-right: 10px;
+  margin-bottom: 10px;
+}
+.profile .profile-info {
+  width: 63%;
+  float: left;
 }
 .profile .profile-info a {
   font-weight: 400;

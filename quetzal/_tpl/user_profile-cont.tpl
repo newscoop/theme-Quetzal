@@ -13,7 +13,7 @@
         <p><b>Facebook</b> <a class="link-color" href="http://facebook.com/{{ $profile['facebook'] }}" rel="nofollow" target="_blank">{{ $profile['facebook'] }}</a></p>
         {{ /if }}
         {{ if $profile['google'] }}
-        <p><b>Google+</b> <a class="link-color" href="http://plus.google.com/{{ $profile['google'] }}" rel="nofollow" target="_blank">http://plus.google.com/{{ $profile['google'] }}</a></p>
+        <p><b>Google+</b> <a class="link-color" href="http://plus.google.com/{{ $profile['google'] }}" rel="nofollow" target="_blank">+{{ $profile['google'] }}</a></p>
         {{ /if }}
 
         <p class="member-since">{{ #memberSince# }} <time class="timeago" datetime="{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00">{{ $user->created|date_format:'%Y-%m-%d' }} 06:00:00</time></p>

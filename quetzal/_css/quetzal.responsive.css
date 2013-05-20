@@ -179,6 +179,9 @@
     background-size: cover !important;
     height: 220px;
   }
+  .profile .profile-info {
+    width: 53%;
+  }
   .footer-brand {
     text-align: center;
   }
@@ -692,6 +695,9 @@
   }
   .more-like-this-phone article .article-date {
     font-size: 11px;
+  }
+  .profile .profile-info {
+    width: 100%;
   }
   .debate .well {
     width: 90%;
