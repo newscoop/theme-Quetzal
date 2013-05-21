@@ -13,8 +13,8 @@
   <h5 id="video-cont-label"><i class="icon-film"></i> {{ #watch# }}</h5><hr>
   <video id="video_{{ $gimme->current_list->index }}" class="video-js vjs-default-skin" controls
           preload="auto" width="100%" height="270"
-          data-setup="{}">
-    <source src="{{ uri options="articleattachment" }}" type='{{ $gimme->attachment->mime_type }}'>
+          data-setup="{'techOrder': ['flash', 'html5']}">
+    <source src="{{ uri options="articleattachment" }}" type='video/ogg'>
     <a href="{{ uri options="articleattachment" }}">{{ #download# }} .{{ $gimme->attachment->extension }} file</a>
    </video>
 

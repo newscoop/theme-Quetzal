@@ -57,6 +57,9 @@
     <script src="{{ url static_file='_js/vendor/galleria/galleria-1.2.9.min.js'}}"></script>
     <link href="{{ url static_file="_css/video-js.css" }}" rel="stylesheet">
     <script src="{{ url static_file="_js/vendor/video.js" }}"></script>
+    <script>
+    videojs.options.flash.swf = "{{ url static_file='_js/vendor/video-js.swf' }}";
+    </script>
     {{/if}}
     <script src="{{ url static_file='_js/vendor/jquery.timeago.js'}}"></script>
 
