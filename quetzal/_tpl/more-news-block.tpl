@@ -33,7 +33,7 @@
                         <div class="clearfix"></div>
                         <div class="article-links">
                             <hr>
-                            <a href="{{ url options="comments"}}" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | 
+                            <a href="{{ url options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | 
                             <a href="{{ uri options="article"}}" class="link-color">{{ #readMore# }}</a>
                             <span class="article-date pull-right">
                                 <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>
