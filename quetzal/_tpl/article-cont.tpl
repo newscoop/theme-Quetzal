@@ -9,6 +9,7 @@
             {{ if $gimme->article->has_map }}
             <span class="pull-right visible-desktop">{{ #locations# }}: {{ list_article_locations }}{{ if $gimme->location->enabled }}{{ $gimme->location->name }}{{ if $gimme->current_list->at_end }}{{ else }}, {{ /if }}{{ /if }}{{ /list_article_locations }}</span> <span class="visible-phone">{{ #locations# }}: {{ list_article_locations }}{{ if $gimme->location->enabled }}{{ $gimme->location->name }}{{ if !$gimme->current_list->at_end }}, {{ /if }}{{ /if }}{{ /list_article_locations }}</span>
             {{/if}}
+             {{ list_article_topics }}{{ if $gimme->current_list->at_beginning }}<span class="pull-right">{{ #topics# }} {{ /if }}<a href="{{ url options="template topic.tpl" }}">{{ $gimme->topic->name }}</a>{{ if $gimme->current_list->at_end }}</span>{{ else }}, {{ /if }}{{ /list_article_topics }}
             </span>
             <div class="clearfix"></div>
             {{ include file="_tpl/article-slideshows.tpl" }}
