@@ -25,7 +25,7 @@
 {{ if hasvideo }}
 <div class="video-attachment"><!-- read http://diveintohtml5.org/video.html -->
   <h5 id="video-cont-label"><i class="icon-film"></i> {{ #watch# }}</h5><hr>
-  <div class="flowplayer" data-swf="{{ url static_file='_js/vendor/flowplayer.swf' }}" data-ratio="0.417">
+  <div class="flowplayer" data-swf="{{ url static_file='_js/vendor/flowplayer/flowplayer.swf' }}" data-ratio="0.417">
   <video >
     {{foreach from=$videosources key=extension item=videoSource name=videoLoop}}
     <source src="{{ $videoSource }}" type='video/{{if $extension == flv }}flash{{ elseif $extension == ogv}}ogg{{ else }}{{ $extension }}{{ /if }}'>
