@@ -652,6 +652,13 @@ article.main-article .addthis_toolbox .addthis_button_facebook_like {
 #recaptcha_response_field {
   height: 32px !important;
 }
+.audiojs {
+  width: 60%;
+  font-size: 9px;
+}
+.audiojs .scrubber {
+  width: 60%;
+}
 /* End Single Page --- */
 /* --- Begin Debate */
 .debate .debate-right h1 {

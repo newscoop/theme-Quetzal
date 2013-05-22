@@ -55,9 +55,9 @@
     {{/if}}
     {{ if $gimme->template->name == 'article.tpl'}}
     <script src="{{ url static_file='_js/vendor/galleria/galleria-1.2.9.min.js'}}"></script>
-    <link href="{{ url static_file="_css/flowplayer_skin/minimalist.css" }}" rel="stylesheet">
-    <script src="{{ url static_file="_js/vendor/flowplayer/flowplayer.min.js" }}"></script>
+    <link href="{{ url static_file='_css/flowplayer_skin/minimalist.css' }}" rel="stylesheet">
+    <script src="{{ url static_file='_js/vendor/flowplayer/flowplayer.min.js' }}"></script>
+    <script src="{{ url static_file='_js/vendor/audiojs/audio.min.js' }}"></script>
     {{/if}}
     <script src="{{ url static_file='_js/vendor/jquery.timeago.js'}}"></script>
-
   </head>

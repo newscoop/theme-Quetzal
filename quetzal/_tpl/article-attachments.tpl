@@ -1,11 +1,11 @@
 {{ if $gimme->article->has_attachments }} 
 {{assign var=hasvideo value=0}}
 {{ list_article_attachments }}
-{{ if $gimme->attachment->extension == oga }}           
+{{ if $gimme->attachment->extension == oga || $gimme->attachment->extension == mp3 }}           
 <div class="audio-attachment">
-  <h5><i class="icon-headphones"></i> {{ #listen# }}</h5><hr><br>
-    <audio src="{{ uri options="articleattachment" }}" width="100%" controls>
-  <a href="{{ uri options="articleattachment" }}">{{ #downloadAudioFile# }}</a>
+  <h5><i class="icon-headphones"></i> {{ #listen# }}</h5><hr>
+    <audio src="{{ uri options="articleattachment" }}">
+    <a href="{{ uri options="articleattachment" }}">{{ #downloadAudioFile# }}</a>
   </audio>
 </div><!-- /#audio-attachment -->
 {{ elseif $gimme->attachment->extension == ogv || $gimme->attachment->extension == ogg || $gimme->attachment->extension == flv || $gimme->attachment->extension == mp4 || $gimme->attachment->extension == webm }}             

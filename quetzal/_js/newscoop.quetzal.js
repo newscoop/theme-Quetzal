@@ -6,7 +6,12 @@ $(document).ready(function() {
  	// boostrap initialize components
   	$("a[rel]").popover();
   	$("a[rel=tooltip]").tooltip();
-  	
+
+    // initialize audio player
+    audiojs.events.ready(function() {
+        var as = audiojs.createAll();
+    });
+
   	// Place holder on inputs for IE
     if(!$.support.placeholder) {
         var active = document.activeElement;
