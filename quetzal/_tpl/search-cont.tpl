@@ -20,7 +20,7 @@
             </header>
             <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time></span>
             <div class="article-excerpt hidden-phone">
-                {{ $gimme->article->full_text|truncate:200:"...":true}}
+                {{ $gimme->article->deck }}
             </div>  
             <div class="article-links hidden-phone">
                 <hr>
