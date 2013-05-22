@@ -11,9 +11,10 @@
 
   <div class="video-attachment"><!-- read http://diveintohtml5.org/video.html -->
   <h5 id="video-cont-label"><i class="icon-film"></i> {{ #watch# }}</h5><hr>
+  video/{{if $gimme->attachment->extension == flv }}flash{{ elseif $gimme->attachment->extension == ogv}}ogg{{ else }}{{ $gimme->attachment->extension }}{{ /if }}
   <div class="flowplayer" data-swf="{{ url static_file='_js/vendor/flowplayer.swf' }}" data-ratio="0.417">
   <video >
-    <source src="{{ uri options="articleattachment" }}" type='video/{{if $gimme->attachment->extension == flv }}flash{{ else }}{{ $gimme->attachment->extension }}{{ /if }}'>
+    <source src="{{ uri options="articleattachment" }}" type='video/{{if $gimme->attachment->extension == flv }}flash{{ elseif $gimme->attachment->extension == ogv}}ogg{{ else }}{{ $gimme->attachment->extension }}{{ /if }}'>
     <a href="{{ uri options="articleattachment" }}">{{ #download# }} .{{ $gimme->attachment->extension }} file</a>
    </video>
   </div>
