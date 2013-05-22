@@ -15,7 +15,6 @@
   <div class="flowplayer" data-swf="{{ url static_file='_js/vendor/flowplayer.swf' }}" data-ratio="0.417">
   <video >
     <source src="{{ uri options="articleattachment" }}" type='video/{{if $gimme->attachment->extension == flv }}flash{{ elseif $gimme->attachment->extension == ogv}}ogg{{ else }}{{ $gimme->attachment->extension }}{{ /if }}'>
-    <a href="{{ uri options="articleattachment" }}">{{ #download# }} .{{ $gimme->attachment->extension }} file</a>
    </video>
   </div>
 </div><!-- /#video-attachment --> 
