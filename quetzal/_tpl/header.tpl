@@ -1,6 +1,7 @@
         <!-- HEADER -->
         <header id="header" role="banner">
             
+            {{ assign var="currentsection" value=$gimme->section->number }}
             <div class="container">
                 <!-- TOPBAR NAV -->
                 <nav id="topnav" class="navbar">
@@ -54,7 +55,7 @@
                                     {{ local }}
                                     {{ set_current_issue }}
                                     {{ list_sections }}
-                                    <li class="pull-left"><a class="btn" href="{{ uri options="section" }}">{{ $gimme->section->name}}</a></li>
+                                    <li class="pull-left {{ if $currentsection == $gimme->section->number }}active{{ /if}}"><a class="btn" href="{{ uri options="section" }}">{{ $gimme->section->name}}</a></li>
                                     {{ /list_sections }}
                                     {{ /local }}
                                 </ul>
@@ -83,13 +84,16 @@
             <nav role="navigation" class="container navbar navbar-inverse visible-desktop">    
                 <div class="navbar-inner">
                     <ul class="nav">
+                        {{ local }}
+                        {{ set_current_issue }}
                         {{ list_sections }}
-                        <li>
+                        <li {{ if $currentsection == $gimme->section->number }}class="active"{{ /if}}>
                             <a href="{{ uri option="section"}}">
                                 {{ $gimme->section->name }}
                             </a>
                         </li>
                         {{ /list_sections }}
+                        {{ /local }}
                     </ul>
                     
                     <ul class="nav pull-right login-nav">
@@ -135,9 +139,12 @@
                         {{ #sections# }}
                     </a>
                     <ul class="dropdown-menu">
+                        {{ local }}
+                        {{ set_current_issue }}
                         {{ list_sections }}
-                        <li class="pull-left"><a class="btn" href="{{ uri option="section"}}">{{ $gimme->section->name}}</a></li>
+                        <li class="pull-left {{ if $currentsection == $gimme->section->number }}active{{ /if}}"><a class="btn" href="{{ uri option="section"}}">{{ $gimme->section->name}}</a></li>
                         {{ /list_sections }}
+                        {{ /local }}
                     </ul>
                 </li>
             </ul>
