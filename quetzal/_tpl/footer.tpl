@@ -29,8 +29,8 @@
                             <li><a href="#">{{ #aboutUs# }}</a></li>
                             <li><a href="#">{{ #termsAndConditions# }}</a></li>
                             <li><a href="#">{{ #contact# }}</a></li>
-                            <li><a href="#">{{ #followUs# }}</a></li>
-                            <li><a href="#">{{ #beOurFan# }}</a></li>
+                            <li><a href="http://twitter.com/sourcefabric ">{{ #followUs# }}</a></li>
+                            <li><a href="http://facebook.com/sourcefabric ">{{ #beOurFan# }}</a></li>
                             <li><a href="#">{{ #signUpToOurNewsletter# }}</a></li>
                             <li><a href="/en/static/rss">{{ #subscribeToOurFeed# }}</a></li> 
                             <li><a href="/?tpl=6">{{ #archive# }}</a></li>                           
