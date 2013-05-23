@@ -83,7 +83,7 @@
             <!-- MAIN NAV -->
             <nav role="navigation" class="container navbar navbar-inverse visible-desktop">    
                 <div class="navbar-inner">
-                    <ul class="nav">
+                    <ul class="nav sections-menu">
                         {{ local }}
                         {{ set_current_issue }}
                         {{ list_sections }}

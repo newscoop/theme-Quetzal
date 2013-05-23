@@ -1099,6 +1099,10 @@ nav[role="navigation"] .navbar-inner .dropdown-toggle {
   background: none !important;
   outline: none;
 }
+nav[role="navigation"] .navbar-inner .sections-menu li.active a,
+nav[role="navigation"] .navbar-inner .sections-menu li.active a:focus {
+  color: #d55436;
+}
 nav[role="navigation"] .caret {
   border: none;
   padding: 0px;
@@ -2047,6 +2051,9 @@ article.main-article figcaption {
   background-image: -ms-linear-gradient(#ff7300, #ff7300 70%, #ff5500);
   background-image: -o-linear-gradient(#ff7300, #ff7300 70%, #ff5500);
   background-image: linear-gradient(#ff7300, #ff7300 70%, #ff5500);
+}
+.phone-nav .dropdown-menu li.active > a {
+  background: #971a12;
 }
 /* End Phone Navigation --- */
 /* --- Begin Tablet Navigation (extends from phone nav) */
