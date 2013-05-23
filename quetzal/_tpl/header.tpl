@@ -88,7 +88,7 @@
                         {{ set_current_issue }}
                         {{ list_sections }}
                         <li {{ if $currentsection == $gimme->section->number }}class="active"{{ /if}}>
-                            <a href="{{ uri option="section"}}">
+                            <a href="{{ uri options="section"}}">
                                 {{ $gimme->section->name }}
                             </a>
                         </li>
@@ -142,7 +142,7 @@
                         {{ local }}
                         {{ set_current_issue }}
                         {{ list_sections }}
-                        <li class="pull-left {{ if $currentsection == $gimme->section->number }}active{{ /if}}"><a class="btn" href="{{ uri option="section"}}">{{ $gimme->section->name}}</a></li>
+                        <li class="pull-left {{ if $currentsection == $gimme->section->number }}active{{ /if}}"><a class="btn" href="{{ uri options="section"}}">{{ $gimme->section->name}}</a></li>
                         {{ /list_sections }}
                         {{ /local }}
                     </ul>
