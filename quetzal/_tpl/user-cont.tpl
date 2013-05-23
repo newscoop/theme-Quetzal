@@ -2,7 +2,7 @@
     <form action="{{ $view->url(['controller' => 'user', 'action' => 'search'], 'default', true) }}" method="GET">
         <div class="input-append">
             <input type="search" placeholder="{{ #search# }}" name="q">
-            <button class="btn" type="button"><i class="icon-search"></i></button>
+            <button class="btn" type="submit"><i class="icon-search"></i></button>
         </div>
         <div class="clearfix"></div>
     </form>

@@ -1,7 +1,7 @@
 <div class="span8 home-featured-news">
     <!-- SECTION ARTICLES -->                                
     <div class="row section-articles">
-    {{ list_articles length="5" ignore_issue="true" }}
+    {{ list_articles length="5" ignore_issue="true" ignore_section="true"}}
         {{ if $gimme->current_list->at_beginning }}            
 
         <article class="span8 section-article section-featured">                                        
