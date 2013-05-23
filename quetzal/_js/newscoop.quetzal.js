@@ -10,7 +10,7 @@ $(document).ready(function() {
   	// Place holder on inputs for IE
     if(!$.support.placeholder) {
         var active = document.activeElement;
-        $(':password, :text, #searchinput').focus(function () {
+        $('textarea,:password, :text, #searchinput').focus(function () {
                 if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
                         $(this).val('').removeClass('hasPlaceholder');
                 }
@@ -19,7 +19,7 @@ $(document).ready(function() {
                         $(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
                 }
         });
-        $(':password, :text, #searchinput').blur();
+        $('textarea,:password, :text, #searchinput').blur();
         $(active).focus();
         $('form').submit(function () {
                 $(this).find('.hasPlaceholder').each(function() { $(this).val(''); });

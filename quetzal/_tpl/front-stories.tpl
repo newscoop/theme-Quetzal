@@ -26,7 +26,6 @@
             </div>                                        
             <div class="clearfix"></div>
         </article>
-
     </div>
     <div class="row">
         <div class="span8 other-featured">

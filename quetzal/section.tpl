@@ -24,7 +24,7 @@
 
                 {{ include file="_tpl/multimedia.tpl" }}          
 
-                <div class="row">
+                <div class="row front-bottom-blocks">
                     {{ include file="_tpl/more-news-block.tpl" }}          
 
                     {{ include file="_tpl/map.tpl" }}          

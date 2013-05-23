@@ -1,5 +1,5 @@
 <!-- sidebar -->
-<aside class="span4">
+<aside class="span4" id="sidebar">
     
     <!-- ADVERTISEMENTS -->
     <section class="advertisements visible-desktop">
