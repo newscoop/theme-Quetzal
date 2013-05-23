@@ -1284,6 +1284,10 @@ section[role="main"] .container:before {
   -moz-text-shadow: 0px 1px 3px #000000;
   -webkit-text-shadow: 0px 1px 3px #000000;
 }
+.tab-content .comment-box a.link-color,
+.tab-content .comment-box a.comments-link {
+  font-weight: 400;
+}
 .tab-content hr {
   border-bottom: none;
   border-top: 1px dotted #454f58;
@@ -1905,6 +1909,10 @@ article.main-article figcaption {
   color: #999;
   font-size: 11px;
   font-weight: 700;
+}
+.comment-box a.link-color,
+.comment-box a.comments-link {
+  font-weight: 400;
 }
 #comment-form input[type="text"],
 #comment-form input[type="email"],

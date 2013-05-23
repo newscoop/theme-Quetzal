@@ -386,15 +386,21 @@ section[role="main"]{
     .comment-box{
         font-size: 12px;
         line-height: 15px;
+
         a{
             color: #fff;            
         }
+
         .comment-info{
             color: #889199;
             font-style: italic;  
             font-size: 11px;
             .web-font;
             .text-shadow(0px, 1px, 3px, #000); 
+        }
+
+        a.link-color,a.comments-link{
+            font-weight: 400;
         }
     }
     
@@ -1003,6 +1009,12 @@ article.main-article{
         color: #999;
         font-size: 11px;
         .bold-weight;
+    }
+}
+
+.comment-box{//FOR USER PROFILE COMMENTS
+    a.link-color,a.comments-link{
+        font-weight: 400;
     }
 }
 
