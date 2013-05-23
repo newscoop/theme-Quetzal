@@ -10,7 +10,7 @@
                     <div class="comment-info">
                         <time class="timeago" datetime="{{ $gimme->user_comment->submit_date}}">{{ $gimme->user_comment->submit_date }},</time> {{ #by# }}
                                     {{ if $gimme->user_comment->user->identifier }}
-                                        <a link-color href="http://{{ $gimme->publication->site }}/user/profile/{{ $gimme->user_comment->user->uname|urlencode }}">{{ $gimme->user_comment->user->uname }}</a>
+                                        <a class="link-color" href="http://{{ $gimme->publication->site }}/user/profile/{{ $gimme->user_comment->user->uname|urlencode }}">{{ $gimme->user_comment->user->uname }}</a>
                                     {{ else }}
                                         {{ $gimme->user_comment->nickname }} ({{ #anonymous# }})
                                     {{ /if }}
