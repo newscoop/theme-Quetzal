@@ -554,6 +554,9 @@
   .single figure.aside-figure img {
     width: 100%;
   }
+  .article-container .article-content .cs_img {
+    width: 100%;
+  }
   .main-header .span7 {
     margin-bottom: 5px;
   }
