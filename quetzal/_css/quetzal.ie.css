@@ -70,3 +70,13 @@ article.main-article figure figcaption {
 	*position: relative;
 	*width: 280px;
 }
+
+.internal-page .internal-nav ul > li {
+    *width:45px;
+    *float: left;
+    *text-align: center;
+}
+
+.debate .well {
+	*width: 28%;
+}
