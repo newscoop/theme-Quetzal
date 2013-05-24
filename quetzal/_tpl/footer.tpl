@@ -26,12 +26,11 @@
                     <div class="span3 more-links right-separator visible-desktop">
                         <h4>{{ #moreLinks# }}</h4>
                         <ul>
-                            <li><a href="#">{{ #aboutUs# }}</a></li>
-                            <li><a href="#">{{ #termsAndConditions# }}</a></li>
-                            <li><a href="#">{{ #contact# }}</a></li>
+                            {{ list_articles ignore_issue="true" ignore_section="true" constraints="type is page" }}
+                            <li><a href="{{ url options="article" }}">{{ $gimme->article->name }}</a></li>
+                            {{ /list_articles }}
                             <li><a href="http://twitter.com/sourcefabric ">{{ #followUs# }}</a></li>
                             <li><a href="http://facebook.com/sourcefabric ">{{ #beOurFan# }}</a></li>
-                            <li><a href="#">{{ #signUpToOurNewsletter# }}</a></li>
                             <li><a href="/en/static/rss">{{ #subscribeToOurFeed# }}</a></li> 
                             <li><a href="/?tpl=6">{{ #archive# }}</a></li>                           
                         </ul>
@@ -40,17 +39,17 @@
                         <h4>{{ #contactUs# }}</h4>
                         <div class="info">
                             <span class="link-color">{{ #email# }}</span>
-                            support@domain.com
+                            contact@sourcefabric.org 
                         </div>
 
                         <div class="info">
                             <span class="link-color">{{ #address# }}</span>
-                            New York, NY 10021-3528
+                            Salvátorská 10, 110 00 Praha 1, Czech Republic
                         </div>
 
                         <div class="info">
                             <span class="link-color">{{ #phone# }}</span>
-                            +1 (502) 2468-4984
+                             +420 222 362 540
                         </div>
                     </div>
 

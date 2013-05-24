@@ -20,15 +20,15 @@
                         {{ /if }}
                         <a href="/user" class="pull-left white-text visible-phone">&nbsp;|&nbsp;{{ #community# }}</a>                         
                         <ul class="nav pull-right social-buttons">
-                          <li class="visible-desktop"><a href="#" class="fb">{{ #beOurFan# }}</a></li>
-                          <li class="visible-desktop"><a href="#" class="tw">{{ #followUs# }}</a></li>
+                          <li class="visible-desktop"><a href="https://www.facebook.com/Sourcefabric" class="fb">{{ #beOurFan# }}</a></li>
+                          <li class="visible-desktop"><a href="https://twitter.com/sourcefabric" class="tw">{{ #followUs# }}</a></li>
                           <li class="visible-desktop"><a href="/en/static/rss" class="rss">{{ #rssFeed# }}</a></li>
-                          <li class="visible-tablet"><a href="#" class="fb">Facebook</a></li>
+                          <li class="visible-tablet"><a href="https://www.facebook.com/Sourcefabric" class="fb">Facebook</a></li>
                           <li class="visible-tablet"><a href="#" class="tw">Twitter</a></li>
-                          <li class="visible-tablet"><a href="#" class="rss">{{ #rssFeed# }}</a></li>
-                          <li class="visible-phone"><a href="#" class="fb">&nbsp;</a></li>
-                          <li class="visible-phone"><a href="#" class="tw">&nbsp;</a></li>
-                          <li class="visible-phone"><a href="#" class="rss">&nbsp;</a></li>
+                          <li class="visible-tablet"><a href="/en/static/rss" class="rss">{{ #rssFeed# }}</a></li>
+                          <li class="visible-phone"><a href="https://www.facebook.com/Sourcefabric" class="fb">&nbsp;</a></li>
+                          <li class="visible-phone"><a href="https://twitter.com/sourcefabric" class="tw">&nbsp;</a></li>
+                          <li class="visible-phone"><a href="/en/static/rss" class="rss">&nbsp;</a></li>
                         </ul>
                     </div>                    
                 </nav>
