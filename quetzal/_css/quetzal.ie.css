@@ -34,9 +34,16 @@
 .most-prominent,
 .other-featured,
 #sidebar,
-.article-container{
-	*margin-left:0px
+.article-container,
+.community,
+{
+	*margin-left:0px;
 }
+
+.archive-block{
+	*padding-left: 20px;
+}
+
 
 .section-articles{
 	*margin-left:-10px;

@@ -1,7 +1,7 @@
 {{ if $user->isAuthor() }}
 {{ $escapedName=str_replace(" ", "\ ", $user->author->name) }}
 {{/if}}
-<div class="span8 section-articles profile-articles">
+<div class="span8 section-articles profile-articles community-articles">
     <section class="archive-block">
         <div class="block-title">{{ #articlesBy# }} <span class="link-color">{{ $user->first_name}} {{ $user->last_name}}</span></div>
         <hr>

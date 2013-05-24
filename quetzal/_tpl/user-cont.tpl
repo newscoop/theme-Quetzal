@@ -1,4 +1,4 @@
-<div class="span8">
+<div class="span8 community">
     <form action="{{ $view->url(['controller' => 'user', 'action' => 'search'], 'default', true) }}" method="GET">
         <div class="input-append">
             <input type="search" placeholder="{{ #search# }}" name="q">
