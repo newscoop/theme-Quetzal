@@ -1696,6 +1696,9 @@ article.main-article figcaption {
 .article-content .article-date {
   color: #777;
 }
+.article-content p a {
+  color: #d55436;
+}
 .article-links {
   font-size: 11px;
 }
