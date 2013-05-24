@@ -1,5 +1,5 @@
-@import "../mixins.less";
-@import "../quetzal.layout.less";
+@import "mixins.less";
+@import "quetzal.layout.less";
 
 /***************************** */
 /**** Begin Quetzal Skin ***** */
@@ -10,7 +10,7 @@
 body{
     .content-font;
     font-weight: normal;
-    background: url("../../_img/body-back.jpg") repeat;
+    background: url("../_img/body-back.jpg") repeat;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -91,7 +91,7 @@ hr{
 /* --- Begin Header Styles */
 
 #header{
-    background: #171b20 url("../../_img/header-back.png") top repeat-x;
+    background: #171b20 url("../_img/header-back.png") top repeat-x;
 
     .navbar{margin-bottom: 8px}
     .main-header{
@@ -123,7 +123,7 @@ hr{
     #topnav{
         .navbar-inner{
             background-color:#1e2229;
-            background: url("../../_img/topnav-back.png") repeat-x;
+            background: url("../_img/topnav-back.png") repeat-x;
             font-family: Tahoma, arial, sans-serif;
             min-height: 35px !important;
             line-height: 35px;
@@ -164,13 +164,13 @@ hr{
         }
     }
     .fb{
-        background: url("../../_img/fb.png") no-repeat left center;
+        background: url("../_img/fb.png") no-repeat left center;
     }
     .tw{
-        background: url("../../_img/tw.png") no-repeat left center;
+        background: url("../_img/tw.png") no-repeat left center;
     }
     .rss{
-        background: url("../../_img/rss.png") no-repeat left center;
+        background: url("../_img/rss.png") no-repeat left center;
     }
 }
 
@@ -192,7 +192,7 @@ nav[role="navigation"]{
         .nav > li {
             height: 30px;
             line-height: 16px; 
-            background: url("../../_img/menu-separator.png") no-repeat right bottom;
+            background: url("../_img/menu-separator.png") no-repeat right bottom;
             &:hover{
                 a:hover{color: #f0532e}
             }
@@ -228,7 +228,7 @@ nav[role="navigation"]{
     .caret{
         border: none;
         padding: 0px;
-        background: url("../../_img/arrow-down.png") no-repeat;
+        background: url("../_img/arrow-down.png") no-repeat;
         width: 15px;
         height: 19px;
         display: inline-block;
@@ -348,7 +348,7 @@ section[role="main"]{
 }
 
 .nav-tabs{ // Widget for latest comments and polls
-    background: #161a20 url("../../_img/nav-tabs.png") repeat-x top;
+    background: #161a20 url("../_img/nav-tabs.png") repeat-x top;
     border-bottom: 1px solid #3A434C;
 
     & > li{
@@ -361,7 +361,7 @@ section[role="main"]{
         &.active, &:hover{
             & > a{
                 border: none;
-                background: #29313a url("../../_img/tab-active.png") repeat-x top;
+                background: #29313a url("../_img/tab-active.png") repeat-x top;
                 border-top: 1px solid #29313a;
                 border-left: 1px solid #29313a;
                 border-right: 1px solid #29313a;
@@ -369,7 +369,7 @@ section[role="main"]{
                 color: #fff;
 
                 &:hover{
-                    background: #29313a url("../../_img/tab-active.png") repeat-x top;
+                    background: #29313a url("../_img/tab-active.png") repeat-x top;
                     border-top: 1px solid #29313a;
                     border-left: 1px solid #29313a;
                     border-right: 1px solid #29313a;
@@ -381,7 +381,7 @@ section[role="main"]{
 }
 
 .tab-content{
-    background: #29313a url("../../_img/tabcontent.png") repeat-x bottom;
+    background: #29313a url("../_img/tabcontent.png") repeat-x bottom;
 
     .comment-box{
         font-size: 12px;
@@ -484,7 +484,7 @@ section[role="main"]{
         color: #fff;
         border: 1px solid #29313A;
         outline: none;
-        background: url("../../_img/tab-active.png") repeat-x center top #29313A;
+        background: url("../_img/tab-active.png") repeat-x center top #29313A;
     }
 }
 
@@ -523,7 +523,7 @@ section[role="main"]{
     }    
 
     .tabWrap{
-        background: url("../../_img/tabs-back.png") repeat-x 0px -15px;   
+        background: url("../_img/tabs-back.png") repeat-x 0px -15px;   
         padding: 0px 1px;
         margin-top: -1px;
     }
@@ -561,7 +561,7 @@ section[role="main"]{
 }
 
 i.icon-center{
-    background: url("../../_img/center-map.png") no-repeat center;
+    background: url("../_img/center-map.png") no-repeat center;
     height: 22px;
     width: 22px;
     display: inline-block;    
@@ -595,7 +595,7 @@ i.icon-center{
         display: inline-block;
         height: 22px;
         line-height: 22px;
-        background: url("../../_img/map-badges.png") repeat-x;
+        background: url("../_img/map-badges.png") repeat-x;
         color: #fff;
         text-decoration: none;
         font-size: 12px;
@@ -691,7 +691,7 @@ i.icon-center{
         margin: 0px;
     }
     .widget-wrap{
-        background: url("../../_img/tabs-back.png") repeat-x 0px -15px;   
+        background: url("../_img/tabs-back.png") repeat-x 0px -15px;   
         padding: 0px 1px;
         margin-top: -1px;
     }
@@ -739,7 +739,7 @@ i.icon-center{
 /* --- Begin Footer */
 
 footer[id="main-footer"]{
-    background: #1e232a url("../../_img/footer-back.jpg") bottom repeat-x;
+    background: #1e232a url("../_img/footer-back.jpg") bottom repeat-x;
     color: #bcc2cb;
     a{color: #bcc2cb}
     h4{color: #fff}
@@ -756,7 +756,7 @@ footer[id="main-footer"]{
     }
 
     .right-separator{
-        background: url("../../_img/dot.png") repeat-y right;
+        background: url("../_img/dot.png") repeat-y right;
     }    
 }
 
@@ -790,7 +790,7 @@ article.main-article{
 
 .internal-page{    
     header.section-header{
-        background: #171b21 url("../../_img/internal-header.png") repeat-x top;
+        background: #171b21 url("../_img/internal-header.png") repeat-x top;
         .rounded-corners-top(6px);
     }
 
@@ -819,7 +819,7 @@ article.main-article{
             padding-right: 10px;
             padding-left: 5px;
             background: red;
-            background: url("../../_img/menu-separator.png") no-repeat right bottom;
+            background: url("../_img/menu-separator.png") no-repeat right bottom;
         }
     }
 
