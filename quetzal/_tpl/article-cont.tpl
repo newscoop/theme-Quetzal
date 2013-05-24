@@ -4,25 +4,33 @@
         {{ if $gimme->article->content_accessible }} 
         <header>
             <span class="article-info">
+            {{ if $gimme->article->type_name == "news" }}
                 <time datetime="{{$gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ"}}">{{ $gimme->article->publish_date|camp_date_format:"%d %M %Y" }}</time> 
                 By {{ list_article_authors }} {{ if $gimme->author->user->defined}}<a href="{{ $view->url(['username' => $gimme->author->user->uname], 'user') }}" class="link-color">{{/if}}{{ $gimme->author->name }}{{if $gimme->author->user->defined }}</a>{{/if}} ({{ $gimme->author->type|lower }}) {{ if !$gimme->current_list->at_end }}, {{/if}}{{/list_article_authors}}
             {{ if $gimme->article->has_map }}
             <span class="pull-right visible-desktop">{{ #locations# }}: {{ list_article_locations }}{{ if $gimme->location->enabled }}{{ $gimme->location->name }}{{ if $gimme->current_list->at_end }}{{ else }}, {{ /if }}{{ /if }}{{ /list_article_locations }}</span> <span class="visible-phone">{{ #locations# }}: {{ list_article_locations }}{{ if $gimme->location->enabled }}{{ $gimme->location->name }}{{ if !$gimme->current_list->at_end }}, {{ /if }}{{ /if }}{{ /list_article_locations }}</span>
             {{/if}}
              {{ list_article_topics }}{{ if $gimme->current_list->at_beginning }}<div>{{ #topics# }} {{ /if }}<a class="link-color" href="{{ url options="template topic.tpl" }}">{{ $gimme->topic->name }}</a>{{ if $gimme->current_list->at_end }}</div>{{ else }}, {{ /if }}{{ /list_article_topics }}
+            {{ /if }}
             </span>
             <div class="clearfix"></div>
-            {{ include file="_tpl/article-slideshows.tpl" }}
+            {{ if $gimme->article->type_name == "news" }}
+                {{ include file="_tpl/article-slideshows.tpl" }}
+            {{ else }}
+                <h1 style="width:100%;">{{ $gimme->article->name }}</h1>
+            {{ /if }}
         </header>
 
         <section class="article-content">
-            {{ assign var="has_slideshow" value=0 }}
-            {{ foreach $gimme->article->slideshows as $slideshow }}
-            {{ assign var="has_slideshow" value=$has_slideshow+1 }}
-            {{ /foreach }}
+            {{ if $gimme->article->type_name == "news" }}
+                {{ assign var="has_slideshow" value=0 }}
+                {{ foreach $gimme->article->slideshows as $slideshow }}
+                {{ assign var="has_slideshow" value=$has_slideshow+1 }}
+                {{ /foreach }}
 
-            {{ if !$has_slideshow > 0}}
-            {{ include file="_tpl/img/img_300x300.tpl" where="mobile"}}
+                {{ if !$has_slideshow > 0}}
+                {{ include file="_tpl/img/img_300x300.tpl" where="mobile"}}
+                {{ /if }}
             {{ /if }}
 
             {{ include file="_tpl/_edit-article.tpl" }}{{ $gimme->article->full_text }}
