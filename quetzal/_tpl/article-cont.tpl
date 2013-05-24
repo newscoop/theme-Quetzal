@@ -48,6 +48,7 @@
             var addthis_config = {ui_language: "{{ $gimme->language->code }}"}
         </script>
         <!-- AddThis Button END -->
+        {{ include file="_tpl/article-rating.tpl" }}
 
         {{ include file="_tpl/article-comments.tpl" }}
         </section>
