@@ -39,14 +39,29 @@
         </section>
                 <!-- AddThis Button BEGIN -->
         <div class="addthis_toolbox addthis_default_style">
-            <a class="addthis_button_facebook_like" fb:like:width="112" fb:like:layout="button_count"></a>
-            <a class="addthis_button_tweet"></a>
-            <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+
+            <!--- Twitter button -->
+            <div style="float:left; width:90px;">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>
+            </div>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+            </script>
+
+            <!--- Facebook button -->
+            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=100924830001723&amp;xfbml=1"></script><fb:like href="http://{{ $gimme->publication->site }}{{ uri }}" send="false" layout="button_count" show_faces="false"></fb:like> 
+            
+            <!--- Google+ button -->
+            <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="120"></div>
+            <script type="text/javascript">
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+            </script>
+
         </div>
-        <script src="//s7.addthis.com/js/200/addthis_widget.js#pubid=undefined"></script>
-        <script>
-            var addthis_config = {ui_language: "{{ $gimme->language->code }}"}
-        </script>
+
         <!-- AddThis Button END -->
         {{ include file="_tpl/article-rating.tpl" }}
 
