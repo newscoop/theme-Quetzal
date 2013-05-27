@@ -36,6 +36,7 @@
 #sidebar,
 .article-container,
 .community,
+.auth-page
 {
 	*margin-left:0px;
 }
@@ -43,7 +44,6 @@
 .archive-block{
 	*padding-left: 20px;
 }
-
 
 .section-articles{
 	*margin-left:-10px;
@@ -86,4 +86,8 @@ article.main-article figure figcaption {
 
 .debate .well {
 	*width: 28%;
+}
+
+.community input.btn[type="submit"], .community button.btn {
+	*height: 31px;
 }

@@ -49,7 +49,7 @@
 
             <!--- Facebook button -->
             <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=100924830001723&amp;xfbml=1"></script><fb:like href="http://{{ $gimme->publication->site }}{{ uri }}" send="false" layout="button_count" show_faces="false"></fb:like> 
-            
+    
             <!--- Google+ button -->
             <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="120"></div>
             <script type="text/javascript">
@@ -69,7 +69,7 @@
         </section>
         {{ else }}
         <header>
-            <p>{{ #infoOnLockedArticles# }}</p>
+            <div class="alert">{{ #infoOnLockedArticles# }}</div>
         </header>
         {{ /if }} {{* end content_accesible *}}
 

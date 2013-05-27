@@ -30,7 +30,7 @@
         <div class="container">
             <section id="content">
                 <div class="row home-featured-news">
-                    <div class="span8">
+                    <div class="span8 auth-page">
                         <div class="alert alert-info">
                             <h5 class="checkHeading">{{ #weSentYouAnEmail# }}</h5>
                             <p>{{ #pleaseCheckYourInbox# }}</p>

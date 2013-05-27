@@ -8,7 +8,7 @@
                         <h4>{{ #aboutUs# }}</h4>
                         <p>
                             Developed and used by news organisations like Switzerland’s TagesWoche, ElPeriódico de Guatemala and Yemen Times, Newscoop 4 aims to help independent news organisations manage online publications, enrich content and find new audiences.<br>
-                            <a href="#" class="link-color">{{ #moreAboutUs# }}</a>
+                            <a href="/en/static/pages/95/About-us.htm" class="link-color">{{ #moreAboutUs# }}</a>
                         </p>
                     </div>
                     <div class="span4 categories right-separator visible-desktop">
