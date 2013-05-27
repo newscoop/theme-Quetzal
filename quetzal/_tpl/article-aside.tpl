@@ -75,22 +75,21 @@
     {{ include file="_tpl/debate-voting.tpl" }}
     {{ else }}
     <!-- MAP WIDGET -->
+    {{ if $gimme->article->has_map }} 
     <section class="widget-map hidden-tablet">
         <header class="widget-wrap">
             <h4>{{ #newsNearYou# }}</h4>
         </header>
-        <section class="widget-wrap">
-            {{ if $gimme->article->has_map }}         
+        <section class="widget-wrap">        
             <figure class="map">
                 {{ map show_locations_list="false" show_reset_link="false" width="100%" height="250" }}
-            </figure>  
-            {{ /if }}
+            </figure>   
         </section>
         <footer>
             <hr>
-
         </footer>
     </section>
+    {{ /if }}
     {{ /if }}
     
 </aside>

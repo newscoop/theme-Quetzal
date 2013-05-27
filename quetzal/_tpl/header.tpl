@@ -1,10 +1,11 @@
         <!-- HEADER -->
-        <header role="banner">
+        <header id="header" role="banner">
             
+            {{ assign var="currentsection" value=$gimme->section->number }}
             <div class="container">
                 <!-- TOPBAR NAV -->
                 <nav id="topnav" class="navbar">
-                    <div class="navbar-inner user-top-lef-links">
+                    <div class="navbar-inner user-top-lef-links topnavbar">
                         <div class="pull-left welcome hidden-phone">
                             <span class="link-color">{{ #welcome# }}</span> {{$smarty.now|date_format:"%d/%m/%Y"}} 
                         </div>
@@ -19,15 +20,15 @@
                         {{ /if }}
                         <a href="/user" class="pull-left white-text visible-phone">&nbsp;|&nbsp;{{ #community# }}</a>                         
                         <ul class="nav pull-right social-buttons">
-                          <li class="visible-desktop"><a href="#" class="fb">{{ #beOurFan# }}</a></li>
-                          <li class="visible-desktop"><a href="#" class="tw">{{ #followUs# }}</a></li>
+                          <li class="visible-desktop"><a href="https://www.facebook.com/Sourcefabric" class="fb">{{ #beOurFan# }}</a></li>
+                          <li class="visible-desktop"><a href="https://twitter.com/sourcefabric" class="tw">{{ #followUs# }}</a></li>
                           <li class="visible-desktop"><a href="/en/static/rss" class="rss">{{ #rssFeed# }}</a></li>
-                          <li class="visible-tablet"><a href="#" class="fb">Facebook</a></li>
+                          <li class="visible-tablet"><a href="https://www.facebook.com/Sourcefabric" class="fb">Facebook</a></li>
                           <li class="visible-tablet"><a href="#" class="tw">Twitter</a></li>
-                          <li class="visible-tablet"><a href="#" class="rss">{{ #rssFeed# }}</a></li>
-                          <li class="visible-phone"><a href="#" class="fb">&nbsp;</a></li>
-                          <li class="visible-phone"><a href="#" class="tw">&nbsp;</a></li>
-                          <li class="visible-phone"><a href="#" class="rss">&nbsp;</a></li>
+                          <li class="visible-tablet"><a href="/en/static/rss" class="rss">{{ #rssFeed# }}</a></li>
+                          <li class="visible-phone"><a href="https://www.facebook.com/Sourcefabric" class="fb">&nbsp;</a></li>
+                          <li class="visible-phone"><a href="https://twitter.com/sourcefabric" class="tw">&nbsp;</a></li>
+                          <li class="visible-phone"><a href="/en/static/rss" class="rss">&nbsp;</a></li>
                         </ul>
                     </div>                    
                 </nav>
@@ -51,9 +52,12 @@
                                     {{ #sections# }}
                                 </a>
                                 <ul class="dropdown-menu">
+                                    {{ local }}
+                                    {{ set_current_issue }}
                                     {{ list_sections }}
-                                    <li class="pull-left"><a class="btn" href="{{ uri option="section"}}">{{ $gimme->section->name}}</a></li>
+                                    <li class="pull-left {{ if $currentsection == $gimme->section->number }}active{{ /if}}"><a class="btn" href="{{ uri options="section" }}">{{ $gimme->section->name}}</a></li>
                                     {{ /list_sections }}
+                                    {{ /local }}
                                 </ul>
                             </li>
                         </ul>
@@ -65,7 +69,7 @@
                         <form id="seachform" name="search_articles" action="/{{ $gimme->language->code }}/{{ $gimme->issue->url_name }}/" method="POST">
                             <div class="input-append pull-right">
                                 <input type="hidden" name="tpl" value="7">
-                                <input type="search" placeholder="Search" name="f_search_keywords">
+                                <input type="search" id="searchinput" placeholder="Search" name="f_search_keywords">
                                 <button class="btn" type="submit" name="f_search_articles"><i class="icon-search"></i></button>
                             </div>
                             <div class="clearfix"></div>
@@ -79,14 +83,17 @@
             <!-- MAIN NAV -->
             <nav role="navigation" class="container navbar navbar-inverse visible-desktop">    
                 <div class="navbar-inner">
-                    <ul class="nav">
+                    <ul class="nav sections-menu">
+                        {{ local }}
+                        {{ set_current_issue }}
                         {{ list_sections }}
-                        <li>
-                            <a href="{{ uri option="section"}}">
+                        <li {{ if $currentsection == $gimme->section->number }}class="active"{{ /if}}>
+                            <a href="{{ uri options="section"}}">
                                 {{ $gimme->section->name }}
                             </a>
                         </li>
                         {{ /list_sections }}
+                        {{ /local }}
                     </ul>
                     
                     <ul class="nav pull-right login-nav">
@@ -132,9 +139,12 @@
                         {{ #sections# }}
                     </a>
                     <ul class="dropdown-menu">
+                        {{ local }}
+                        {{ set_current_issue }}
                         {{ list_sections }}
-                        <li class="pull-left"><a class="btn" href="{{ uri option="section"}}">{{ $gimme->section->name}}</a></li>
+                        <li class="pull-left {{ if $currentsection == $gimme->section->number }}active{{ /if}}"><a class="btn" href="{{ uri options="section"}}">{{ $gimme->section->name}}</a></li>
                         {{ /list_sections }}
+                        {{ /local }}
                     </ul>
                 </li>
             </ul>

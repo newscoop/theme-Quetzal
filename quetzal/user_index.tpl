@@ -14,7 +14,7 @@
 
         <div class="container">
             <section id="content">
-                <div class="row home-featured-news">
+                <div class="row community">
                     
                 {{ include file="_tpl/user-cont.tpl" }}
 

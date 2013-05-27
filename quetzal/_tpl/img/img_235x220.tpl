@@ -8,7 +8,7 @@
 </a>
 {{else}}
 <a href="{{ uri options="article" }}#video-cont-label" class="pull-left sub-item video">
-  <img style="background: #000 url({{ $image->src }});" src="{{url static_file='_img/player.png'}}" alt="uno">
+  <img style="background: url({{ $image->src }});background-position: center top;" src="{{url static_file='_img/player.png'}}" alt="uno">
   <div class="photo-caption">
     {{ if $where=="audio" }}
     <i class="icon-headphones icon-white"></i>
