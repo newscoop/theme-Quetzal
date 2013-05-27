@@ -30,7 +30,7 @@
         <div class="container">
             <section id="content">
                 <div class="row home-featured-news">
-                    <div class="span8">
+                    <div class="span8 auth-page">
                         <div class="quetzal-form">
                             <form action="{{ $form->getAction() }}" class="zend_form" method="{{ $form->getMethod() }}">
                                 <fieldset>

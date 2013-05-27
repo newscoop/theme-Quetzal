@@ -1,4 +1,4 @@
-<div class="span8 home-featured-news">
+<div class="span8 home-featured-news section-articles">
     <!-- SECTION ARTICLES -->                                
     <div class="row section-articles">
     {{ list_articles length="5" ignore_issue="true" }}

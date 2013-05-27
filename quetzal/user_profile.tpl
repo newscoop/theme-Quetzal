@@ -17,7 +17,7 @@
                 <div class="row profile">
                 {{ include file="_tpl/user_profile-cont.tpl" }}
                 </div> <!--end div class="row"-->
-                <div class="row home-featured-news">
+                <div class="row home-featured-news community">
                 {{ if $user->isAuthor() }}
                 {{ include file="_tpl/user-articles.tpl" }}          
                 {{ else }}

@@ -15,7 +15,7 @@
         <div class="container">
             <section id="content">
                 <div class="row home-featured-news">
-                    <div class="span8">
+                    <div class="span8 auth-page">
                         <h1>{{ #hi# }}, {{ $name }}</h1>
 
                         <p>{{ #youAreHereForTheFirstTime# }}</p>

@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="{{ url static_file="_css/quetzal.skin.css"}}">
     <link rel="stylesheet" href="{{ url static_file="_css/quetzal.responsive.css"}}">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Asap:400,700">
+    <!--[if lte IE 9]>
+       <link rel="stylesheet" href="{{ url static_file="_css/quetzal.ie.css"}}">
+    <![endif]-->
 
     <!-- RSS & Pingback -->
     <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://{{ $gimme->publication->site }}/en/static/rss/">
@@ -52,9 +55,33 @@
     {{/if}}
     {{ if $gimme->template->name == 'article.tpl'}}
     <script src="{{ url static_file='_js/vendor/galleria/galleria-1.2.9.min.js'}}"></script>
-    <link href="{{ url static_file="_css/video-js.css" }}" rel="stylesheet">
-    <script src="{{ url static_file="_js/vendor/video.js" }}"></script>
+    <link href="{{ url static_file='_css/flowplayer_skin/minimalist.css' }}" rel="stylesheet">
+    <script src="{{ url static_file='_js/vendor/flowplayer/flowplayer.min.js' }}"></script>
+    <script src="{{ url static_file='_js/vendor/audiojs/audio.min.js' }}"></script>
     {{/if}}
     <script src="{{ url static_file='_js/vendor/jquery.timeago.js'}}"></script>
-
+    {{ if $gimme->template->name == 'front.tpl'}}
+    <script>
+        $(document).ready(function(){
+            var pathname = document.location.pathname;
+            if (pathname === "/user") {
+                $("#user-active").addClass('active');
+            } else if (pathname === "/user/filter/f/a-z"){
+                $("#user-all").addClass('active');
+            } else if (pathname === "/user/filter/f/a-d"){
+                $("#user-ad").addClass('active');
+            } else if (pathname === "/user/filter/f/e-k"){
+                $("#user-ek").addClass('active');
+            } else if (pathname === "/user/filter/f/l-p"){
+                $("#user-lp").addClass('active');
+            } else if (pathname === "/user/filter/f/q-t"){
+                $("#user-qt").addClass('active');
+            } else if (pathname === "/user/filter/f/u-z"){
+                $("#user-uz").addClass('active');
+            } else if (pathname === "/user/editors"){
+                $("#user-editors").addClass('active');
+            }
+        });
+    </script>
+    {{/if}}
   </head>

@@ -2,8 +2,15 @@
     <!-- MORE NEWS TABS -->
     <div class="hidden-phone">
         <ul class="nav nav-tabs">
-            <h4>{{ #moreNews# }}</h4>
-            {{ list_sections}}
+            {{ assign var=currentsection value=$gimme->section->number}}
+            {{ if $currentsection }}
+            {{ assign var=constraints value="number not $currentsection"}}
+            {{ else }}
+            {{ assign var=constraints value=""}}
+            {{ /if }}
+        
+            <h4>{{ #moreNews# }} </h4>
+            {{ list_sections constraints=$constraints}}
             {{ if $gimme->current_list->at_beginning }}
             <li class="active">
                 <a href="#tab{{ $gimme->current_list->index }}" data-toggle="tab">{{ $gimme->section->name}}</a>
@@ -15,7 +22,7 @@
         </ul>
         <div class="tabWrap">
             <div class="tab-content">
-                {{ list_sections }}
+                {{ list_sections constraints=$constraints}}
                 {{ if $gimme->current_list->at_beginning }}
                 <div class="tab-pane active" id="tab{{ $gimme->current_list->index }}">
                 {{else}}
@@ -33,7 +40,7 @@
                         <div class="clearfix"></div>
                         <div class="article-links">
                             <hr>
-                            <a href="{{ url options="comments"}}" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | 
+                            <a href="{{ url options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | 
                             <a href="{{ uri options="article"}}" class="link-color">{{ #readMore# }}</a>
                             <span class="article-date pull-right">
                                 <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>

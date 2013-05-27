@@ -28,7 +28,7 @@
         <div class="container">
             <section id="content">
                 <div class="row home-featured-news">
-                    <div class="span8">
+                    <div class="span8 auth-page">
                         <div class="alert">
                             <p>{{ #followTheSteps# }}</p>
                             <p><b>{{ #thanksForRegistering# }}</b></p>
