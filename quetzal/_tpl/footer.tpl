@@ -29,8 +29,8 @@
                             {{ list_articles ignore_issue="true" ignore_section="true" constraints="type is page" }}
                             <li><a href="{{ url options="article" }}">{{ $gimme->article->name }}</a></li>
                             {{ /list_articles }}
-                            <li><a href="http://twitter.com/sourcefabric ">{{ #followUs# }}</a></li>
-                            <li><a href="http://facebook.com/sourcefabric ">{{ #beOurFan# }}</a></li>
+                            <li><a target="_blank" href="http://twitter.com/sourcefabric ">{{ #followUs# }}</a></li>
+                            <li><a target="_blank"href="http://facebook.com/sourcefabric ">{{ #beOurFan# }}</a></li>
                             <li><a href="/en/static/rss">{{ #subscribeToOurFeed# }}</a></li> 
                             <li><a href="/?tpl=6">{{ #archive# }}</a></li>                           
                         </ul>

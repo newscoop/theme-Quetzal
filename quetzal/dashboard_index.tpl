@@ -47,6 +47,18 @@
                     </div>
                     <div class="span8">
                         <div class="quetzal-form well">
+                            <link rel="stylesheet" href="{{ url static_file="_css/datepicker.css"}}">
+                            <script src="{{ url static_file='_js/vendor/bootstrap-datepicker.js'}}"></script>
+                            <script type="text/javascript">
+                                $(function() {
+                                     // Date picker
+                                     $('#attributes-birth_date').datepicker({
+                                        format:'yyyy/mm/dd',
+                                        startView:2,
+                                        autoclose:'true'
+                                     });
+                                });
+                            </script>
                             {{ $form }}
                         </div>
                     </div>
