@@ -36,8 +36,8 @@
                              <fieldset>
                                  {{ if $form->email->hasErrors() }}
                                  <div class="alert alert-error">
-                                     <h5>{{ #emailIsNotCorrect #}}</h5>
-                                     <p>{{ #maybeYouRegisteredOn# }} <em>{{ $gimme->publication->name }}</em> with another e-mail account?</p>
+                                     <h5>{{ #emailIsNotCorrect# }}</h5>
+                                     <p>{{ #maybeYouRegistered# }} <em>{{ $gimme->publication->name }}</em> {{ #withAnotherEmail# }}</p>
                                  </div>
                                  {{ /if }}
                              </fieldset>
