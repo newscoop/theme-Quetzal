@@ -29,18 +29,18 @@
             <section id="content">
                 <div class="row home-featured-news">
                     <div class="span8 auth-page">
-                        <div class="quetzal-form well">
+                        <div class="quetzal-form well quetzal-register">
                         {{ $form }}
                         </div>
                         <script type="text/javascript">
-                        $('#email').change(function() {
+                        $('.quetzal-register #email').change(function() {
                             $.post('{{ $view->url(['controller' => 'register', 'action' => 'check-email'], 'default') }}?format=json', {
                                 'email': $(this).val()
                             }, function (data) {
                                 if (data.status) {
-                                    $('#email').css('color', 'green');
+                                    $('.quetzal-register #email').css('color', 'green');
                                 } else {
-                                    $('#email').css('color', 'red');
+                                    $('.quetzal-register #email').css('color', 'red');
                                 }
                             }, 'json');
                         }).keyup(function() {
