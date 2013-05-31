@@ -16,9 +16,12 @@
                         <div class="row">
                             <div class="span2">
                                 <ul>
+                                    {{ local }}
+                                    {{ set_current_issue }}
                                     {{ list_sections }}
                                     <li><a href="{{ url options='section' }}" title="{{ $gimme->section->name }}"> {{ $gimme->section->name }}</a></li>
                                     {{ /list_sections }}
+                                    {{ /local }}
                                 </ul>
                             </div>
                         </div>

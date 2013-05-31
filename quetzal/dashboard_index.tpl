@@ -20,7 +20,7 @@
                 </div> 
                 <div class="row">
                     <div class="span12 more-news-tabs tab-sections">
-                        <a class="back-link visible-phone" href="#">&larr; {{ #back# }}</a>
+                        <a class="back-link visible-phone" href="javascript:history.back()">&larr; {{ #back# }}</a>
                     </div>
                 </div>                       
             </div>
@@ -33,7 +33,7 @@
                         <center>
                         <span class="label">{{ #currentAvatar# }}</span><br>
                             <figure class="user-image">
-                                <img src="{{ include file="_tpl/user-image.tpl" user=$user width=175 height=210 }}" style="max-width: 100%" rel="resizable" />
+                                <img src="{{ include file="_tpl/user-image.tpl" user=$user width=140 height=210 }}" style="max-width: 100%" rel="resizable" />
                             </figure>
                         </center>
                     </div>
