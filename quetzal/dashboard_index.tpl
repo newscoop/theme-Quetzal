@@ -33,7 +33,7 @@
                         <center>
                         <span class="label">{{ #currentAvatar# }}</span><br>
                             <figure class="user-image">
-                                <img src="{{ include file="_tpl/user-image.tpl" user=$user width=175 height=210 }}" style="max-width: 100%" rel="resizable" />
+                                <img src="{{ include file="_tpl/user-image.tpl" user=$user width=140 height=210 }}" style="max-width: 100%" rel="resizable" />
                             </figure>
                         </center>
                     </div>
