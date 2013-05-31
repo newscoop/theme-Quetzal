@@ -20,7 +20,7 @@ $(document).ready(function() {
                         $(this).val('').removeClass('hasPlaceholder');
                 }
         }).blur(function () {
-                if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+                if ($(this).attr('placeholder') != '' && typeof $(this).attr('placeholder') != 'undefined' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
                         $(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
                 }
         });
