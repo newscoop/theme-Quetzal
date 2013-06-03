@@ -51,7 +51,7 @@
 
             <!--- Facebook button -->
             <div style="float:left; width:80px; margin-right:15px;">
-                <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fexample.com%2Fpage%2Fto%2Flike&amp;send=false&amp;layout=standard&amp;width=80&amp;show_faces=false&amp;colorscheme=light&amp;action=like&amp;height=35&amp;appId=100924830001723" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:35px;" allowTransparency="true"></iframe>
+                <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F{{ $gimme->publication->site }}{{ uri }}&amp;send=false&amp;layout=standard&amp;width=80&amp;show_faces=false&amp;colorscheme=light&amp;action=like&amp;height=35&amp;appId=100924830001723" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:35px;" allowTransparency="true"></iframe>
             </div>
                     <!--- Google+ button -->
             <div style="float:left; width:50px;">
