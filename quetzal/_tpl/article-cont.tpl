@@ -41,7 +41,7 @@
         {{ if $gimme->article->type_name == "news" }}
         <!-- Social Buttons BEGIN -->
         <div class="addthis_toolbox addthis_default_style">
-
+            
             <!--- Twitter button -->
             <div style="float:left; width:90px;">
             <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>
@@ -50,7 +50,7 @@
             </script>
 
             <!--- Facebook button -->
-            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=100924830001723&amp;xfbml=1"></script><fb:like href="http://{{ $gimme->publication->site }}{{ uri }}" send="false" layout="button_count" show_faces="false"></fb:like> 
+            <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fexample.com%2Fpage%2Fto%2Flike&amp;send=false&amp;layout=standard&amp;width=80&amp;show_faces=false&amp;colorscheme=light&amp;action=like&amp;height=35&amp;appId=100924830001723" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:35px;" allowTransparency="true"></iframe>
     
             <!--- Google+ button -->
             <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="120"></div>
