@@ -59,25 +59,30 @@
         </section>
 
         <div class="addthis_toolbox addthis_default_style">
+
             <!--- Twitter button -->
             <div style="float:left; width:90px;">
-            <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-dnt="true">Tweet</a>
             </div>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
             </script>
 
             <!--- Facebook button -->
-            <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=100924830001723&amp;xfbml=1"></script><fb:like href="http://{{ $gimme->publication->site }}{{ uri }}" send="false" layout="button_count" show_faces="false"></fb:like> 
-    
-            <!--- Google+ button -->
-            <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="120"></div>
-            <script type="text/javascript">
-              (function() {
-                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                po.src = 'https://apis.google.com/js/plusone.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-              })();
-            </script>
+            <div style="float:left; width:80px; margin-right:15px;">
+                <iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2F{{ $gimme->publication->site }}{{ uri }}&amp;send=false&amp;layout=standard&amp;width=80&amp;show_faces=false&amp;colorscheme=light&amp;action=like&amp;height=35&amp;appId=100924830001723" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:35px;" allowTransparency="true"></iframe>
+            </div>
+                    <!--- Google+ button -->
+            <div style="float:left; width:50px;">
+                <div class="g-plusone" data-size="medium" data-annotation="inline" data-width="120"></div>
+                <script type="text/javascript">
+                  (function() {
+                    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                    po.src = 'https://apis.google.com/js/plusone.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                  })();
+                </script>
+            </div>
+
         </div>
 
         {{ include file="_tpl/article-comments.tpl" }}

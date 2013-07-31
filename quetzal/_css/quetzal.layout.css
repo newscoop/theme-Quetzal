@@ -626,6 +626,7 @@ article.main-article .article-content blockquote {
 article.main-article .addthis_toolbox {
   padding: 10px 0px 5px 0px;
   margin: 10px 0px;
+  height: 30px;
 }
 #comments input[type="submit"] {
   margin-top: -100px;
