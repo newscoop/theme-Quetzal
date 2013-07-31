@@ -59,7 +59,7 @@
     <script src="{{ url static_file='_js/vendor/flowplayer/flowplayer.min.js' }}"></script>
     {{/if}}
     <script src="{{ url static_file='_js/vendor/jquery.timeago.js'}}"></script>
-    {{ if $gimme->template->name == 'front.tpl'}}
+    {{ if $gimme->template->name == 'front.tpl' || $gimme->template->name == 'user_index.tpl' }}
     <script>
         $(document).ready(function(){
             var pathname = document.location.pathname;
