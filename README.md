@@ -1,7 +1,7 @@
-Quetzal
-=======
+Quetzal - Newscoop Theme
+========================
 
-A magazine style theme for Newscoop.
+This is a fresh new theme for newscoop and includes a couple of new features and widgets types, also it's translation ready and uses Twitter Bootstrap as css base with good css organization to make the process of creating new skins easy.
 
 Features Included:
 
@@ -30,4 +30,4 @@ http://quetzal-dev.lab.sourcefabric.org
 Copyright & License
 -------------------
 
-Like Newscoop, the 'Global News' theme is &copy; Sourcefabric 2013 and released under the <a href="https://www.gnu.org/licenses/gpl.html">GNU General Public License, version 3</a>.
+Like Newscoop, the 'Quetzal' theme is &copy; Sourcefabric 2013 and released under the <a href="https://www.gnu.org/licenses/gpl.html">GNU General Public License, version 3</a>.
