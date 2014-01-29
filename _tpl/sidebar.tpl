@@ -11,7 +11,9 @@
     <section class="sidebar-widget-tabs visible-desktop">
         <ul class="nav nav-tabs">
             <li class="active"> <a href="#last-comments" data-toggle="tab">{{ #latestComments# }}</a> </li>
+            {{ if $gimme->template->name != "search.tpl" && $gimme->template->name != "topic.tpl"}}
             <li><a href="#poll" data-toggle="tab">{{ #pollTitle# }}</a></li>
+            {{ /if }}
         </ul>
         <div class="tab-content">
             <div class="tab-pane active" id="last-comments">
@@ -34,9 +36,11 @@
                 {{/if}}
                 {{ /list_article_comments }}                
             </div>
+            {{ if $gimme->template->name != "search.tpl" && $gimme->template->name != "topic.tpl"}}
             <div class="tab-pane" id="poll">
             {{ include file="_tpl/sidebar_poll.tpl" }}                                           
             </div>
+            {{ /if }}
         </div>
     </section>
     {{/if}}
