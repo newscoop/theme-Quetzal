@@ -20,7 +20,7 @@ Features Included:
 Documentation
 -------------
 
-http://wiki.sourcefabric.org/display/CS/Quetzal+Theme+%7C+Newscoop+4.x+%7C+Release+Date%3A+June+2013
+http://wiki.sourcefabric.org/x/F4im
 
 Demo
 ----
