@@ -3,6 +3,9 @@ Quetzal - Newscoop Theme
 
 This is a fresh new theme for newscoop and includes a couple of new features and widgets types, also it's translation ready and uses Twitter Bootstrap as css base with good css organization to make the process of creating new skins easy.
 
+![Quetzal Theme frontpage in different devices] (http://i.imgur.com/qgCLJoc.jpg "Quetzal Theme frontpage in different devices")
+
+
 Features Included:
 
     Responsive CSS for any browser.
