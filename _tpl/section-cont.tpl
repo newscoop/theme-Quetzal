@@ -1,13 +1,13 @@
 <div class="span8 home-featured-news section-articles">
-    <!-- SECTION ARTICLES -->                                
+    <!-- SECTION ARTICLES -->
     <div class="row section-articles">
     {{ list_articles length="5" ignore_issue="true" constraints="type not poll" }}
-        {{ if $gimme->current_list->at_beginning }}            
+        {{ if $gimme->current_list->at_beginning }}
 
-        <article class="span8 section-article section-featured">                                        
+        <article class="span8 section-article section-featured">
             <figure class="pull-left article-image">
                 <a href="{{ uri options="article" }}">
-                    {{ include file='_tpl/img/img_330x215.tpl'}} 
+                    {{ include file='_tpl/img/img_330x215.tpl'}}
                 </a>
             </figure>
             <span class="link-color">{{ $gimme->article->section->name }}</span>
@@ -19,12 +19,12 @@
                 <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
             </header>
             <div class="article-excerpt hidden-phone">
-                {{ $gimme->article->full_text|truncate:250:"...":true }}
-            </div>  
+                {{ $gimme->article->deck|truncate:250:"...":true }}
+            </div>
             <div class="article-links hidden-phone">
                 <hr>
                 <a href="{{ uri options="article" }}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="link-color">{{ #readMore# }}</a>
-            </div>                                        
+            </div>
             <div class="clearfix"></div>
         </article>
         {{ else }}
@@ -32,8 +32,8 @@
         <article class="span8 section-article">
             <figure class="pull-left article-image">
                 <a href="{{ uri options="article" }}">
-                    {{ include file='_tpl/img/img_202x152.tpl'}} 
-                    {{ include file='_tpl/img/img_225x150.tpl'}} 
+                    {{ include file='_tpl/img/img_202x152.tpl'}}
+                    {{ include file='_tpl/img/img_225x150.tpl'}}
                 </a>
             </figure>
             <span class="link-color">{{ $gimme->article->section->name }}</span>
@@ -45,8 +45,8 @@
                 <span class="article-date"><time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time> </span>
             </header>
             <div class="article-excerpt hidden-phone">
-                {{ $gimme->article->full_text|truncate:190:"...":true}}
-            </div>  
+                {{ $gimme->article->deck|truncate:190:"...":true}}
+            </div>
             <div class="article-links hidden-phone">
                 <hr>
                 <a href="{{ uri options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | <a href="{{ uri options="article" }}" class="link-color">{{ #readMore# }}</a>
@@ -55,7 +55,7 @@
         </article>
         {{ /if}}
 
-        {{ if $gimme->current_list->at_end }}            
+        {{ if $gimme->current_list->at_end }}
 
         {{* PAGINATION *}}
         {{ $pages=ceil($gimme->current_list->count/5) }}
@@ -84,6 +84,6 @@
 
         {{ /if }}
 
-        {{ /list_articles }}    
+        {{ /list_articles }}
     </div>
 </div>

@@ -1,7 +1,14 @@
-*.swp
-*.swo
-templates
-theme
-Makefile
-*.sublime-project
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Sublime stuff
+sftp-config.json
 *.sublime-workspace
+*.sublime-project

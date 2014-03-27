@@ -8,7 +8,7 @@
             {{ else }}
             {{ assign var=constraints value=""}}
             {{ /if }}
-        
+
             <h4>{{ #moreNews# }} </h4>
             {{ list_sections constraints=$constraints}}
             {{ if $gimme->current_list->at_beginning }}
@@ -34,13 +34,13 @@
                         <div class="article-excerpt pull-left">
                             <a href="{{ uri options="article"}}" class="title">
                                 {{ $gimme->article->name}}
-                            </a>               
-                                {{ $gimme->article->full_text|truncate:100:"...":true }}
+                            </a>
+                                {{ $gimme->article->deck|truncate:100:"...":true }}
                         </div>
                         <div class="clearfix"></div>
                         <div class="article-links">
                             <hr>
-                            <a href="{{ url options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> | 
+                            <a href="{{ url options="article"}}#comments" class="comments-link">{{ $gimme->article->comment_count }} {{ #comments# }}</a> |
                             <a href="{{ uri options="article"}}" class="link-color">{{ #readMore# }}</a>
                             <span class="article-date pull-right">
                                 <time datetime="{{ $gimme->article->publish_date|date_format:"%Y-%m-%dT%H:%MZ" }}">{{ $gimme->article->publish_date|camp_date_format:"%M %e, %Y" }}</time>

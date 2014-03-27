@@ -1,6 +1,6 @@
         <!-- FOOTER -->
         <footer id="main-footer">
-            <div class="container">                
+            <div class="container">
                 <!-- FOOTER INFO -->
                 <div class="row footer-info">
 
@@ -34,15 +34,15 @@
                             {{ /list_articles }}
                             <li><a target="_blank" href="http://twitter.com/sourcefabric ">{{ #followUs# }}</a></li>
                             <li><a target="_blank"href="http://facebook.com/sourcefabric ">{{ #beOurFan# }}</a></li>
-                            <li><a href="/en/static/rss">{{ #subscribeToOurFeed# }}</a></li> 
-                            <li><a href="/?tpl=6">{{ #archive# }}</a></li>                           
+                            <li><a href="/en/static/rss">{{ #subscribeToOurFeed# }}</a></li>
+                            <li><a href="{{ uri options="template archive.tpl" }}">{{ #archive# }}</a></li>
                         </ul>
                     </div>
                     <div class="span2 contact-us visible-desktop">
                         <h4>{{ #contactUs# }}</h4>
                         <div class="info">
                             <span class="link-color">{{ #email# }}</span>
-                            contact@sourcefabric.org 
+                            contact@sourcefabric.org
                         </div>
 
                         <div class="info">
@@ -59,8 +59,8 @@
                     {{ if $gimme->section->name }}
                     <!-- FOOTER TABLET VISIBLE HOME ONLY -->
                     <div class="span12 visible-tablet tablet-map">
-                        <div class="widget-map">                            
-                            <h4 class="widget-wrap">{{ #newsNearYou# }}</h4>                            
+                        <div class="widget-map">
+                            <h4 class="widget-wrap">{{ #newsNearYou# }}</h4>
                             <section class="widget-wrap">
                                 <figure class="map">
                                 {{* All possible constraints for setting the map you can see here:
@@ -93,7 +93,7 @@
                                     {{ assign var="latitude" value=$gimme->location->latitude }}
                                     {{ assign var="longitude" value=$gimme->location->longitude }}
                                     {{* If for example you want to show articles close to current location,
-                                    rectangle in list_articles can be specified like 
+                                    rectangle in list_articles can be specified like
                                     location="$latitude-1/60 $longitude-1/60,$latitude+1/60 $longitude+1/60"
                                     that should return all articles geolocated 1 minute or closer to the location.
                                     Details about list_articles are here:
@@ -109,8 +109,8 @@
                                             <article class="section-article">
                                                 <figure class="pull-left article-image">
                                                     <a href="{{ uri options="article" }}">
-                                                        {{ include file='_tpl/img/img_202x152.tpl'}} 
-                                                        {{ include file='_tpl/img/img_225x150.tpl'}} 
+                                                        {{ include file='_tpl/img/img_202x152.tpl'}}
+                                                        {{ include file='_tpl/img/img_225x150.tpl'}}
                                                     </a>
                                                 </figure>
                                                 <header>
@@ -118,13 +118,13 @@
                                                 </header>
                                                 <div class="article-excerpt">
                                                     {{ $gimme->article->full_text|truncate:200:"...":true}}
-                                                </div>  
+                                                </div>
                                                 <div class="article-links">
                                                     <a href="{{ uri options="article" }}" class="link-color">Read more +</a>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </article>
-                                            {{ /list_articles }} 
+                                            {{ /list_articles }}
                                         </div>
                                     </div>
                                     {{ /list_map_locations }}
