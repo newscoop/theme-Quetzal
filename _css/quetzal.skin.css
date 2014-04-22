@@ -379,7 +379,7 @@ h1.block-title {
 .quetzal-carousel .video:hover {
   opacity: 1;
   -moz-opacity: 1;
-  filter: alpha(opacity=0.8);
+  filter: alpha(opacity=1);
   transition: opacity 1s;
   -moz-transition: opacity 1s;
   -webkit-transition: opacity 1s;
@@ -891,7 +891,8 @@ article.main-article .addthis_toolbox {
 /* End Registration and Login Form --- */
 /***************************** */
 /******** End Layout ********* */
-/***************************** *//***************************** */
+/***************************** */
+/***************************** */
 /**** Begin Quetzal Skin ***** */
 /***************************** */
 /* --- Begin General Elements */
@@ -1255,7 +1256,7 @@ section[role="main"] .container:before {
   -o-transition: all 0.5s;
   opacity: 0.7;
   -moz-opacity: 0.7;
-  filter: alpha(opacity=0.8);
+  filter: alpha(opacity=0.7);
 }
 .quetzal-carousel .carousel-control span {
   display: block;
@@ -1274,7 +1275,7 @@ section[role="main"] .container:before {
   -o-transition: all 0.5s;
   opacity: 1;
   -moz-opacity: 1;
-  filter: alpha(opacity=0.8);
+  filter: alpha(opacity=1);
 }
 .arrow-left {
   border-top: 8px solid transparent;
@@ -1401,11 +1402,11 @@ section[role="main"] .container:before {
   background-image: -ms-linear-gradient(#ca3500, #ca3500 10%, #bb1c00);
   background-image: -o-linear-gradient(#ca3500, #ca3500 10%, #bb1c00);
   background-image: linear-gradient(#ca3500, #ca3500 10%, #bb1c00);
-  border-radius: 3 x;
-  -ms-border-radius: 3 x;
-  -moz-border-radius: 3 x;
-  -webkit-border-radius: 3 x;
-  -khtml-border-radius: 3 x;
+  border-radius: 3x;
+  -ms-border-radius: 3x;
+  -moz-border-radius: 3x;
+  -webkit-border-radius: 3x;
+  -khtml-border-radius: 3x;
   width: 100%;
   margin-top: -15px;
 }
@@ -1819,6 +1820,46 @@ article.main-article figcaption {
   background: #c52500;
   font-family: 'Asap', sans-serif;
   font-style: italic;
+}
+.internal-page .main-article .article-content table {
+  box-shadow: 0 1px 0 0 #FFFFFF;
+  max-width: 100%;
+  width: 100%;
+}
+.internal-page .main-article .article-content table tr:first-child td:first-child {
+  -webkit-border-top-left-radius: 2px;
+  -moz-border-radius-topleft: 2px;
+  border-top-left-radius: 2px;
+}
+.internal-page .main-article .article-content table tr:first-child td:last-child {
+  -webkit-border-top-right-radius: 2px;
+  -moz-border-radius-topright: 2px;
+  border-top-right-radius: 2px;
+}
+.internal-page .main-article .article-content table tr:last-child td:last-child {
+  -webkit-border-bottom-right-radius: 2px;
+  -moz-border-radius-bottomright: 2px;
+  border-bottom-right-radius: 2px;
+}
+.internal-page .main-article .article-content table tr:last-child td:first-child {
+  -webkit-border-bottom-left-radius: 2px;
+  -moz-border-radius-bottomleft: 2px;
+  border-bottom-left-radius: 2px;
+}
+.internal-page .main-article .article-content table tr td {
+  padding: 7px;
+  border-left: 1px solid #DDDDDD;
+  border-top: 1px solid #DDDDDD;
+}
+.internal-page .main-article .article-content table tr td:last-child {
+  border-right: 1px solid #DDDDDD;
+}
+.internal-page .main-article .article-content table tr:last-child td {
+  border-bottom: 1px solid #DDDDDD;
+}
+.internal-page .main-article .article-content table tbody > tr:nth-child(2n+1) > td,
+.internal-page .main-article .article-content table .art-item .clearfix table tbody > tr:nth-child(2n+1) > th {
+  background-color: #F2F2F2;
 }
 .internal-page .main-article .addthis_toolbox {
   border-bottom: 1px dotted #b2b2b2;
