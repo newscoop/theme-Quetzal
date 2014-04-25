@@ -659,7 +659,7 @@ article.main-article .addthis_toolbox {
   margin-bottom: 100px;
 }
 #recaptcha_response_field {
-  height: 32px !important;
+  height: auto !important;
 }
 .audiojs {
   width: 60%;
