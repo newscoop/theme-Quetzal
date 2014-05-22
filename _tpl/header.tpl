@@ -108,6 +108,7 @@
                                     <li><a title="German" href="#">Spanish</a></li>
                                 </ul>
                             </div>
+
                             <a href="/user" class="white-text">{{ #community# }}</a>
                             {{ if !$gimme->user->logged_in }}
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
