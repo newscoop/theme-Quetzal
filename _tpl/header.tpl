@@ -105,7 +105,7 @@
                             </a>
                                 <ul class="dropdown-menu">
                                     <li><a title="English" href="#">English</a></li>
-                                    <li><a title="German" href="#">Spanish</a></li>
+                                    <li><a title="Spanish" href="#">Spanish</a></li>
                                 </ul>
                             </div>
 
