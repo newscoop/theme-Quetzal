@@ -98,10 +98,10 @@
                     
                     <ul class="nav pull-right login-nav">
                         <li class="dropdown">
-                            <div class="btn-group languageBar">
-                            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                            <div class="languageBar">
+                            <a class="bdropdown-toggle" data-toggle="dropdown" href="#">
                                 Language
-                                <span class="caret"></span>
+                                <b class="caret"></b>
                             </a>
                                 <ul class="dropdown-menu">
                                     <li><a title="English" href="#">English</a></li>
