@@ -1102,13 +1102,24 @@ hr {
   color: #ff8f59;
 }
 .languageBar {
-  margin-top: 5px;
+  margin-top: 7px;
   border: transparent;
   color: #fff;
   float: left;
   background-color: transparent;
   font-family: Arial;
   text-shadow: none;
+}
+.navbar .nav > li > div.languageBar > .dropdown-menu:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ccc;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: -7px;
+  left: 9px;
 }
 .social-buttons a {
   padding-left: 23px !important;
@@ -1182,7 +1193,7 @@ nav[role="navigation"] .caret {
 }
 nav[role="navigation"] .dropdown-menu {
   border: none;
-  left: 9px;
+  left: 0px;
   border-top-right-radius: 0px;
   border-top-left-radius: 0px;
   -moz-border-radius-topright: 0px;

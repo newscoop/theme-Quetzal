@@ -99,13 +99,13 @@
                     <ul class="nav pull-right login-nav">
                         <li class="dropdown">
                             <div class="languageBar">
-                            <a class="bdropdown-toggle" data-toggle="dropdown" href="#">
-                                Language
+                            <a class="bdropdown-toggle white-text" data-toggle="dropdown" href="#">
+                                {{ #language# }}
                                 <b class="caret"></b>
                             </a>
                                 <ul class="dropdown-menu">
-                                    <li><a title="English" href="#">English</a></li>
-                                    <li><a title="Spanish" href="#">Spanish</a></li>
+                                    <li><a class="link-color" title="English" href="#">English</a></li>
+                                    <li><a class="link-color" title="Spanish" href="#">Spanish</a></li>
                                 </ul>
                             </div>
 
