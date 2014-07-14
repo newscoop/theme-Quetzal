@@ -1110,6 +1110,15 @@ hr {
   font-family: Arial;
   text-shadow: none;
 }
+.languageBar a.white-text {
+  color: #ffffff;
+}
+.languageBar a.white-text:hover {
+  color: #f0532e;
+}
+.languageBar .dropdown-menu a.link-color:hover {
+  color: #f0532e;
+}
 .navbar .nav > li > div.languageBar > .dropdown-menu:before {
   content: '';
   display: inline-block;
