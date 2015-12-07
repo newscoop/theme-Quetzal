@@ -379,7 +379,7 @@ h1.block-title {
 .quetzal-carousel .video:hover {
   opacity: 1;
   -moz-opacity: 1;
-  filter: alpha(opacity=0.8);
+  filter: alpha(opacity=1);
   transition: opacity 1s;
   -moz-transition: opacity 1s;
   -webkit-transition: opacity 1s;

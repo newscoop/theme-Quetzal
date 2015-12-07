@@ -155,7 +155,29 @@ hr{
         }
     }
 }
-
+.languageBar {
+    margin-top: 7px;
+    border: transparent;
+    color: #fff;
+    float: left;
+    background-color: transparent;
+    font-family: Arial;
+    text-shadow: none;
+}
+.languageBar a.white-text {color:#fff}
+.languageBar a.white-text:hover {color:#f0532e}
+.languageBar .dropdown-menu a.link-color {color:#f0532e}
+.navbar .nav>li>div.languageBar>.dropdown-menu:before {
+content: '';
+display: inline-block;
+border-left: 7px solid transparent;
+border-right: 7px solid transparent;
+border-bottom: 7px solid #ccc;
+border-bottom-color: rgba(0, 0, 0, 0.2);
+position: absolute;
+top: -7px;
+left: 9px;
+}
 .social-buttons{
     a{
         padding-left: 23px !important;
@@ -237,7 +259,7 @@ nav[role="navigation"]{
 
     .dropdown-menu{
         border: none;
-        left: 9px;
+        left: 0px;
         .rounded-corners-top(0px);
 
         &:after, &:before{
@@ -856,6 +878,16 @@ article.main-article{
             color: #fff;
             background: @strong_color;
             .web-font-italic;
+        }
+         .article-content table {box-shadow:0 1px 0 0 #FFFFFF; max-width:100%;width:100%;
+            tr:first-child td:first-child{-webkit-border-top-left-radius: 2px;-moz-border-radius-topleft: 2px;border-top-left-radius: 2px;}
+            tr:first-child td:last-child{-webkit-border-top-right-radius: 2px;-moz-border-radius-topright: 2px;border-top-right-radius: 2px;}
+            tr:last-child td:last-child{-webkit-border-bottom-right-radius: 2px;-moz-border-radius-bottomright: 2px;border-bottom-right-radius: 2px;}
+            tr:last-child td:first-child{-webkit-border-bottom-left-radius: 2px;-moz-border-radius-bottomleft: 2px;border-bottom-left-radius: 2px;}
+            tr td{padding:7px;border-left:1px solid #DDDDDD;border-top:1px solid #DDDDDD;}
+            tr td:last-child{border-right:1px solid #DDDDDD;}
+            tr:last-child td{border-bottom:1px solid #DDDDDD;}
+            tbody > tr:nth-child(2n+1) > td, .art-item .clearfix table tbody > tr:nth-child(2n+1) > th {background-color:#F2F2F2;}
         }
         .addthis_toolbox{
             border-bottom: 1px dotted #b2b2b2;    

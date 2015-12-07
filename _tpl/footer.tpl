@@ -153,7 +153,7 @@
                         <a href="/" class="visible-desktop">
                             <img class="logo-footer" src="{{ url static_file='_img/newscoop-quetzal-logo-footer.png' }}" alt="{{$gimme->publication->name}}">
                         </a>
-                        {{ #copyrightMessage# }}
+                        {{ #copyrightMessage# }} {{ #powered# }} <a target="_blank" href="http://newscoop.sourcefabric.org/">Newscoop</a>. {{ #designed# }} <a target="_blank" href="http://www.sourcefabric.org/">Sourcefabric</a>. 
                     </div>
                 </div>
             </div>

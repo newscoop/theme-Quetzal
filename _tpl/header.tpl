@@ -98,6 +98,17 @@
                     
                     <ul class="nav pull-right login-nav">
                         <li class="dropdown">
+                            <div class="languageBar">
+                            <a class="bdropdown-toggle white-text" data-toggle="dropdown" href="#">
+                                {{ #language# }}
+                                <b class="caret"></b>
+                            </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="link-color" title="English" href="#">English</a></li>
+                                    <li><a class="link-color" title="Spanish" href="#">Spanish</a></li>
+                                </ul>
+                            </div>
+
                             <a href="/user" class="white-text">{{ #community# }}</a>
                             {{ if !$gimme->user->logged_in }}
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
